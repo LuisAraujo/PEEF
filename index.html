@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8"/>
+	<title>Executing Code on Web [Python]</title>
+	<script src= "js/jquery-3.4.1.min.js" ></script>
+	<script src= "js/execulting-code.js" ></script>
+	<script src= "js/interaction-codingpage.js" ></script>
+	<link rel="stylesheet" type="text/css" href="sources/css/icofont.css">
+	<link rel="stylesheet" href="sources/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8">
+	</script>
+	
+</head>
+
+<body>
+	<div class="head-menu">
+		 
+			 <div class="button-head-menu"> 
+				<i class="icofont-file-file"></i> 
+				<span class="label"> New File </span>
+			 </div>
+			 
+			 
+			 <div class="button-head-menu"> 
+				<i class="icofont-ui-folder"></i> 
+				<span class="label"> New Folder </span>
+			 </div>
+			 
+			 <div id="button-run" class="button-head-menu"> 
+				
+				<i class="icofont-ui-play"></i> 
+				<span class="label"> Run </span>
+				
+			 </div>
+ 
+	</div>
+	<div class="container">
+	
+		<div class="bar-side" id="explore-bar">
+			<div  class="file-explore-bar" numberitem="0"> 
+				<i class="icofont-file-python"></i> 
+				<span id="container-filename"> file.py  </span>
+			</div>
+			
+			
+			<div class="file-explore-bar" numberitem="1" > 
+				<i class="icofont-file-python"></i> 
+				<span id="container-filename"> teste.py  </span>
+			</div>
+			
+			
+		</div>
+		<div class="separator">
+		</div>
+		
+		<div id="container-coding"  class="container-main">
+			<div id="editor-bar">
+				<div id="item-code-0" class="item-code active" numberitem="0">
+				   file.py
+				</div>
+				<div id="item-code-1"  class="item-code" numberitem="1">
+				   teste.py
+				</div>
+			</div>
+			<div id="editor" >
+			</div>
+		</div>
+		
+		<div class="separator">
+		</div>
+		
+		<div id="console-container" class="container-main container-code">
+			<div class="contents">
+			
+			</div>
+			
+			<div id="button-help"> 
+				<div> ----------------------------------- </div>
+				<i class="icofont-ui-text-chat"></i> 
+				<span> Did you need help? <span class="link"> Talk with me! </div> </span>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</body>
+</html>

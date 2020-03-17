@@ -1,0 +1,1 @@
+print("Essa mensagem vem do arquivo python!");
