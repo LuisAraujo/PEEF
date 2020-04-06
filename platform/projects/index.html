@@ -6,14 +6,14 @@
 	<script src= "../../js/jquery-3.4.1.min.js" ></script>
 	<script src= "../../js/execulting-code.js" ></script>
 	<script src= "../../js/interaction-codingpage.js" ></script>
-	<script src= "../../js/project_getallcodes.js" ></script>
+	<script src= "../../js/project_backend.js" ></script>
+	<script src= "../../js/project_frontend.js" ></script>
+
 	<link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
 	<link rel="stylesheet" href="../../sources/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8">
 	</script>
-	<script>
-        getAllCodesByProject();
-	</script>
+
 </head>
 
 <body>
@@ -41,32 +41,33 @@
 	<div class="container">
 	
 		<div class="bar-side" id="explore-bar">
-			<div  class="file-explore-bar" numberitem="0"> 
-				<i class="icofont-file-python"></i> 
-				<span id="container-filename"> file.py  </span>
-			</div>
+			<!doctype html>
+			<html lang="en">
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport"
+					  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+				<title>Document</title>
+			</head>
+			<body>
 			
-			
-			<div class="file-explore-bar" numberitem="1" > 
-				<i class="icofont-file-python"></i> 
-				<span id="container-filename"> teste.py  </span>
-			</div>
-			
-			
+			</body>
+			</html>
+
+
 		</div>
+
 		<div class="separator">
 		</div>
 		
 		<div id="container-coding"  class="container-main">
 			<div id="editor-bar">
-				<div id="item-code-0" class="item-code active" numberitem="0">
-				   file.py
-				</div>
-				<div id="item-code-1"  class="item-code" numberitem="1">
-				   teste.py
-				</div>
+				<!-- list of code files -->
 			</div>
 			<div id="editor" >
+
+				<!-- list of codes in project -->
 			</div>
 		</div>
 		

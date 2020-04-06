@@ -1,41 +1,50 @@
-function showcode(numberitem){
-	
-	var filename =  $("#item-code-" +  numberitem).html().trim();
-	console.log(filename);
-	
-	$.post( "backend/openingFile.php", {filename: "../"+filename }, function(data) { 
-		}).done(function(data) {
-			editor.setValue(data);
-			$("#item-code-"+fileactive).removeClass("no-saved");
-		}).fail(function() {
-			$("#console-container .contents").html("Tivemos um error ao abrir o arquivo, tente novamente! :(" );
-		});
-};
+function getAllCodesNameByProject( callback ) {
 
-	
+    $.post("../../backend/project_getallcodes.php"
+        , function (data) {})
+        .done(function (data){
+            callback(  JSON.parse( data ) );
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+
+function getCodesById(id, callback ) {
+
+    $.post("../../backend/project_getcodeprojectbyid.php",
+        {idcode: id})
+        .done(function (data) {
+            callback(  JSON.parse( data ) );
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
 function runcode(){
-	
-	var filename =  $("#item-code-" +  fileactive).html().trim();
 
-	$("#container-filename").html( filename + ".py" );
+	$.post( "../../backend/execulting-code.php", {idcode: fileactive }, function(data) { })
+	.done(function(data) {
+        console.log("compiled code");
+		$("#console-container .contents").html(data);
+	})
+	.fail(function(data) {
+        console.log("error on compilation");
+		$("#console-container .contents").html("Tivemos um error ao exectar o arquivo, tente novamente! :(" );
+	})
 
-	$.post( "backend/openingFile.php", {filename: "../"+filename }, function(data) { 
-	}).done(function(data) {
-			
-			$("#container-status").html("Estamos executando o seu código..." );
-			 editor.setValue(data);
-			
-		$.post( "backend/execulting-code.php", {filename: filename }, function(data) { })
-			.done(function(data) {
-				$("#console-container .contents").html(data);
-			})
-			.fail(function() {
-				$("#console-container .contents").html("Tivemos um error ao exectar o arquivo, tente novamente! :(" );
-			})
-	
-	})
-	.fail(function() {
-		$("#console-container .contents").html("Tivemos um error ao abrir o arquivo, tente novamente! :(" );
-	})
-	
-}	
+}
+
+function savecode(callback) {
+    console.log("saving...");
+    $.post( "../../backend/save_code.php", {idcode: fileactive, code: editor.getValue() })
+        .done(function(data) {
+            desactiveAllCode();
+            console.log("code saved " + fileactive + "  " +editor.getValue() );
+            callback();
+        })
+}
