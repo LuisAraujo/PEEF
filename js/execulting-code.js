@@ -1,6 +1,7 @@
 function showcode(numberitem){
 	
-	var filename =  $("#item-code-" +  numberitem).html().trim();;
+	var filename =  $("#item-code-" +  numberitem).html().trim();
+	console.log(filename);
 	
 	$.post( "backend/openingFile.php", {filename: "../"+filename }, function(data) { 
 		}).done(function(data) {
@@ -24,7 +25,7 @@ function runcode(){
 			$("#container-status").html("Estamos executando o seu código..." );
 			 editor.setValue(data);
 			
-		$.post( "execulting-code.php", {filename: filename }, function(data) { })
+		$.post( "backend/execulting-code.php", {filename: filename }, function(data) { })
 			.done(function(data) {
 				$("#console-container .contents").html(data);
 			})
