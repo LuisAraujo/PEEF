@@ -1,15 +1,14 @@
 <?php
-//EXTRATOR DE ERROS
-
 @include "conectionDataBase.php";
 
-$idcode = $_POST["idcode"]; //"file"; //mudar para parâmetro
+$idcode = $_POST["idcode"];
 
 $result = $mysqli->query("SELECT code FROM Code Where Code.id = $idcode;");
 $myArray = array();
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
 
+/*creating a tem file for execute code*/
 $temp = tmpfile();
 fwrite($temp, $row["code"]);
 fseek($temp, 0);
@@ -30,9 +29,7 @@ if($error == 0){
 		$outsplited = split(",", $o);
 		foreach($outsplited as $os)
 			print $os . "<br>";
-
 	}
-
 }
 
 fclose($temp);

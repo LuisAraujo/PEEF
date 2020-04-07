@@ -1,16 +1,19 @@
 filesnames = [];
 fileactive = 0;
-
+var mapcodes = new Map();
 
 $(document).ready(function () {
-    var json_result = getAllCodesNameByProject(  setCodeNamesMenu );
+
+    //get all name project and set it on bar-explore
+    getAllCodesNameByProject(getIdCurrentProject,  setCodeNamesMenu );
 
     editor = ace.edit("editor");
-
-    $("#editor").hide();
-
     startAceJs();
 
+    //$("#editor").hide();
+
+    /** MENU **/
+    //Button Run
     $("#button-run").click( function(){ savecode(
         function(){
             if(fileactive == 0)
@@ -21,9 +24,10 @@ $(document).ready(function () {
         })
     } );
 
-    $(".file-explore-bar").click( function(){
-        activeCode( $(this).attr("numberitem") );
+    $("#button-save").click(function () {
+       savecode(function () {});
     });
+
 
 });
 
@@ -34,13 +38,13 @@ function setCodeNamesMenu(data) {
     $.each(data, function(i) {
         //show in explore bar
         $("#explore-bar").append(
-            '<div id="file-explore-'+i+'" class="file-explore-bar" numberitem="0" idcode ='+data[i].id+' >'+
-            '<i class="icofont-file-python"></i>'+
-            '<span  class="container-filename">'+ data[i].name +'</span>' +
+            '<div id="file-explore-' + i + '" class="file-explore-bar" numberitem="0" idcode =' + data[i].id + ' >' +
+            '<i class="icofont-file-python"></i>' +
+            '<span  class="container-filename">' + data[i].name + '</span>' +
             '</div>'
         );
 
-
+    });
 
         $(".item-code").click( function(){
             activeCode( $(this).attr("idcode") );
@@ -48,43 +52,51 @@ function setCodeNamesMenu(data) {
 
         //when click show code in editor
         $(".file-explore-bar").click(function () {
-            getCodesById(  $(this).attr("idcode") ,  showCodeInEditor );
-            activeCode( $(this).attr("idcode") );
 
-            $("#editor").show();
+        var idcode =  $(this).attr("idcode");
+        activeCode( idcode );
+        //$("#editor").show();
 
-            if( $("#item-code-" + $(this).attr('idcode') ).length == 0 ) {
-               //show in editor bar
-               $("#editor-bar").append(
-                   '<div id="item-code-' + $(this).attr("idcode") + '" class="item-code" idcode="' + $(this).attr("idcode") + '">' +
-                   data[0].name + '</div>'
-               )
-           }
-        });
 
-        //forcing click in first element
-        //$("#file-explore-0").trigger("click");
+
+        if( $("#item-code-" + $(this).attr('idcode') ).length == 0 ) {
+            //get code the first time in bd
+            getCodesById( idcode ,  showCodeInEditor );
+            console.log("get code bd");
+           //show in editor bar
+           $("#editor-bar").append(
+               '<div id="item-code-' + $(this).attr("idcode") + '" class="item-code" idcode="' + $(this).attr("idcode") + '">' +
+               data[0].name + '</div>'
+           )
+       }else{
+            console.log("get code the temp code \n"+ mapcodes.get(idcode.toString()));
+            //get code the temp code
+            showCodeInEditor( mapcodes.get(idcode) );
+        }
+
 
     });
 }
 
 function showCodeInEditor(data) {
-     editor.setValue(data.code);
+     editor.setValue(data);
+     //forcing remove * in name file, couse modification in editor
+     //$("#item-code-"+fileactive).removeClass("no-saved");
 }
 
 function activeCode( numberitem ){
-    console.log("active")
+
     $(".item-code").removeClass("active");
     $("#item-code-" +  numberitem).addClass("active");
     fileactive = parseInt( numberitem );
-    //showcode(numberitem);
+
 }
 
 
 function desactiveAllCode(  ){
     console.log("active")
     $(".item-code").removeClass("active");
-    $(".item-code").removeClass("no-saved");
+
 }
 
 function startAceJs(){
@@ -95,6 +107,10 @@ function startAceJs(){
     document.getElementById('editor').style.fontSize='15px';
 
     editor.getSession().on('change', function() {
+
+        mapcodes.set(fileactive.toString(), editor.getValue()) ;
+        console.log(fileactive);
+        console.log("change \n" + mapcodes.get(fileactive.toString()) );
         updateAceJs();
     });
 }
