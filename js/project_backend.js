@@ -1,3 +1,11 @@
+function getStartPage(){
+    $.post( "../../backend/project_page.php").done(
+        function (data){
+            console.log("ok");
+        });
+}
+
+
 function getIdCurrentProject(){
     return 1;
 }

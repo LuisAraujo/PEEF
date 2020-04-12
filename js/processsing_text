@@ -1,0 +1,9 @@
+const NEW_FILE = "New File";
+const SAVE = "Save";
+const RUN = "Run";
+const DOWNLOAD = "Downloar";
+const MESSAGE = "Message";
+
+const ERROR_ACESSFILE = "A  error when execute code, try again! :(";
+const COMPILED_SUCESS = "Program Compiled with Sucess!";
+

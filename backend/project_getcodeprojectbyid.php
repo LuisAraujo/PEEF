@@ -1,5 +1,5 @@
 <?php
-@include "conectionDataBase.php";
+@include "conection_database.php";
 
 $idcode = $_POST["idcode"];
 

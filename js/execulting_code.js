@@ -9,7 +9,6 @@ function getAllCodesNameByProject(idproject, callback ) {
     $.post("../../backend/project_getallcodes.php",
     {idproject: idproject})
         .done(function (data){
-
             callback(  JSON.parse( data ) );
         })
         .fail(function () {
@@ -39,7 +38,6 @@ function getCodesById(idcode, callback ) {
         .fail(function () {
             console.log("erro on get code by id");
         });
-
 }
 
 
@@ -49,14 +47,15 @@ function getCodesById(idcode, callback ) {
  */
 function runcode(){
 
-	$.post( "../../backend/execulting-code.php", {idcode: fileactive }, function(data) { })
+	$.post( "../../backend/execulting_code.php", {idcode: fileactive }, function(data) { })
 	.done(function(data) {
         console.log("compiled code");
-		$("#console-container .contents").html(data);
+        var msg =  "<span class='alert'>"+COMPILED_SUCESS+"</span> <br><br>";
+		$("#console-container .contents").html(msg + data);
 	})
 	.fail(function(data) {
         console.log("error on compilation");
-		$("#console-container .contents").html("Tivemos um error ao exectar o arquivo, tente novamente! :(" );
+		$("#console-container .contents").html(ERROR_ACESSFILE);
 	})
 
 }
@@ -76,4 +75,30 @@ function savecode(callback) {
             console.log("code saved " + fileactive + "  " +editor.getValue() );
             callback();
         })
+}
+
+function  downloadcode() {
+  if(fileactive == 0)
+       return;
+
+    var req = new XMLHttpRequest();
+    req.open("GET", '../../backend/download_code.php?idcode='+fileactive , true);
+    req.responseType = "blob";
+    req.onload = function (event) {
+        console.log(req)
+        var blob = req.response;
+        var fileName = req.getResponseHeader('Content-Disposition').split("fileName=")[1];  //if you have the fileName header available
+        var link=document.createElement('a');
+        link.href=window.URL.createObjectURL(blob);
+        link.download=fileName;
+        link.click();
+    };
+
+    req.send();
+
+
+   /* $.post( "../../backend/download_code.php", {idcode: fileactive}) .done(
+        function(data) {console.log(data)
+        });*/
+
 }

@@ -1,8 +1,10 @@
 <?php
-@include "conectionDataBase.php";
+@include "conection_database.php";
+@include "manager_section.php";
+
 $idproject = $_POST["idproject"];
 
-$result = $mysqli->query("SELECT id, name FROM Code Where Code.Project_id = $idproject;");
+$result = $mysqli->query("SELECT id, name FROM Code WHERE Project_id = ".  getcurrentproject_session());
 $myArray = array();
 
 while($row = $result->fetch_array(MYSQLI_ASSOC)) {

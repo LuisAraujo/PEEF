@@ -3,6 +3,8 @@ fileactive = 0;
 var mapcodes = new Map();
 
 $(document).ready(function () {
+    //backend
+    getStartPage();
 
     //get all name project and set it on bar-explore
     getAllCodesNameByProject(getIdCurrentProject,  setCodeNamesMenu );
@@ -26,6 +28,10 @@ $(document).ready(function () {
 
     $("#button-save").click(function () {
        savecode(function () {});
+    });
+
+    $("#button-download").click(function () {
+        downloadcode();
     });
 
 
