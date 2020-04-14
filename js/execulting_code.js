@@ -14,7 +14,6 @@ function getAllCodesNameByProject(idproject, callback ) {
         .fail(function () {
             console.log("erro on get names code");
         });
-
 }
 
 /**
@@ -25,15 +24,18 @@ function getAllCodesNameByProject(idproject, callback ) {
  */
 function getCodesById(idcode, callback ) {
 
+
     $.post("../../backend/project_getcodeprojectbyid.php",
         {idcode: idcode})
         .done(function (data) {
-            var jdata = JSON.parse( data )
+
+            var jdata = JSON.parse( data );
 
             if( mapcodes.get(idcode.toString()) == undefined)
-                mapcodes.set(idcode.toString(), jdata.code);
+                mapcodes.set( idcode.toString(), jdata.code);
 
-            callback(  jdata.code  );
+            showCodeInEditor( jdata.code, "get bd" );
+
         })
         .fail(function () {
             console.log("erro on get code by id");
@@ -75,6 +77,26 @@ function savecode(callback) {
             console.log("code saved " + fileactive + "  " +editor.getValue() );
             callback();
         })
+}
+
+
+
+/**
+ * @name createcode
+ * @desc create code tin databasee
+ */
+function createcode(name, extension ){
+
+    $.post( "../../backend/create_code.php", {name: name, extension: extension })
+        .done(function(data) {
+
+            getAllCodesNameByProject(getIdCurrentProject,  setCodeNamesMenu );
+            $("#modal-createcode").hide();
+        })
+        .fail(function(data) {
+            console.log("error on create file");
+            $("#console-container .contents").html(ERROR_CREATEFILE);
+        });
 }
 
 function  downloadcode() {

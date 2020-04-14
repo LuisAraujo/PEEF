@@ -12,6 +12,7 @@
 	<script src= "../../js/project_backend.js" ></script>
 	<script src= "../../js/project_frontend.js" ></script>
 
+	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
 	<link rel="stylesheet" href="../../sources/css/style.css">
 	<link rel="stylesheet" href="../../sources/css/togglestyle.css">
@@ -21,6 +22,25 @@
 </head>
 
 <body>
+
+	<div id="modal-createcode">
+		<div id="container-namefile">
+			<div>Name File *</div>
+			<div id="container-input-cratecode">
+				<input id="input-cratecode" placeholder="Type file name.">
+			</div>
+			<span>.py</span>
+		</div>
+		<div id="container-buttons-modal">
+			<div class="buttons-modal" id="button-create-newfile">
+				CREATE
+			</div>
+			<div class="buttons-modal"  id="button-create-cancel">
+				CANCEL
+			</div>
+		</div>
+	</div>
+
 	<div class="head-menu">
 		 
 			 <div id="button-new-file"  class="button-head-menu">
@@ -35,39 +55,30 @@
 			 </div> -->
 
 			<div id="button-save" class="button-head-menu">
-
 				<i class="icofont-diskette"></i>
 				<span class="label"> Save </span>
 
 			</div>
 
-			 <div id="button-run" class="button-head-menu"> 
-				
+			 <div id="button-run" class="button-head-menu">
 				<i class="icofont-ui-play"></i> 
 				<span class="label"> Run </span>
-				
 			 </div>
 
 
-
 			<div id="button-download" class="button-head-menu">
-
 				<i class="icofont-download"></i>
 				<span class="label"> Download </span>
-
 			</div>
 
 			<div id="button-message" class="button-head-menu">
-
 				<i class="icofont-ui-messaging"></i>
 				<span class="label"> Message </span>
 
 			</div>
 
 
-			<div id="img-profile">
-
-			</div>
+			<div id="img-profile"></div>
 
 			<div class="button-head-menu large checkbox">
 				<input type="checkbox" id="check-codesended" name="" value="">

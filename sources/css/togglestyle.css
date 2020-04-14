@@ -4,6 +4,7 @@
     display: block;
     float: right;
     padding-top: 10px;
+    font-weight: 900;
 }
 
 .checkbox input[type="checkbox"] {
@@ -26,15 +27,15 @@
     height: 22px;
     transition: transform 0.28s ease;
     border-radius: 3px;
-    border: 2px solid #7bbe72;
+    border: 2px solid #606262;
 }
 .checkbox label:after {
     content: '';
     display: block;
     width: 10px;
     height: 5px;
-    border-bottom: 2px solid #7bbe72;
-    border-left: 2px solid #7bbe72;
+    border-bottom: 4px solid #2a9c2a;
+    border-left: 4px solid #2a9c2a;
     -webkit-transform: rotate(-45deg) scale(0);
     transform: rotate(-45deg) scale(0);
     transition: transform ease 0.25s;
@@ -44,7 +45,7 @@
     left: 10px;
 }
 .checkbox input[type="checkbox"]:checked ~ label::before {
-    color: #7bbe72;
+    color: #156012;
 }
 
 .checkbox input[type="checkbox"]:checked ~ label::after {

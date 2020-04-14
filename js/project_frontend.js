@@ -34,68 +34,92 @@ $(document).ready(function () {
         downloadcode();
     });
 
+    $("#button-new-file").click(function () {
+        $("#modal-createcode").show();
+    });
 
+    $("#button-create-newfile").click(function () {
+        if($("#input-cratecode").val() != "") {
+
+            createcode($("#input-cratecode").val(), "py");
+        }
+    });
+
+    $("#button-create-cancel").click(function () {
+        $("#modal-createcode").hide();
+    });
 });
 
 
 function setCodeNamesMenu(data) {
+    //1.clear bar explore
     $("#explore-bar").empty("");
 
+    //2.get file list and set item file-explore-bar in bar explore
     $.each(data, function(i) {
         //show in explore bar
         $("#explore-bar").append(
-            '<div id="file-explore-' + i + '" class="file-explore-bar" numberitem="0" idcode =' + data[i].id + ' >' +
+            '<div id="file-explore-' + i + '" class="file-explore-bar"  name =' + data[i].name + ' idcode =' + data[i].id + ' >' +
             '<i class="icofont-file-python"></i>' +
             '<span  class="container-filename">' + data[i].name + '</span>' +
             '</div>'
         );
-
     });
 
-        $(".item-code").click( function(){
-            activeCode( $(this).attr("idcode") );
-        });
-
-        //when click show code in editor
-        $(".file-explore-bar").click(function () {
+    //3. when click in itens file-explore-bar show code in editor
+    $(".file-explore-bar").click(function () {
 
         var idcode =  $(this).attr("idcode");
         activeCode( idcode );
-        //$("#editor").show();
 
+        //already get data?
+        if( $("#item-code-" + idcode ).length == 0 ) {
 
-
-        if( $("#item-code-" + $(this).attr('idcode') ).length == 0 ) {
             //get code the first time in bd
             getCodesById( idcode ,  showCodeInEditor );
-            console.log("get code bd");
-           //show in editor bar
-           $("#editor-bar").append(
+
+            console.info("get code bd");
+
+            //show in editor bar
+            $("#editor-bar").append(
                '<div id="item-code-' + $(this).attr("idcode") + '" class="item-code" idcode="' + $(this).attr("idcode") + '">' +
-               data[0].name + '</div>'
-           )
+                $(this).attr("name") + '</div>'
+            );
+
+            //item tab code
+            $(".item-code").click( function(){
+                activeCode( $(this).attr("idcode") );
+            });
+
+
        }else{
-            console.log("get code the temp code \n"+ mapcodes.get(idcode.toString()));
+            //console.log("get code the temp code \n"+ idcode + "  "+ mapcodes.get(idcode.toString()));
             //get code the temp code
-            showCodeInEditor( mapcodes.get(idcode) );
+            showCodeInEditor( mapcodes.get(idcode), "temp");
         }
+
 
 
     });
 }
 
 function showCodeInEditor(data) {
-     editor.setValue(data);
-     //forcing remove * in name file, couse modification in editor
-     //$("#item-code-"+fileactive).removeClass("no-saved");
+
+    editor.setValue(data);
+
 }
 
-function activeCode( numberitem ){
+function activeCode( idcode ){
 
     $(".item-code").removeClass("active");
-    $("#item-code-" +  numberitem).addClass("active");
-    fileactive = parseInt( numberitem );
+    $("#item-code-" +  idcode).addClass("active");
 
+    fileactive = idcode;
+
+    var tempcode = mapcodes.get(fileactive.toString());
+
+    if(tempcode != undefined)
+        showCodeInEditor( tempcode );
 }
 
 
@@ -114,10 +138,12 @@ function startAceJs(){
 
     editor.getSession().on('change', function() {
 
-        mapcodes.set(fileactive.toString(), editor.getValue()) ;
-        console.log(fileactive);
-        console.log("change \n" + mapcodes.get(fileactive.toString()) );
-        updateAceJs();
+        if (fileactive != undefined) {
+            mapcodes.set(fileactive.toString(), editor.getValue());
+            updateAceJs();
+        }else{
+            console.error("Fileactive is undefined!")
+        }
     });
 }
 
