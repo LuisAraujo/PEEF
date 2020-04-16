@@ -9,12 +9,15 @@ $typeerror = "";
 
 if($error != 0){
 
-    $typeerror = $out[ count($out) - 1];
+    /* $typeerror = $out[ count($out) - 1];
     if($typeerror == "SyntaxError: invalid syntax")
         $line = explode(",", $out[ count($out) - 4])[1];
     else
         $line = explode(",", $out[ count($out) - 3])[1];
-    $typeerror = str_replace("'" , "\'" , $typeerror);
+    */
+    //unset($out[0]);
+
+    $typeerror = str_replace("'" , "\'" , implode(",",$out));
 }
 
 //Insert Compilations
