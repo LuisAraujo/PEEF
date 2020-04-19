@@ -1,0 +1,1 @@
+{ "activity" : 1, "projects" : [{"id" : 1 , "scoresections": ["0.394"] }, {"id" : 2 , "scoresections": []}]}

@@ -23,7 +23,7 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
 
     //get all compilation of project
    // $query = "SELECT * FROM Compilation WHERE Code_id = (SELECT id FROM Code WHERE Project_id = ". $row2['id'] ." LIMIT 1)";
-    $query = "SELECT Compilation.id as id, date, hours, erromessage, CodeCompilation.code as code FROM Compilation LEFT JOIN CodeCompilation ON Compilation.id = CodeCompilation.Compilation_id WHERE Code_id = (SELECT id FROM Code WHERE Project_id = ". $row2['id'] ." LIMIT 1)";
+    $query = "SELECT Compilation.id as id, date, hours, erromessage,  CodeCompilation.id as idcode, CodeCompilation.code as code, typeError, lineError  FROM Compilation LEFT JOIN CodeCompilation ON Compilation.id = CodeCompilation.Compilation_id WHERE Code_id = (SELECT id FROM Code WHERE Project_id = ". $row2['id'] ." LIMIT 1)";
     $result = $mysqli->query($query);
 
     $tempSession = array();
@@ -74,7 +74,20 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
         echo "<h2> Session ".$i."</h2>";
 
         //for to events in sessions
-        for ($j = 1; $j <= count($arraySession[$i]); $j++) {
+        for ($j = 1; $j <= count($arraySession[$i])-1; $j++) {
+
+            //if old or currente compilation is not error
+            if( ($arraySession[$i][$j]["typeError"] == "no-error") ||
+                ($arraySession[$i][$j-1]["typeError"] == "no-error")) {
+
+                continue;
+            }
+
+            //Same error location?
+            echo  $j."<br>";
+            var_dump($arraySession[$i][$j]) ;
+            echo  "<br><br>";
+
             $score = 0;
             $line = $arraySession[$i][$j - 1];
 
@@ -88,33 +101,37 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
                 if ($j < count($arraySession[$i])) {
                     //Collate: Create consecutive pairs from the events in the session, eg. (e1 , e2), (e2 , e3), (e3 , e4), up to (en−1 , en).
 
-                    $temp = explode(":", $line["erromessage"]);
-                    $l1 = explode(",", $temp[0]);
-
-
-                    $temp = explode(":", $arraySession[$i][$j]["erromessage"]);
-                    $l2 = explode(",", $temp[0]);
 
                     //Same type error?
-                    if (strcmp($l1[0], $l2[0]) == 0) {
-                       // echo ">> same error  <br>";
+                    if (strcmp( $line["typeError"], $arraySession[$i][$j]["typeError"]) == 0) {
+                        echo ">> same error  <br>";
                         $score += 3;
                     }else
-                       // echo ">>>> dif error  <br>";
+                        echo ">>>> dif error  <br>";
 
-                    //Same error location?
-                    if (strcmp($l1[1], $l2[1]) == 0) {
-                       // echo ">> same location";
+
+                    if (strcmp($line["lineError"], $arraySession[$i][$j]["lineError"]) == 0) {
+                        echo ">> same location <br>";
                         $score += 3;
+                    }else
+                        echo ">>>> dif line  <br>";
+
+                    //maybe change this calc for other file and save data in database
+
+
+                    //get lines editeds in code compilation of before one compilation
+                    $query3 = "SELECT count(*) as qtd FROM lineEdited WHERE codeCompilation_id = (SELECT id FROM CodeCompilation WHERE Compilation_id = ". (intval( $arraySession[$i][$j]["id"] ) - 1) ." LIMIT 1) AND line >= ". (intval($arraySession[$i][$j]["lineError"]) - 3)." AND line <= ". (intval($arraySession[$i][$j]["lineError"]) + 3);
+                    $result3 = $mysqli->query($query3);
+                    $row3 = $result3->fetch_array(MYSQLI_ASSOC);
+                    if(intval($row3["qtd"]) > 0 ) {
+                        $score += 1;
+                        echo ">>>> same edit location <br>";
                     }
 
-                    //Same edit location
-                    $linesCode = explode("\n" , $line["code"]);
-                    $linesCode2 = explode("\n" ,$arraySession[$i][$j]["code"]);
-
-
-                    //if( modInLine( "$linesCode[1]" , "$linesCode2[1]", 1))
-                      //  $score += 1;
+                    /*if( modification_inrange( $arraySession[$i][$j]["code"], $line["code"], $arraySession[$i][$j]["lineError"])) {
+                        $score += 1;
+                        echo  ">>>> same edit location <br>";
+                    }*/
 
                 }
 
