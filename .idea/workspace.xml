@@ -27,98 +27,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="execulting_code.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/execulting_code.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="50" />
+            <state relative-caret-position="275">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getjson_jadudEQmertric_thesis.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/getjson_jadudEQmertric_thesis.php">
+      <file leaf-file-name="manager_getprojects.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/manager_getprojects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="121" column="73" lean-forward="false" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
-              <folding>
-                <marker date="1587280746598" expanded="true" signature="158:201" ph="SELECT id FR... Project" />
-                <marker date="1587280746598" expanded="true" signature="757:865" ph="SELECT * FRO... Compilation" />
-                <marker date="1587280746598" expanded="true" signature="882:1196" ph="SELECT Compi... " />
-                <marker date="1587280746598" expanded="true" signature="4314:4379" ph="SELECT count... lineEditionCodeCompilation" />
-                <marker date="1587280746598" expanded="true" signature="4314:4380" ph="SELECT count... lineEditionCodeCompilation" />
-                <marker date="1587280746598" expanded="true" signature="4314:4435" ph="SELECT count... lineEdited" />
-                <marker date="1587280746598" expanded="true" signature="4314:4506" ph="SELECT count... lineEdited" />
-                <marker date="1587280746598" expanded="true" signature="4314:4572" ph="SELECT count... lineEditionCodeCompilation" />
-                <marker date="1587280746598" expanded="true" signature="4381:4435" ph="SELECT id FR... CodeCompilation" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calc_stringedit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/calc_stringedit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state relative-caret-position="125">
+              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_typererro.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
+      <file leaf-file-name="getjson_editions_onProjects.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/getjson_editions_onProjects.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+            <state relative-caret-position="250">
+              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
-                <marker date="1587274397522" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
-                <marker date="1587274397522" expanded="true" signature="1245:1290" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1245:1336" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:1977" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:1978" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2012" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2014" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2018" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2041" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2042" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2043" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2056" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2058" ph="UPDATE Compi... " />
-                <marker date="1587274397522" expanded="true" signature="1943:2059" ph="UPDATE Compi... " />
+                <marker date="1587534473892" expanded="true" signature="86:423" ph="SELECT LineE... " />
+                <marker date="1587534473892" expanded="true" signature="86:447" ph="SELECT LineE... " />
+                <marker date="1587534473892" expanded="true" signature="86:463" ph="SELECT CodeC... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_editline.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/process_editline.php">
+      <file leaf-file-name="manager-codes.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-              <folding>
-                <marker date="1587278584159" expanded="true" signature="164:207" ph="SELECT id FR... Project" />
-                <marker date="1587278584159" expanded="true" signature="325:575" ph="SELECT Compi... Compilation" />
-                <marker date="1587278584159" expanded="true" signature="325:576" ph="SELECT Compi... Compilation" />
-                <marker date="1587278584159" expanded="true" signature="325:600" ph="SELECT Compi... Compilation" />
-                <marker date="1587278584159" expanded="true" signature="992:1027" ph="INSERT INTO LineEdited... " />
-                <marker date="1587278584159" expanded="true" signature="992:1028" ph="INSERT INTO LineEdited... " />
-                <marker date="1587278584159" expanded="true" signature="992:1074" ph="INSERT INTO LineEdited... " />
-                <marker date="1587278584159" expanded="true" signature="992:1098" ph="INSERT INTO LineEdited... " />
-                <marker date="1587278584159" expanded="true" signature="1213:1267" ph="UPDATE CodeC... " />
-                <marker date="1587278584159" expanded="true" signature="1213:1268" ph="UPDATE CodeC... " />
-                <marker date="1587278584159" expanded="true" signature="1213:1351" ph="UPDATE CodeC... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_compilation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/save_compilation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+            <state relative-caret-position="533">
+              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -129,8 +76,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -141,8 +89,8 @@
       <find>button-head-menu</find>
       <find>container-namefile</find>
       <find>item-code</find>
-      <find>echo</find>
       <find>idcode</find>
+      <find>echo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,12 +127,17 @@
         <option value="$PROJECT_DIR$/sources/css/style.css" />
         <option value="$PROJECT_DIR$/backend/jadud_metrics.php" />
         <option value="$PROJECT_DIR$/backend/getjson_jadudEqMertric.php" />
-        <option value="$PROJECT_DIR$/backend/getjson_jadudEQmertric.php" />
-        <option value="$PROJECT_DIR$/backend/process_typererro.php" />
         <option value="$PROJECT_DIR$/backend/calc_stringedit.php" />
         <option value="$PROJECT_DIR$/backend/save_compilation.php" />
         <option value="$PROJECT_DIR$/backend/process_editline.php" />
+        <option value="$PROJECT_DIR$/sources/css/manager-codes.css" />
         <option value="$PROJECT_DIR$/backend/getjson_jadudEQmertric_thesis.php" />
+        <option value="$PROJECT_DIR$/backend/process_typererro.php" />
+        <option value="$PROJECT_DIR$/backend/getjson_jadudEQmertric.php" />
+        <option value="$PROJECT_DIR$/js/getjson_editions_onproject.js" />
+        <option value="$PROJECT_DIR$/js/manager_getprojects.js" />
+        <option value="$PROJECT_DIR$/platform/manager/index.html" />
+        <option value="$PROJECT_DIR$/backend/getjson_editions_onProjects.php" />
       </list>
     </option>
   </component>
@@ -215,6 +168,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,6 +196,12 @@
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="platform" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="platform" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -258,8 +219,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,6 +226,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -313,12 +273,13 @@
       <workItem from="1586877265601" duration="12993000" />
       <workItem from="1586917972533" duration="3447000" />
       <workItem from="1587010318700" duration="4790000" />
-      <workItem from="1587229733488" duration="23945000" />
+      <workItem from="1587229733488" duration="24474000" />
+      <workItem from="1587522385334" duration="11899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130921000" />
+    <option name="totallyTimeSpent" value="143349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -328,12 +289,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -356,40 +317,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/project_backend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/projects/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/icofont.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268900">
-          <caret line="10756" column="4" lean-forward="false" selection-start-line="10756" selection-start-column="4" selection-end-line="10756" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/save_code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <marker date="1586664886410" expanded="true" signature="163:187" ph="UPDATE Code " />
-            <marker date="1586664886410" expanded="true" signature="163:209" ph="UPDATE Code " />
-            <marker date="1586664886410" expanded="true" signature="163:220" ph="UPDATE Code " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/project_getcodeprojectbyid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -647,47 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/getjson_jadudEQmertric.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <marker date="1586878078077" expanded="true" signature="117:160" ph="SELECT id FR... Project" />
-            <marker date="1586878078077" expanded="true" signature="539:647" ph="SELECT * FRO... Compilation" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/save_code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <marker date="1586664886410" expanded="true" signature="163:187" ph="UPDATE Code " />
-            <marker date="1586664886410" expanded="true" signature="163:209" ph="UPDATE Code " />
-            <marker date="1586664886410" expanded="true" signature="163:220" ph="UPDATE Code " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/execulting_code.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <marker date="1586667346444" expanded="true" signature="162:201" ph="SELECT code Code" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/projects/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2025">
@@ -702,17 +588,6 @@
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <marker date="1586664892020" expanded="true" signature="97:135" ph="SELECT code Code" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/project_getallcodes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <marker date="1586723149606" expanded="true" signature="135:179" ph="SELECT id, n... Code" />
-            <marker date="1586723149606" expanded="true" signature="135:180" ph="SELECT id, n... Code" />
           </folding>
         </state>
       </provider>
@@ -745,45 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/execulting_code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
-          <folding>
-            <marker date="1587274397522" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
-            <marker date="1587274397522" expanded="true" signature="1245:1290" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1245:1336" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:1977" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:1978" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2012" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2014" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2018" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2041" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2042" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2043" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2056" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2058" ph="UPDATE Compi... " />
-            <marker date="1587274397522" expanded="true" signature="1943:2059" ph="UPDATE Compi... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/calc_stringedit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/save_compilation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -792,10 +628,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/calc_stringedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="74" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/execulting_code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/process_editline.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        <state relative-caret-position="175">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <marker date="1587278584159" expanded="true" signature="164:207" ph="SELECT id FR... Project" />
             <marker date="1587278584159" expanded="true" signature="325:575" ph="SELECT Compi... Compilation" />
@@ -812,20 +664,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/project_getallcodes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <marker date="1586723149606" expanded="true" signature="135:179" ph="SELECT id, n... Code" />
+            <marker date="1586723149606" expanded="true" signature="135:180" ph="SELECT id, n... Code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1587528193949" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
+            <marker date="1587528193949" expanded="true" signature="1247:1292" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1247:1338" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:1979" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:1980" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2014" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2016" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2020" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2043" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2044" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2045" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2058" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2060" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2061" ph="UPDATE Compi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/getjson_jadudEQmertric.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <marker date="1587529045767" expanded="true" signature="117:160" ph="SELECT id FR... Project" />
+            <marker date="1587529045767" expanded="true" signature="523:631" ph="SELECT * FRO... Compilation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/getjson_jadudEQmertric_thesis.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="121" column="73" lean-forward="false" selection-start-line="121" selection-start-column="73" selection-end-line="121" selection-end-column="73" />
+        <state relative-caret-position="3704">
+          <caret line="165" column="28" lean-forward="true" selection-start-line="164" selection-start-column="4" selection-end-line="165" selection-end-column="28" />
           <folding>
-            <marker date="1587280746598" expanded="true" signature="158:201" ph="SELECT id FR... Project" />
-            <marker date="1587280746598" expanded="true" signature="757:865" ph="SELECT * FRO... Compilation" />
-            <marker date="1587280746598" expanded="true" signature="882:1196" ph="SELECT Compi... " />
-            <marker date="1587280746598" expanded="true" signature="4314:4379" ph="SELECT count... lineEditionCodeCompilation" />
-            <marker date="1587280746598" expanded="true" signature="4314:4380" ph="SELECT count... lineEditionCodeCompilation" />
-            <marker date="1587280746598" expanded="true" signature="4314:4435" ph="SELECT count... lineEdited" />
-            <marker date="1587280746598" expanded="true" signature="4314:4506" ph="SELECT count... lineEdited" />
-            <marker date="1587280746598" expanded="true" signature="4314:4572" ph="SELECT count... lineEditionCodeCompilation" />
-            <marker date="1587280746598" expanded="true" signature="4381:4435" ph="SELECT id FR... CodeCompilation" />
+            <marker date="1587525435978" expanded="true" signature="158:201" ph="SELECT id FR... Project" />
+            <marker date="1587525435978" expanded="true" signature="757:865" ph="SELECT * FRO... Compilation" />
+            <marker date="1587525435978" expanded="true" signature="882:1196" ph="SELECT Compi... " />
+            <marker date="1587525435978" expanded="true" signature="3863:3928" ph="SELECT count... lineEditionCodeCompilation" />
+            <marker date="1587525435978" expanded="true" signature="3863:3929" ph="SELECT count... lineEditionCodeCompilation" />
+            <marker date="1587525435978" expanded="true" signature="3863:3984" ph="SELECT count... lineEdited" />
+            <marker date="1587525435978" expanded="true" signature="3863:4055" ph="SELECT count... lineEdited" />
+            <marker date="1587525435978" expanded="true" signature="3863:4121" ph="SELECT count... lineEditionCodeCompilation" />
+            <marker date="1587525435978" expanded="true" signature="3930:3984" ph="SELECT id FR... CodeCompilation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/execulting_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <marker date="1586667346444" expanded="true" signature="162:201" ph="SELECT code Code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/save_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
+          <folding>
+            <marker date="1586664886410" expanded="true" signature="163:187" ph="UPDATE Code " />
+            <marker date="1586664886410" expanded="true" signature="163:209" ph="UPDATE Code " />
+            <marker date="1586664886410" expanded="true" signature="163:220" ph="UPDATE Code " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/projects/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/manager_getprojects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/getjson_editions_onProjects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <marker date="1587534473892" expanded="true" signature="86:423" ph="SELECT LineE... " />
+            <marker date="1587534473892" expanded="true" signature="86:447" ph="SELECT LineE... " />
+            <marker date="1587534473892" expanded="true" signature="86:463" ph="SELECT CodeC... " />
           </folding>
         </state>
       </provider>

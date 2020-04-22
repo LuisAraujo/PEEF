@@ -71,7 +71,7 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
 
     //for to sessions
     for ($i = 0; $i < count($arraySession); $i++) {
-        echo "<h2> Session ".$i."</h2>";
+        //echo "<h2> Session ".$i."</h2>";
 
         //for to events in sessions
         for ($j = 1; $j <= count($arraySession[$i])-1; $j++) {
@@ -83,18 +83,11 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
                 continue;
             }
 
-            //Same error location?
-            echo  $j."<br>";
-            var_dump($arraySession[$i][$j]) ;
-            echo  "<br><br>";
-
             $score = 0;
             $line = $arraySession[$i][$j - 1];
 
-            //echo $line["erromessage"]. "<br>";
             if (strcmp(trim($line["erromessage"]), ",") != 0) {
                 //Do both events  ends in error
-               // echo ">> both error  <br>";
                 $score += 2;
 
                 //dentro no limite
@@ -104,17 +97,15 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
 
                     //Same type error?
                     if (strcmp( $line["typeError"], $arraySession[$i][$j]["typeError"]) == 0) {
-                        echo ">> same error  <br>";
                         $score += 3;
-                    }else
-                        echo ">>>> dif error  <br>";
+                    }
+
 
 
                     if (strcmp($line["lineError"], $arraySession[$i][$j]["lineError"]) == 0) {
-                        echo ">> same location <br>";
                         $score += 3;
-                    }else
-                        echo ">>>> dif line  <br>";
+                    }
+
 
                     //maybe change this calc for other file and save data in database
 
@@ -125,7 +116,7 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
                     $row3 = $result3->fetch_array(MYSQLI_ASSOC);
                     if(intval($row3["qtd"]) > 0 ) {
                         $score += 1;
-                        echo ">>>> same edit location <br>";
+                       // echo ">>>> same edit location <br>";
                     }
 
                     /*if( modification_inrange( $arraySession[$i][$j]["code"], $line["code"], $arraySession[$i][$j]["lineError"])) {

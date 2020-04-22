@@ -12,7 +12,7 @@ $result = $mysqli->query($query);
 
 
 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-    echo $row["id"]. "  ". $row["erromessage"]."<br>";
+   // echo $row["id"]. "  ". $row["erromessage"]."<br>";
     //break;
 
     if( trim( $row["erromessage"] ) ==  ","){

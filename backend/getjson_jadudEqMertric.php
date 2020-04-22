@@ -8,7 +8,7 @@ $query2 = "SELECT id FROM Project WHERE Activity_id = $idactivity";
 $result2 = $mysqli->query($query2);
 $jsonReturn = '{ "activity" : '.$idactivity.', "projects" : [';
 //echo $result2->num_rows . "<br>";;
-$currentRow = 0;
+
 
 //get all projects
 while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
