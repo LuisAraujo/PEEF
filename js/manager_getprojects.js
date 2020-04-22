@@ -10,7 +10,7 @@ function getprojects(idprojects, callback) {
 }
 
 function  printprojects(json) {
-
+    console.log(json)
     for(var i = 0; i < json.codes.length; i++){
 
         var elems = '<div class="container-data-code">';
@@ -23,14 +23,15 @@ function  printprojects(json) {
 
         elems += '<div class="container-code">';
 
-        console.log( json.codes[i])
+        console.log(json.codes[i].line);
+
         for(var j = 0; j < json.codes[i].code.length; j++) {
             elems += '<span class="';
 
-            if(parseInt( json.codes[i].line) == j+1 )
+            if(json.codes[i].line.includes(j+1+"") )
                 elems += 'line-changed';
 
-            if (i % 2 == 0)
+            if (j % 2 == 0)
                 elems += ' line1"><span class="number">'+(j+1)+'</span>';
             else
                 elems += ' line2"><span class="number">'+(j+1)+'</span>';
