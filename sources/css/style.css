@@ -4,6 +4,8 @@ html, body{
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Roboto', sans-serif;
+	background-color: #e0e0e0;
+	overflow-y: hidden;
 }
 
 .bar-side{
@@ -23,7 +25,7 @@ html, body{
 
 .container{
 	
-	height: calc(100% - 100px);
+	height: calc(100% - 70px);
 	
 }
 .container-main{
@@ -59,7 +61,7 @@ html, body{
 	
 	
 }
-.file-explore-bar .icofont-file-python{
+.file-explore-bar .icofont-file-python, .file-explore-bar .icofont-file-pdf{
 	font-size: 30px;
 	position:relative;
 	top: 5px;
@@ -70,6 +72,9 @@ html, body{
 	background-color: #223366;
 }
 
+#file-explore-description{
+	background-color: #4d77b0;
+}
 #console-container{
 	color: #fff;
 	font-family: Courier New;
@@ -160,7 +165,7 @@ html, body{
 
 #editor {
     width: 100%;
-    height: 100%
+    height: calc(100% - 30px);
 }
 
 #editor-bar{
@@ -171,7 +176,7 @@ html, body{
 #editor-bar .item-code{
 	width: 80px;
 	height: 25px;
-	background-color: fff;
+	background-color: #fff;
 	text-align: center;
 	padding-top: 5px;
 	padding-left: 5px;
@@ -189,6 +194,7 @@ html, body{
 #editor-bar .item-code.no-saved:after{
 	content: "*";
 }
+
 
 
 #img-profile{
@@ -278,4 +284,204 @@ html, body{
 	width: 270px;
 	margin: 0px auto;
 	height: 30px;
+}
+
+
+#modal-description{
+	width: 800px;
+	height: 400px;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #727282;
+	position: absolute;
+	z-index: 999;
+	padding-top: 20px;
+	font-weight: bold;
+	left: calc( 50% - 400px);
+	top: 50px;
+	display: none;
+}
+
+
+#modal-description .title{
+	text-align: center;
+	font-size: large;
+}
+
+
+#text-modal-description{
+	width: calc(100% - 40px);
+	margin: 10px;
+	height: calc(70%);
+	overflow-y: scroll;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #000;
+}
+
+#modal-description-img{
+	width: calc(100% - 20px);
+	height: calc(10%);
+	margin: 10px;
+}
+
+#modal-description-img .link-image-description{
+	margin-left: 10px;
+}
+
+#modal-description-img .link-image-description a{
+	text-decoration: none;
+	color: #000;
+}
+
+#modal-description-img .link-image-description:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #2055b0;
+}
+
+#modal-description .bt-close{
+	float: right;
+	border-radius: 50%;
+	background-color: #060f24;
+	color: #fff;
+	padding: 2px;
+	margin-right: 10px;
+}
+
+
+#modal-description .bt-close:hover{
+	background-color: #132f6a;
+	cursor: pointer;
+}
+
+
+#bg{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	display: block;
+	position: absolute;
+	z-index: 999;
+	display: none;
+}
+
+
+#container-chat{
+	background-color: #bbbac0;
+	border: 1px #373737 solid;
+	border-radius: 5px;
+	width: 40%;
+	height: 300px;
+	position: absolute;
+	z-index: 999;
+	bottom: 10px;
+	right: 10px;
+	padding: 5px;
+}
+
+#container-chat .title{
+
+	height: 15px;
+	color: #060f24;
+	font-weight: bold;
+	padding: 4px;
+	text-align: center;
+	float: left;
+	margin-bottom: 5px;
+}
+
+#container-chat .close{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #060f24;
+	color:#fff;
+	padding: 4px;
+	text-align: center;
+	float: right;
+	margin-bottom: 5px;
+}
+
+#container-chat .close:hover{
+	cursor: pointer;
+}
+
+#container-mensage-sended{
+	height: calc(80% - 20px);
+	width: calc(100% - 10px);
+	margin-left: 5px;
+	margin-top: 5px;
+
+	overflow-y: scroll;
+	background-color: #f9f2f2;
+}
+
+#container-text-type-message{
+	width: 100%;
+
+}
+
+#text-type-message{
+	width: calc(90% - 10px);
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+	resize: none;
+	height: 40px;
+}
+
+#bt-send-message{
+	width: 35px;
+	height: 35px;
+	margin-top: 5px;
+	background-color: #060f24;
+	color: #fff;
+	float: left;
+	font-size: 35px;
+	text-align: center;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+#bt-send-message:hover{
+	background-color: #fff;
+	color: #060f24;
+	cursor: pointer;
+}
+#container-mensage-sended .message-item{
+	width: 80%;
+	min-height: 40px;
+	margin: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #b4b4b4;
+}
+
+#container-mensage-sended .message-item .user{
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+#container-mensage-sended .message-item .date{
+	font-size: 10px;
+	float: right;
+}
+
+#container-mensage-sended .message-item .text{
+	font-size: 15px;
+	text-align: left;
+}
+
+#container-mensage-sended .message-sended{
+	background-color: #eef3f6;
+	float: left;
+}
+
+#container-mensage-sended .message-received{
+	background-color: #263f7a;
+	float: right;
+	color: #fff;
 }

@@ -48,6 +48,14 @@ $(document).ready(function () {
     $("#button-create-cancel").click(function () {
         $("#modal-createcode").hide();
     });
+
+    $("#button-message").click(function () {
+        $("#container-chat").show();
+    });
+
+    $("#bt-close-chat").click(function () {
+        $("#container-chat").hide();
+    });
 });
 
 
@@ -55,19 +63,47 @@ function setCodeNamesMenu(data) {
     //1.clear bar explore
     $("#explore-bar").empty("");
 
+
+    $("#explore-bar").append(
+        '<div id="file-explore-description" class="file-explore-bar"  >' +
+        '<i class="icofont-file-pdf"></i>' +
+        '<span  class="container-filename"> Description </span>' +
+        '</div>'
+    );
+
+
+    $("#file-explore-description").click(function () {
+
+        getDataActivity( function (data) {
+            console.log(data)
+            $("#title-modal-description").html(data[0].title);
+            $("#text-modal-description").html(data[0].description);
+            $("#text-modal-description").html(data[0].description);
+            $("#modal-description-img").html('<span class="link-image-description"><a href="'+data[0].image+'" target="_blank"> <i class="icofont-file-jpg"></i> Image 01 </a></span>');
+            $("#modal-description").show();
+        });
+
+    });
+
+    $("#bt-close-modal-description").click(function () {
+        $("#modal-description").hide();
+    });
+
     //2.get file list and set item file-explore-bar in bar explore
     $.each(data, function(i) {
         //show in explore bar
         $("#explore-bar").append(
             '<div id="file-explore-' + i + '" class="file-explore-bar"  name =' + data[i].name + ' idcode =' + data[i].id + ' >' +
             '<i class="icofont-file-python"></i>' +
-            '<span  class="container-filename">' + data[i].name + '</span>' +
+            '<span  class="container-filename"> ' + data[i].name + '</span>' +
             '</div>'
         );
     });
 
     //3. when click in itens file-explore-bar show code in editor
     $(".file-explore-bar").click(function () {
+        if($(this).attr("id") == "file-explore-description")
+            return;
 
         var idcode =  $(this).attr("idcode");
         activeCode( idcode );
@@ -80,7 +116,7 @@ function setCodeNamesMenu(data) {
 
             console.info("get code bd");
 
-            //show in editor bar
+            //show in ed
             $("#editor-bar").append(
                '<div id="item-code-' + $(this).attr("idcode") + '" class="item-code" idcode="' + $(this).attr("idcode") + '">' +
                 $(this).attr("name") + '</div>'
@@ -101,6 +137,9 @@ function setCodeNamesMenu(data) {
 
 
     });
+
+
+
 }
 
 function showCodeInEditor(data) {

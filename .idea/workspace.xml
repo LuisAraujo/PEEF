@@ -14,50 +14,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="project_getallcodes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/project_getallcodes.php">
+      <file leaf-file-name="project_frontend.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state relative-caret-position="225">
+              <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_backend.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/project_backend.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_getdataactivity.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/project_getdataactivity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <marker date="1586723149606" expanded="true" signature="135:179" ph="SELECT id, n... Code" />
-                <marker date="1586723149606" expanded="true" signature="135:180" ph="SELECT id, n... Code" />
+                <marker date="1587793873122" expanded="true" signature="123:201" ph="SELECT * FRO... Activity" />
+                <marker date="1587793873122" expanded="true" signature="123:235" ph="SELECT * FRO... Activity" />
+                <marker date="1587793873122" expanded="true" signature="123:236" ph="SELECT * FRO... Activity" />
+                <marker date="1587793873122" expanded="true" signature="158:201" ph="SELECT Activ... Project" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
+        <entry file="file://$PROJECT_DIR$/platform/projects/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="356">
+              <caret line="124" column="35" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_typererro.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <marker date="1587528193949" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
-                <marker date="1587528193949" expanded="true" signature="1247:1292" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1247:1338" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:1979" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:1980" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2014" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2016" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2020" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2043" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2044" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2045" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2058" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2060" ph="UPDATE Compi... " />
-                <marker date="1587528193949" expanded="true" signature="1945:2061" ph="UPDATE Compi... " />
-              </folding>
+            <state relative-caret-position="127">
+              <caret line="402" column="23" lean-forward="false" selection-start-line="402" selection-start-column="23" selection-end-line="402" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,9 +86,13 @@
       <find>span</find>
       <find>button-head-menu</find>
       <find>container-namefile</find>
-      <find>item-code</find>
       <find>idcode</find>
       <find>echo</find>
+      <find>item-code</find>
+      <find>python</find>
+      <find>editor</find>
+      <find>file-explore-description</find>
+      <find>container-chat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,7 +114,6 @@
         <option value="$PROJECT_DIR$/backend/project_getcodeprojectbyid.php" />
         <option value="$PROJECT_DIR$/backend/conection_database.php" />
         <option value="$PROJECT_DIR$/backend/manager_section.php" />
-        <option value="$PROJECT_DIR$/js/project_backend.js" />
         <option value="$PROJECT_DIR$/backend/project_page.php" />
         <option value="$PROJECT_DIR$/backend/execulting_code.php" />
         <option value="$PROJECT_DIR$/sources/css/togglecss.css" />
@@ -111,11 +121,8 @@
         <option value="$PROJECT_DIR$/sources/css/togglestyle.css" />
         <option value="$PROJECT_DIR$/js/processsing_text" />
         <option value="$PROJECT_DIR$/backend/project_getallcodes.php" />
-        <option value="$PROJECT_DIR$/js/project_frontend.js" />
         <option value="$PROJECT_DIR$/backend/create_code.php" />
         <option value="$PROJECT_DIR$/js/execulting_code.js" />
-        <option value="$PROJECT_DIR$/platform/projects/index.html" />
-        <option value="$PROJECT_DIR$/sources/css/style.css" />
         <option value="$PROJECT_DIR$/backend/jadud_metrics.php" />
         <option value="$PROJECT_DIR$/backend/getjson_jadudEqMertric.php" />
         <option value="$PROJECT_DIR$/backend/calc_stringedit.php" />
@@ -129,6 +136,11 @@
         <option value="$PROJECT_DIR$/js/manager_getprojects.js" />
         <option value="$PROJECT_DIR$/sources/css/manager-codes.css" />
         <option value="$PROJECT_DIR$/platform/manager/index.html" />
+        <option value="$PROJECT_DIR$/js/project_backend.js" />
+        <option value="$PROJECT_DIR$/platform/projects/index.html" />
+        <option value="$PROJECT_DIR$/js/project_frontend.js" />
+        <option value="$PROJECT_DIR$/sources/css/style.css" />
+        <option value="$PROJECT_DIR$/backend/project_getdataactivity.php" />
       </list>
     </option>
   </component>
@@ -160,7 +172,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,6 +221,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,16 +232,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\sources\css\fonts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\sources\css" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\sources\css\fonts" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\js" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\platform\projects" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\sources\css\fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,15 +278,16 @@
       <workItem from="1587010318700" duration="4790000" />
       <workItem from="1587229733488" duration="24474000" />
       <workItem from="1587522385334" duration="15646000" />
+      <workItem from="1587706889817" duration="3074000" />
+      <workItem from="1587785694401" duration="7435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147096000" />
+    <option name="totallyTimeSpent" value="157605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21449487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -308,16 +321,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/project_getcodeprojectbyid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="27" />
-          <folding>
-            <marker date="1586664892020" expanded="true" signature="97:135" ph="SELECT code Code" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/execulting_code.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -351,7 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="925">
           <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -440,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1075">
           <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -493,13 +494,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/file.py" />
-    <entry file="file://$PROJECT_DIR$/js/project_backend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/conection_database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -555,21 +549,6 @@
             <marker date="1586727674730" expanded="true" signature="159:259" ph="INSERT INTO Code... " />
             <marker date="1586727674730" expanded="true" signature="171:176" ph="UPDATE Code " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="175" column="21" lean-forward="true" selection-start-line="175" selection-start-column="21" selection-end-line="175" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +703,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1587528193949" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
+            <marker date="1587528193949" expanded="true" signature="1247:1292" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1247:1338" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:1979" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:1980" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2014" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2016" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2020" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2043" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2044" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2045" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2058" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2060" ph="UPDATE Compi... " />
+            <marker date="1587528193949" expanded="true" signature="1945:2061" ph="UPDATE Compi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -742,47 +756,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/projects/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="89" column="23" lean-forward="true" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+        <state relative-caret-position="356">
+          <caret line="124" column="35" lean-forward="false" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
+    <entry file="file://$PROJECT_DIR$/js/project_backend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        <state relative-caret-position="258">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
+    <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="225">
+          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/process_typererro.php">
+    <entry file="file://$PROJECT_DIR$/sources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="127">
+          <caret line="402" column="23" lean-forward="false" selection-start-line="402" selection-start-column="23" selection-end-line="402" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/project_getdataactivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1587528193949" expanded="true" signature="866:1017" ph="SELECT id, e... Compilation" />
-            <marker date="1587528193949" expanded="true" signature="1247:1292" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1247:1338" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:1979" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:1980" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2014" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2016" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2020" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2043" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2044" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2045" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2058" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2060" ph="UPDATE Compi... " />
-            <marker date="1587528193949" expanded="true" signature="1945:2061" ph="UPDATE Compi... " />
+            <marker date="1587793873122" expanded="true" signature="123:201" ph="SELECT * FRO... Activity" />
+            <marker date="1587793873122" expanded="true" signature="123:235" ph="SELECT * FRO... Activity" />
+            <marker date="1587793873122" expanded="true" signature="123:236" ph="SELECT * FRO... Activity" />
+            <marker date="1587793873122" expanded="true" signature="158:201" ph="SELECT Activ... Project" />
           </folding>
         </state>
       </provider>

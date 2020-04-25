@@ -21,3 +21,12 @@ function getIdCurrentAtcivity(){
 function getIdCurrentLearner(){
     return 1;
 }
+
+
+function getDataActivity(callback){
+    $.post( "../../backend/project_getdataactivity.php").done(
+        function (data){
+            data = JSON.parse(data);
+            callback(data);
+        });
+}

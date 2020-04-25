@@ -58,13 +58,14 @@
 
 .data-code{
     font-size: 12px;
-    background-color: #18263a;
-    color: #fff;
+    background-color: #fff;
+    color: #222;
     width: 100%;
     display: block;
     padding: 2px;
     border-radius: 5px;
     margin-bottom: 5px;
+	border: 1px solid #000;
 }
 
 .data-error{
