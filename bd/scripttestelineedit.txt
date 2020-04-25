@@ -1,0 +1,2 @@
+DELETE FROM LineEdited WHERE CodeCompilation_id  > 90;
+UPDATE CodeCompilation SET linesedited = 0 WHERE id > 90;

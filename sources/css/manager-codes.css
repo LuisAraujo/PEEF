@@ -1,6 +1,8 @@
 #all-codes{
 
     margin-top: 10px;
+    overflow-y: scroll;
+    height: calc(100% - 70px);
 }
 
 .container-data-code {
