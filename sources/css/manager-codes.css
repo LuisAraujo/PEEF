@@ -2,7 +2,8 @@
 
     margin-top: 10px;
     overflow-y: scroll;
-    height: calc(100% - 70px);
+    height: calc(100% - 80px);
+    width: 100%;
 }
 
 .container-data-code {
@@ -101,4 +102,15 @@
     font-size: 20px;
     border: none;
     outline: none;
+}
+
+.head-menu{
+    height:100px !important;
+}
+.head-menu .title{
+    font-size: x-large;
+    width: 100%;
+    margin-left: 5px;
+    margin-top: 5px;
+
 }
