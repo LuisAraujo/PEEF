@@ -1,0 +1,135 @@
+.head-bar-side{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 50px;
+}
+.head-bar-side .menu-logo{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    float: left;
+}
+
+.head-bar-side .img-profile{
+    float: left;
+    margin-left: 5px;
+}
+
+.head-bar-side .username{
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 100px;
+    height: 20px;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #727282;
+}
+
+
+.item-menu{
+    width: calc(100% - 5px);
+    font-size: 20px;
+    padding-top:10px;
+    padding-left: 5px;
+    padding-bottom:10px;
+    color: #5e5e6d;
+}
+.item-menu:active{
+    border-right: 5px solid #060f24;
+    width: calc(100% - 10px);
+}
+.item-menu:hover{
+    background-color: #c4c4dc;
+    cursor: pointer;
+}
+
+.inp-head-lager{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #727282;
+    border-radius: 5px;
+}
+
+
+.container-medium{
+    width: calc(80% - 10px);
+    height: 100%;
+    float: left;
+}
+
+#bt-find-course{
+    float: right;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+#container-input-find-course{
+
+    margin-top: 15px;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.container-courses{
+    padding: 10px;
+}
+
+.item-courses{
+    width: 310px;
+    height: 150px;
+    border-radius: 10px;
+    margin-left: 10px;
+    float: left;
+    padding: 10px;
+    border: 1px solid #060f24;
+}
+
+.item-courses:hover{
+    cursor:pointer;
+}
+
+.item-courses.blue{
+    background-color: #4684bf;
+}
+
+.item-courses.blue2{
+    background-color: #66adc8;
+}
+
+
+
+.name-course{
+    color:#fff;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.code-course{
+    background-color: #060f24;
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+.professor-course{
+    margin-top: 10px;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #060f24;
+}

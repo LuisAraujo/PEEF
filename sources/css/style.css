@@ -16,12 +16,6 @@ html, body{
 	background-color: #eee;
 }
 
-.separator{
-	width: 10px;
-	height: 100%;
-	background-color: #bdbdbd;
-	float:left;
-}
 
 .container{
 	
@@ -34,6 +28,83 @@ html, body{
 	width: calc( 40% - 10px);
 	float:left;	
 }
+
+.separator{
+	width: 10px;
+	height: 100%;
+	background-color: #bdbdbd;
+	float:left;
+}
+
+
+.separator-small{
+	width: 3px;
+	height: 100%;
+	background-color: #bdbdbd;
+	float:left;
+}
+
+.img-profile{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #000;
+	background-image: url("../images/profile.png");
+	background-size: cover;
+}
+
+
+.container-input{
+	height: 25px;
+	border: 1px solid #727282;
+	border-radius: 10px;
+	width: 250px;
+	padding: 5px;
+	float: left;
+}
+
+.container-input.larger{
+	width: 400px;
+}
+
+.container-input input{
+	border: none;
+	background: none;
+	font-size: 20px;
+	width: 100%;
+}
+
+.container-input input:focus{
+	outline: none;
+}
+
+
+.bt{
+	width: 100px;
+	height: 25px;
+	margin-top: 5px;
+	background-color: #15357b;
+	color: #fff;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.bt:hover{
+	cursor: pointer;
+	background-color: #1b43a0;
+
+}
+
+.bt .label{
+	margin-left: 5px;
+}
+
+/* platform */
+
 
 .container-code{
 	background-color: #060f24;
@@ -75,9 +146,11 @@ html, body{
 #file-explore-description{
 	background-color: #4d77b0;
 }
+
 #console-container{
 	color: #fff;
 	font-family: Courier New;
+	background-color: #060f24;
 }
 #console-container .alert{
 	color: #777;
@@ -197,18 +270,15 @@ html, body{
 
 
 
+
+
 #img-profile{
 	float: right;
 	width: 50px;
 	height: 50px;
-	border-radius: 50%;
-	background-color: #000;
 	margin-top: 10px;
 	margin-right: 30px;
-	background-image: url("../images/profile.png");
-	background-size: cover;
 }
-
 /**MODAL CREATE NEW FIE */
 #modal-createcode{
 	display: none;
@@ -250,6 +320,9 @@ html, body{
 	color: #fff;
 }
 
+
+
+/*
 #container-input-cratecode{
 	height: 25px;
 	border: 1px solid #727282;
@@ -267,7 +340,7 @@ html, body{
 
 #input-cratecode:focus{
 	outline: none;
-}
+}*/
 
 #container-namefile{
 	width: 80%;
@@ -432,6 +505,11 @@ html, body{
 	height: 40px;
 }
 
+
+
+
+
+
 #bt-send-message{
 	width: 35px;
 	height: 35px;
@@ -450,6 +528,8 @@ html, body{
 	color: #060f24;
 	cursor: pointer;
 }
+
+
 #container-mensage-sended .message-item{
 	width: 80%;
 	min-height: 40px;
