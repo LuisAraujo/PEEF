@@ -3,28 +3,36 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8"/>
-    <title>PEEF - Login Leaner</title>
+    <title>PEEF - Login Student</title>
     <link rel="stylesheet" href="../sources/css/style-home.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/home_login.js"></script>
 </heade>
 
 <body>
 <section class="main-section">
     <header class="header-home">
         <div class="img-head-page"></div>
-        <div class="title-head-pege">Log in Leaner</div>
+        <div class="title-head-pege">Log in Student</div>
     </header>
     <div class="container-login">
         <div class="img-logo-form"></div>
+        <form>
+            <div class="inp-form"  >
+                <input name="username" id="username"  placeholder="E-mail"/>
+            </div>
+            <div class="inp-form"  >
+                <input type="password" name="password"  id="password" placeholder="Password"/>
+            </div>
 
-        <div class="inp-form"  >
-            <input id="inp-logo-login"  placeholder="E-mail"/>
-        </div>
-        <div class="inp-form"  >
-            <input type="password" id="inp-logo-password" placeholder="Password"/>
-        </div>
-        <div class="button-form" id="button-login">
-            Login
-        </div>
+            <div id="mgs-login">Login or Password is wrong!</div>
+
+            <div class="button-form" id="button-login">
+                Login
+            </div>
+            <input type="hidden" id="inp-mode" value="1" />
+        </form>
+
     </div>
 </section>
 <header class="foot-home">
