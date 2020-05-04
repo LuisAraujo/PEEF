@@ -1,12 +1,19 @@
 <?php
 @include "conection_database.php";
-@include "manager_section.php";
 
-$login = $_POST["login"];
-$pass = $_POST["password"];
-$mode = $_POST["mode"];
+if(isset($_POST["login"]))
+    $login = $_POST["login"];
+if(isset( $_POST["password"]))
+    $pass = $_POST["password"];
+if(isset($_POST["mode"]))
+    $mode = $_POST["mode"];
 
-$query ="SELECT count(*) as count FROM ";
+
+/*$login = "teste@gmail.com";
+$pass = "12345";
+$mode = "1";*/
+
+$query ="SELECT id FROM ";
 
 if($mode == "1")
     $query .= " Student ";
@@ -17,10 +24,12 @@ $query .= " WHERE email= '$login' AND password= md5('$pass') ";
 
 $result = $mysqli->query($query);
 
-if(  ! $result->fetch_array()["count"] ){
-    echo $query ;
+$id = $result->fetch_array()["id"];
+
+if(  !$id ){
+    echo "error" ;
 }else{
-    echo "logged";
+    echo $id ;
 }
 
 ?>
