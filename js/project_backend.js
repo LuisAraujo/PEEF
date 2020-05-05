@@ -1,5 +1,5 @@
 function getStartPage(){
-    $.post( "../../backend/project_page.php").done(
+    $.post( "../../backend/project_getidcode.php").done(
         function (data){
             console.log("ok");
         });

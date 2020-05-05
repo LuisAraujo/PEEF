@@ -14,7 +14,6 @@ if( !isset($_SESSION['currentproject']))
 if( !isset($_SESSION['currentuser']))
     $_SESSION['currentuser'] = "";
 
-echo $_SESSION['currentproject'];
 
 //set data via post
 
