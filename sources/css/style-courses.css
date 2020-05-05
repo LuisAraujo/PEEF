@@ -1,3 +1,6 @@
+body{
+    overflow: hidden;
+}
 .head-bar-side{
     margin-top: 10px;
     margin-left: 10px;
@@ -132,4 +135,122 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: #060f24;
+}
+
+
+.head-menu .head-title{
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.container-activity{
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: calc( 100% - 30px);
+    height: 100%;
+}
+
+.container-activity iframe{
+    height: 360px;
+    background-color: #727282;
+}
+
+.container-activity iframe:last-child{
+   margin-bottom:  100px
+}
+
+.container-activity .class-item{
+    border-bottom: 1px solid #727282;
+    width: 100%;
+    min-height:300px;
+    margin-top: 10px;
+}
+.container-activity .title-class{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container-activity .description-class{
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container-activity .video-class{   }
+
+.activity-item{
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #727282;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-item:hover{
+    cursor: pointer;
+    background-color: #d0d0ea;
+}
+.activity-item div{
+    float: left;
+}
+
+.activity-item i {
+    font-size: 30px;
+    margin-left: 5px;
+    color: #484854;
+    width: 50px;
+    display: block;
+    text-align: center;
+}
+.icofont-flag.actived{
+    color:  #32659c !important;
+}
+
+.icofont-error{
+    color: #9c1612 !important;
+}
+
+.icofont-chat.actived{
+    color: #32659c !important;
+}
+.icofont-check-circled{
+    color: #2a9c2a !important;
+}
+
+
+.activity-item .title-activity{
+    width: 330px;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.activity-head{
+    width: 50%;
+    height: 30px;
+    font-size: 12px !important;
+}
+
+.activity-head .title-activity{
+    width: 330px !important;
+}
+
+.activity-head div{
+    float: left;
+    width: 50px;
+    border-right: 1px solid #727282;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.activity-head div:last-child{
+    border-right:none;
 }

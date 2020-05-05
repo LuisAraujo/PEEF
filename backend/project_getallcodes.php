@@ -4,6 +4,8 @@
 
 $idproject = $_POST["idproject"];
 
+//$idproject = getcurrentproject_session();
+
 $result = $mysqli->query("SELECT id, name FROM Code WHERE Project_id = ".  getcurrentproject_session());
 $myArray = array();
 
