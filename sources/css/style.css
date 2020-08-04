@@ -155,6 +155,13 @@ html, body{
 #console-container .alert{
 	color: #777;
 }
+#console-container .alert-error{
+	color: #bb433d;
+}
+
+#console-container .alert-sucess{
+	color: #3fab5c;
+}
 
 .contents{
 	margin: 10px;

@@ -50,14 +50,23 @@ function getCodesById(idcode, callback ) {
 function runcode(){
 
 	$.post( "../../backend/execulting_code.php", {idcode: fileactive }, function(data) { })
-	.done(function(data) {
+	.done(function(out) {
         console.log("compiled code");
         var msg =  "<span class='alert'>"+COMPILED_SUCESS+"</span> <br><br>";
-		$("#console-container .contents").html(msg + data);
+
+        if(out == "1")
+           msg +=  "<span class='alert-sucess'> " +TEST_PASSED;
+        else {
+            msg += "<span class='alert-error'> " + TEST_NPASSED + "(" + out + "%) </span>" ;
+        }
+
+        $("#console-container .contents").html(msg);
+		//$("#console-container .contents").html(msg + out);
 	})
 	.fail(function(data) {
         console.log("error on compilation");
-		$("#console-container .contents").html(ERROR_ACESSFILE);
+        var msg = "<span class='alert-error'> " + ERROR_ACESSFILE + "(" + data + "%) </span>" ;
+		$("#console-container .contents").html(msg);
 	})
 
 }

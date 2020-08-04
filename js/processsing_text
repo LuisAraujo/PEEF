@@ -5,5 +5,7 @@ const DOWNLOAD = "Downloar";
 const MESSAGE = "Message";
 
 const ERROR_ACESSFILE = "A  error when execute code, try again! :(";
-const COMPILED_SUCESS = "Program Compiled with Sucess!";
+const COMPILED_SUCESS = "Program Compiled with Success!";
 const ERROR_CREATEFILE = "A error when create code, try again!";
+const TEST_PASSED = "Your code was accepted!";
+const TEST_NPASSED = "Your code has an error!";

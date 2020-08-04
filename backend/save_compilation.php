@@ -20,8 +20,9 @@ if($error != 0){
     $typeerror = str_replace("'" , "\'" , implode(",",$out));
 }
 
+$testpassed = $n_error==0?1:0;
 //Insert Compilations
-$query = "INSERT compilation VALUES (null, CURDATE() , CURTIME(),'".$line." , ".$typeerror." ',  $idcode, NULL, NULL)";
+$query = "INSERT compilation VALUES (null, CURDATE() , CURTIME(),'".$line." , ".$typeerror." ',  $idcode, NULL, NULL, $testpassed)";
 $result = $mysqli->query($query);
 
 $code2 = str_replace("'" , "\'" , $row[code]);
