@@ -16,21 +16,49 @@ $(document).ready(function () {
 
     /** MENU **/
     //Button Run
-    $("#button-run").click( function(){ savecode(
-        function(){
-            if(fileactive == 0)
-                return;
+    $("#button-test").click( function(){
+        if($(this).hasClass("disable"))
+            return;
 
-            $("#item-code-"+fileactive).removeClass("no-saved");
-            runcode();
-        })
+        $("#percent-passed").html("0%") ;
+        $("#percent-passed").css("width", "0%" );
+        $("#ntestepassed").html("?");
+        $("#ntestefailed").html("?");
+        $("#container-unittests").html("  ...");
+
+        $("#console-container").hide();
+        $("#test-container").show();
+
+        savecode(
+            function(){
+                if(fileactive == 0)
+                    return;
+
+                $("#item-code-"+fileactive).removeClass("no-saved");
+                testcode();
+            }
+        )
     } );
 
+    $("#button-run").click(function () {
+        if($(this).hasClass("disable"))
+            return;
+
+        $("#console-container").show();
+        $("#test-container").hide();
+
+        runcode();
+    });
+
     $("#button-save").click(function () {
+        if($(this).hasClass("disable"))
+            return;
        savecode(function () {});
     });
 
     $("#button-download").click(function () {
+        if($(this).hasClass("disable"))
+            return;
         downloadcode();
     });
 
@@ -159,6 +187,11 @@ function activeCode( idcode ){
 
     if(tempcode != undefined)
         showCodeInEditor( tempcode );
+
+    $("#button-download").removeClass("disable");
+    $("#button-run").removeClass("disable");
+    $("#button-test").removeClass("disable");
+    $("#button-save").removeClass("disable");
 }
 
 
@@ -189,3 +222,5 @@ function startAceJs(){
 function updateAceJs(){
     $("#item-code-"+fileactive).addClass("no-saved");
 }
+
+

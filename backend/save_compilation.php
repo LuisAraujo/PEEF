@@ -2,7 +2,7 @@
 
 //$idproject = $_SESSION["project"];
 
-$idcode = $_POST["idcode"];
+//$idcode = $_POST["idcode"];
 //Initial value
 $line = "";
 $typeerror = "";

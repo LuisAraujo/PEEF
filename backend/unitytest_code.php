@@ -2,7 +2,7 @@
 @include "conection_database.php";
 @include "manager_section.php";
 
-$idcode = 1;//$_POST["idcode"];
+$idcode = $_POST["idcode"];
 setcurrentcode_session($idcode);
 
 $result = $mysqli->query("SELECT name, code FROM Code Where id = $idcode;");
@@ -38,7 +38,8 @@ if($error == 0){
 	//	print "<br>> " .$o;
     $n_error = 0;
     $count_error = $test->num_rows;
-
+    $jsontest = '{"tests": [';
+    $count = 0;
     while($row2) {
         //overwrite file with new test
         fwrite($temp_testinput, $row2["input"]);
@@ -52,20 +53,36 @@ if($error == 0){
 
         exec($cmd, $out, $error);
 
-        if (strcmp($out[0], $row2["output"]) !== 0) {
-            $n_error++;
 
+        if($count>0)
+            $jsontest .= ",";
+
+        if (strcmp($out[0], $row2["output"]) !== 0) {
+            $jsontest .= '{"passed":"0" ,';
+            $n_error++;
+        }else{
+            $jsontest .= '{"passed":"1" ,';
         }
 
+        $instring = str_replace( "\n", "|", $row2["input"]);
+        $instring = preg_replace('/\s+/', '', $instring);
+
+        $jsontest .= ' "in": "'.$instring.'", "out": "'.$out[0].'", "wait": "'.$row2["output"].'"}';
+
+
         $row2 = $test->fetch_array(MYSQLI_ASSOC);
+        $count++;
     }
 
+    $jsontest .= "], ";
     if($n_error == 0){
-        echo 1;
+        $jsontest .= '"total": {"percent" : "100", "nfail": "'.$count_error.'", "npassed": "'.$count_error.'" }';
     }else{
-        echo  (100*$n_error)/ $count_error;
+        $jsontest .= '"total": {"percent" : "'.(100 - ((100*$n_error)/ $count_error)). '", "nfail": "'.$n_error.'", "npassed": "'.($count_error-$n_error).'" }';
     }
 
+    $jsontest .= "}";
+    echo $jsontest;
 
 }else{ 
 	print("<b>Error founded! <br> </b>");

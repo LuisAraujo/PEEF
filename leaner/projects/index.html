@@ -6,7 +6,8 @@
 	<title>Python Environment with Enhance Feedback</title>
 	<script src= "../../js/jquery-3.4.1.min.js" ></script>
 	<script src= "../../js/processsing_text" ></script>
-	<script src= "../../js/execulting_code.js" ></script>
+	<script src= "../../js/unitytest_code.js" ></script>
+	<script src= "../../js/run_code.js" ></script>
 
 
 	<script src= "../../js/project_backend.js" ></script>
@@ -55,6 +56,7 @@
 		</div>
 	</div>
 
+   <!-- CHAT -->
    	<div id="container-chat">
 		<div class="title">My Chat</div>
 		<div id="bt-close-chat" class="close"><i class="icofont-close"></i></div>
@@ -105,19 +107,24 @@
 				<span class="label"> New Folder </span>
 			 </div> -->
 
-			<div id="button-save" class="button-head-menu">
+			<div id="button-save" class="button-head-menu disable">
 				<i class="icofont-diskette"></i>
 				<span class="label"> Save </span>
 
 			</div>
 
-			 <div id="button-run" class="button-head-menu">
+			 <div id="button-run" class="button-head-menu disable">
 				<i class="icofont-ui-play"></i> 
 				<span class="label"> Run </span>
 			 </div>
 
 
-			<div id="button-download" class="button-head-menu">
+			<div id="button-test" class="button-head-menu disable" >
+				<i class="icofont-ui-play"></i>
+				<span class="label"> Test </span>
+			</div>
+
+			<div id="button-download" class="button-head-menu disable">
 				<i class="icofont-download"></i>
 				<span class="label"> Download </span>
 			</div>
@@ -152,30 +159,63 @@
                 <!-- tab of code files -->
 			</div>
 
-			<div id="editor" >
-
-				<!-- list of codes in project -->
-
-			</div>
+			<div id="editor" ></div>
 		</div>
 		
 		<div class="separator">
 		</div>
 		
-		<div id="console-container" class="container-main container-code">
-			<div class="contents">
-			
+		<div id="console-container" class="container-main70 container-code">
+			<div class="contents" id="out">
+
+				<div id="out_lines"></div>
+				<input id="in"></input>
+
 			</div>
 			
-			<div id="button-help"> 
+			<div id="button-help">
 				<div> ----------------------------------- </div>
 				<i class="icofont-ui-text-chat"></i> 
-				<span> Do you need help? <span class="link"> Talk with me! </div> </span>
+				<span> Do you need help? <span class="link"> Talk with me!  </span> </span>
 			</div>
 		</div>
-	</div>
-	
-	
-	
+
+
+		<div id="test-container" class="container-main70">
+
+			<div class="hcontainer-unittest">
+				<div class="hlinetest-container"><h3>Result of Test</h3></div>
+				<div class="bar-test"><div id="percent-passed" class="subbar-test">  </div> </div>
+				<div class="linetest-container"><span id="ntestepassed"> ? </span> test(s) passed, <span id="ntestefailed"> ? </span> test(s) failed </div>
+
+			</div>
+
+			<div id="container-unittests">
+				<div class="container-unittest">
+					<div class="hlinetest-container"><b>Test 01</b></div>
+					<div class="linetest-container"><b>Status:</b> <span class="status-unittest approved"></span> Passed </div>
+					<div class="linetest-container"><b>Input(s): 10 | 20 | 30</b>  </div>
+					<div class="linetest-container"><b>Expected Output: 60 </b> </div>
+				</div>
+
+
+				<div class="container-unittest">
+					<div class="hlinetest-container"><b>Test 02</b></div>
+					<div class="linetest-container"><b>Status:</b> <span class="status-unittest reapproved"></span> Failed </div>
+					<div class="linetest-container"><b>Input(s): 10 | 10 </b>  </div>
+					<div class="linetest-container"><b>Expected Output: 20</b> </div>
+				</div>
+
+				<div class="container-unittest">
+					<div class="hlinetest-container"><b>Test 03</b></div>
+					<div class="linetest-container"><b>Status:</b> <span class="status-unittest reapproved"></span> Failed </div>
+					<div class="linetest-container"><b>Input(s): 10 | 10 </b>  </div>
+					<div class="linetest-container"><b>Expected Output: 20</b> </div>
+				</div>
+
+			</div>
+
+		</div>
+
 </body>
 </html>

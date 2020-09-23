@@ -47,20 +47,40 @@ function getCodesById(idcode, callback ) {
  * @name runcode
  * @desc run the current active code data in databasee
  */
-function runcode(){
-
-	$.post( "../../backend/execulting_code.php", {idcode: fileactive }, function(data) { })
+function testcode(){
+    console.log("ok1");
+	$.post( "../../backend/unitytest_code.php",
+    {idcode: fileactive },
+    function(data) { })
 	.done(function(out) {
-        console.log("compiled code");
-        var msg =  "<span class='alert'>"+COMPILED_SUCESS+"</span> <br><br>";
 
-        if(out == "1")
-           msg +=  "<span class='alert-sucess'> " +TEST_PASSED;
-        else {
-            msg += "<span class='alert-error'> " + TEST_NPASSED + "(" + out + "%) </span>" ;
+        console.log(out);
+
+        var jsonout = JSON.parse(out);
+
+
+        $("#percent-passed").html(jsonout.total.percent + "%") ;
+        $("#percent-passed").css("width", jsonout.total.percent + "%" );
+        $("#ntestepassed").html(jsonout.total.npassed);
+        $("#ntestefailed").html(jsonout.total.nfail);
+
+        $("#container-unittests").html("");
+        for(var i = 0; i < jsonout.tests.length; i++)
+        {
+            var testunit = '<div class="container-unittest"> <div class="hlinetest-container"><b>Test '+(i+1)+'</b></div>';
+            if(jsonout.tests[i].passed == 1)
+                testunit += '<div class="linetest-container"><b>Status:</b> <span class="status-unittest approved"></span> Passed </div>';
+            else
+                testunit += '<div class="linetest-container"><b>Status:</b> <span class="status-unittest reapproved"></span> Failed </div>';
+
+            testunit += '<div class="linetest-container"><b>Input(s):'+jsonout.tests[i].in+'</b>  </div>';
+            testunit += '<div class="linetest-container"><b>Actual Outputs(s):'+jsonout.tests[i].out+'</b>  </div>';
+            testunit += '<div class="linetest-container"><b>Expected Output(s): '+jsonout.tests[i].wait+'</b> </div> </div>';
+
+            $("#container-unittests").append(testunit);
         }
 
-        $("#console-container .contents").html(msg);
+        //$("#console-container .contents").html(msg);
 		//$("#console-container .contents").html(msg + out);
 	})
 	.fail(function(data) {
@@ -71,20 +91,44 @@ function runcode(){
 
 }
 
+
+
+/**
+ * @name runcode
+ * @desc run the current active code data in database
+ * @param callback - function called after done
+ */
+function runcode(callback) {
+
+    console.log("saving...");
+
+    $.post( "../../backend/runcode/run_code.php",
+        {idcode: fileactive, code: editor.getValue() })
+        .done(function(data) {
+
+
+        })
+}
+
+
 /**
  * @name savecode
  * @desc save the current active code data in database
  * @param callback - function called after done
  */
 function savecode(callback) {
+
     console.log("saving...");
-    $.post( "../../backend/save_code.php", {idcode: fileactive, code: editor.getValue() })
+
+    $.post( "../../backend/save_code.php",
+        {idcode: fileactive, code: editor.getValue() })
         .done(function(data) {
 
             $("#item-code-"+fileactive).removeClass("no-saved");
 
             console.log("code saved " + fileactive + "  " +editor.getValue() );
             callback();
+           // console.log(callback);
         })
 }
 
