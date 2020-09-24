@@ -47,7 +47,7 @@ $(document).ready(function () {
         $("#console-container").show();
         $("#test-container").hide();
 
-        runcode();
+        startRunCode();
     });
 
     $("#button-save").click(function () {

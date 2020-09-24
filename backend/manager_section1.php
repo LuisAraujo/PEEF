@@ -1,23 +1,10 @@
 <?php
 
-if(session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
-}
-
-if( !isset( $_SESSION['currentcourse']))
-    $_SESSION['currentcourse'] = "";
-
-if( !isset( $_SESSION['currentcode']))
-    $_SESSION['currentcode'] = "";
-
-if( !isset($_SESSION['currentproject']))
-    $_SESSION['currentproject'] = "";
-
-if( !isset($_SESSION['currentuser']))
-    $_SESSION['currentuser'] = "";
-
-if( !isset($_SESSION['typeuser']))
-    $_SESSION['typeuser'] = "";
+$_SESSION['currentcourse'] = "1";
+$_SESSION['currentcode'] = "1";
+$_SESSION['currentproject'] = "1";
+$_SESSION['currentuser'] = "1";
+$_SESSION['typeuser'] = "1";
 
 //set data via post
 

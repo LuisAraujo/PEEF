@@ -1,12 +1,13 @@
 <?php
 
 
+include 'getnamestemp.php';
+error_reporting(0);
 $token = $_POST["token"];
+$iduser = $_POST["iduser"];
 
-$iduser = 1;
-$folderprefix = "../../userdatarunnig/tempuser_" . $iduser."/".$token;
-$inputname = $folderprefix."/input_".$token."_num.txt";
-
+$folderprefix = getnamesubfoldertemp_session($iduser,$token);
+$inputname = getnamefileinputtemp_session($iduser,$token);
 
 $n_input = $_POST["n_input"];
 $input = $_POST["input"];

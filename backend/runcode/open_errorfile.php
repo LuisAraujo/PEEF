@@ -1,10 +1,13 @@
 <?php
+
+include 'getnamestemp.php';
+
 error_reporting(0);
 $token = $_POST["token"];
+$iduser = $_POST["iduser"];
 
-$iduser = 1;
-$folderprefix = "../../userdatarunnig/tempuser_" . $iduser."/".$token;
-$errorname = $folderprefix."/error.log";
+$folderprefix = getnamesubfoldertemp_session($iduser,$token);
+$errorname = getnamefileerror($iduser, $token );
 
 
 $myfile = fopen($errorname, "r");

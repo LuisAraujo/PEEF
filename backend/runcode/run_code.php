@@ -1,20 +1,22 @@
 <?php
-	
-	//usando flags resolve o problema parcialmente, mas em casos de chamada de funcao
-	//a flag n funciona
-	$token = $_POST["token"];
-	//id user get by database
-	$iduser = 1;
-	//name main folder of user
-	$folderprefix2 = "../../userdatarunnig/tempuser_" . $iduser ."/";
-	//name actual folder with token
-	$folderprefix = $folderprefix2.$token;
-	//name of input file
-	$ouputname = $folderprefix."/output_".$token.".txt";
-	//name of input file. num is string for replace to number of input
-	$inputname = $folderprefix."/input_".$token."_num.txt";
-	
-	
+
+    include 'getnamestemp.php';
+    error_reporting(0);
+    //a flag n funciona
+    $token = $_POST["token"];
+    $iduser = $_POST["iduser"];
+
+    //name main folder of user
+    $folderprefix2 = getnamefoldertemp_session($iduser);
+    //name actual folder with token
+    $folderprefix = getnamesubfoldertemp_session($iduser, $token);
+    //name of input file
+    $ouputname = getnamefileoutputtemp_session($iduser,$token);
+    //name of input file. num is string for replace to number of input
+    $inputname = getnamefileinputtemp_session($iduser,$token);
+    //name of error
+    $errorname = getnamefileerror( $iduser, $token );
+
 	//if user folder arealdy exists
 	if( is_dir($folderprefix2) ){
 		//delete all files and folders
@@ -48,11 +50,11 @@
 	$descriptorspec = array(
 		0 => array("pipe", "r"),
 		1 => array("pipe", "w"),
-		2 => array("file", $folderprefix."/error.log", "a") 	
+		2 => array("file", $errorname, "a")
 	);
 	
 	//executing code 
-	$process = proc_open('py.exe file.py', $descriptorspec, $pipes, null, null); 			
+	$process = proc_open('py.exe file.py', $descriptorspec, $pipes, null, null);
     $state = proc_get_status($process);
 	
 	//flag out or in 
@@ -67,13 +69,14 @@
 	while( (!feof($pipes[1])) ){ 
 		 
 			
-			if( file_exists($folderprefix."/error.log")  ){
+			if( file_exists($errorname)  ){
 				
-				$myfileerror = fopen($folderprefix."/error.log", "r");	
+				$myfileerror = fopen($errorname, "r");
 				$error = fread($myfileerror, 4096); 
 				$local_str =trim(preg_replace('/\s\s+/', ' ', $error ));
 				if(!empty($local_str) ){
-					$my = fopen($GLOBALS["ouputname"], "a") or die("Unable to open file!");fwrite($my, "__error\n");
+					$my = fopen($ouputname, "a") or die("Unable to open file!");
+					fwrite($my, "__error\n");
 					fclose($my);
 					close();
 					return;
@@ -100,28 +103,24 @@
 				}
 			
 			//for input
-			}else{
-				 
-				$localinputnme = str_replace(["num"], array($n_inputs), $inputname);
-				if( file_exists($localinputnme )){
-				
-						//open input file
-						//call input function
-						$in = input($pipes[0]);
-						if($in != 0)
-							//increment the input number
-							$n_inputs++;
-							
-						//change flag to output mode
-						$flag = "out";
-						
-						 
-				
-						 
-				}
-			
-			}
-		
+			}else {
+
+                $localinputnme = str_replace(["num"], array($n_inputs), $inputname);
+                if (file_exists($localinputnme)) {
+
+                    //open input file
+                    //call input function
+                    $in = input($pipes[0]);
+                    if ($in != 0)
+                        //increment the input number
+                        $n_inputs++;
+
+                    //change flag to output mode
+                    $flag = "out";
+
+                }
+
+            }
 	}
 	
 	
@@ -138,9 +137,7 @@
 		//send sing to end runing code
 		fwrite($myfile, "__close\n");
 		fclose($myfile);
-		
-		
-		
+
 		//close process			
 		proc_close($GLOBALS["process"]);
 		
@@ -176,7 +173,8 @@
 				if(empty($local_str))
 					continue;
 				
-				fwrite($myfile, date("H:i:s")." |". $local_str . "\n");
+				//fwrite($myfile, date("H:i:s")." |". $local_str . "\n");
+				fwrite($myfile,$string_sout[$i] . "\n");
 			}
 			
 			fclose($myfile);

@@ -1,16 +1,23 @@
 <?php
+
+
+include 'getnamestemp.php';
+
 error_reporting(0);
 $token = $_POST["token"];
+$iduser = $_POST["iduser"];
 
-$iduser = 1;
-$folderprefix = "../../userdatarunnig/tempuser_" . $iduser."/".$token;
-$ouputname = $folderprefix."/output_".$token.".txt";
+$folderprefix = getnamesubfoldertemp_session($iduser,$token);
+$ouputname = getnamefileoutputtemp_session($iduser,$token);
 
 
 $myfile = fopen($ouputname, "r");
 if ( !$myfile ) {
 	echo "error";
-} 
+	return;
+}
+
+
 $lines = "";
 if($myfile){
 	

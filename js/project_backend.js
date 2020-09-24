@@ -22,6 +22,13 @@ function getIdCurrentLearner(){
     return 1;
 }
 
+function getIdLearner(callback){
+    $.post( "../../backend/util/getuserid.php").done(
+        function (data){
+            callback(data);
+        });
+}
+
 
 function getDataActivity(callback){
     $.post( "../../backend/project_getdataactivity.php").done(
