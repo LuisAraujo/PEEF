@@ -1,10 +1,13 @@
 <?php
 
     include 'getnamestemp.php';
+
     error_reporting(0);
     //a flag n funciona
     $token = $_POST["token"];
     $iduser = $_POST["iduser"];
+    $nametemp = $_POST["nametemp"];
+    $idcode = $_POST["idcode"];
 
     //name main folder of user
     $folderprefix2 = getnamefoldertemp_session($iduser);
@@ -17,35 +20,6 @@
     //name of error
     $errorname = getnamefileerror( $iduser, $token );
 
-	//if user folder arealdy exists
-	if( is_dir($folderprefix2) ){
-		//delete all files and folders
-		$objects = scandir($folderprefix2);
-		foreach ($objects as $object) {
-			if ($object != "." && $object != "..") 
-				if (filetype($folderprefix2."/".$object) == "dir") {
-				   array_map('unlink', glob("$folderprefix2"."/"."$object/*.*"));
-				   rmdir($folderprefix2."/".$object); 
-				}
-		}
-	}else{	
-		//create user folder
-		mkdir($folderprefix2);
-	}
-	
-	//create actual folder of user with token, if there a error, send _error
-	if( mkdir($folderprefix) != 1){
-		//essa lógica n está correta
-		//open output'file
-		$myfile = fopen($ouputname, "a") ;
-		if ( !$myfile ) {
-			throw new Exception('File open failed.');
-		}  
-		
-		fwrite($myfile, "__error\n");
-		fclose($myfile);
-	}
-	
 	/** EXECUTING CODE ***/
 	$descriptorspec = array(
 		0 => array("pipe", "r"),
@@ -54,7 +28,7 @@
 	);
 	
 	//executing code 
-	$process = proc_open('py.exe file.py', $descriptorspec, $pipes, null, null);
+	$process = proc_open('py.exe '. $nametemp, $descriptorspec, $pipes, null, null);
     $state = proc_get_status($process);
 	
 	//flag out or in 
@@ -67,8 +41,7 @@
 							
     //while end of file								
 	while( (!feof($pipes[1])) ){ 
-		 
-			
+
 			if( file_exists($errorname)  ){
 				
 				$myfileerror = fopen($errorname, "r");
@@ -122,11 +95,8 @@
 
             }
 	}
-	
-	
-	
-		
-			
+
+
 	//call function to close process
 	close();
 		

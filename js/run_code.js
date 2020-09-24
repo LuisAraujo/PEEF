@@ -5,36 +5,48 @@ iduser = -1;
 internalCheckOut = null;
 
 var startRunCode = function () {
-    console.log("runnig code");
+   // console.log("runnig code");
     token = getToken();
 
     noutput = 0;
     ninput = 0;
     $("#out_lines").html("");
     $("#in").show();
-
-
-
     $("#in").focus();
 
     getIdLearner(function (data) {
         iduser = data;
-        runCode(token);
-        internalCheckOut = setInterval( function(){ checkOutput(token)} , 1000);
-
+        gerateFileCode(iduser, token, function(token, filename){
+           // console.log(filename);
+            runCode(token, filename);
+            internalCheckOut = setInterval(
+                function(){ checkOutput(token)} , 1000
+            );
+        });
     })
 
 };
 
-var runCode = function(token){
+var gerateFileCode = function(iduser, token, callback){
+    $.ajax({
+        url: "../../backend/runcode/createfiletempcode.php",
+        method: "POST",
+        data: {token: token, iduser: iduser, idcode: fileactive}
+    }).done(function(data) {
+        //console.log(data)
+        if(data!="0");
+            callback(token, data);
+    });
+}
+var runCode = function(token, nametemp){
 
     $.ajax({
         url: "../../backend/runcode/run_code.php",
         method: "POST",
-        data: {token: token, iduser: iduser}
+        data: {token: token, iduser: iduser, idcode: fileactive, nametemp: nametemp}
     }).done(function(data) {
-        console.log("executing php called");
-        console.log(data);
+       // console.log("executing php called");
+        //console.log(data);
     });
 }
 
@@ -44,7 +56,7 @@ var showError = function(callback){
         method: "POST",
         data: {token: token, iduser: iduser}
     }).done(function(data) {
-        console.log("getting error");
+        //console.log("getting error");
         callback(data);
     });
 }
@@ -57,7 +69,7 @@ var setInput = function(input, n_input, token){
         data:{input: input, n_input: n_input, token: token, iduser: iduser}
 
     }).done(function(data) {
-        console.log(data);
+        //console.log(data);
 
         if(data == 1)
             ninput++;
@@ -72,8 +84,7 @@ checkOutput = function(token){
         method: "POST",
         data:{token: token, iduser: iduser}
     }).done(function(data) {
-
-        console.log(" --- " +data);
+        console.log(data);
 
         var lines = data.split("\n");
 
@@ -91,11 +102,10 @@ checkOutput = function(token){
                 });
             } else {
 
-                    console.log(lines[noutput].charCodeAt(0))
-                    if( parseInt(lines[noutput].charCodeAt(0)) == 0 ) {
-                        $("#in").show();
-                        $("#in").focus();
-                    }
+                if( parseInt(lines[noutput].charCodeAt(0)) == 0 ) {
+                    $("#in").show();
+                    $("#in").focus();
+                }
 
                 $("#out_lines").append(lines[noutput] + "<br>");
             }
@@ -103,8 +113,7 @@ checkOutput = function(token){
             noutput++;
         }
         }) .fail(function(data) {
-        console.log("erro");
-
+            console.log("erro");
         })
         .always(function() {
 

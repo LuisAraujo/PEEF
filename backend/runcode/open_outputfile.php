@@ -1,6 +1,5 @@
 <?php
 
-
 include 'getnamestemp.php';
 
 error_reporting(0);
@@ -10,13 +9,11 @@ $iduser = $_POST["iduser"];
 $folderprefix = getnamesubfoldertemp_session($iduser,$token);
 $ouputname = getnamefileoutputtemp_session($iduser,$token);
 
-
 $myfile = fopen($ouputname, "r");
 if ( !$myfile ) {
-	echo "error";
+	echo "error ";
 	return;
 }
-
 
 $lines = "";
 if($myfile){

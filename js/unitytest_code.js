@@ -48,16 +48,19 @@ function getCodesById(idcode, callback ) {
  * @desc run the current active code data in databasee
  */
 function testcode(){
-    console.log("ok1");
+
 	$.post( "../../backend/unitytest_code.php",
     {idcode: fileactive },
     function(data) { })
 	.done(function(out) {
 
-        console.log(out);
+       if(out == "0"){
+
+           $("#container-unittests").append("Your code has a error!");
+           return;
+       }
 
         var jsonout = JSON.parse(out);
-
 
         $("#percent-passed").html(jsonout.total.percent + "%") ;
         $("#percent-passed").css("width", jsonout.total.percent + "%" );
@@ -84,7 +87,7 @@ function testcode(){
 		//$("#console-container .contents").html(msg + out);
 	})
 	.fail(function(data) {
-        console.log("error on compilation");
+        //console.log("error on compilation");
         var msg = "<span class='alert-error'> " + ERROR_ACESSFILE + "(" + data + "%) </span>" ;
 		$("#console-container .contents").html(msg);
 	})
@@ -118,7 +121,7 @@ function runcode(callback) {
  */
 function savecode(callback) {
 
-    console.log("saving...");
+   // console.log("saving...");
 
     $.post( "../../backend/save_code.php",
         {idcode: fileactive, code: editor.getValue() })
@@ -126,7 +129,7 @@ function savecode(callback) {
 
             $("#item-code-"+fileactive).removeClass("no-saved");
 
-            console.log("code saved " + fileactive + "  " +editor.getValue() );
+            //console.log("code saved " + fileactive + "  " +editor.getValue() );
             callback();
            // console.log(callback);
         })

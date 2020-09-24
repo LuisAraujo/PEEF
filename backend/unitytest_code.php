@@ -5,7 +5,7 @@
 $idcode = $_POST["idcode"];
 setcurrentcode_session($idcode);
 
-$result = $mysqli->query("SELECT name, code FROM Code Where id = $idcode;");
+$result = $mysqli->query("SELECT name, code FROM code Where id = $idcode;");
 $myArray = array();
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
@@ -84,14 +84,16 @@ if($error == 0){
     $jsontest .= "}";
     echo $jsontest;
 
-}else{ 
-	print("<b>Error founded! <br> </b>");
+}else{
 
-	foreach($out as $o){
+
+	echo 0;
+
+	/*foreach($out as $o){
 		$outsplited = split(",", $o);
 		foreach($outsplited as $os)
 			print $os . "<br>";
-	}
+	}*/
 }
 
 fclose($temp);

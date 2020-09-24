@@ -25,4 +25,9 @@ function getnamefileerror($iduser, $token){
     return getnamesubfoldertemp_session($iduser, $token)."/error.log";
 }
 
+
+function getnamefilecode_session($iduser, $token){
+    return getnamesubfoldertemp_session($iduser, $token)."/filecode.py";
+}
+
 ?>

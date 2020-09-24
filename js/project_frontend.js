@@ -47,7 +47,16 @@ $(document).ready(function () {
         $("#console-container").show();
         $("#test-container").hide();
 
-        startRunCode();
+        savecode(
+            function(){
+                if(fileactive == 0)
+                    return;
+
+                $("#item-code-"+fileactive).removeClass("no-saved");
+                startRunCode();
+            }
+        );
+
     });
 
     $("#button-save").click(function () {
@@ -103,7 +112,7 @@ function setCodeNamesMenu(data) {
     $("#file-explore-description").click(function () {
 
         getDataActivity( function (data) {
-            console.log(data)
+            //console.log(data)
             $("#title-modal-description").html(data[0].title);
             $("#text-modal-description").html(data[0].description);
             $("#text-modal-description").html(data[0].description);
@@ -142,7 +151,7 @@ function setCodeNamesMenu(data) {
             //get code the first time in bd
             getCodesById( idcode ,  showCodeInEditor );
 
-            console.info("get code bd");
+            //console.info("get code bd");
 
             //show in ed
             $("#editor-bar").append(
@@ -196,7 +205,7 @@ function activeCode( idcode ){
 
 
 function desactiveAllCode(  ){
-    console.log("active")
+    //console.log("active")
     $(".item-code").removeClass("active");
 
 }

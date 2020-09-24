@@ -11,7 +11,7 @@ $(document).ready(function () {
 function login(login, pass, mode) {
 
 
-    $.post( "../backend/home_login.php", {login:login, password:pass, mode: mode})
+    $.post( "../backend/home_login.php", {login: login, password:pass, mode: mode})
 
         .done( function (data){
             console.log(data)
