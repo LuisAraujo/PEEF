@@ -4,11 +4,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta charset="utf-8"/>
 	<title>Python Environment with Enhance Feedback</title>
+
 	<script src= "../../js/jquery-3.4.1.min.js" ></script>
+
+	<script src= "../../js/processsing_text.js" ></script>
 	<script src= "../../js/project_backend.js" ></script>
 	<script src= "../../js/project_frontend.js" ></script>
 
-	<script src= "../../js/processsing_text" ></script>
+
 	<script src= "../../js/unitytest_code.js" ></script>
 	<script src= "../../js/run_code.js" ></script>
 
@@ -98,7 +101,7 @@
 		 
 			 <div id="button-new-file"  class="button-head-menu">
 				<i class="icofont-file-file"></i> 
-				<span class="label"> New File </span>
+				<span id="labelnewfile" class="label">  </span>
 			 </div>
 			 
 			 
@@ -109,29 +112,29 @@
 
 			<div id="button-save" class="button-head-menu disable">
 				<i class="icofont-diskette"></i>
-				<span class="label"> Save </span>
+				<span id="labelsave" class="label"> Save </span>
 
 			</div>
 
 			 <div id="button-run" class="button-head-menu disable">
 				<i class="icofont-ui-play"></i> 
-				<span class="label"> Run </span>
+				<span id="labelrun"  class="label"> Run </span>
 			 </div>
 
 
 			<div id="button-test" class="button-head-menu disable" >
 				<i class="icofont-ui-play"></i>
-				<span class="label"> Test </span>
+				<span id="labeltest" class="label"> Test </span>
 			</div>
 
 			<div id="button-download" class="button-head-menu disable">
 				<i class="icofont-download"></i>
-				<span class="label"> Download </span>
+				<span id="labeldownload" class="label"> Download </span>
 			</div>
 
 			<div id="button-message" class="button-head-menu">
 				<i class="icofont-ui-messaging"></i>
-				<span class="label"> Chat </span>
+				<span id="labelchat" class="label"> Chat </span>
 
 			</div>
 
@@ -140,7 +143,7 @@
 
 			<div class="button-head-menu large checkbox">
 				<input type="checkbox" id="check-codesended" name="" value="">
-				<label for="check-codesended"><span>SEND CODE</span></label>
+				<label for="check-codesended"><span id="labelsendcode">SEND CODE</span></label>
 			</div>
 	</div>
 
@@ -176,7 +179,7 @@
 			<div id="button-help">
 				<div> ----------------------------------- </div>
 				<i class="icofont-ui-text-chat"></i> 
-				<span> Do you need help? <span class="link"> Talk with me!  </span> </span>
+				<span >  <span id="labelneedhelp"> Do you need help?</span> <span class="link" id="labeltalkme"> Talk with me!  </span> </span>
 			</div>
 		</div>
 
@@ -184,9 +187,9 @@
 		<div id="test-container" class="container-main70">
 
 			<div class="hcontainer-unittest">
-				<div class="hlinetest-container"><h3>Result of Test</h3></div>
+				<div id="labelresulttest" class="hlinetest-container">...</div>
 				<div class="bar-test"><div id="percent-passed" class="subbar-test">  </div> </div>
-				<div class="linetest-container"><span id="ntestepassed"> ? </span> test(s) passed, <span id="ntestefailed"> ? </span> test(s) failed </div>
+				<div class="linetest-container"><span id="ntestepassed"> ? </span>, <span id="ntestefailed"> ? </span> </div>
 
 			</div>
 

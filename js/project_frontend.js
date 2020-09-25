@@ -1,5 +1,7 @@
 filesnames = [];
 fileactive = 0;
+json=null;
+
 var mapcodes = new Map();
 
 $(document).ready(function () {
@@ -7,7 +9,7 @@ $(document).ready(function () {
     getStartPage();
 
     //get all name project and set it on bar-explore
-    getAllCodesNameByProject(getIdCurrentProject,  setCodeNamesMenu );
+    getAllCodesNameByProject( getIdCurrentProject,  setCodeNamesMenu );
 
     editor = ace.edit("editor");
     startAceJs();
@@ -93,7 +95,32 @@ $(document).ready(function () {
     $("#bt-close-chat").click(function () {
         $("#container-chat").hide();
     });
+
+
+
+
+
+
 });
+
+
+function configLang() {
+    jQuery.getJSON("../../lang/eng-text.json", function(data){
+        json = data;
+
+        //initial conf
+        $("#labelnewfile").text(data.newfile);
+        $("#labelsave").text(data.save);
+        $("#labelrun").text(data.run);
+        $("#labeltest").text(data.test);
+        $("#labeldownload").text(data.download);
+        $("#labelchat").text(data.chat);
+        $("#labelsendcode").text( data.send_code.toUpperCase());
+        $("#labeldescription").text( data.description);
+        $("#labeltalkme").text(data.talkme);
+        $("#labelneedhelp").text( data.needhelp);
+    });
+}
 
 
 function setCodeNamesMenu(data) {
@@ -104,7 +131,7 @@ function setCodeNamesMenu(data) {
     $("#explore-bar").append(
         '<div id="file-explore-description" class="file-explore-bar"  >' +
         '<i class="icofont-file-pdf"></i>' +
-        '<span  class="container-filename"> Description </span>' +
+        '<span  id="labeldescription" class="container-filename"> Description </span>' +
         '</div>'
     );
 
@@ -175,7 +202,7 @@ function setCodeNamesMenu(data) {
 
     });
 
-
+    configLang();
 
 }
 
