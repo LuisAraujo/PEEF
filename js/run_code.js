@@ -46,7 +46,7 @@ var runCode = function(token, nametemp){
         data: {token: token, iduser: iduser, idcode: fileactive, nametemp: nametemp}
     }).done(function(data) {
        // console.log("executing php called");
-        //console.log(data);
+        console.log(data);
     });
 }
 

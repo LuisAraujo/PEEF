@@ -1,8 +1,10 @@
 <?php
 @include "conection_database.php";
 @include "manager_section.php";
+@include "unitytest/getnamestemptest.php";
 
-$idcode = $_POST["idcode"];
+$idcode = 4;//$_POST["idcode"];
+$iduser = getcurrentuser_session();
 setcurrentcode_session($idcode);
 
 $result = $mysqli->query("SELECT name, code FROM code Where id = $idcode;");
@@ -15,18 +17,25 @@ $temp = tmpfile();
 fwrite($temp, $row["code"]);
 fseek($temp, 0);
 
+
+//$temp_log = tmpfile();
+//fseek($temp_log, 0);
+
+
 /*TEST FILE*/
 $query = "SELECT * FROM Test Where Activity_id = (SELECT DISTINCT Activity.id FROM Activity INNER JOIN Project ON Activity.id = Project.Activity_id INNER JOIN Code ON Code.Project_id = Project.id WHERE Code.id =  $idcode)";
 //echo $query;
 
 $test = $mysqli->query($query);
 $row2 = $test->fetch_array(MYSQLI_ASSOC);
+
 $temp_testinput = tmpfile();
 fwrite($temp_testinput, $row2["input"]);
 fseek($temp_testinput, 0);
 
 //$cmd = 'python '.$namefile.'.py 2>&1';
-$cmd = 'python ' . stream_get_meta_data($temp)['uri'] .  '< '. stream_get_meta_data($temp_testinput)['uri'].'';
+
+$cmd = 'python ' . stream_get_meta_data($temp)['uri'] .  '< '. stream_get_meta_data($temp_testinput)['uri'].' 2>&1';
 
 $out = "";
 $error = "";
@@ -86,14 +95,8 @@ if($error == 0){
 
 }else{
 
+	echo "0";
 
-	echo 0;
-
-	/*foreach($out as $o){
-		$outsplited = split(",", $o);
-		foreach($outsplited as $os)
-			print $os . "<br>";
-	}*/
 }
 
 fclose($temp);

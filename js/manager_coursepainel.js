@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    setLog("online");
+
     showAllCourse();
 
     $("#inp-find-course").change(function () {
@@ -8,6 +11,10 @@ $(document).ready(function () {
     $("#bt-find-course").click(function () {
         findCoursByName( $("#inp-find-course").val() );
     });
+
+    window.addEventListener("beforeunload", function(e){
+        setLog("offline")
+    }, false);
 });
 
 

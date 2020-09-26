@@ -1,7 +1,8 @@
-function getStartPage(){
+function getStartPage(callback){
     $.post( "../../backend/project_getidcode.php").done(
         function (data){
-            console.log("ok");
+           console.log(data)
+           callback();
         });
 }
 
@@ -36,4 +37,17 @@ function getDataActivity(callback){
             data = JSON.parse(data);
             callback(data);
         });
+}
+
+
+
+function   verifyProjectExists(callback) {
+    $.post( "../../backend/course_createproject.php").done(
+        function (data){
+            if(data == "1")
+             callback(data);
+            else
+                alert("Erro when open project!")
+        });
+
 }

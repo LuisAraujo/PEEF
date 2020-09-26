@@ -1,7 +1,7 @@
 <?php
 
 @include "conection_database.php";
-$idproject = 1;
+$idproject = $_POST["idproject"];
 $currentRow = 0;
 
 //$query = "SELECT CodeCompilation.id as codeid, LineEdited.id, diff, lineError, code, date, hours, typeError, line FROM Compilation INNER JOIN CodeCompilation ON  Compilation.id = CodeCompilation.Compilation_id INNER JOIN LineEdited ON LineEdited.CodeCompilation_id = CodeCompilation.id  WHERE Code_id = (SELECT Code.id FROM Code WHERE Project_id = ".$idproject." LIMIT 1) ORDER BY codeid";

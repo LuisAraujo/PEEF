@@ -7,11 +7,11 @@ $extension = $_POST["extension"];
 
 $result = $mysqli->query("INSERT INTO Code VALUES('null', '$name". "." . "$extension', '', " . getcurrentproject_session(). ")" );
 
-if($result){
+if($result)
     echo "ok";
-}else {
+else
     echo "erro";
-}
+
 
 
 

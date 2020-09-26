@@ -1,14 +1,17 @@
 <?php
 
     include 'getnamestemp.php';
+    @include "manager_section.php";
+    @include "../conection_database.php";
 
-    error_reporting(0);
+    //error_reporting(0);
     //a flag n funciona
     $token = $_POST["token"];
     $iduser = $_POST["iduser"];
     $nametemp = $_POST["nametemp"];
     $idcode = $_POST["idcode"];
-
+    //used to save compilation
+    $error = 0;
     //name main folder of user
     $folderprefix2 = getnamefoldertemp_session($iduser);
     //name actual folder with token
@@ -40,21 +43,13 @@
 	fopen($ouputname, "w+");
 							
     //while end of file								
-	while( (!feof($pipes[1])) ){ 
+	while( (!feof($pipes[1])) ){
 
-			if( file_exists($errorname)  ){
-				
-				$myfileerror = fopen($errorname, "r");
-				$error = fread($myfileerror, 4096); 
-				$local_str =trim(preg_replace('/\s\s+/', ' ', $error ));
-				if(!empty($local_str) ){
-					$my = fopen($ouputname, "a") or die("Unable to open file!");
-					fwrite($my, "__error\n");
-					fclose($my);
-					close();
-					return;
-				}
-			}
+        if(verifyErro($errorname,$ouputname) == 1){
+                $error = 1;
+                break;
+            }
+
 		
 			//for outputs
 			if($flag == "out"){	
@@ -96,12 +91,60 @@
             }
 	}
 
+    if(verifyErro($errorname,$ouputname) == 1){
+        $error = 1;
+    }
 
-	//call function to close process
-	close();
-		
-	
-	function close(){
+    $out = "";
+
+    if($error != 0){
+        $myfileerror = fopen($errorname, "r");
+        $out = fread($myfileerror,filesize($errorname));
+        fclose($myfileerror);
+    }
+
+
+    $typeerror = "";
+
+    if($error != 0){
+
+        if( is_array($out))
+            $imp_str = implode(",",$out);
+        else
+            $imp_str = $out;
+
+        $typeerror = preg_replace( "/\r|\n/", ",", $imp_str );
+        $typeerror = str_replace( ",,", ",", $imp_str );
+        $typeerror = str_replace("\\" , "\\\\" , $typeerror);
+        $typeerror = str_replace("'" , "\'" , $typeerror );
+
+    }
+
+
+    $testpassed = $error==0?1:0;
+    //Insert Compilations
+    $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$typeerror',  $idcode, NULL, NULL, -1)";
+
+    $result = $mysqli->query($query);
+
+    $code2 = str_replace("'" , "\'" , $row[code]);
+
+    //Copying Code in Compilations
+    $query2 = "INSERT CodeCompilation VALUES (null, '".$row[name]."',' ".$code2." ', 0, $mysqli->insert_id )";
+    $result2 = $mysqli->query($query2);
+
+
+    //call function to close process
+    close();
+
+
+
+
+
+
+
+
+    function close(){
 		//open output file
 		$myfile = fopen($GLOBALS["ouputname"], "a") or die("Unable to open file!");
 		//send sing to end runing code
@@ -163,5 +206,26 @@
 			//echo "-".$lines[$i]. "<br>";
 		}
 	}
+
+	function verifyErro($errorname,$ouputname){
+
+        if( file_exists($errorname)  ){
+
+            $myfileerror = fopen($errorname, "r");
+            $error = fread($myfileerror, 4096);
+            $local_str =trim(preg_replace('/\s\s+/', ' ', $error ));
+            if(!empty($local_str) ){
+                $my = fopen($ouputname, "a") or die("Unable to open file!");
+                fwrite($my, "__error\n");
+                fclose($my);
+
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+
+
 	 
 ?>

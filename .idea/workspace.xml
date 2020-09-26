@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/backend/calc_typererro.php" line="19" />
+    <bookmark url="file://$PROJECT_DIR$/backend/calc_type_error.php" line="21" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d453502-67ae-4b40-af03-58598d99ecab" name="Default" comment="" />
@@ -14,72 +14,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="eng-text.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lang/eng-text.json">
+      <file leaf-file-name="run_code.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/runcode/run_code.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="-229">
+              <caret line="125" column="108" lean-forward="false" selection-start-line="125" selection-start-column="108" selection-end-line="125" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pt-text.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lang/pt-text.json">
+      <file leaf-file-name="save_compilation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/save_compilation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leaner/projects/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="200" column="86" lean-forward="true" selection-start-line="200" selection-start-column="86" selection-end-line="200" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="707" column="17" lean-forward="false" selection-start-line="707" selection-start-column="17" selection-end-line="707" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_frontend.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="108" column="20" lean-forward="true" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+            <state relative-caret-position="-4">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leaner/courses/index.html">
+        <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="-125">
+              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manager_coursepainel.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/manager_coursepainel.js">
+      <file leaf-file-name="unitytest_code.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/unitytest_code.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-191">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1601102268578" expanded="true" signature="245:284" ph="SELECT name,... Code" />
+                <marker date="1601102268578" expanded="true" signature="543:754" ph="SELECT * FRO... Test" />
+                <marker date="1601102268578" expanded="true" signature="583:746" ph="SELECT DISTI... Activity" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,10 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>container-namefile</find>
-      <find>idcode</find>
-      <find>echo</find>
-      <find>item-code</find>
       <find>python</find>
       <find>editor</find>
       <find>file-explore-description</find>
@@ -127,6 +97,10 @@
       <find>button-test</find>
       <find>hlinetest-container</find>
       <find>Test</find>
+      <find>INSERT INTO PROJECT</find>
+      <find>error</find>
+      <find>teste</find>
+      <find>echo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,46 +109,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sources/css/style-home.css" />
-        <option value="$PROJECT_DIR$/teacher/index.html" />
-        <option value="$PROJECT_DIR$/backend/home_login.php" />
-        <option value="$PROJECT_DIR$/backend/ccourse_getcourses.php" />
-        <option value="$PROJECT_DIR$/backend/course_getcourses.php" />
-        <option value="$PROJECT_DIR$/backend/course_getcoursesbyname.php" />
-        <option value="$PROJECT_DIR$/leaner/courses/index.html" />
-        <option value="$PROJECT_DIR$/sources/css/style-courses.css" />
-        <option value="$PROJECT_DIR$/backend/course_createproject.php" />
-        <option value="$PROJECT_DIR$/backend/project_getallcodes.php" />
-        <option value="$PROJECT_DIR$/backend/course_getclasses.php" />
-        <option value="$PROJECT_DIR$/leaner/courses/activity/index.html" />
-        <option value="$PROJECT_DIR$/backend/course_getactivities.php" />
-        <option value="$PROJECT_DIR$/backend/get_dataactivity.php" />
-        <option value="$PROJECT_DIR$/backend/course_getidproject.php" />
-        <option value="$PROJECT_DIR$/js/manager_coursepainel.js" />
-        <option value="$PROJECT_DIR$/backend/manager_section_show.php" />
-        <option value="$PROJECT_DIR$/js/manager_coursepage.js" />
         <option value="$PROJECT_DIR$/backend/project_page.php" />
-        <option value="$PROJECT_DIR$/backend/project_getidcode.php" />
         <option value="$PROJECT_DIR$/backend/test_code.php" />
-        <option value="$PROJECT_DIR$/backend/save_compilation.php" />
         <option value="$PROJECT_DIR$/backend/execulting_code.php" />
         <option value="$PROJECT_DIR$/js/execulting_code.js" />
         <option value="$PROJECT_DIR$/js/runcode.js" />
         <option value="$PROJECT_DIR$/backend/manager_section.php" />
         <option value="$PROJECT_DIR$/backend/manager_section1.php" />
         <option value="$PROJECT_DIR$/backend/runcode/open_errorfile.php" />
-        <option value="$PROJECT_DIR$/js/project_backend.js" />
         <option value="$PROJECT_DIR$/backend/util/getuserid.php" />
         <option value="$PROJECT_DIR$/backend/runcode/create_input.php" />
         <option value="$PROJECT_DIR$/js/home_login.js" />
-        <option value="$PROJECT_DIR$/backend/runcode/getnamestemp.php" />
         <option value="$PROJECT_DIR$/backend/util/getfiletempcode.php" />
         <option value="$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/QN6982j/error.log" />
-        <option value="$PROJECT_DIR$/backend/runcode/run_code.php" />
         <option value="$PROJECT_DIR$/backend/runcode/open_outputfile.php" />
-        <option value="$PROJECT_DIR$/js/run_code.js" />
-        <option value="$PROJECT_DIR$/backend/runcode/createfiletempcode.php" />
-        <option value="$PROJECT_DIR$/backend/unitytest_code.php" />
         <option value="$PROJECT_DIR$/alltext.json" />
         <option value="$PROJECT_DIR$/eng-text.json" />
         <option value="$PROJECT_DIR$/pt-text.json" />
@@ -182,10 +130,36 @@
         <option value="$PROJECT_DIR$/js/processsing_text.js" />
         <option value="$PROJECT_DIR$/sources/css/style.css" />
         <option value="$PROJECT_DIR$/lang/eng-text.json" />
-        <option value="$PROJECT_DIR$/leaner/projects/index.html" />
         <option value="$PROJECT_DIR$/lang/pt-text.json" />
+        <option value="$PROJECT_DIR$/backend/create_code.php" />
+        <option value="$PROJECT_DIR$/backend/course_createproject.php" />
+        <option value="$PROJECT_DIR$/backend/project_getallcodes.php" />
+        <option value="$PROJECT_DIR$/backend/course_getidproject.php" />
         <option value="$PROJECT_DIR$/js/unitytest_code.js" />
+        <option value="$PROJECT_DIR$/js/project_backend.js" />
+        <option value="$PROJECT_DIR$/backend/project_getidcode.php" />
+        <option value="$PROJECT_DIR$/leaner/courses/index.html" />
+        <option value="$PROJECT_DIR$/leaner/courses/activity/index.html" />
+        <option value="$PROJECT_DIR$/leaner/index.html" />
+        <option value="$PROJECT_DIR$/leaner/projects/index.html" />
+        <option value="$PROJECT_DIR$/js/log.js" />
+        <option value="$PROJECT_DIR$/backend/log/setlog.php" />
         <option value="$PROJECT_DIR$/js/project_frontend.js" />
+        <option value="$PROJECT_DIR$/js/manager_coursepage.js" />
+        <option value="$PROJECT_DIR$/js/manager_coursepainel.js" />
+        <option value="$PROJECT_DIR$/js/run_code.js" />
+        <option value="$PROJECT_DIR$/backend/unitytest/getnamestemp.php" />
+        <option value="$PROJECT_DIR$/backend/runcode/getnamestemp.php" />
+        <option value="$PROJECT_DIR$/backend/runcode/createfiletempcode.php" />
+        <option value="$PROJECT_DIR$/backend/teste.log" />
+        <option value="$PROJECT_DIR$/backend/unitytest/getnamestemptest.php" />
+        <option value="$PROJECT_DIR$/backend/error_unitytest.log" />
+        <option value="$PROJECT_DIR$/backend/getjson_editions_onProjects.php" />
+        <option value="$PROJECT_DIR$/backend/calc_typererro.php" />
+        <option value="$PROJECT_DIR$/js/manager_getprojects.js" />
+        <option value="$PROJECT_DIR$/backend/unitytest_code.php" />
+        <option value="$PROJECT_DIR$/backend/runcode/run_code.php" />
+        <option value="$PROJECT_DIR$/backend/save_compilation.php" />
       </list>
     </option>
   </component>
@@ -216,6 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,58 +202,28 @@
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="platform" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="leaner" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="platform" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="manager" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="leaner" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="courses" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="leaner" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="userdatarunnig" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="userdatarunnig" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tempuser_c4ca4238a0b923820dcc509a6f75849b" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,19 +234,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\runcode" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\js" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\leaner\courses\activity" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\metrics" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\lang" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\runcode" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\userdatarunnig\tempuser_c4ca4238a0b923820dcc509a6f75849b\GJ7682j" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\leaner\courses" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\leaner" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\unitytest" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\runcode" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -361,16 +307,17 @@
       <workItem from="1600914246718" duration="3125000" />
       <workItem from="1600956416484" duration="22010000" />
       <workItem from="1600989055723" duration="4696000" />
+      <workItem from="1601073630162" duration="25056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324242000" />
+    <option name="totallyTimeSpent" value="349298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -400,91 +347,400 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/util/getuserid.php">
+    <entry file="file://$PROJECT_DIR$/backend/course_createproject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="450">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <marker date="1601084258004" expanded="true" signature="155:357" ph="SELECT id Pr... " />
+            <marker date="1601084258004" expanded="true" signature="164:357" ph="INSERT INTO Project... " />
+            <marker date="1601084258004" expanded="true" signature="201:345" ph="SELECT id FR... Enrollment" />
+            <marker date="1601084258004" expanded="true" signature="271:313" ph="SELECT Cours... Activity" />
+            <marker date="1601084258004" expanded="true" signature="444:741" ph="INSERT INTO Project... " />
+            <marker date="1601084258004" expanded="true" signature="444:861" ph="INSERT INTO Project... " />
+            <marker date="1601084258004" expanded="true" signature="601:653" ph="SELECT id FR... Enrollment" />
+            <marker date="1601084258004" expanded="true" signature="601:669" ph="SELECT id FR... Enrollment" />
+            <marker date="1601084258004" expanded="true" signature="601:670" ph="SELECT id FR... Enrollment" />
+            <marker date="1601084258004" expanded="true" signature="601:726" ph="SELECT id FR... Enrollment" />
+            <marker date="1601084258004" expanded="true" signature="671:713" ph="SELECT Cours... Activity" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/MB8582g/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/DJ8085m/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/GQ7078a/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/FQ8179h/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/HR7789e/error.log" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/CR7375y/error.log" />
-    <entry file="file://$PROJECT_DIR$/js/project_backend.js">
+    <entry file="file://$PROJECT_DIR$/backend/project_getallcodes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1601085145626" expanded="true" signature="100:145" ph="SELECT id, n... Code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/course_getidproject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding>
+            <marker date="1601085801922" expanded="true" signature="119:351" ph="SELECT Proje... Project" />
+            <marker date="1601085801922" expanded="true" signature="223:317" ph="SELECT id FR... Enrollment" />
+            <marker date="1601085801922" expanded="true" signature="440:605" ph="INSERT INTO Project... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/create_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <marker date="1601084206669" expanded="true" signature="159:259" ph="INSERT INTO Code... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/project_getidcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <marker date="1601086476416" expanded="true" signature="116:171" ph="SELECT Code.... Code" />
+            <marker date="1601086476416" expanded="true" signature="290:335" ph="INSERT INTO Code... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaner/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/QN6982j/error.log" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/OU7584w/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/OU7584w/error.log" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/OU7584w/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/KN8376g/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/BX7669p/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/VK8288o/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/DR6983h/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/NI7479q/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/BT7082h/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/BT7082h/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/BT7082h/error.log" />
-    <entry file="file://$PROJECT_DIR$/backend/runcode/create_input.php">
+    <entry file="file://$PROJECT_DIR$/leaner/projects/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="200">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaner/courses/activity/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/manager_coursepainel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaner/courses/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/log/setlog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <marker date="1601089945110" expanded="true" signature="380:401" ph="INSERT INTO Log... " />
+            <marker date="1601089945110" expanded="true" signature="380:444" ph="INSERT INTO Log... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/manager_coursepage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/project_backend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="107" column="14" lean-forward="true" selection-start-line="105" selection-start-column="3" selection-end-line="107" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/KB6975c/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/KB6975c/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/MN7987p/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/MN7987p/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/MN7987p/filecode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AR7574q/filecode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AR7574q/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AR7574q/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/JE8477n/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/JE8477n/filecode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/JE8477n/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/CV8581v/filecode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/runcode/getnamestemp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="75">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/FR8470f/filecode.py" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/FR8470f/error.log" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/DV7878n/error.log" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/LL7379q/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/KQ7069y/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/GJ7682j/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/UJ7478a/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/JF7874c/output.txt" />
-    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/UY8666m/output.txt" />
-    <entry file="file://$PROJECT_DIR$/backend/runcode/createfiletempcode.php">
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/CV8581v/error.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <marker date="1600979821265" expanded="true" signature="1583:1622" ph="SELECT name,... Code" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/CV8581v/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/runcode/open_outputfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/runcode/run_code.php">
+    <entry file="file://$PROJECT_DIR$/backend/runcode/createfiletempcode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <marker date="1601096030890" expanded="true" signature="1572:1611" ph="SELECT name,... Code" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/teste.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AAAA/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AAAA/error_unitytest.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/error_unitytest.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/unitytest/getnamestemptest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/AAAA/error_unitytest.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/save_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1586664886410" expanded="true" signature="163:209" ph="UPDATE Code " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/metrics/getjson_Becker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1587875339586" expanded="true" signature="199:388" ph="SELECT Stude... Project" />
+            <marker date="1587875339586" expanded="true" signature="934:1171" ph="SELECT typeE... Compilation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/calc_type_error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <marker date="1601099905181" expanded="true" signature="900:1060" ph="SELECT id, e... Compilation" />
+            <marker date="1601099905181" expanded="true" signature="1302:1393" ph="UPDATE Compi... " />
+            <marker date="1601099905181" expanded="true" signature="2000:2115" ph="UPDATE Compi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/unitytest_code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3406">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/metrics/getjson_editions_onProjects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <marker date="1601099656614" expanded="true" signature="496:770" ph="SELECT CodeC... " />
+            <marker date="1601099656614" expanded="true" signature="1316:1377" ph="SELECT diff,... LIneEdited" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -500,134 +756,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/unitytest_code.php">
+    <entry file="file://$PROJECT_DIR$/js/manager_getprojects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-          <folding>
-            <marker date="1600983019154" expanded="true" signature="162:201" ph="SELECT name,... Code" />
-            <marker date="1600983019154" expanded="true" signature="409:620" ph="SELECT * FRO... Test" />
-            <marker date="1600983019154" expanded="true" signature="449:612" ph="SELECT DISTI... Activity" />
-          </folding>
+        <state relative-caret-position="1619">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/manager/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/run_code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaner/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="-450">
+          <caret line="48" column="26" lean-forward="false" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/processsing_text.js">
+    <entry file="file://$PROJECT_DIR$/backend/save_compilation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="-4">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style-home.css">
+    <entry file="file://$PROJECT_DIR$/backend/runcode/run_code.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-229">
+          <caret line="125" column="108" lean-forward="false" selection-start-line="125" selection-start-column="108" selection-end-line="125" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/icofont.css">
+    <entry file="file://$PROJECT_DIR$/backend/unitytest_code.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style-courses.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lang/eng-text.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lang/pt-text.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/unitytest_code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="707" column="17" lean-forward="false" selection-start-line="707" selection-start-column="17" selection-end-line="707" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/project_frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="108" column="20" lean-forward="true" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaner/projects/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="200" column="86" lean-forward="true" selection-start-line="200" selection-start-column="86" selection-end-line="200" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leaner/courses/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/manager_coursepainel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-191">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1601102268578" expanded="true" signature="245:284" ph="SELECT name,... Code" />
+            <marker date="1601102268578" expanded="true" signature="543:754" ph="SELECT * FRO... Test" />
+            <marker date="1601102268578" expanded="true" signature="583:746" ph="SELECT DISTI... Activity" />
+          </folding>
         </state>
       </provider>
     </entry>

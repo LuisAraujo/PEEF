@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    setLog2("oncourse");
+
     $("#container-my-activity").hide();
 
     $("#bt-explore-activity").click(function () {
@@ -11,6 +14,10 @@ $(document).ready(function () {
 
     getAllClasses();
     getAllActivity();
+
+    window.addEventListener("beforeunload", function(e){
+        setLog("outcourse")
+    }, false);
 });
 
 

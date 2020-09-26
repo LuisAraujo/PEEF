@@ -1,7 +1,7 @@
 <?php
 
 include "../conection_database.php";
-include "../runcode/getnamestemp.php";
+include "getnamestemp.php";
 
 $idcode = $_POST["idcode"];
 $iduser = $_POST["iduser"];

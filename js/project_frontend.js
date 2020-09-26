@@ -6,10 +6,15 @@ var mapcodes = new Map();
 
 $(document).ready(function () {
     //backend
-    getStartPage();
 
-    //get all name project and set it on bar-explore
-    getAllCodesNameByProject( getIdCurrentProject,  setCodeNamesMenu );
+    setLog("inproject");
+
+    getStartPage( function () {
+        //get all name project and set it on bar-explore
+        getAllCodesNameByProject( setCodeNamesMenu);
+    });
+
+
 
     editor = ace.edit("editor");
     startAceJs();
@@ -98,11 +103,12 @@ $(document).ready(function () {
 
 
 
-
+    window.addEventListener("beforeunload", function(e){
+       setLog("outproject")
+    }, false);
 
 
 });
-
 
 function configLang() {
     jQuery.getJSON("../../lang/eng-text.json", function(data){

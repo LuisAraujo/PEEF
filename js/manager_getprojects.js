@@ -1,7 +1,18 @@
+function calctypeerror(idprojects, callback) {
+
+    $.post( "../../backend/calc_type_error.php", {idproject: idprojects},
+        function( data ) {
+
+        console.log(data)
+        callback();
+
+    })
+}
+
 function getprojects(idprojects, callback) {
     console.log("ok");
 
-    $.post( "../../backend/getjson_editions_onProjects.php", function( data ) {
+    $.post( "../../backend/metrics/getjson_editions_onProjects.php", {idproject: idprojects}, function( data ) {
         //console.log(data);
         var json = JSON.parse(data);
         callback(json);
@@ -47,4 +58,11 @@ function  printprojects(json) {
 
 }
 
-getprojects(1 , printprojects );
+/*valor fixo
+* Colocar uma página anterior, com os cursos / projeto
+* passar o id do projeto para esta pagina
+* criar um ready
+* */
+calctypeerror( 9, function () {
+    getprojects(9, printprojects );
+});

@@ -4,10 +4,9 @@
  * @param idproject - identify the project
  * @param callback - function called after done
  */
-function getAllCodesNameByProject(idproject, callback ) {
+function getAllCodesNameByProject(callback) {
 
-    $.post("../../backend/project_getallcodes.php",
-    {idproject: idproject})
+    $.post("../../backend/project_getallcodes.php")
         .done(function (data){
             callback(  JSON.parse( data ) );
         })

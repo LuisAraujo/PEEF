@@ -14,7 +14,7 @@ if( $result->num_rows ==  0  ) {
     $query2 .= " VALUES (NULL, CURDATE(), CURDATE(), CURRENT_TIME(), 0, 0, NULL, (SELECT id FROM Enrollment WHERE Student_id = " . getcurrentuser_session() . " AND Course_id = " . getcurrentcourse_session() . ") , $activity, 1)";
     $result2 = $mysqli->query($query2);
 
-
+    setcurrentproject_session($mysqli->insert_id);
     echo json_encode("{'id' : '".$mysqli->insert_id."'}");
 
 
