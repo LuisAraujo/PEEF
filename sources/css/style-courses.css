@@ -225,7 +225,7 @@ body{
 
 
 .activity-item .title-activity{
-    width: 330px;
+    width: 300px;
     font-size: 25px;
     white-space: nowrap;
     overflow: hidden;
@@ -240,7 +240,7 @@ body{
 }
 
 .activity-head .title-activity{
-    width: 330px !important;
+    width: 310px !important;
 }
 
 .activity-head div{

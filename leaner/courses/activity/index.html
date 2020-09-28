@@ -10,7 +10,7 @@
 
     <script src="../../../js/jquery-3.4.1.min.js"></script>
     <script src="../../../js/log.js"></script>
-    <script src="../../../js/manager_coursepage.js"></script>
+    <script src="../../../js/activity_frontend.js"></script>
 
 
 </head>
@@ -18,27 +18,25 @@
     <div class="bar-side" id="explore-bar">
 
         <div class="head-bar-side">
-            <div class="menu-logo">
-                <i class="icofont-navigation-menu"></i>
-            </div>
+
             <div class="img-profile" ></div>
-            <div class="username">
-                Luis Gustavo
+            <div id="labelusername" class="username">
+                ...
             </div>
         </div>
 
         <div>
             <div id="bt-explore-home" class="item-menu">
                 <i class="icofont-home"></i>
-                <span> Home </span>
+                <span id="labelhome"> Home </span>
             </div>
             <div id="bt-explore-activity" class="item-menu">
                 <i class="icofont-code-alt"></i>
-                <span> Activity </span>
+                <span id="labelactivity" > Activity </span>
             </div>
             <div id="bt-explore-notification" class="item-menu">
                 <i class="icofont-notification"></i>
-                <span> Notification </span>
+                <span id="labelnotification"> Notification </span>
             </div>
 
         </div>
@@ -48,7 +46,7 @@
     <div class="container-medium">
 
         <div class="head-menu">
-            <div class="head-title"> Course Teste </div>
+            <div class="head-title"> <span id="labelcourse" ></span> <span id="namecourse" ></span> </div>
         </div>
 
         <!-- COURSE -->
@@ -91,10 +89,10 @@
         <!-- ACTIVTY -->
         <div  class="container-activity" >
             <div class="activity-head">
-                <div class="title-activity">Title</div>
-                <div class="flag-activity">Sended</div>
-                <div class="corect-activity">Corect</div>
-                <div class="corect-activity">Chat</div>
+                <div id="labeltitle" class="title-activity">Title</div>
+                <div id="labelsended" class="flag-activity">Sended</div>
+                <div id="labelcorrect" class="corect-activity">Corect</div>
+                <div id="labelchat" class="corect-activity">Chat</div>
             </div>
 
             <div id="container-my-activity">

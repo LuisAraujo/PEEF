@@ -34,6 +34,7 @@ function getIdLearner(callback){
 function getDataActivity(callback){
     $.post( "../../backend/project_getdataactivity.php").done(
         function (data){
+            console.log(data)
             data = JSON.parse(data);
             callback(data);
         });

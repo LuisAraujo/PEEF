@@ -15,7 +15,39 @@ $(document).ready(function () {
     window.addEventListener("beforeunload", function(e){
         setLog("offline")
     }, false);
+
+    getdatauser();
 });
+
+function getdatauser() {
+    $.post("../../backend/getdatauser.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            $("#username").text(data.name);
+            configLang(data.cod);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+function configLang(cod) {
+    if(cod == null)
+        cod =  "eng";
+
+    jQuery.getJSON("../../lang/"+cod+"-text.json", function(data){
+        json = data;
+
+        //initial conf
+        $("#labelhome").text(data.home);
+        $("#labelnotifcation").text(data.notification);
+        $("#labelcourse").text(data.course);
+        $("#labelfind").text(data.find);
+        $("#labelfindcourse").attr("placeholder", data.findcourse);
+
+    });
+}
 
 
 function findCoursByName(data) {

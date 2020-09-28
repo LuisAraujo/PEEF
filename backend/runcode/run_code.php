@@ -124,24 +124,22 @@
     $testpassed = $error==0?1:0;
     //Insert Compilations
     $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$typeerror',  $idcode, NULL, NULL, -1)";
-
     $result = $mysqli->query($query);
 
-    $code2 = str_replace("'" , "\'" , $row[code]);
+
+    $result = $mysqli->query("SELECT name, code FROM code Where id = $idcode;");
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+
+    $code2 = str_replace("'" , "\'" , $row['code']);
 
     //Copying Code in Compilations
-    $query2 = "INSERT CodeCompilation VALUES (null, '".$row[name]."',' ".$code2." ', 0, $mysqli->insert_id )";
+    $query2 = "INSERT CodeCompilation VALUES (null, '".$row['name']."',' ".$code2." ', 0, $mysqli->insert_id )";
+    echo $query2;
     $result2 = $mysqli->query($query2);
 
 
     //call function to close process
     close();
-
-
-
-
-
-
 
 
     function close(){

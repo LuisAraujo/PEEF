@@ -11,7 +11,10 @@ $(document).ready(function () {
 
     getStartPage( function () {
         //get all name project and set it on bar-explore
-        getAllCodesNameByProject( setCodeNamesMenu);
+        getdatauser( function () {
+            getAllCodesNameByProject( setCodeNamesMenu);
+        });
+
     });
 
 
@@ -110,10 +113,29 @@ $(document).ready(function () {
 
 });
 
-function configLang() {
-    jQuery.getJSON("../../lang/eng-text.json", function(data){
+
+function getdatauser(callback) {
+    $.post("../../backend/getdatauser.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            $("#labelusername").text(data.name);
+            configLang(data.cod, callback);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+function configLang(cod, callback) {
+    if(cod == null)
+        cod =  "eng";
+
+    jQuery.getJSON("../../lang/"+cod+"-text.json", function(data){
         json = data;
 
+        //initial conf
         //initial conf
         $("#labelnewfile").text(data.newfile);
         $("#labelsave").text(data.save);
@@ -123,10 +145,18 @@ function configLang() {
         $("#labelchat").text(data.chat);
         $("#labelsendcode").text( data.send_code.toUpperCase());
         $("#labeldescription").text( data.description);
+        $("#labeldescription_input").text( data.input);
+        $("#labelinput").text( data.input);
+        $("#labeldescription_output").text( data.output);
+        $("#labeloutput").text( data.output);
         $("#labeltalkme").text(data.talkme);
         $("#labelneedhelp").text( data.needhelp);
+
+        callback();
+
     });
 }
+
 
 
 function setCodeNamesMenu(data) {
@@ -137,7 +167,7 @@ function setCodeNamesMenu(data) {
     $("#explore-bar").append(
         '<div id="file-explore-description" class="file-explore-bar"  >' +
         '<i class="icofont-file-pdf"></i>' +
-        '<span  id="labeldescription" class="container-filename"> Description </span>' +
+        '<span  id="labeldescription" class="container-filename"> '+ json.description +'    </span>' +
         '</div>'
     );
 
@@ -145,11 +175,16 @@ function setCodeNamesMenu(data) {
     $("#file-explore-description").click(function () {
 
         getDataActivity( function (data) {
-            //console.log(data)
-            $("#title-modal-description").html(data[0].title);
-            $("#text-modal-description").html(data[0].description);
-            $("#text-modal-description").html(data[0].description);
-            $("#modal-description-img").html('<span class="link-image-description"><a href="'+data[0].image+'" target="_blank"> <i class="icofont-file-jpg"></i> Image 01 </a></span>');
+            //console.log(data);
+            $("#title-modal-description").html(data.title);
+            $("#text-modal-description").html(data.description);
+            $("#text-modal-description_input").html(data.description_input);
+            $("#text-modal-description_output   ").html(data.description_output);
+
+            $("#out1").html("<td>"+data.input01+"</td><td>"+data.output01+"</td>");
+            $("#out2").html("<td>"+data.input02+"</td><td>"+data.output02+"</td>");
+
+            $("#modal-description-img").html('<span class="link-image-description"><a href="'+data.image+'" target="_blank"> <i class="icofont-file-jpg"></i> Image 01 </a></span>');
             $("#modal-description").show();
         });
 
@@ -208,7 +243,7 @@ function setCodeNamesMenu(data) {
 
     });
 
-    configLang();
+
 
 }
 

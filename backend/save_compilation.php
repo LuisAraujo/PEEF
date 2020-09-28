@@ -26,10 +26,10 @@ $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$typeerror', 
 
 $result = $mysqli->query($query);
 
-$code2 = str_replace("'" , "\'" , $row[code]);
+$code2 = str_replace("'" , "\'" , $row['code']);
 
 //Copying Code in Compilations
-$query2 = "INSERT CodeCompilation VALUES (null, '".$row[name]."',' ".$code2." ', 0, $mysqli->insert_id )";
+$query2 = "INSERT CodeCompilation VALUES (null, '".$row['name']."',' ".$code2." ', 0, $mysqli->insert_id )";
 $result2 = $mysqli->query($query2);
 
 ?>

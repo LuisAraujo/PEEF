@@ -62,11 +62,10 @@ if($error == 0){
 
         exec($cmd, $out, $error);
 
-
         if($count>0)
             $jsontest .= ",";
 
-        if (strcmp($out[0], $row2["output"]) !== 0) {
+        if (strcmp($out[ count($out ) -1 ], $row2["output"]) !== 0) {
             $jsontest .= '{"passed":"0" ,';
             $n_error++;
         }else{
@@ -76,7 +75,7 @@ if($error == 0){
         $instring = str_replace( "\n", "|", $row2["input"]);
         $instring = preg_replace('/\s+/', '', $instring);
 
-        $jsontest .= ' "in": "'.$instring.'", "out": "'.$out[0].'", "wait": "'.$row2["output"].'"}';
+        $jsontest .= ' "in": "'.$instring.'", "out": "'.$out[ count($out ) -1 ].'", "wait": "'.$row2["output"].'"}';
 
 
         $row2 = $test->fetch_array(MYSQLI_ASSOC);

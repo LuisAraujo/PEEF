@@ -48,7 +48,8 @@ function getCodesById(idcode, callback ) {
  */
 function testcode(){
 
-	$.post( "../../backend/unitytest_code.php",
+	//$.post( "../../backend/unitytest_code.php",
+	$.post( "../../backend/unitytest_code_.php",
     {idcode: fileactive },
     function(data) { })
 	.done(function(out) {
@@ -58,7 +59,7 @@ function testcode(){
            $("#container-unittests").append(json.error_code);
            return;
        }
-
+        console.log(out)
         var jsonout = JSON.parse(out);
 
         $("#percent-passed").html(jsonout.total.percent + "%") ;

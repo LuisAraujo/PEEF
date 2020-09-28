@@ -86,7 +86,7 @@ html, body{
 
 
 .bt{
-	width: 100px;
+	min-width: 100px;
 	height: 25px;
 	margin-top: 5px;
 	background-color: #15357b;
@@ -95,7 +95,7 @@ html, body{
 	font-size: 20px;
 	text-align: center;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 5px 10px 5px 10px;
 	padding-top: 10px;
 }
 
@@ -417,18 +417,34 @@ html, body{
 
 #modal-description{
 	width: 800px;
-	height: 400px;
+	height: 90%;
 	background-color: #FFF;
 	border-radius: 5px;
 	border: 1px solid #727282;
 	position: absolute;
 	z-index: 999;
 	padding-top: 20px;
+	padding-left: 20px;
 	font-weight: bold;
 	left: calc( 50% - 400px);
-	top: 50px;
+	top: 5%;
 	display: none;
+	overflow-y: scroll;
 }
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 300px;
+}
+
+th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 50%;
+	padding: 5px;
+}
+
 
 
 #modal-description .title{
@@ -439,8 +455,29 @@ html, body{
 
 #text-modal-description{
 	width: calc(100% - 40px);
-	margin: 10px;
-	height: calc(70%);
+	//margin: 10px;
+	height:calc(20%);
+	overflow-y: scroll;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #000;
+}
+
+#text-modal-description_input{
+
+	width: calc(100% - 40px);
+	//margin: 10px;
+	overflow-y: scroll;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #000;
+}
+
+#text-modal-description_output{
+
+	width: calc(100% - 40px);
+	//margin: 10px;
+//height: calc(70%);
 	overflow-y: scroll;
 	padding: 10px;
 	text-align: justify;
@@ -450,11 +487,11 @@ html, body{
 #modal-description-img{
 	width: calc(100% - 20px);
 	height: calc(10%);
-	margin: 10px;
+	//margin: 10px;
 }
 
 #modal-description-img .link-image-description{
-	margin-left: 10px;
+	//margin-left: 10px;
 }
 
 #modal-description-img .link-image-description a{

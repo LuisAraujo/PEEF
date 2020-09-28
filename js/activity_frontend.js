@@ -1,3 +1,5 @@
+jsonlang =  null;
+
 $(document).ready(function () {
 
     setLog2("oncourse");
@@ -12,13 +14,64 @@ $(document).ready(function () {
        showHome();
     });
 
-    getAllClasses();
-    getAllActivity();
-
     window.addEventListener("beforeunload", function(e){
         setLog("outcourse")
     }, false);
+    getAllClasses();
+    getAllActivity();
+    getdatauser();
+    getNameCourse();
+
 });
+
+
+function getdatauser() {
+    $.post("../../../backend/getdatauser.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            $("#labelusername").text(data.name);
+            configLang(data.cod);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+function getNameCourse() {
+    $.post("../../../backend/getnamecourse.php" )
+        .done(function(data)
+        {
+            $("#namecourse").text(data);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+}
+
+function configLang(cod) {
+    if(cod == null)
+        cod =  "eng";
+
+    jQuery.getJSON("../../../lang/"+cod+"-text.json", function(data){
+        jsonlang = data;
+
+        //initial conf
+
+        $("#labelhome").text(data.home);
+        $("#labelnotification").text(data.notification);
+        $("#labelactivity").text(data.activity);
+        $("#labeltitle").text(data.title);
+        $("#labelsended").text(data.sended);
+        $("#labelchat").text(data.chat);
+        $("#labelcorrect").text(data.correct);
+        $("#labelcourse").text(data.course);
+
+        callback();
+
+    });
+}
 
 
 function  showActivity() {
@@ -51,7 +104,7 @@ function getAllActivity() {
     for(var i= 0 ; i < json.length; i++){
 
         var elem ='<div class="activity-item" idactivity="'+json[i].id+'"> <div class="title-activity">'+json[i].title+'</div> ';
-        elem +=  '<div ><i class="icofont-flag" title="Sended"></i></div> ';
+        elem +=  '<div ><i class="icofont-flag" title="Title"></i></div> ';
         elem +=  '<div ><i class="icofont-check-circled" title="Correct"></i></div>';
         elem +=  ' <!-- <div ><i class="icofont-error" title="Wrong"></i></div> --> ';
         elem +=  '<div><i class="icofont-chat actived" title="message"></i></div> </div>';

@@ -10,34 +10,32 @@
 
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/log.js"></script>
-    <script src="../../js/manager_coursepainel.js"></script>
+    <script src="../../js/course_fontend.js"></script>
 
 </head>
 <body>
     <div class="bar-side" id="explore-bar">
 
         <div class="head-bar-side">
-            <div class="menu-logo">
-                <i class="icofont-navigation-menu"></i>
-            </div>
+
             <div class="img-profile" ></div>
-            <div class="username">
-                Luis Gustavo
+            <div id="username" class="username">
+                ...
             </div>
         </div>
 
         <div>
             <div class="item-menu">
                 <i class="icofont-home"></i>
-                <span> Home </span>
+                <span id="labelhome"> Home </span>
             </div>
             <div class="item-menu">
                 <i class="icofont-notebook"></i>
-                <span> Course </span>
+                <span id="labelcourse"> Course </span>
             </div>
             <div class="item-menu">
                 <i class="icofont-notification"></i>
-                <span> Notification </span>
+                <span id="labelnotifcation"> Notification </span>
             </div>
 
         </div>
@@ -50,11 +48,11 @@
 
             <div id="bt-find-course" class="bt">
                 <i class="icofont-search-2"></i>
-                <span class="label">Find </span>
+                <span id="labelfind" class="label">Find </span>
             </div>
 
             <div id="container-input-find-course" class="container-input larger">
-                <input id="inp-find-course" placeholder="Find your course"/>
+                <input id="labelfindcourse" id="inp-find-course" placeholder=""/>
             </div>
         </div>
 
