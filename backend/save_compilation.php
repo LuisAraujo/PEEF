@@ -1,7 +1,7 @@
 <?php
 
 $line = "";
-$typeerror = "";
+$errormessage = "";
 
 if($error != 0){
 
@@ -10,10 +10,10 @@ if($error != 0){
     else
         $imp_str = $out;
 
-    $typeerror = preg_replace( "/\r|\n/", ",", $imp_str );
-    $typeerror = str_replace( ",,", ",", $imp_str );
-    $typeerror = str_replace("\\" , "\\\\" , $typeerror);
-    $typeerror = str_replace("'" , "\'" , $typeerror );
+    $errormessage = preg_replace( "/\r|\n/", ",", $imp_str );
+    $errormessage = str_replace( ",,", ",", $imp_str );
+    $errormessage = str_replace("\\" , "\\\\" , $errormessage);
+    $errormessage = str_replace("'" , "\'" , $errormessage );
 
 }
 
@@ -22,7 +22,7 @@ if($error != 0)
 else
     $testpassed = $n_error==0?1:0;
 //Insert Compilations
-$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$typeerror',  $idcode, NULL, NULL, $testpassed)";
+$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$errormessage',  $idcode, NULL, NULL, NULL, $testpassed)";
 
 $result = $mysqli->query($query);
 

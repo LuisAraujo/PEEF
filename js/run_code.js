@@ -38,6 +38,8 @@ var gerateFileCode = function(iduser, token, callback){
             callback(token, data);
     });
 }
+
+
 var runCode = function(token, nametemp){
 
     $.ajax({
@@ -45,7 +47,18 @@ var runCode = function(token, nametemp){
         method: "POST",
         data: {token: token, iduser: iduser, idcode: fileactive, nametemp: nametemp}
     }).done(function(data) {
-       // console.log("executing php called");
+        if(data == "1"){
+
+            if( peditor.laststatus == PEditor.no){
+               // peditor.getfeedbackonmessage = true;
+                alertFeedbackonMensage();
+            }
+
+            peditor.laststatus= PEditor.success;
+
+        }else if(data == "0"){
+            peditor.laststatus=PEditor.error;
+        }
         console.log(data);
     });
 }
@@ -62,7 +75,7 @@ var showError = function(callback){
 }
 
 var setInput = function(input, n_input, token){
-    console.log(input, n_input);
+    //console.log(input, n_input);
     $.ajax({
         url: "../../backend/runcode/create_input.php",
         method: "POST",
@@ -84,7 +97,7 @@ checkOutput = function(token){
         method: "POST",
         data:{token: token, iduser: iduser}
     }).done(function(data) {
-        console.log(data);
+       // console.log(data);
 
         var lines = data.split("\n");
 

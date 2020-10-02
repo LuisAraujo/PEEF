@@ -3,6 +3,7 @@
     include 'getnamestemp.php';
     @include "manager_section.php";
     @include "../conection_database.php";
+    @include  "../identify_errotype.php";
 
     //error_reporting(0);
     //a flag n funciona
@@ -47,6 +48,7 @@
 
         if(verifyErro($errorname,$ouputname) == 1){
                 $error = 1;
+                echo "0";
                 break;
             }
 
@@ -93,6 +95,7 @@
 
     if(verifyErro($errorname,$ouputname) == 1){
         $error = 1;
+        echo "0";
     }
 
     $out = "";
@@ -104,7 +107,7 @@
     }
 
 
-    $typeerror = "";
+    $erromessage = "";
 
     if($error != 0){
 
@@ -113,17 +116,21 @@
         else
             $imp_str = $out;
 
-        $typeerror = preg_replace( "/\r|\n/", ",", $imp_str );
-        $typeerror = str_replace( ",,", ",", $imp_str );
-        $typeerror = str_replace("\\" , "\\\\" , $typeerror);
-        $typeerror = str_replace("'" , "\'" , $typeerror );
+        $erromessage = preg_replace( "/\r|\n/", ",", $imp_str );
+        $erromessage = str_replace( ",,", ",", $imp_str );
+        $erromessage = str_replace("\\" , "\\\\" , $erromessage);
+        $erromessage = str_replace("'" , "\'" , $erromessage );
 
+    }else{
+        echo "1";
     }
 
 
+    $typeerror = checkErroType($erromessage);
+
     $testpassed = $error==0?1:0;
     //Insert Compilations
-    $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$typeerror',  $idcode, NULL, NULL, -1)";
+    $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$erromessage',  $idcode, '".$typeerror[0]."', '".$typeerror[1]."', '".$typeerror[2]."', -1)";
     $result = $mysqli->query($query);
 
 
@@ -134,12 +141,13 @@
 
     //Copying Code in Compilations
     $query2 = "INSERT CodeCompilation VALUES (null, '".$row['name']."',' ".$code2." ', 0, $mysqli->insert_id )";
-    echo $query2;
     $result2 = $mysqli->query($query2);
 
 
     //call function to close process
     close();
+
+
 
 
     function close(){

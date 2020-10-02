@@ -53,35 +53,48 @@ function testcode(){
     {idcode: fileactive },
     function(data) { })
 	.done(function(out) {
+
         $("#labelresulttest").text(json.result_test);
 
-       if(out == "0"){
+        if(out != "0"){
+
+            var jsonout = JSON.parse(out);
+
+            $("#percent-passed").html(jsonout.total.percent + "%") ;
+            $("#percent-passed").css("width", jsonout.total.percent + "%")
+            $("#ntestepassed").html(jsonout.total.npassed + " " +json.test2 + "(s) " + json.passed);
+            $("#ntestefailed").html(jsonout.total.nfail +" " +json.test2 + "(s) " + json.fail);
+
+            $("#container-unittests").html("");
+            for(var i = 0; i < jsonout.tests.length; i++)
+            {
+                var testunit = '<div class="container-unittest"> <div class="hlinetest-container"><b>'+json.test2 + ' '+(i+1)+'</b></div>';
+                if(jsonout.tests[i].passed == 1)
+                    testunit += '<div class="linetest-container"><b>'+json.status+':</b> <span class="status-unittest approved"></span> '+json.passed+'</div>';
+                else
+                    testunit += '<div class="linetest-container"><b>'+json.status+':</b> <span class="status-unittest reapproved"></span>'+json.fail+' </div>';
+
+                testunit += '<div class="linetest-container"><b>'+json.input+'(s):'+jsonout.tests[i].in+'</b>  </div>';
+                testunit += '<div class="linetest-container"><b>'+json.actual_output+'(s):'+jsonout.tests[i].out+'</b>  </div>';
+                testunit += '<div class="linetest-container"><b>'+json.expected_output+'(s): '+jsonout.tests[i].wait+'</b> </div> </div>';
+
+                $("#container-unittests").append(testunit);
+            }
+
+            if( peditor.laststatus == PEditor.no){
+                peditor.laststatus = PEditor.success;
+                alertFeedbackonMensage();
+            }
+
+        }else if(out == "0"){
            $("#container-unittests").append(json.error_code);
+            peditor.laststatus = PEditor.error;
            return;
-       }
-        console.log(out)
-        var jsonout = JSON.parse(out);
-
-        $("#percent-passed").html(jsonout.total.percent + "%") ;
-        $("#percent-passed").css("width", jsonout.total.percent + "%")
-        $("#ntestepassed").html(jsonout.total.npassed + " " +json.test2 + "(s) " + json.passed);
-        $("#ntestefailed").html(jsonout.total.nfail +" " +json.test2 + "(s) " + json.fail);
-
-        $("#container-unittests").html("");
-        for(var i = 0; i < jsonout.tests.length; i++)
-        {
-            var testunit = '<div class="container-unittest"> <div class="hlinetest-container"><b>'+json.test2 + ' '+(i+1)+'</b></div>';
-            if(jsonout.tests[i].passed == 1)
-                testunit += '<div class="linetest-container"><b>'+json.status+':</b> <span class="status-unittest approved"></span> '+json.passed+'</div>';
-            else
-                testunit += '<div class="linetest-container"><b>'+json.status+':</b> <span class="status-unittest reapproved"></span>'+json.fail+' </div>';
-
-            testunit += '<div class="linetest-container"><b>'+json.input+'(s):'+jsonout.tests[i].in+'</b>  </div>';
-            testunit += '<div class="linetest-container"><b>'+json.actual_output+'(s):'+jsonout.tests[i].out+'</b>  </div>';
-            testunit += '<div class="linetest-container"><b>'+json.expected_output+'(s): '+jsonout.tests[i].wait+'</b> </div> </div>';
-
-            $("#container-unittests").append(testunit);
         }
+
+
+
+
 
         //$("#console-container .contents").html(msg);
 		//$("#console-container .contents").html(msg + out);

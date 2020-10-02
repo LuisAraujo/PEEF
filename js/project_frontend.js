@@ -1,6 +1,8 @@
 filesnames = [];
-fileactive = 0;
+fileactive = undefined;
 json=null;
+editor = null;
+peditor = new PEditor();
 
 var mapcodes = new Map();
 
@@ -47,7 +49,9 @@ $(document).ready(function () {
                 $("#item-code-"+fileactive).removeClass("no-saved");
                 testcode();
             }
-        )
+        );
+
+
     } );
 
     $("#button-run").click(function () {
@@ -287,12 +291,18 @@ function startAceJs(){
 
     editor.getSession().on('change', function() {
 
+        if( peditor.laststatus == PEditor.error){
+            peditor.laststatus = PEditor.no;
+            setLog("fixingcode");
+        }
         if (fileactive != undefined) {
             mapcodes.set(fileactive.toString(), editor.getValue());
             updateAceJs();
         }else{
             console.error("Fileactive is undefined!")
         }
+
+
     });
 }
 
@@ -301,3 +311,8 @@ function updateAceJs(){
 }
 
 
+function alertFeedbackonMensage(){
+console.log('feedback');
+    confirm("Pelo visto você solucionou o problema. A mensagem de erro lhe ajudou nisso?", function (){},function (){});
+
+}

@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `PEEF_BD`.`ACTIVITY` (
   `Course_id` INT(11) NOT NULL,
   `description_input` TEXT NULL,
   `description_output` TEXT NULL,
-  `date_creation` DATE NULL,
+  `date_creation` DATE NULL DEFAULT CURDATE(),
   `data_delivery` DATE NULL DEFAULT NULL,
   `show_after` DATE NULL DEFAULT NULL COMMENT 'se tiver uma data, os sitema n exibirá até a data. Se for null, o sistema exibirá sem restrição.',
   PRIMARY KEY (`id`),
@@ -341,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `PEEF_BD`.`ENHANCEDMESSAGE` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(100) NULL DEFAULT NULL,
   `subtype` VARCHAR(200) NULL DEFAULT NULL,
-  `enhancedmessage` TEXT NULL DEFAULT NULL,
+  `enhacedmessage` VARCHAR(45) NULL DEFAULT NULL,
   `linktutorial` VARCHAR(45) NULL DEFAULT NULL,
   `Language_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -567,8 +567,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `PEEF_BD`;
-INSERT INTO `PEEF_BD`.`ENHANCEDMESSAGE` (`id`, `type`, `subtype`, `enhancedmessage`, `linktutorial`, `Language_id`) VALUES (1, 'SyntaxError', 'invalid syntax', 'Ocorreu um erro de Sintaxe. Isso significa que no seu código há um padrão não reconhecido pelo Python. Verifique se falta algum parentese em comando como if, while, for, print, input e outros. Verifique ainda o uso de \':\' em comando como if e for.  ', NULL, 1);
-INSERT INTO `PEEF_BD`.`ENHANCEDMESSAGE` (`id`, `type`, `subtype`, `enhancedmessage`, `linktutorial`, `Language_id`) VALUES (2, 'SyntaxError', 'Missing parentheses in call to', 'O erro pode ter ocorrido em uma chamada de função. Utilize os parênteses. Exemplo: print(\'Hello Word\') .', NULL, 1);
+INSERT INTO `PEEF_BD`.`ENHANCEDMESSAGE` (`id`, `type`, `subtype`, `enhacedmessage`, `linktutorial`, `Language_id`) VALUES (1, 'SyntaxError', 'invalid syntax', 'Ocorreu um erro de Sintaxe. Isso significa que no seu código há um padrão não reconhecido pelo Python. Verifique se falta algum parentese em comando como if, while, for, print, input e outros. Verifique ainda o uso de \':\' em comando como if e for.  ', NULL, DEFAULT);
+INSERT INTO `PEEF_BD`.`ENHANCEDMESSAGE` (`id`, `type`, `subtype`, `enhacedmessage`, `linktutorial`, `Language_id`) VALUES (2, 'SyntaxError', 'Missing parentheses in call to', 'O erro pode ter ocorrido em uma chamada de função. Utilize os parênteses. Exemplo: print(\'Hello Word\') .', NULL, DEFAULT);
 
 COMMIT;
 

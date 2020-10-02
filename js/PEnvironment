@@ -1,0 +1,18 @@
+class PEnvironment {
+
+    constructor() {
+        this._jsonlang;
+    }
+
+    get fileNames(){
+        return this._filesnames;
+    }
+
+    set fileNames(filesnames){
+        this._filesnames = filesnames;
+    }
+
+
+
+
+}
