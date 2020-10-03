@@ -25,6 +25,9 @@ function getnamefileerror($iduser, $token){
     return getnamesubfoldertemp_session($iduser, $token)."/error.log";
 }
 
+function getnamefileenhacedmessage($iduser, $token){
+    return getnamesubfoldertemp_session($iduser, $token)."/enhancedmessage.txt";
+}
 function getnamefileerror2($iduser, $token){
     return getnamesubfoldertemp_session($iduser, $token)."/error_unitytest.log";
 }

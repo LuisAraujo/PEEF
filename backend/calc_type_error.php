@@ -4,7 +4,7 @@ echo "<title>Extract Erro Type Line and Msg</title>";
 
 $errostr = "SystemExit,KeyboardInterrupt,GeneratorExit,Exception,StopIteration,StandardError,BufferError,ArithmeticError,FloatingPointError,OverflowError,ZeroDivisionError,AssertionError,AttributeError,EnvironmentError,IOError,OSError,WindowsError (Windows),VMSError (VMS),EOFError,ImportError,LookupError,IndexError,KeyError,MemoryError,NameError,UnboundLocalError,ReferenceError,RuntimeError,NotImplementedError,SyntaxError,IndentationError,TabError,SystemError,TypeError,ValueError,UnicodeError,UnicodeDecodeError,UnicodeEncodeError,UnicodeTranslateError,Warning,DeprecationWarning,PendingDeprecationWarning,RuntimeWarning,SyntaxWarning,UserWarning,FutureWarning,ImportWarning,UnicodeWarning,BytesWarning";
 $errorstype = explode(",", $errostr);
-$idproject = 9;//$_POST["idproject"];
+$idproject = 1;//$_POST["idproject"];
 
 $query = "SELECT id, erromessage FROM Compilation WHERE typeError IS NULL AND lineError IS NULL AND Code_id = (SELECT id FROM Code WHERE Project_id = $idproject  LIMIT 1)";
 

@@ -30,4 +30,9 @@ function getnamefilecode_session($iduser, $token){
     return getnamesubfoldertemp_session($iduser, $token)."/filecode.py";
 }
 
+function getnamefileenhacedmessage($iduser, $token){
+    return getnamesubfoldertemp_session($iduser, $token)."/enhancedmessage.txt";
+}
+
+
 ?>

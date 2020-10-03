@@ -39,5 +39,8 @@
   "expected_output": "Expected Output",
   "language": "Language",
   "lang": "Eng-US",
-  "activity": "Activity"
+  "activity": "Activity",
+  "originalmessage": "Original Message",
+  "enhancedmessage": "Enhanched Message",
+  "nofound": "No found!"
 }

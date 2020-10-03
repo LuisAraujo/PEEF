@@ -39,6 +39,9 @@
   "expected_output": "Saída Esperada",
   "language": "Linguagem",
   "lang": "Pt-Br",
-  "activity": "Atividade"
+  "activity": "Atividade",
+  "originalmessage": "Mensagem Original",
+  "enhancedmessage": "Mensagem Melhorada",
+  "nofound": "Não encontrado!"
 
 }

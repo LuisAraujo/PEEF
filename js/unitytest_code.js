@@ -60,10 +60,13 @@ function testcode(){
 
             var jsonout = JSON.parse(out);
 
+            console.log(jsonout)
+
             $("#percent-passed").html(jsonout.total.percent + "%") ;
             $("#percent-passed").css("width", jsonout.total.percent + "%")
             $("#ntestepassed").html(jsonout.total.npassed + " " +json.test2 + "(s) " + json.passed);
             $("#ntestefailed").html(jsonout.total.nfail +" " +json.test2 + "(s) " + json.fail);
+
 
             $("#container-unittests").html("");
             for(var i = 0; i < jsonout.tests.length; i++)

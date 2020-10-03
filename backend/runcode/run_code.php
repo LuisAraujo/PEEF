@@ -4,6 +4,7 @@
     @include "manager_section.php";
     @include "../conection_database.php";
     @include  "../identify_errotype.php";
+    @include  "../get_enhanced_message.php";
 
     //error_reporting(0);
     //a flag n funciona
@@ -23,6 +24,7 @@
     $inputname = getnamefileinputtemp_session($iduser,$token);
     //name of error
     $errorname = getnamefileerror( $iduser, $token );
+    $enhancedmessagename = getnamefileenhacedmessage( $iduser, $token );
 
 	/** EXECUTING CODE ***/
 	$descriptorspec = array(
@@ -93,23 +95,23 @@
             }
 	}
 
-    if(verifyErro($errorname,$ouputname) == 1){
-        $error = 1;
-        echo "0";
+
+    if($error != 1){
+
+        if(verifyErro($errorname,$ouputname) == 1){
+            $error = 1;
+            echo "0";
+        }
     }
 
     $out = "";
+    $erromessage = "";
+    $myfileenhanced = "";
 
     if($error != 0){
         $myfileerror = fopen($errorname, "r");
         $out = fread($myfileerror,filesize($errorname));
         fclose($myfileerror);
-    }
-
-
-    $erromessage = "";
-
-    if($error != 0){
 
         if( is_array($out))
             $imp_str = implode(",",$out);
@@ -121,16 +123,28 @@
         $erromessage = str_replace("\\" , "\\\\" , $erromessage);
         $erromessage = str_replace("'" , "\'" , $erromessage );
 
+
+
     }else{
         echo "1";
     }
 
-
     $typeerror = checkErroType($erromessage);
+
+    $enhacedmessagefound =0;
+    $enhacedmessage = getEnchecedMessage( $typeerror );
+
+   if( strlen($enhacedmessage) > 0) {
+
+        $myfileenhanced = fopen($enhancedmessagename, "w+");
+        $out2 = fwrite($myfileenhanced, $enhacedmessage);
+        fclose($myfileenhanced);
+        $enhacedmessagefound = 1;
+    }
 
     $testpassed = $error==0?1:0;
     //Insert Compilations
-    $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$erromessage',  $idcode, '".$typeerror[0]."', '".$typeerror[1]."', '".$typeerror[2]."', -1)";
+    $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$erromessage',  $idcode, '".$typeerror[0]."', '".$typeerror[1]."', '".$typeerror[2]."', -1, '".$enhacedmessagefound."')";
     $result = $mysqli->query($query);
 
 
@@ -146,9 +160,6 @@
 
     //call function to close process
     close();
-
-
-
 
     function close(){
 		//open output file

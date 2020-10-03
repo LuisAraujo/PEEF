@@ -3,7 +3,7 @@
 @include "manager_section.php";
 @include "unitytest/getnamestemptest.php";
 
-$idcode = 4;//$_POST["idcode"];
+$idcode = $_POST["idcode"];
 $iduser = getcurrentuser_session();
 setcurrentcode_session($idcode);
 

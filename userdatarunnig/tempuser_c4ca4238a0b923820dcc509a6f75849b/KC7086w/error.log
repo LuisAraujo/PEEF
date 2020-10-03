@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "../../userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/KC7086w/filecode.py", line 3, in <module>
-    c = a + d
-NameError: name 'd' is not defined
