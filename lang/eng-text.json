@@ -42,5 +42,6 @@
   "activity": "Activity",
   "originalmessage": "Original Message",
   "enhancedmessage": "Enhanched Message",
-  "nofound": "No found!"
+  "nofound": "No found!",
+  "backcourse": "Back"
 }

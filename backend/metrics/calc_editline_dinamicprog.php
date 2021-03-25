@@ -1,21 +1,22 @@
 <?php
-echo "<title>Jadud’s Error Quotient (EDIT LOCATIOn)</title>";
-@include "conection_database.php";
+echo "<title>Calc Editline</title>";
+@include "../conection_database.php";
 @include "calc_stringedit.php";
 
 $idactivity = 1;
 
-$query = "SELECT id FROM Project WHERE Activity_id = $idactivity";
+$query = "SELECT id FROM project WHERE Activity_id = $idactivity";
 $result = $mysqli->query($query);
 
 
 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
+
     //get code compilation that not computed lines editss
-    $query2 = "SELECT Compilation.id as id, CodeCompilation.id as codeid, code FROM Compilation INNER JOIN CodeCompilation ON CodeCompilation.Compilation_id = Compilation.id WHERE CodeCompilation.linesedited = 0 AND Code_id = (SELECT id FROM Code WHERE Project_id = ".$row["id"]."  LIMIT 1)";
+    $query2 = "SELECT compilation.id as id, codecompilation.id as codeid, code FROM compilation INNER JOIN codecompilation ON codecompilation.Compilation_id = compilation.id WHERE codecompilation.linesedited = 0 AND Code_id = (SELECT id FROM code WHERE Project_id = ".$row["id"]."  LIMIT 1)";
     $result2 = $mysqli->query($query2);
 
-    $query4 = "SELECT Compilation.id as id, CodeCompilation.id as codeid, code FROM Compilation INNER JOIN CodeCompilation ON CodeCompilation.Compilation_id = Compilation.id WHERE CodeCompilation.linesedited = 1 AND Code_id = (SELECT id FROM Code WHERE Project_id = 1  LIMIT 1) ORDER BY CodeCompilation.id DESC LIMIT 1";
+    $query4 = "SELECT compilation.id as id, codecompilation.id as codeid, code FROM compilation INNER JOIN codecompilation ON codecompilation.Compilation_id = compilation.id WHERE codecompilation.linesedited = 1 AND Code_id = (SELECT id FROM code WHERE Project_id = 1  LIMIT 1) ORDER BY codecompilation.id DESC LIMIT 1";
 
     $result4 = $mysqli->query($query4);
     $oldcode = "";
@@ -35,12 +36,12 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $lines = comparation_linesDP($row2["code"], $oldcode );
         //for each line computed set in bds
         for( $i = 0; $i < count($lines); $i++) {
-            $query3 = "INSERT INTO LineEdited VALUES(NULL, " . $lines[$i][0] . ", " . $lines[$i][1] . " ," . $row2["codeid"] . ")";
+            $query3 = "INSERT INTO lineedited VALUES(NULL, " . $lines[$i][0] . ", " . $lines[$i][1] . " ," . $row2["codeid"] . ")";
             echo $query3. "<br>";
             $result3 = $mysqli->query($query3);
         }
         //update flag in CodeCompilation for true (lineedited is computade)
-        $query4 = "UPDATE CodeCompilation SET linesedited = 1 WHERE  id = ".$row2["codeid"];
+        $query4     = "UPDATE codecompilation SET linesedited = 1 WHERE  id = ".$row2["codeid"];
         $result4 = $mysqli->query($query4);
 
         //save this code as oldcode to next interaction

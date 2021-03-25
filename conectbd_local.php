@@ -1,0 +1,1 @@
+<?$localhost = "localhost";$user="inages98_root";/*$user="root";*/$senha = "T1rul1p@";/*$senha = "";*/$banco="inages98_sisgestpmfa";/*$banco="inagesp_sisgest";*/$conn = mysqli_connect($localhost,$user,$senha);if (!$conn) {   	die("Connection failed: " .mysqli_connect_error());	 }else{        $selected = mysqli_select_db($conn,$banco);    mysqli_set_charset($conn, "utf8");	}?>

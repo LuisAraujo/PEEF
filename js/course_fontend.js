@@ -44,7 +44,7 @@ function configLang(cod) {
         $("#labelnotifcation").text(data.notification);
         $("#labelcourse").text(data.course);
         $("#labelfind").text(data.find);
-        $("#labelfindcourse").attr("placeholder", data.findcourse);
+        $("#inp-find-course").attr("placeholder", data.findcourse);
 
     });
 }
@@ -54,7 +54,7 @@ function findCoursByName(data) {
 
     $("#container-my-courses").html("");
 
-    $.post("../../backend/course_getcoursesbyname.php",{namecourse: data} )
+    $.post("../../backend/course/course_getcoursesbyname.php",{namecourse: data} )
         .done(function(data)
         {
             printDataCourse(data);
@@ -67,7 +67,7 @@ function showAllCourse() {
 
     $("#container-my-courses").html("");
 
-    $.post("../../backend/course_getcourses.php" )
+    $.post("../../backend/course/course_getcourses.php" )
         .done(function(data)
         {
             printDataCourse(data);
@@ -104,7 +104,7 @@ function printDataCourse( data ) {
         $("#container-my-courses").append(elem);
 
         $(".item-courses").click(function () {
-            $.post( "../../backend/manager_section.php", { currentcourse: $(this).attr("idcourse")  } )
+            $.post( "../../backend/session/manager_section.php", { currentcourse: $(this).attr("idcourse")  } )
             .done(function(data)
             {
                 if(data != "0") {

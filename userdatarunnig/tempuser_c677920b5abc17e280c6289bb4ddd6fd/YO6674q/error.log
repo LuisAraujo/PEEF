@@ -1,0 +1,4 @@
+  File "../../userdatarunnig/tempuser_c677920b5abc17e280c6289bb4ddd6fd/YO6674q/filecode.py", line 2
+    b = input( chr(0) + "<< Informe outro numero")
+    ^
+SyntaxError: invalid syntax

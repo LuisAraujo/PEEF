@@ -7,13 +7,12 @@
 
 	<script src= "../../js/jquery-3.4.1.min.js" ></script>
 	<script src= "../../js/log.js"></script>
-	<script src= "../../js/processsing_text.js" ></script>
-	<script src= "../../js/logeditingcode.js" ></script>
 	<script src= "../../js/PEditor.js" ></script>
 	<script src= "../../js/project_backend.js" ></script>
 	<script src= "../../js/project_frontend.js" ></script>
 
 
+	<script src= "../../js/chat.js" ></script>
 	<script src= "../../js/unitytest_code.js" ></script>
 	<script src= "../../js/run_code.js" ></script>
 
@@ -21,6 +20,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
 	<link rel="stylesheet" href="../../sources/css/style.css">
+	<link rel="stylesheet" href="../../sources/css/chat.css">
 	<link rel="stylesheet" href="../../sources/css/togglestyle.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8">
 	</script>
@@ -89,7 +89,7 @@
 	</div>
 
    <!-- CHAT -->
-   	<div id="container-chat">
+   	<div id="container-chat" class="chat">
 		<div class="title">My Chat</div>
 		<div id="bt-close-chat" class="close"><i class="icofont-close"></i></div>
 		<div id="container-mensage-sended" >
@@ -127,10 +127,17 @@
 
 
 	<div class="head-menu">
-		 
-			 <div id="button-new-file"  class="button-head-menu">
+
+
+			<div id="button-back-course"  class="button-head-menu">
+				<i class="icofont-arrow-left"></i>
+				<span id="labelbackcourse" class="label"> Back </span>
+			</div>
+
+
+		<div id="button-new-file"  class="button-head-menu">
 				<i class="icofont-file-file"></i> 
-				<span id="labelnewfile" class="label">  </span>
+				<span id="labelnewfile" class="label"> New </span>
 			 </div>
 			 
 			 

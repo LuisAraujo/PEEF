@@ -22,6 +22,8 @@ $(document).ready(function () {
     getdatauser();
     getNameCourse();
 
+
+
 });
 
 
@@ -40,7 +42,7 @@ function getdatauser() {
 }
 
 function getNameCourse() {
-    $.post("../../../backend/getnamecourse.php" )
+    $.post("../../../backend/course/getnamecourse.php" )
         .done(function(data)
         {
             $("#namecourse").text(data);
@@ -68,7 +70,7 @@ function configLang(cod) {
         $("#labelcorrect").text(data.correct);
         $("#labelcourse").text(data.course);
 
-        callback();
+
 
     });
 }
@@ -86,7 +88,7 @@ function  showHome() {
 
 
 function getAllClasses() {
-    $.post( "../../../backend/course_getclasses.php", function( data ) {
+    $.post( "../../../backend/course/course_getclasses.php", function( data ) {
         console.log(data);
         var json = JSON.parse(data);
         for(var i= 0 ; i < json.length; i++){
@@ -98,7 +100,7 @@ function getAllClasses() {
 
 
 function getAllActivity() {
-    $.post( "../../../backend/course_getactivities.php", function( data ) {
+    $.post( "../../../backend/course/course_getactivities.php", function( data ) {
     //console.log(data);
     var json = JSON.parse(data);
     for(var i= 0 ; i < json.length; i++){
@@ -115,16 +117,16 @@ function getAllActivity() {
 
     $(".activity-item").click(function () {
         console.log("click item")
-        $.post( "../../../backend/course_getidproject.php", { idactivity: $(this).attr("idactivity")  } )
+        $.post( "../../../backend/course/course_getidproject.php", { idactivity: $(this).attr("idactivity")  } )
         .done(function(data)
         {
             data = JSON.parse(data);
             console.log("get data idproj" + data);
-            $.post( "../../../backend/manager_section.php", { currentproject: data.id } )
+            $.post( "../../../backend/session/manager_section.php", { currentproject: data.id } )
 
                 .done(function(data)
                 {
-                    console.log("get data manager")
+                    console.log("get data editstring")
                     if(data != "0") {
                         window.location = "../../projects/index.html";
                     }

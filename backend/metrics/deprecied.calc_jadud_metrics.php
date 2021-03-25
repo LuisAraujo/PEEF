@@ -1,7 +1,7 @@
 <?php
 echo "<title>Jadud’s Error Quotient</title>";
 
-@include "conection_database.php";
+@include "../conection_database.php";
 
 echo "<h2> Jadud’s Error Quotient (JADUD, 2006) </h2>";
 

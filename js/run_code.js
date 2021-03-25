@@ -14,6 +14,7 @@ var startRunCode = function () {
     $("#in").show();
     $("#in").focus();
 
+    //get learner n é preciso, id user está na sessao
     getIdLearner(function (data) {
         iduser = data;
         gerateFileCode(iduser, token, function(token, filename){
@@ -38,6 +39,9 @@ var gerateFileCode = function(iduser, token, callback){
             callback(token, data);
     });
 }
+
+
+
 
 
 var runCode = function(token, nametemp){
@@ -94,7 +98,7 @@ checkEnhanced = function(token, callback){
 
     $.ajax({
         url: "../../backend/runcode/open_enhancedfile.php",
-        //url: "../../backend/manager_section1.php",
+        //url: "../../backend/depreciate.manager_section1.php",
         method: "POST",
         data:{token: token, iduser: iduser}
     }).done(function(data) {
@@ -113,7 +117,7 @@ checkOutput = function(token){
 
     $.ajax({
         url: "../../backend/runcode/open_outputfile.php",
-        //url: "../../backend/manager_section1.php",
+        //url: "../../backend/depreciate.manager_section1.php",
         method: "POST",
         data:{token: token, iduser: iduser}
     }).done(function(data) {

@@ -24,6 +24,7 @@
     $inputname = getnamefileinputtemp_session($iduser,$token);
     //name of error
     $errorname = getnamefileerror( $iduser, $token );
+    //get file of enhanced message
     $enhancedmessagename = getnamefileenhacedmessage( $iduser, $token );
 
 	/** EXECUTING CODE ***/
@@ -34,13 +35,18 @@
 	);
 	
 	//executing code 
-	$process = proc_open('py.exe '. $nametemp, $descriptorspec, $pipes, null, null);
+	//window
+    $process = proc_open('py.exe '. $nametemp, $descriptorspec, $pipes, null, null);
     $state = proc_get_status($process);
 	
-	//flag out or in 
+	//flag out or in. Started in out
 	$flag = "out";
 	//number of input
 	$n_inputs = 0;
+	//time limit of wainting interation
+	$timelimit = 400;
+	//get initial time
+	$timestart = strtotime("now");
 	
 	//open output file
 	fopen($ouputname, "w+");
@@ -48,6 +54,17 @@
     //while end of file								
 	while( (!feof($pipes[1])) ){
 
+	    //get current time for count limit
+		$timecurrent = strtotime("now");
+
+        //check limit
+		if( $timecurrent - $timestart >= $timelimit){
+			echo "fim";
+			timeout();
+			break;
+		}
+
+        //has error?
         if(verifyErro($errorname,$ouputname) == 1){
                 $error = 1;
                 echo "0";
@@ -64,8 +81,9 @@
 				if($out!=null){
 					//spliting lines
 					$louts = split("\n", $out);
-					//print this lines
-					printlines($louts);
+
+					//depreciate print this lines
+					//printlines($louts);
 				
 					//character hide is the signal to invert to input mode
 					if(!empty($louts[count($louts)-1]))
@@ -77,12 +95,15 @@
 			//for input
 			}else {
 
+			    //save replaced name file
                 $localinputnme = str_replace(["num"], array($n_inputs), $inputname);
+
+                //exists?
                 if (file_exists($localinputnme)) {
 
-                    //open input file
                     //call input function
                     $in = input($pipes[0]);
+
                     if ($in != 0)
                         //increment the input number
                         $n_inputs++;
@@ -95,7 +116,7 @@
             }
 	}
 
-
+    //verify erro tag
     if($error != 1){
 
         if(verifyErro($errorname,$ouputname) == 1){
@@ -109,6 +130,8 @@
     $myfileenhanced = "";
 
     if($error != 0){
+
+        //ope file error
         $myfileerror = fopen($errorname, "r");
         $out = fread($myfileerror,filesize($errorname));
         fclose($myfileerror);
@@ -118,22 +141,25 @@
         else
             $imp_str = $out;
 
+        //
         $erromessage = preg_replace( "/\r|\n/", ",", $imp_str );
+        //change imp_str to erromessage??
         $erromessage = str_replace( ",,", ",", $imp_str );
         $erromessage = str_replace("\\" , "\\\\" , $erromessage);
         $erromessage = str_replace("'" , "\'" , $erromessage );
-
-
 
     }else{
         echo "1";
     }
 
+    //get type error
     $typeerror = checkErroType($erromessage);
+    //flag found enhaced message
+    $enhacedmessagefound = 0;
+    //get enhaced message
+    $enhacedmessage = getEnhancedMessage( $typeerror );
 
-    $enhacedmessagefound =0;
-    $enhacedmessage = getEnchecedMessage( $typeerror );
-
+   //open enhacedmessage file and insert message
    if( strlen($enhacedmessage) > 0) {
 
         $myfileenhanced = fopen($enhancedmessagename, "w+");
@@ -142,25 +168,34 @@
         $enhacedmessagefound = 1;
     }
 
+    /* INSERT DATA EXECUTATION IN DATABASE */
+
     $testpassed = $error==0?1:0;
-    //Insert Compilations
+
+    //Insert Compilation
     $query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$erromessage',  $idcode, '".$typeerror[0]."', '".$typeerror[1]."', '".$typeerror[2]."', -1, '".$enhacedmessagefound."')";
     $result = $mysqli->query($query);
+    //save id complitaion inserted
+    $idinsered = $mysqli->insert_id;
 
-
+    //select name and code of this executed code
     $result = $mysqli->query("SELECT name, code FROM code Where id = $idcode;");
     $row = $result->fetch_array(MYSQLI_ASSOC);
 
+    //replace code
     $code2 = str_replace("'" , "\'" , $row['code']);
 
-    //Copying Code in Compilations
-    $query2 = "INSERT CodeCompilation VALUES (null, '".$row['name']."',' ".$code2." ', 0, $mysqli->insert_id )";
+    //Copying to Code in Compilations
+    $query2 = "INSERT CodeCompilation VALUES (null, '".$row['name']."',' ".$code2." ', 0, $idinsered )";
+    echo $query2;
     $result2 = $mysqli->query($query2);
-
 
     //call function to close process
     close();
 
+    /* @name close
+     * @desc open output file and insert close tag
+    */
     function close(){
 		//open output file
 		$myfile = fopen($GLOBALS["ouputname"], "a") or die("Unable to open file!");
@@ -172,8 +207,11 @@
 		proc_close($GLOBALS["process"]);
 		
 	}
-	
-	//function to set input data in python
+
+    /* @name input
+     * @desc function to set input data in python
+     * @return resource
+     */
 	function input($pipe){	
 		
 		$myfileinput = fopen($GLOBALS["localinputnme"], "r");	
@@ -183,17 +221,20 @@
 		
 		return $r;
 	}
-	
-	//function to save output data in file
+
+    /* @name output
+     * @desc function to save output data in output file
+     * @return resource
+     */
 	function output($pipe){
 		
 		if(feof($pipe))
 			return null;
-		
+		//read pipe
 		$out = fread($pipe, 4096); 
 		
 		if($out != null){
-			//open file in a mode
+			//open file in a mode a
 			$myfile = fopen($GLOBALS["ouputname"], "a");
 			
 			$string_sout = split("\n", $out);
@@ -202,8 +243,7 @@
 				$local_str =trim(preg_replace('/\s\s+/', ' ', $string_sout[$i] ));
 				if(empty($local_str))
 					continue;
-				
-				//fwrite($myfile, date("H:i:s")." |". $local_str . "\n");
+                //write in file
 				fwrite($myfile,$string_sout[$i] . "\n");
 			}
 			
@@ -212,18 +252,56 @@
 		
 		return $out;
 	}
-	
-	
+
+	/* @name timeout
+	 * @desc open file of output and insert timrout tag
+	 * */
+	function timeout(){
+		//open output file
+		$myfile = fopen($GLOBALS["ouputname"], "a") or die("Unable to open file!");
+		//send sing to end runing code
+		fwrite($myfile, "__timeout\n");
+		fclose($myfile);
+		
+		//close process			
+		proc_close($GLOBALS["process"]);
+		
+	}
+
+	/* @name enhacedmessege
+     * @param enhancedmessagename (enhanced message file name), $enhacedmessage (enhanced message)
+     * @desc open enhanced message file and insert enhanced message
+     * @return bool
+     */
+	function enhacedmessege($enhancedmessagename, $enhacedmessage){
+        $found = 0;
+        if( strlen($enhacedmessage) > 0) {
+
+            $myfileenhanced = fopen($enhancedmessagename, "w+");
+            fwrite($myfileenhanced, $enhacedmessage);
+            fclose($myfileenhanced);
+            $found = 1;
+        }
+
+        return  $found;
+
+    }
+	/* @name printlines
+     * @param lines (linhas of files)
+	 * */
 	function printlines($lines){
 		for($i = 0; $i < count($lines); $i++){
 			$local_str =trim(preg_replace('/\s\s+/', ' ', $lines[$i] ));
 			if(empty($local_str) )
 					continue;
-				
-			//echo "-".$lines[$i]. "<br>";
 		}
 	}
 
+    /* @name verifyError
+     * @param errorname (name of file with error information), outputname (name of output file)
+     * @desc: verify if has a error end insert tag error in output file
+     * @return int
+     */
 	function verifyErro($errorname,$ouputname){
 
         if( file_exists($errorname)  ){
@@ -231,6 +309,7 @@
             $myfileerror = fopen($errorname, "r");
             $error = fread($myfileerror, 4096);
             $local_str =trim(preg_replace('/\s\s+/', ' ', $error ));
+
             if(!empty($local_str) ){
                 $my = fopen($ouputname, "a") or die("Unable to open file!");
                 fwrite($my, "__error\n");
@@ -244,5 +323,4 @@
     }
 
 
-	 
 ?>

@@ -64,6 +64,14 @@ body{
     float: left;
 }
 
+
+.container-medium100{
+    width: 100%;
+    height: 100%;
+
+}
+
+
 #bt-find-course{
     float: right;
     margin-right: 10px;

@@ -302,12 +302,13 @@ html, body{
 }
 
 #editor-bar .item-code{
-	width: 80px;
+	min-width: 80px;
 	height: 25px;
-	background-color: #fff;
+	background-color: #ddd;
 	text-align: center;
 	padding-top: 5px;
-	padding-left: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	float: left;
 }
 
@@ -316,7 +317,8 @@ html, body{
 }
 
 #editor-bar .item-code.active{
-	background-color: #ddd;
+
+	background-color: #fff;
 }
 
 #editor-bar .item-code.no-saved:after{
@@ -532,137 +534,6 @@ th, td{
 }
 
 
-#container-chat{
-	background-color: #bbbac0;
-	border: 1px #373737 solid;
-	border-radius: 5px;
-	width: 40%;
-	height: 300px;
-	position: absolute;
-	z-index: 999;
-	bottom: 10px;
-	right: 10px;
-	padding: 5px;
-	display:none;
-}
-
-#container-chat .title{
-
-	height: 15px;
-	color: #060f24;
-	font-weight: bold;
-	padding: 4px;
-	text-align: center;
-	float: left;
-	margin-bottom: 5px;
-}
-
-#container-chat .close{
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background-color: #060f24;
-	color:#fff;
-	padding: 4px;
-	text-align: center;
-	float: right;
-	margin-bottom: 5px;
-}
-
-#container-chat .close:hover{
-	cursor: pointer;
-}
-
-#container-mensage-sended{
-	height: calc(80% - 20px);
-	width: calc(100% - 10px);
-	margin-left: 5px;
-	margin-top: 5px;
-
-	overflow-y: scroll;
-	background-color: #f9f2f2;
-}
-
-#container-text-type-message{
-	width: 100%;
-
-}
-
-#text-type-message{
-	width: calc(90% - 10px);
-	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	float: left;
-	resize: none;
-	height: 40px;
-}
-
-
-
-
-
-
-#bt-send-message{
-	width: 35px;
-	height: 35px;
-	margin-top: 5px;
-	background-color: #060f24;
-	color: #fff;
-	float: left;
-	font-size: 35px;
-	text-align: center;
-	border-radius: 50%;
-	padding: 5px;
-}
-
-#bt-send-message:hover{
-	background-color: #fff;
-	color: #060f24;
-	cursor: pointer;
-}
-
-
-#container-mensage-sended .message-item{
-	width: 80%;
-	min-height: 40px;
-	margin: 5px;
-	border-radius: 5px;
-	padding: 5px;
-	border: 1px solid #b4b4b4;
-}
-
-#container-mensage-sended .message-item .user{
-	font-size: 12px;
-	font-weight: bold;
-
-}
-
-#container-mensage-sended .message-item .date{
-	font-size: 10px;
-	float: right;
-}
-
-#container-mensage-sended .message-item .text{
-	font-size: 15px;
-	text-align: left;
-}
-
-#container-mensage-sended .message-sended{
-	background-color: #eef3f6;
-	float: left;
-}
-
-#container-mensage-sended .message-received{
-	background-color: #263f7a;
-	float: right;
-	color: #fff;
-}
-
-#test-container{
-	overflow: scroll;
-	height: 500px;
-}
 
 
 .container-unittest{
@@ -744,4 +615,59 @@ th, td{
 .hlinetest-container{
 	font-size: 24px;
 	font-weight: bold;
+}
+
+
+.head-menu{
+	height:100px !important;
+}
+
+.head-menu .title{
+	font-size: x-large;
+	width: 100%;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.inp-search-menu {
+	float: left;
+	margin: 20px 5px 0px 10px;
+}
+.inp-search-menu select{
+	font-size: 20px;
+	border: none;
+	outline: none;
+}
+
+.inp-search-menu  label{
+	font-weight:bold;
+}
+
+.inp-data-menu {
+	float: left;
+	margin: 20px 5px 0px 10px;
+}
+.inp-data-menu input{
+	font-size: 20px;
+	border: none;
+	outline: none;
+}
+
+.inp-data-menu label{
+	font-weight:bold;
+}
+
+
+#editorcontainer{
+	width: calc( 60% - 10px);
+	height: 100%;
+	float: left;
+}
+
+#datacode{
+	height:50px;
+	width: 100%;
+	border-bottom: 1px #727282 solid;
+	padding-top: 10px;
+	padding-left: 10px;
 }

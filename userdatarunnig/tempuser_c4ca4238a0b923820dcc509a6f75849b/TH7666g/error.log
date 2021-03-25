@@ -1,4 +1,0 @@
-  File "../../userdatarunnig/tempuser_c4ca4238a0b923820dcc509a6f75849b/TH7666g/filecode.py", line 1
-    a = input( chr(0) + "<< informe o a
-                                      ^
-SyntaxError: EOL while scanning string literal

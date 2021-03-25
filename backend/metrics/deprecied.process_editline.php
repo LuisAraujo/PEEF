@@ -1,6 +1,6 @@
 <?php
 echo "<title>Jadud’s Error Quotient (EDIT LOCATIOn)</title>";
-@include "conection_database.php";
+@include "../conection_database.php";
 @include "calc_stringedit.php";
 
 $idactivity = 1;

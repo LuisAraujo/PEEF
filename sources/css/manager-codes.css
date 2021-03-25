@@ -1,7 +1,6 @@
 #all-codes{
-
     margin-top: 10px;
-    overflow-y: scroll;
+    overflow: scroll;
     height: calc(100% - 80px);
     width: 100%;
 }
@@ -11,7 +10,6 @@
     width: 210px;
     float: left;
     margin-left: 10px;
-
 }
 
 .container-code{
@@ -93,24 +91,3 @@
 
 
 /*MENU */
-
-.inp-search-menu {
-    float: left;
-    margin: 20px 5px 0px 10px;
-}
-.inp-search-menu select{
-    font-size: 20px;
-    border: none;
-    outline: none;
-}
-
-.head-menu{
-    height:100px !important;
-}
-.head-menu .title{
-    font-size: x-large;
-    width: 100%;
-    margin-left: 5px;
-    margin-top: 5px;
-
-}

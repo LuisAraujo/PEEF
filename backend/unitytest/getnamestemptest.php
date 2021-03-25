@@ -3,7 +3,7 @@
 function getnamefoldertemp_session($iduser){
    // if(gettypeuser() == "leaner" ) {
         $hex_iduser = md5( $iduser );
-        return "../userdatarunnig/tempuser_" . $hex_iduser . "/";
+        return "../../userdatarunnig/tempuser_" . $hex_iduser . "/";
    // }
 }
 

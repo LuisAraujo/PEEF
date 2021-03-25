@@ -49,10 +49,9 @@ if( mkdir($folderprefix) != 1){
     fclose($myfile);
 }
 
-
 $namefile = getnamefilecode_session( $iduser, $token);
 
-$result = $GLOBALS['mysqli']->query("SELECT name, code FROM Code Where id = $idcode;");
+$result = $GLOBALS['mysqli']->query("SELECT name, code FROM code Where id = $idcode;");
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
 

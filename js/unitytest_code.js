@@ -6,7 +6,7 @@
  */
 function getAllCodesNameByProject(callback) {
 
-    $.post("../../backend/project_getallcodes.php")
+    $.post("../../backend/project/project_getallcodes.php")
         .done(function (data){
             callback(  JSON.parse( data ) );
         })
@@ -24,7 +24,7 @@ function getAllCodesNameByProject(callback) {
 function getCodesById(idcode, callback ) {
 
 
-    $.post("../../backend/project_getcodeprojectbyid.php",
+    $.post("../../backend/project/project_getcodeprojectbyid.php",
         {idcode: idcode})
         .done(function (data) {
 
@@ -42,18 +42,46 @@ function getCodesById(idcode, callback ) {
 }
 
 
+
+var startTestCode = function () {
+    // console.log("runnig code");
+    token = getToken();
+
+    gerateFileTestCode( token, function(token, filename){
+        // console.log(filename);
+        testCode(token, filename);
+    });
+
+
+};
+
+
+
+var gerateFileTestCode = function( token, callback){
+    $.ajax({
+        url: "../../backend/unitytest/createfiletemptestcode.php",
+        method: "POST",
+        data: {token: token, idcode: fileactive}
+    }).done(function(data) {
+        //console.log(data)
+        if(data!="0")
+            callback(token);
+    });
+}
+
+
 /**
  * @name runcode
  * @desc run the current active code data in databasee
  */
-function testcode(){
+function testCode(token){
 
-	//$.post( "../../backend/unitytest_code.php",
-	$.post( "../../backend/unitytest_code_.php",
-    {idcode: fileactive },
+	//$.post( "../../backend/depreciate.unitytest_code.php",
+	$.post( "../../backend/unitytest/unitytest_code_.php",
+    {idcode: fileactive, token: token },
     function(data) { })
 	.done(function(out) {
-
+        console.log(out)
         $("#labelresulttest").text(json.result_test);
 
         if(out != "0"){
@@ -176,7 +204,7 @@ function  downloadcode() {
        return;
 
     var req = new XMLHttpRequest();
-    req.open("GET", '../../backend/download_code.php?idcode='+fileactive , true);
+    req.open("GET", '../../backend/project/download_code.php?idcode='+fileactive , true);
     req.responseType = "blob";
     req.onload = function (event) {
         console.log(req)

@@ -9,6 +9,48 @@ var mapcodes = new Map();
 $(document).ready(function () {
     //backend
 
+    $(document).keydown(function(event) {
+
+            // If Control or Command key is pressed and the S key is pressed
+            // run save function. 83 is the key code for S.
+
+
+            if((event.ctrlKey || event.metaKey) && event.which == 83) {
+                // Save Function
+                if(fileactive != undefined )
+                    $("#button-save").trigger("click");
+
+                event.preventDefault();
+                return false;
+
+
+            //(R)un code
+            }
+
+            if((event.ctrlKey || event.metaKey) && event.which == 82) {
+                // Save Function
+                if(fileactive != undefined )
+                    $("#button-run").trigger("click");
+
+                event.preventDefault();
+                return false;
+
+
+            }
+
+            if((event.ctrlKey || event.metaKey) && event.which == 69) {
+                console.log("ok");
+
+                // Save Function
+                if(fileactive != undefined )
+                    $("#button-test").trigger("click");
+
+                event.preventDefault();
+                return false;
+            }
+        }
+    );
+
     setLog("inproject");
 
     getStartPage( function () {
@@ -47,7 +89,7 @@ $(document).ready(function () {
                     return;
 
                 $("#item-code-"+fileactive).removeClass("no-saved");
-                testcode();
+                startTestCode(); //testcode();
             }
         );
 
@@ -85,11 +127,17 @@ $(document).ready(function () {
         downloadcode();
     });
 
+    $("#button-back-course").click(function () {
+        window.location = "../courses/activity/index.html";
+    });
+
     $("#button-new-file").click(function () {
         $("#modal-createcode").show();
     });
 
     $("#button-create-newfile").click(function () {
+        alert("Essa função está indisponível")
+
         if($("#input-cratecode").val() != "") {
 
             createcode($("#input-cratecode").val(), "py");
@@ -102,12 +150,51 @@ $(document).ready(function () {
 
     $("#button-message").click(function () {
         $("#container-chat").show();
+
+        getallmessages( function (data) {
+            $("#container-mensage-sended").html("");
+            setMessageChat(data);
+        });
     });
 
     $("#bt-close-chat").click(function () {
         $("#container-chat").hide();
     });
 
+    $('#check-codesended').change(function() {
+        if(this.checked) {
+            sendProject();
+        }else{
+            removeSendProject();
+        }
+    });
+
+
+    getSendedProject(function (data) {
+        if(data.sended == 1)
+            $("#check-codesended").prop("checked", true);
+    });
+
+
+    $("#bt-send-message").click(function () {
+        console.log("send msg");
+        let text = $("#text-type-message").val();
+        sendmessage(text, 0, function () {
+            $("#text-type-message").val("");
+
+            getlastmessages( function (data) {
+                setMessageChat(data);
+            });
+        });
+    });
+
+
+    //verify chat messages
+    window.setInterval( function () {
+        getlastmessages( function (data) {
+            setMessageChat(data);
+        });
+    }, 60*100);
 
 
     window.addEventListener("beforeunload", function(e){
@@ -118,50 +205,26 @@ $(document).ready(function () {
 });
 
 
-function getdatauser(callback) {
-    $.post("../../backend/getdatauser.php" )
-        .done(function(data)
-        {
-            data = JSON.parse(data);
-            $("#labelusername").text(data.name);
-            configLang(data.cod, callback);
-        })
-        .fail(function () {
-            console.log("erro");
-        });
 
+function setMessageChat(data) {
+
+    for(let i = 0; i < data.length; i++){
+
+        if(data[i].fromprofessor == 1){
+
+            let msg = '<div class="message-item message-sended"><div class="user">Chatbot</div>' +
+                '<div class="text">'+data[i].text+'</div><div class="date">'+data[i].date+', '+data[i].horas+'</div></div>';
+
+            $("#container-mensage-sended").append(msg);
+
+        }else{
+            let msg = '<div class="message-item message-received"><div class="user">me</div>' +
+                '<div class="text">'+data[i].text+'</div><div class="date">'+data[i].date+', '+data[i].horas+'</div></div>';
+
+            $("#container-mensage-sended").append(msg);
+        }
+    }
 }
-
-function configLang(cod, callback) {
-    if(cod == null)
-        cod =  "eng";
-
-    jQuery.getJSON("../../lang/"+cod+"-text.json", function(data){
-        json = data;
-
-        //initial conf
-        //initial conf
-        $("#labelnewfile").text(data.newfile);
-        $("#labelsave").text(data.save);
-        $("#labelrun").text(data.run);
-        $("#labeltest").text(data.test);
-        $("#labeldownload").text(data.download);
-        $("#labelchat").text(data.chat);
-        $("#labelsendcode").text( data.send_code.toUpperCase());
-        $("#labeldescription").text( data.description);
-        $("#labeldescription_input").text( data.input);
-        $("#labelinput").text( data.input);
-        $("#labeldescription_output").text( data.output);
-        $("#labeloutput").text( data.output);
-        $("#labeltalkme").text(data.talkme);
-        $("#labelneedhelp").text( data.needhelp);
-
-        callback();
-
-    });
-}
-
-
 
 function setCodeNamesMenu(data) {
     //1.clear bar explore

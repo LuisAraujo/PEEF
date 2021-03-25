@@ -1,11 +1,13 @@
 <?php
 
-@include "conection_database.php";
+//USED ON EDIT LINE VIEW
+
+@include "../conection_database.php";
 $idproject = $_POST["idproject"];
 $currentRow = 0;
 
 //$query = "SELECT CodeCompilation.id as codeid, LineEdited.id, diff, lineError, code, date, hours, typeError, line FROM Compilation INNER JOIN CodeCompilation ON  Compilation.id = CodeCompilation.Compilation_id INNER JOIN LineEdited ON LineEdited.CodeCompilation_id = CodeCompilation.id  WHERE Code_id = (SELECT Code.id FROM Code WHERE Project_id = ".$idproject." LIMIT 1) ORDER BY codeid";
-$query = "SELECT CodeCompilation.id as codeid,  lineError, code, date, hours, typeError FROM Compilation INNER JOIN CodeCompilation ON  Compilation.id = CodeCompilation.Compilation_id WHERE Code_id = (SELECT Code.id FROM Code WHERE Project_id = ".$idproject." LIMIT 1) ORDER BY codeid";
+$query = "SELECT codecompilation.id as codeid,  lineError, code, date, hours, typeError FROM compilation INNER JOIN codecompilation ON  compilation.id = codecompilation.Compilation_id WHERE Code_id = (SELECT code.id FROM code WHERE Project_id = ".$idproject." LIMIT 1) ORDER BY codeid";
 $result = $mysqli->query($query);
 $currentRow = 0;
 $jsonReturn = '{ "idproject": "'. $idproject.'" , "codes": ['  ;
@@ -20,7 +22,7 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
     //$jsonReturn .='{"id": "'.$row['id'].'",  "date": "'.$row['date'].'",  "hours": "'.$row['hours'].'", "typeError": "'.$row['typeError'].'", "line": [';
     $jsonReturn .='{"date": "'.$row['date'].'",  "hours": "'.$row['hours'].'", "typeError": "'.$row['typeError'].'", "line": [';
 
-    $query2 = "SELECT diff, line FROM LIneEdited WHERE CodeCompilation_id = ".$row['codeid'];
+    $query2 = "SELECT diff, line FROM lineedited WHERE CodeCompilation_id = ".$row['codeid'];
     $result2 = $mysqli->query($query2);
 
     $currentRow2 = 0;

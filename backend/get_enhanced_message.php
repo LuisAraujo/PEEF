@@ -2,11 +2,11 @@
 
 @include "metrics/calc_stringedit.php";
 @include "conection_database.php";
-@include "manager_section.php";
+@include "session/manager_section.php";
 
-function getEnchecedMessage($typeError){
+function getEnhancedMessage($typeError){
 
-    $query = "SELECT subtype, enhancedmessage FROM ENHANCEDMESSAGE WHERE type = '$typeError[0]' AND Sis_Language_id = (SELECT Language_id FROM STUDENT WHERE  id = '".getcurrentuser_session()."') AND Language_id = (SELECT Language_id FROM COURSE WHERE id = '".getcurrentcourse_session()."')";
+    $query = "SELECT subtype, enhancedmessage FROM enhancedmessage WHERE type = '$typeError[0]' AND Sis_Language_id = (SELECT Language_id FROM student WHERE  id = '".getcurrentuser_session()."') AND Language_id = (SELECT Language_id FROM course WHERE id = '".getcurrentcourse_session()."')";
 
     $result = $GLOBALS['mysqli']->query($query);
 

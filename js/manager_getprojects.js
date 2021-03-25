@@ -16,12 +16,17 @@ function getprojects(idprojects, callback) {
         //console.log(data);
         var json = JSON.parse(data);
         callback(json);
-
+        console.log(json)
     })
 }
 
 function  printprojects(json) {
     console.log(json)
+
+    if(json.codes.length == 0){
+        $("#all-codes").append("Don't have compilation to this project!");
+    }
+
     for(var i = 0; i < json.codes.length; i++){
 
         var elems = '<div class="container-data-code">';
@@ -58,11 +63,3 @@ function  printprojects(json) {
 
 }
 
-/*valor fixo
-* Colocar uma página anterior, com os cursos / projeto
-* passar o id do projeto para esta pagina
-* criar um ready
-* */
-calctypeerror( 9, function () {
-    getprojects(9, printprojects );
-});
