@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
     <link rel="stylesheet" href="../../sources/css/style.css">
     <link rel="stylesheet" href="../../sources/css/style-courses.css">
+    <link rel="stylesheet" href="../../sources/css/style-dashboard.css">
 
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/log.js"></script>
-    <script src="../../js/activity_frontend.js"></script>
+    <script src="../../js/dashboard_frontend.js"></script>
 
 
 </head>
@@ -18,27 +19,25 @@
     <div class="bar-side" id="explore-bar">
 
         <div class="head-bar-side">
-
             <div class="img-profile" ></div>
-            <div id="labelusername" class="username">
-                ...
-            </div>
+            <div id="labelusername" class="username"></div>
         </div>
 
         <div>
-            <div id="bt-explore-course" class="item-menu">
-                <i class="icofont-boo"></i>
-                <span id="labelcourse"> Courses </span>
+            <div id="bt-explore-home" ref="home" class="item-menu active">
+                <i class="icofont-home"></i>
+                <span id="labelhome"> Home </span>
             </div>
-            <div id="bt-explore-student" class="item-menu">
+
+            <div id="bt-explore-student" ref="student" class="item-menu">
                 <i class="icofont-student-alt"></i>
                 <span id="labelstudent"> Students </span>
             </div>
-            <div id="bt-explore-activity" class="item-menu">
+            <div id="bt-explore-activity" ref="activity"  class="item-menu">
                 <i class="icofont-code-alt"></i>
                 <span id="labelactivity" > Activities </span>
             </div>
-            <div id="bt-explore-notification" class="item-menu">
+            <div id="bt-explore-notification" ref="engagement"  class="item-menu">
                 <i class="icofont-notification"></i>
                 <span id="labelnotification"> Engagement </span>
             </div>
@@ -50,23 +49,76 @@
     <div class="container-medium">
 
         <div class="head-menu">
-            <div class="head-title"> <span></span> <span id="namecourse" ></span> </div>
+            <div class="head-title">
+                <span>Dashboard</span>
+            </div>
+
+
+            <div class="inp-search-menu">
+                <label>Course</label>
+                <select id="select-courses">
+                    <option> </option>
+                    <option>Aluno Teste</option>
+                </select>
+            </div>
         </div>
 
-        <!-- COURSE -->
-        <div id="container-my-classe" class="container-activity">
 
+        <!-- HOME -->
+        <div id="container-home" class="container-activity">
 
+            <div class="itens-sumary-datshboard">
+                <i class="icofont-student-alt"></i>
+                <span> Enrolled Students</span>
+                <span id="enrolledstudent"> 0 </span>
+            </div>
 
+            <div class="itens-sumary-datshboard">
+                <i class="icofont-pencil"></i>
+                <span> Total Classes </span>
+                <span id="ncalsses"> 0 </span>
+            </div>
+            <div class="itens-sumary-datshboard">
+                <i class="icofont-test-bulb"></i>
+                <span> Total Activities </span>
+                <span id="nactivity"> 0 </span>
+            </div>
+
+            <div class="itens-sumary-datshboard">
+                <i class="icofont-computer"></i>
+                <span> Total Compilation </span>
+                <span id="ncompilation"> 0 </span>
+            </div>
+
+            <div class="itens-sumary-datshboard">
+                <i class="icofont-check"></i>
+                <span> Total Passed Tests </span>
+                <span id="npassedtest"> 0 </span>
+            </div>
+
+            <div class="button" id="btdownload-datasumary">
+                <i class="icofont-download"></i> Download Data
+            </div>
+
+        </div>
+
+        <!-- student -->
+        <div id="container-student" class="container-activity">
+            student
         </div>
 
 
         <!-- ACTIVTY -->
-        <div  class="container-activity" >
-            <div id="container-my-activity">
-
-            </div>
+        <div id="container-activity" class="container-activity" >
+            activity
         </div>
+
+
+        <!-- ENGAGEMENT -->
+        <div id="container-engagement" class="container-activity" >
+            engagement
+        </div>
+
     </div>
 
 </body>

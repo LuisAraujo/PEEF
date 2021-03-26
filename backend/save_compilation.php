@@ -16,13 +16,14 @@ if($error != 0){
     $errormessage = str_replace("'" , "\'" , $errormessage );
 
 }
-
-if($error != 0)
+//verificar se n causa erro
+if($n_error != 0)
     $testpassed = -1;
 else
     $testpassed = $n_error==0?1:0;
+
 //Insert Compilations
-$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$errormessage',  $idcode, NULL, NULL, NULL, $testpassed)";
+$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$errormessage',  $idcode, NULL, NULL, NULL, $testpassed, NULL)";
 
 $result = $mysqli->query($query);
 

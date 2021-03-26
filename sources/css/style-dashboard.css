@@ -1,0 +1,18 @@
+.itens-sumary-datshboard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button{
+    border: 1px solid #8d8da0;
+    margin-top: 5px;
+    background-color: #d3d7d8;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #bdc1c2;
+}

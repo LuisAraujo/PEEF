@@ -17,6 +17,7 @@ $(document).ready(function () {
     window.addEventListener("beforeunload", function(e){
         setLog("outcourse")
     }, false);
+
     getAllClasses();
     getAllActivity();
     getdatauser();
@@ -101,7 +102,7 @@ function getAllClasses() {
 
 function getAllActivity() {
     $.post( "../../../backend/course/course_getactivities.php", function( data ) {
-    //console.log(data);
+
     var json = JSON.parse(data);
     for(var i= 0 ; i < json.length; i++){
 

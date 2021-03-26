@@ -671,3 +671,27 @@ th, td{
 	padding-top: 10px;
 	padding-left: 10px;
 }
+
+
+.list-item{
+	border-bottom: 1px solid #727282;
+	padding: 5px;
+}
+
+.list-item .label{
+	font-style: italic;
+	font-size: 14px;
+}
+.list-item .name{
+	min-width: 300px;
+	display: block;
+	float: left;
+}
+
+.list-item .link{
+	text-decoration: underline;
+}
+
+.list-item .link:hover{
+	cursor: pointer;
+}

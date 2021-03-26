@@ -1,9 +1,9 @@
 <?php
 
-echo "<title>Students by Course</title>";
 @include "../conection_database.php";
+@include "../session/manager_section.php";
 
-$courseid = 1;
+$courseid = getcurrentcourse_session();
 
 $query = "SELECT Student.id, Student.name FROM enrollment INNER JOIN Student ON Student.id = Student_id WHERE Course_id = ".$courseid;
 $result = $mysqli->query($query);
