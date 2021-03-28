@@ -1,1 +1,0 @@
-Ocorreu um erro de Sintaxe. Isso significa que no seu código há um padrão não reconhecido pelo Python. Verifique se falta algum parêntese em comandos como if, while, for, print, input e outros. Verifique ainda o uso de ':' em comandos como if e for.  

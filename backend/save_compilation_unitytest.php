@@ -2,6 +2,7 @@
 
 $line = "";
 $errormessage = "";
+$typeerror = ['no-error','-1'];
 
 if($error != 0){
 
@@ -15,15 +16,18 @@ if($error != 0){
     $errormessage = str_replace("\\" , "\\\\" , $errormessage);
     $errormessage = str_replace("'" , "\'" , $errormessage );
 
+    $typeerror = checkErroType($errormessage);
+
 }
+
 //verificar se n causa erro
-if($n_error != 0)
-    $testpassed = -1;
+if($error != 0)
+    $testpassed = 0;
 else
     $testpassed = $n_error==0?1:0;
 
 //Insert Compilations
-$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$errormessage',  $idcode, NULL, NULL, NULL, $testpassed, NULL)";
+$query = "INSERT compilation VALUES (NULL, CURDATE() , CURTIME(), '$errormessage',  $idcode, '$typeerror[0]', '$typeerror[1]', '', $testpassed, 0)";
 
 $result = $mysqli->query($query);
 

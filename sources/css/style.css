@@ -487,9 +487,8 @@ th, td{
 }
 
 #modal-description-img{
-	width: calc(100% - 20px);
-	height: calc(10%);
-	//margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 #modal-description-img .link-image-description{

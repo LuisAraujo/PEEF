@@ -2,6 +2,7 @@
 @include "../conection_database.php";
 @include "../session/manager_section.php";
 @include "../util/getnamestemp.php";
+@include  "../identify_errotype.php";
 
 $idcode = $_POST["idcode"];
 $token = $_POST["token"];
@@ -164,7 +165,9 @@ if($error == 0){
         $out = fgets($temp_testoutput);
         fclose($temp_testoutput);
         $outstring = str_replace( "\n", "|", $out);
-        $outstring = preg_replace('/\s+/', '', $out);
+        $outstring = preg_replace('/\s+/', ' ', $out);
+        $outstring = ltrim($outstring);
+        $outstring = rtrim($outstring);
 
         if (strcmp( $outstring , $row2["output"]) !== 0) {
             $jsontest .= '{"passed":"0" ,';
@@ -196,14 +199,18 @@ if($error == 0){
     $jsontest .= "}";
     echo $jsontest;
 
+    $typeerror = "no-error";
+    $lineerror = "-1";
+
 }else{
 
 	echo "0";
+
 
 }
 
 fclose($temp);
 
-@include "save_compilation.php";
+@include "../save_compilation_unitytest.php";
 
 ?>

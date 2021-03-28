@@ -148,6 +148,15 @@ $(document).ready(function () {
         $("#modal-createcode").hide();
     });
 
+    $("#labeltalkme").click(function () {
+        $("#container-chat").show();
+
+        getallmessages( function (data) {
+            $("#container-mensage-sended").html("");
+            setMessageChat(data);
+        });
+    });
+
     $("#button-message").click(function () {
         $("#container-chat").show();
 
@@ -251,7 +260,8 @@ function setCodeNamesMenu(data) {
             $("#out1").html("<td>"+data.input01+"</td><td>"+data.output01+"</td>");
             $("#out2").html("<td>"+data.input02+"</td><td>"+data.output02+"</td>");
 
-            $("#modal-description-img").html('<span class="link-image-description"><a href="'+data.image+'" target="_blank"> <i class="icofont-file-jpg"></i> Image 01 </a></span>');
+           // $("#modal-description-img").html('<span class="link-image-description"><a href="'+data.image+'" target="_blank"> <i class="icofont-file-jpg"></i> Image 01 </a></span>');
+            $("#modal-description-img").attr('src', data.image );
             $("#modal-description").show();
         });
 
