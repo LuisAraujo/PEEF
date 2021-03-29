@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../../sources/images/logo_peef.png" sizes="16x16" type="image/png">
     <title>PEFF - My Activity</title>
 
     <link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
@@ -37,10 +38,7 @@
                 <i class="icofont-code-alt"></i>
                 <span id="labelactivity" > Activities </span>
             </div>
-            <div id="bt-explore-notification" ref="engagement"  class="item-menu">
-                <i class="icofont-notification"></i>
-                <span id="labelnotification"> Engagement </span>
-            </div>
+
 
         </div>
     </div>
@@ -56,7 +54,7 @@
 
             <div class="inp-search-menu">
                 <label>Course</label>
-                <select id="select-courses">
+                <select class="select-header" id="select-courses">
                     <option> </option>
                     <option>Aluno Teste</option>
                 </select>
@@ -69,31 +67,38 @@
 
             <div class="itens-sumary-datshboard">
                 <i class="icofont-student-alt"></i>
-                <span> Enrolled Students</span>
+                <span> <strong> Enrolled Students </strong></span>
                 <span id="enrolledstudent"> 0 </span>
             </div>
 
             <div class="itens-sumary-datshboard">
                 <i class="icofont-pencil"></i>
-                <span> Total Classes </span>
+                <span> <strong>Total Classes</strong> </span>
                 <span id="ncalsses"> 0 </span>
             </div>
             <div class="itens-sumary-datshboard">
                 <i class="icofont-test-bulb"></i>
-                <span> Total Activities </span>
+                <span> <strong>Total Activities</strong> </span>
                 <span id="nactivity"> 0 </span>
             </div>
 
             <div class="itens-sumary-datshboard">
                 <i class="icofont-computer"></i>
-                <span> Total Compilation </span>
+                <span><strong> Total Compilation</strong> </span>
                 <span id="ncompilation"> 0 </span>
             </div>
 
             <div class="itens-sumary-datshboard">
+                <i class="icofont-list"></i>
+                <span> <strong>Total Tests </strong></span>
+                <span id="test"> 0 </span>
+            </div>
+
+
+            <div class="itens-sumary-datshboard">
                 <i class="icofont-check"></i>
-                <span> Total Passed Tests </span>
-                <span id="npassedtest"> 0 </span>
+                <span><strong>Total Passed Tests</strong> </span>
+                <span id="passedtest"> 0 </span>
             </div>
 
             <div class="button" id="btdownload-datasumary">
@@ -115,7 +120,7 @@
 
 
         <!-- ENGAGEMENT -->
-        <div id="container-engagement" class="container-activity" >
+        <div id="container-activity-details" class="container-activity" >
             engagement
         </div>
 

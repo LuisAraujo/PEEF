@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600;700&display=swap');
+
 html, body{
 	width:100%;
 	height:100%;
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background-color: #e0e0e0;
 	overflow-y: hidden;
 }
+
 
 .bar-side{
 	height: 100%;
@@ -671,26 +674,13 @@ th, td{
 	padding-left: 10px;
 }
 
-
-.list-item{
-	border-bottom: 1px solid #727282;
-	padding: 5px;
+.select-header{
+	border-radius: 5px;
 }
 
-.list-item .label{
-	font-style: italic;
-	font-size: 14px;
-}
-.list-item .name{
-	min-width: 300px;
-	display: block;
-	float: left;
-}
-
-.list-item .link{
-	text-decoration: underline;
-}
-
-.list-item .link:hover{
-	cursor: pointer;
+.select-header option{
+	background-color: transparent;
+	font-size: 15px;
+	border:0px;
+	outline:0px;
 }
