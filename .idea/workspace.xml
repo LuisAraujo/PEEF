@@ -13,59 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_frontend.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="203" column="93" lean-forward="false" selection-start-line="203" selection-start-column="75" selection-end-line="203" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat_frontend.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/chat_frontend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="90" column="48" lean-forward="true" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calc_editline_dinamicprog_byproject.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/metrics/calc_editline_dinamicprog_byproject.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="278" lean-forward="false" selection-start-line="15" selection-start-column="278" selection-end-line="15" selection-end-column="278" />
-              <folding>
-                <marker date="1617075089577" expanded="true" signature="319:594" ph="SELECT compi... compilation" />
-                <marker date="1617075089577" expanded="true" signature="653:956" ph="SELECT compi... compilation" />
-                <marker date="1617075089577" expanded="true" signature="1542:1648" ph="INSERT INTO lineedited... " />
-                <marker date="1617075089577" expanded="true" signature="1842:1897" ph="UPDATE codec... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setlastmessageasview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/chat/setlastmessageasview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <marker date="1617074865941" expanded="true" signature="420:456" ph="UPDATE Messa... " />
-                <marker date="1617074865941" expanded="true" signature="420:469" ph="UPDATE Messa... " />
-                <marker date="1617074865941" expanded="true" signature="420:490" ph="UPDATE Messa... " />
-                <marker date="1617074865941" expanded="true" signature="420:544" ph="UPDATE Messa... " />
-                <marker date="1617074865941" expanded="true" signature="420:560" ph="UPDATE Messa... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/project_backend.js" />
         <option value="$PROJECT_DIR$/js/log.js" />
         <option value="$PROJECT_DIR$/backend/chat/getallmessagesbyidproject.php" />
         <option value="$PROJECT_DIR$/js/home_login.js" />
@@ -159,13 +106,14 @@
         <option value="$PROJECT_DIR$/backend/course/getsumarystudent_bycourse.php" />
         <option value="$PROJECT_DIR$/js/chat.js" />
         <option value="$PROJECT_DIR$/js/chat_frontend.js" />
-        <option value="$PROJECT_DIR$/teacher/dashboard/index.html" />
-        <option value="$PROJECT_DIR$/js/dashboard_frontend.js" />
         <option value="$PROJECT_DIR$/sources/css/style-dashboard.css" />
         <option value="$PROJECT_DIR$/backend/dashboard/dash_getactivitiesbystudent.php" />
         <option value="$PROJECT_DIR$/js/project_frontend.js" />
         <option value="$PROJECT_DIR$/backend/chat/setlastmessageasview.php" />
         <option value="$PROJECT_DIR$/backend/metrics/calc_editline_dinamicprog.php" />
+        <option value="$PROJECT_DIR$/js/calcmetrics.js" />
+        <option value="$PROJECT_DIR$/teacher/dashboard/index.html" />
+        <option value="$PROJECT_DIR$/js/dashboard_frontend.js" />
         <option value="$PROJECT_DIR$/backend/metrics/calc_editline_dinamicprog_byproject.php" />
       </list>
     </option>
@@ -233,62 +181,6 @@
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="leaner" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="leaner" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="chat" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="editstring" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -403,18 +295,17 @@
       <workItem from="1616727995296" duration="11018000" />
       <workItem from="1616776494510" duration="10692000" />
       <workItem from="1616979795606" duration="17174000" />
-      <workItem from="1617040879512" duration="16495000" />
+      <workItem from="1617040879512" duration="17532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539884000" />
+    <option name="totallyTimeSpent" value="540921000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32210836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -455,20 +346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/metrics/getjson_logs_bystudent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/manager-codes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/course/course_getclasses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -820,26 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/dashboard/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1150">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="203" column="93" lean-forward="false" selection-start-line="203" selection-start-column="75" selection-end-line="203" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/css/style-dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -905,14 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/chat_frontend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="90" column="48" lean-forward="true" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/metrics/calc_editline_dinamicprog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -941,16 +790,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/chat_frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="91" column="11" lean-forward="true" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/metrics/calc_editline_dinamicprog_byproject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="278" lean-forward="false" selection-start-line="15" selection-start-column="278" selection-end-line="15" selection-end-column="278" />
+        <state relative-caret-position="200">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1617075089577" expanded="true" signature="319:594" ph="SELECT compi... compilation" />
-            <marker date="1617075089577" expanded="true" signature="653:956" ph="SELECT compi... compilation" />
-            <marker date="1617075089577" expanded="true" signature="1542:1648" ph="INSERT INTO lineedited... " />
-            <marker date="1617075089577" expanded="true" signature="1842:1897" ph="UPDATE codec... " />
+            <marker date="1617076029736" expanded="true" signature="255:530" ph="SELECT compi... compilation" />
+            <marker date="1617076029736" expanded="true" signature="581:884" ph="SELECT compi... compilation" />
+            <marker date="1617076029736" expanded="true" signature="1410:1516" ph="INSERT INTO lineedited... " />
+            <marker date="1617076029736" expanded="true" signature="1690:1745" ph="UPDATE codec... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/calcmetrics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/chat_backend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/dashboard/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="245" column="19" lean-forward="false" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

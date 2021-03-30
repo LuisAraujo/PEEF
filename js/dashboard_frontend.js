@@ -159,9 +159,9 @@ function  showListStudents( data ) {
                 window.open('../statisticstudents.html?id=' + $(this).attr("value"), '_blank');
             });
         }
-
-
 }
+
+
 function showActivity( data ) {
 
         $("#container-activity").html("");
@@ -220,7 +220,7 @@ function showActivityByStudent(data, idstudent) {
                         elem += ' <div class="label error" title="actual state"><div class="value">' + json[i].typeerror + '</div></div>';
 
                     if(json[i].passed == "1"){
-                        console.log(json[i].idcomp,  json[i].idpassed)
+
                         if(json[i].idcomp == json[i].idpassed)
                             elem += ' <div class="label success" title="tests passed"><i class="icofont-check"></i><div class="value"> passed </div></div>';
                         else
@@ -241,7 +241,13 @@ function showActivityByStudent(data, idstudent) {
             });
 
             $(".editstring-item-list").click(function () {
-                window.open('../editstring/index.html?id=' + $(this).attr("value"), '_blank');
+                let idproject = $(this).attr("value")
+                calcEditString( idproject,function (data) {
+                    console.log(data)
+                    window.open('../editstring/index.html?id=' + idproject, '_blank');
+                })
+
+
             });
 
         }
