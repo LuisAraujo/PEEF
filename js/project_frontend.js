@@ -8,6 +8,7 @@ var mapcodes = new Map();
 
 $(document).ready(function () {
     //backend
+    getlastmessages( showChatMessageAndNotification );
 
     $(document).keydown(function(event) {
 
@@ -150,6 +151,10 @@ $(document).ready(function () {
 
     $("#labeltalkme").click(function () {
         $("#container-chat").show();
+        $("#notification-chat").hide();
+        $("#notification-chat").html(0);
+
+        setlastmessagesasview(-1, 1);
 
         getallmessages( function (data) {
             $("#container-mensage-sended").html("");
@@ -159,6 +164,10 @@ $(document).ready(function () {
 
     $("#button-message").click(function () {
         $("#container-chat").show();
+        $("#notification-chat").hide();
+        $("#notification-chat").html(0);
+
+        setlastmessagesasview(-1, 1);
 
         getallmessages( function (data) {
             $("#container-mensage-sended").html("");
@@ -200,12 +209,7 @@ $(document).ready(function () {
 
     //verify chat messages
     window.setInterval( function () {
-        getlastmessages( function (data) {
-            setMessageChat(data);
-            setlastmessagesasview(-1, 1, function (data) {
-                console.log(data);
-            });
-        });
+        getlastmessages( showChatMessageAndNotification );
     }, 60*100);
 
 
@@ -216,7 +220,43 @@ $(document).ready(function () {
 
 });
 
+function  showChatMessageAndNotification( data ) {
+        let unviewed = 0;
+        let  length = data.length-1;
 
+        //console.log(data);
+        //console.log(data.length);
+
+        if(data.length > 0) {
+
+            //console.log(data[length - unviewed].fromprofessor, data[length - unviewed].hasview)
+            //console.log((data[length - unviewed].fromprofessor == "1" ) && (data[length - unviewed].hasview == "0"))
+
+            while ( (data[length - unviewed].fromprofessor == "1" ) && (data[length - unviewed].hasview == "0")) {
+                unviewed++;
+
+                if(data[length - unviewed] == undefined)
+                    break;
+
+
+            }
+
+            if(unviewed>0) {
+                let lastview = parseInt($("#notification-chat").html());
+                $("#notification-chat").html(lastview+unviewed);
+                $("#notification-chat").show();
+
+            }else if( $("#notification-chat").html() == "0") {
+                $("#notification-chat").hide();
+            }
+        }
+
+        setMessageChat(data);
+
+        if($("#container-chat").css("display") == "block") {
+            setlastmessagesasview(-1, 1);
+        }
+}
 
 function setMessageChat(data) {
 
@@ -237,8 +277,10 @@ function setMessageChat(data) {
         }
     }
 
+
     var chatcontainer = $('#container-mensage-sended');
     chatcontainer.scrollTop(chatcontainer.prop("scrollHeight"));
+
 }
 
 function setCodeNamesMenu(data) {

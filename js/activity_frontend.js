@@ -101,16 +101,33 @@ function getAllClasses() {
 
 
 function getAllActivity() {
-    $.post( "../../../backend/course/course_getactivities.php", function( data ) {
+    $.post( "../../../backend/course/course_getactivitiesanddata.php", function( data ) {
 
     var json = JSON.parse(data);
     for(var i= 0 ; i < json.length; i++){
 
-        var elem ='<div class="activity-item" idactivity="'+json[i].id+'"> <div class="title-activity">'+json[i].title+'</div> ';
-        elem +=  '<div ><i class="icofont-flag" title="Title"></i></div> ';
-        elem +=  '<div ><i class="icofont-check-circled" title="Correct"></i></div>';
+        var elem ='<div class="list-item activity-item" idactivity="'+json[i].id+'"> <div class="title-activity">'+json[i].title+'</div> ';
+        elem +=  '<div class="options-item-list"> ';
+
+        if(json[i].delivered == 1)
+            elem +=  '<div class="lable"><i class="icofont-flag actived" title="Delivered"></i></div> ';
+        else
+            elem +=  '<div class="lable"><i class="icofont-flag " title="Delivered"></i></div> ';
+
+        if(json[i].correct == 1)
+            elem +=  '<div ><i class="icofont-check-circled" title="Correct"></i></div>';
+        else
+            elem +=  '<div class="lable"><i class="icofont-error" title="Error"></i></div>';
+
         elem +=  ' <!-- <div ><i class="icofont-error" title="Wrong"></i></div> --> ';
-        elem +=  '<div><i class="icofont-chat actived" title="message"></i></div> </div>';
+
+        if(json[i].hasmessage > 0)
+            elem +=  '<div class="lable"><i class="icofont-chat actived" title="message"></i></div> </div>';
+        else
+            elem +=  '<div class="lable"><i class="icofont-chat" title="message"></i></div> </div>';
+
+
+        elem +=  '</div>';
 
         $("#container-my-activity").append(elem)
 
@@ -118,12 +135,13 @@ function getAllActivity() {
 
     $(".activity-item").click(function () {
         console.log("click item")
-        $.post( "../../../backend/course/course_getidproject.php", { idactivity: $(this).attr("idactivity")  } )
-        .done(function(data)
-        {
-            data = JSON.parse(data);
-            console.log("get data idproj" + data);
-            $.post( "../../../backend/session/manager_section.php", { currentproject: data.id } )
+       // $.post( "../../../backend/course/course_getidproject.php", { idactivity: $(this).attr("idactivity")  } )
+        //.done(function(data)
+       // {
+            //data = JSON.parse(data);
+            //console.log("get data idproj" , data);
+            //$.post( "../../../backend/session/manager_section.php", { currentproject: data.id } )
+            $.post( "../../../backend/session/manager_section.php", { currentproject: $(this).attr("idactivity") } )
 
                 .done(function(data)
                 {
@@ -138,10 +156,10 @@ function getAllActivity() {
 
 
         })
-        .fail(function () {
-            console.log("erro");
-        });
-    });
+       // .fail(function () {
+        //    console.log("erro");
+        //});
+    //});
   });
 }
 

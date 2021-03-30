@@ -1,7 +1,7 @@
 function getStartPage(callback){
     $.post( "../../backend/project/project_getidcode.php").done(
         function (data){
-           console.log(data)
+          // console.log(data)
            callback();
         });
 }
@@ -57,7 +57,7 @@ function getSendedProject(callback) {
     $.post("../../backend/project/project_getsendproject.php",{sended:1} )
         .done(function(data)
         {
-            console.log(data)
+            //console.log(data)
             data = JSON.parse(data);
             callback(data);
         })

@@ -1,4 +1,4 @@
-lastidmsg = 0;
+lastidmsg = -1;
 
 function sendmessage( text, fromprof, callback) {
 
@@ -76,6 +76,20 @@ function getlastmessagesbyprojectid(idproject, callback) {
 function setlastmessagesasview(idproject,fromprof, callback) {
 
     $.post( "../../backend/chat/setlastmessageasview.php", {fromprof: fromprof, idproject:idproject, lastidmsg:  lastidmsg },
+        function( data ) {
+            //data = JSON.parse(data);
+            //console.log(data);
+
+            if(callback!=undefined)
+                callback(data);
+
+        });
+}
+
+
+function getcountmessagesunviewed(idproject,fromprof, callback) {
+
+    $.post( "../../backend/chat/getmessageunviewed.php", {fromprof: fromprof, idproject:idproject },
         function( data ) {
             //data = JSON.parse(data);
             console.log(data);

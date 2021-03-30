@@ -7,8 +7,10 @@
 if(isset( $_POST["lastidmsg"]))
     $lastidmsg = $_POST["lastidmsg"];
 
+$lastidmsg = -1;
 
 $query = "SELECT * FROM message WHERE Project_id = ".getcurrentproject_session()." AND id > '".$lastidmsg."'";
+
 $result = $mysqli->query($query);
 
 $myArray = array();

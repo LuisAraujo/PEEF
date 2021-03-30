@@ -684,3 +684,157 @@ th, td{
 	border:0px;
 	outline:0px;
 }
+
+
+#notification-chat{
+	background-color: #ff484d;
+	color: #fff;
+	width: 15px;
+	height:15px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	top: -60px;
+	left: 40px;
+	z-index: 99;
+	display: none;
+}
+
+
+.list-item{
+
+	padding: 2px;
+	float: left;
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	background-color: #c5c5df;
+}
+
+.options-item-list{
+	float: right !important;
+}
+
+
+.title-student-list{
+	font-weight: bold;
+	padding-left: 10px;
+	color: #4e4e63;
+}
+
+
+.list-item .name{
+	font-weight: bold;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.list-item .label{
+	font-style: italic;
+	font-size: 14px;
+	background-color: #716eca;
+	border-radius: 5px;
+	padding: 7px;
+	margin-left: 5px;
+	margin-left: 5px;
+	color: #fff;
+	float: left;
+}
+.list-item .label:hover{
+	cursor: pointer;
+	background-color: #625fb5;
+}
+.list-item .label.inactive{
+	background-color: #9c979b;
+	color: #212121;
+}
+
+.list-item .label.inactive:hover{
+	cursor: default;
+}
+
+.list-item .label.success{
+	background-color: #4fce3d;
+	color: #fff;
+}
+
+
+.list-item .label.error{
+	background-color: #ff4c39;
+	color: #fff;
+}
+.list-item .label.warnig{
+	background-color: #d9d200;
+	color: #2f2912;
+}
+
+
+
+.list-item .name{
+	min-width: 300px;
+	display: block;
+	float: left;
+}
+
+.list-item .link{
+	text-decoration: underline;
+}
+
+.list-item .link:hover {
+	cursor: pointer;
+}
+
+.list-item .value{
+	color: #000000;
+	border-radius: 20%;
+	background-color: #fff;
+	padding: 3px;
+	font-size: 10px;
+	margin-left: 10px;
+	min-width: 20px;
+	float: right;
+
+}
+
+.list-item .label.inactive i{
+	color: #424242 !important;
+}
+
+
+.list-item .label.inactive .value{
+	background-color: #ada7ac;
+	color: #212121;
+}
+
+
+.list-item .label.success .value{
+	background-color: transparent;
+	color:#fff;
+	width: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list-item .label.error .value{
+	background-color: transparent;
+	color:#fff;
+	width: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.list-item .label.warnig .value{
+	background-color: transparent;
+	color: #2f2912;
+	width: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+.list-item .label.warnig  i{
+	fill: #fff;
+}
