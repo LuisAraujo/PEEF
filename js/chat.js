@@ -73,6 +73,18 @@ function getlastmessagesbyprojectid(idproject, callback) {
 }
 
 
+function setlastmessagesasview(idproject,fromprof, callback) {
+
+    $.post( "../../backend/chat/setlastmessageasview.php", {fromprof: fromprof, idproject:idproject, lastidmsg:  lastidmsg },
+        function( data ) {
+            //data = JSON.parse(data);
+            console.log(data);
+
+            if(callback!=undefined)
+                callback(data);
+
+        });
+}
 
 function getlastmessages( callback) {
 

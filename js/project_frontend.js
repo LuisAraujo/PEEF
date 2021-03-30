@@ -202,6 +202,9 @@ $(document).ready(function () {
     window.setInterval( function () {
         getlastmessages( function (data) {
             setMessageChat(data);
+            setlastmessagesasview(-1, 1, function (data) {
+                console.log(data);
+            });
         });
     }, 60*100);
 
@@ -233,6 +236,9 @@ function setMessageChat(data) {
             $("#container-mensage-sended").append(msg);
         }
     }
+
+    var chatcontainer = $('#container-mensage-sended');
+    chatcontainer.scrollTop(chatcontainer.prop("scrollHeight"));
 }
 
 function setCodeNamesMenu(data) {

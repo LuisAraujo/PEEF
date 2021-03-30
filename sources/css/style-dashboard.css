@@ -1,6 +1,50 @@
 .itens-sumary-datshboard{
     margin-top: 10px;
     margin-bottom: 10px;
+    float: left;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itens-sumary-datshboard .number{
+    font-family: 'Montserrat Medium', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.itens-sumary-datshboard.color-blue{
+    color: #fff;
+    background-color: #557eca;;
+}
+
+.itens-sumary-datshboard.color-green{
+    color: #fff;
+    background-color: #55ca40;;
+}
+
+.itens-sumary-datshboard.color-orange{
+    color: #fff;
+    background-color: #ca9b24;;
+}
+
+.itens-sumary-datshboard.color-red{
+    color: #fff;
+    background-color: #ca3632;;
+}
+
+
+.itens-sumary-datshboard.color-purple{
+    color: #fff;
+    background-color: #ca61aa;;
+}
+
+.itens-sumary-datshboard.color-cyan{
+    color: #fff;
+    background-color: #599aca;;
 }
 
 .button{
@@ -34,6 +78,14 @@
     float: right;
 }
 
+
+.title-student-list{
+    font-weight: bold;
+    padding-left: 10px;
+    color: #4e4e63;
+}
+
+
 .list-item .name{
     font-weight: bold;
     float: left;
@@ -65,15 +117,21 @@
 }
 
 .list-item .label.success{
-    background-color: #3d9c2e;
+    background-color: #4fce3d;
     color: #fff;
 }
 
 
 .list-item .label.error{
-    background-color: #9c251e;
+    background-color: #ff4c39;
     color: #fff;
 }
+.list-item .label.warnig{
+    background-color: #d9d200;
+    color: #2f2912;
+}
+
+
 
 .list-item .name{
     min-width: 300px;
@@ -128,4 +186,18 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.list-item .label.warnig .value{
+    background-color: transparent;
+    color: #2f2912;
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.list-item .label.warnig  i{
+    fill: #fff;
 }

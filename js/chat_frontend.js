@@ -7,6 +7,7 @@ editor = null;
 $(document).ready(function () {
 
 
+
     getidproject = window.location.search.substr(1);
     if((getidproject != undefined) && (getidproject != "")){
         param = getidproject.split("=")[0];
@@ -44,8 +45,13 @@ $(document).ready(function () {
         }else{
 
         }
-
     }
+
+
+
+
+
+
 });
 
 
@@ -69,6 +75,7 @@ function setDataStudent(data) {
         $("#status_erromsg").html(data.erromessage.substr(0, 10));
         $("#status_erromsg").attr("title", data.erromessage);
         editor.setValue(data.code);
+        editor.setReadOnly(true)
 }
 
 function setChatOn(idproject) {
@@ -81,6 +88,7 @@ function setChatOn(idproject) {
     window.setInterval( function () {
         getlastmessagesbyprojectid( idproject ,function (data) {
             setMessageChat(data);
+            setlastmessagesasview(idproject, 0);
         });
     }, 60*100);
 
@@ -99,9 +107,12 @@ function setChatOn(idproject) {
 
             getlastmessagesbyprojectid( idproject, function (data) {
                 setMessageChat(data);
+
             });
         });
     });
+
+
 
 }
 
@@ -123,6 +134,9 @@ function setMessageChat(data) {
             $("#container-mensage-sended").append(msg);
         }
     }
+
+    var chatcontainer = $('#container-mensage-sended');
+    chatcontainer.scrollTop(chatcontainer.prop("scrollHeight"));
 }
 
 
