@@ -12,80 +12,24 @@ $(document).ready(function () {
         $( "#container-" + $(this).attr("ref") ).show();
     });
 
-    $("#bt-explore-settings").click(function () {
-        window.open("../settings/index.html", "_self");
+    $("#bt-dashboard").click(function () {
+        window.open("../dashboard/index.html", "_self");
     });
-    getAllCourse(function (data) {
-        console.log(data);
+
+
+   getAllCourse(function (data) {
+
         var json = JSON.parse(data);
-        $("#select-courses").html("<option></option>");
+        $("#selectcourses_createclass").html("<option></option>");
+        $("#selectcourses_createactivity").html("<option></option>");
         for(var i= 0 ; i < json.length; i++){
             var elem ='<option value="'+json[i].id+'">'+ json[i].name+ '</option>'
-            $("#select-courses").append(elem);
+            $("#selectcourses_createclass").append(elem);
+            $("#selectcourses_createactivity").append(elem);
         }
 
-        configLang($("#labelusername").attr("codlang"), function (data ) {
-           // $("#select-courses").append("<option value='-1' >"+ data.newcourse +"</option>");
-        })
-
     });
 
-    $("#bt-explore-home").click(function () {
-
-        getSumary(function (data) {
-
-            var json = JSON.parse(data);
-            $("#enrolledstudent").html(json.student);
-            $("#ncalsses").html(json.activity);
-            $("#nactivity").html(json.classes);
-            $("#ncompilation").html(json.complitaion);
-            $("#npassedtest").html(json.passedtest);
-            $("#test").html(json.test);
-        });
-    });
-
-    $("#select-courses").change(function () {
-
-        if($(this).val() == -1){
-
-            $("#bt-explore-settings").trigger("click");
-
-        }else {
-            $.post("../../backend/session/manager_section.php",
-                {currentcourse: $(this).val()},
-                function (data) {
-                    getSumary(function (data) {
-                        var json = JSON.parse(data);
-                        $("#enrolledstudent").html(json.student);
-                        $("#ncalsses").html(json.activity);
-                        $("#nactivity").html(json.classes);
-                        $("#ncompilation").html(json.complitaion);
-                        $("#ntest").html(json.passedtest);
-                        $("#passedtest").html(json.passedtest);
-                        $("#test").html(json.test);
-                    });
-
-                    if ($("#container-student").css("display") != "none")
-                        $("#bt-explore-student").trigger("click")
-                    if ($("#container-activity").css("display") != "none")
-                        $("#bt-explore-activity").trigger("click")
-                }
-            )
-
-        }
-    });
-
-    $("#bt-explore-student").click(function () {
-        getStudents( showListStudents );
-    });
-
-    $("#bt-explore-activity").click(function () {
-        getActivity( showActivity );
-    });
-
-    $("#bt-explore-settings").click(function () {
-        getStudents( showListStudents );
-    });
 
     $("#selecamounttest").change( function () {
        createTestsInputs();
@@ -109,17 +53,16 @@ function getdatauser() {
                 jsonlang = data;
 
                 //initial conf
-                $("#labelhome").text(data.home);
+                $("#labelcourse").text(data.course);
                 $("#labelstudent").text(data.student);
                 $("#labelactivity").text(data.activities);
-                $("#labelasetting").text(data.setting);
-                $("#labelcourse").text(data.course);
-                $("#labelenrolledstudent").text(data.totalclasses);
-                $("#labeltotalclasses").text(data.totalclasses);
-                $("#labeltotalactivity").text(data.totalactivity);
-                $("#labeltotalcompilation").text(data.totalcompilation);
-                $("#labeltotaltest").text(data.totaltest);
-                $("#labeltotalpassestest").text(data.totalpassestest);
+                $("#labelnewcourse").text(data.newcourse);
+                $("#labelnewactivity").text(data.newactivity);
+                $("#labeleditcourse").text(data.editcourse);
+                $("#labeleditactivity").text(data.editactivity);
+                $("#labelnewstudent").text(data.newstudent);
+                $("#labelnewclass").text(data.newclass);
+                $("#labeleditclass").text(data.editclass);
 
             });
         })
@@ -147,32 +90,6 @@ function getAllCourse(callback) {
 
 }
 
-function getStudents(callback) {
-
-    $.post( "../../backend/course/getsumarystudent_bycourse.php",
-        function( data ) {
-            callback(data)
-        }
-    );
-
-}
-function getSumary(callback) {
-
-    $.post( "../../backend/dashboard/dash_sumary.php",
-        function( data ) {
-            callback(data)
-        }
-    );
-
-}
-
-function getActivity(callback) {
-    $.post( "../../backend/dashboard/dash_getactivitiesbycourse.php",
-        function( data ) {
-           callback(data);
-        }
-    );
-}
 
 function getActivityByStudent(idstudent, callback) {
     $.post( "../../backend/dashboard/dash_getactivitiesbystudent.php",{idstudent:idstudent},

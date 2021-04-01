@@ -903,6 +903,7 @@ th, td{
 .from-label{
 	font-weight: bold;
 	color: #727282;
+	color: #727282;
 }
 .select-form label{
 	font-weight: bold;
@@ -951,6 +952,7 @@ th, td{
 	height: 100%;
 	padding: 10px;
 	box-sizing: border-box;
+
 }
 
 .textarea-form textarea:focus{

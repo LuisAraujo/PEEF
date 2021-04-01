@@ -14,15 +14,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/teacher/dashboard/index.html">
+      <file leaf-file-name="dashboard_frontend.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="188" column="48" lean-forward="true" selection-start-line="188" selection-start-column="48" selection-end-line="188" selection-end-column="48" />
+            <state relative-caret-position="375">
+              <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_frontend.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/config_frontend.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="27" column="46" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teacher/settings/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,28 +51,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="904" column="19" lean-forward="false" selection-start-line="904" selection-start-column="19" selection-end-line="904" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style-dashboard.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/css/style-dashboard.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_frontend.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="182" column="9" lean-forward="false" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
+            <state relative-caret-position="577">
+              <caret line="954" column="0" lean-forward="false" selection-start-line="954" selection-start-column="0" selection-end-line="954" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,7 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>head-title</find>
       <find>head-</find>
       <find>container-chat</find>
       <find>title</find>
@@ -101,6 +100,7 @@
       <find>name-course</find>
       <find>button</find>
       <find>bt</find>
+      <find>inp-form</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/chat_backend.js" />
-        <option value="$PROJECT_DIR$/sources/css/chat.css" />
         <option value="$PROJECT_DIR$/backend/datacourse/getinfocode.php" />
         <option value="$PROJECT_DIR$/sources/css/manager-codes.css" />
         <option value="$PROJECT_DIR$/js/editstring_frontend.js" />
@@ -130,7 +128,6 @@
         <option value="$PROJECT_DIR$/backend/dashboard/dash_sumary.php" />
         <option value="$PROJECT_DIR$/backend/dashboard/dash_getactivitiesbycourse.php" />
         <option value="$PROJECT_DIR$/teacher/editstring/index.html" />
-        <option value="$PROJECT_DIR$/teacher/config/index.html" />
         <option value="$PROJECT_DIR$/teacher/chat/index.html" />
         <option value="$PROJECT_DIR$/backend/course/getsumarystudent_bycourse.php" />
         <option value="$PROJECT_DIR$/js/chat_frontend.js" />
@@ -149,17 +146,20 @@
         <option value="$PROJECT_DIR$/leaner/courses/activity/index.html" />
         <option value="$PROJECT_DIR$/leaner/courses/index.html" />
         <option value="$PROJECT_DIR$/js/course_fontend.js" />
-        <option value="$PROJECT_DIR$/lang/pt-br-text.json" />
-        <option value="$PROJECT_DIR$/lang/eng-text.json" />
         <option value="$PROJECT_DIR$/sources/css/style-home.css" />
         <option value="$PROJECT_DIR$/teacher/index.html" />
         <option value="$PROJECT_DIR$/leaner/index.html" />
         <option value="$PROJECT_DIR$/sources/css/style-dashboard.css" />
         <option value="$PROJECT_DIR$/sources/css/style-courses.css" />
-        <option value="$PROJECT_DIR$/sources/css/style.css" />
         <option value="$PROJECT_DIR$/js/activity_frontend.js" />
-        <option value="$PROJECT_DIR$/js/dashboard_frontend.js" />
         <option value="$PROJECT_DIR$/teacher/dashboard/index.html" />
+        <option value="$PROJECT_DIR$/lang/pt-br-text.json" />
+        <option value="$PROJECT_DIR$/lang/eng-text.json" />
+        <option value="$PROJECT_DIR$/teacher/config/index.html" />
+        <option value="$PROJECT_DIR$/js/dashboard_frontend.js" />
+        <option value="$PROJECT_DIR$/sources/css/style.css" />
+        <option value="$PROJECT_DIR$/teacher/settings/index.html" />
+        <option value="$PROJECT_DIR$/js/config_frontend.js" />
       </list>
     </option>
   </component>
@@ -241,18 +241,13 @@
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="PEEF" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEEF" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="settings" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -268,19 +263,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\js" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\teacher" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\course" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\chat" />
+      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\metrics" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\upload\images\c4ca4238a0b923820dcc509a6f75849b" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\dashboard" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\teacher" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\project" />
       <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\course" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\course" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\chat" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\metrics" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\backend\dashboard" />
-      <recent name="C:\Users\hiper\Documents\GitHub\PEEF\teacher\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,12 +364,12 @@
       <workItem from="1616979795606" duration="17174000" />
       <workItem from="1617040879512" duration="26582000" />
       <workItem from="1617155964723" duration="4673000" />
-      <workItem from="1617215340953" duration="13425000" />
+      <workItem from="1617215340953" duration="17189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="568069000" />
+    <option name="totallyTimeSpent" value="571833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -421,13 +416,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/chat/sendmessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/session/checkpermissionproject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -508,13 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/config/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="94" lean-forward="false" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -710,22 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/eng-text.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lang/pt-br-text.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teacher/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -758,22 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style-dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="904" column="19" lean-forward="false" selection-start-line="904" selection-start-column="19" selection-end-line="904" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/activity_frontend.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -782,23 +731,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
+    <entry file="file://$PROJECT_DIR$/teacher/dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="182" column="9" lean-forward="false" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
+        <state relative-caret-position="419">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacher/dashboard/index.html">
+    <entry file="file://$PROJECT_DIR$/sources/css/style-dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="188" column="48" lean-forward="true" selection-start-line="188" selection-start-column="48" selection-end-line="188" selection-end-column="48" />
+        <state relative-caret-position="1775">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/pt-br-text.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/eng-text.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="954" column="0" lean-forward="false" selection-start-line="954" selection-start-column="0" selection-end-line="954" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dashboard_frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacher/settings/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="173" column="43" lean-forward="false" selection-start-line="173" selection-start-column="43" selection-end-line="173" selection-end-column="43" />
           <folding>
-            <element signature="n#style#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/config_frontend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="46" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
