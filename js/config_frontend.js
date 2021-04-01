@@ -31,6 +31,16 @@ $(document).ready(function () {
     });
 
 
+    getLanguages(function (json) {
+
+        $("#newcourselang").html("");
+
+        for(var i= 0 ; i < json.length; i++){
+            var elem ='<option value="'+json[i].id+'">'+ json[i].name+ '</option>'
+            $("#newcourselang").append(elem);
+        }
+    });
+
     $("#selecamounttest").change( function () {
        createTestsInputs();
     });
@@ -38,6 +48,12 @@ $(document).ready(function () {
     $("#selecamountinputs").change( function () {
         createTestsInputs();
     });
+
+
+    $("#bt-newcourse").click( function () {
+        createCourse();
+    });
+
 
 
 });
@@ -91,12 +107,23 @@ function getAllCourse(callback) {
 }
 
 
-function getActivityByStudent(idstudent, callback) {
-    $.post( "../../backend/dashboard/dash_getactivitiesbystudent.php",{idstudent:idstudent},
-        function( data ) {
-           callback(data, idstudent);
-        }
-    );
+function createCourse() {
+
+    if(
+    ($("#newcoursename").val() != undefined) &&
+    ($("#newcoursecode").val() != undefined) &&
+    ($("#newcoursekey").val() != undefined) &&
+    ($("#newcourselang").val() != undefined)
+    )
+    {
+
+        createNewCourse($("#newcoursename").val(),$("#newcoursecode").val(),
+            $("#newcoursekey").val(), $("#newcourselang").val());
+
+    }else {
+        alert("Erro");
+    }
+
 }
 
 
@@ -120,82 +147,7 @@ function createTestsInputs() {
 
 }
 
-function  showListStudents( data ) {
 
-        $("#container-student").html("");
-        var json = JSON.parse(data);
-        if(json.length==0)
-            $("#container-student").html("list returned empty");
-        else {
-
-            for (var i = 0; i < json.length; i++) {
-                var elem = '<div class="list-item" value="' + json[i].id + '">' +
-                    ' <div class="name" ref="'+ json[i].id + '">' + json[i].name + '</div>' +
-                    ' <div class="options-item-list" </div>' +
-                    '<div class="label activity-item-list" title="activities started" value="' + json[i].id + '" value2="' + json[i].idactivity + '"><i class="icofont-test-bulb"></i> <div class="value">'+json[i].projectstarted+'</div></div>' +
-                    '<div class="label statistic-item-list" title="statistic" value="' + json[i].id + '"><i class="icofont-chart-bar-graph"></i> </div>' +
-                    ' <div class="label inactive" title="delivery"><i class="icofont-flag"></i><div class="value">' + json[i].delivery + '</div></div>' +
-                    ' <div class="label inactive" title="compilations"><i class="icofont-code"></i><div class="value">' + json[i].compilation + '</div></div>' +
-                    ' <div class="label inactive" title="total errors"><i class="icofont-error"></i> <div class="value">' + json[i].error + '</div></div>' +
-                    ' <div class="label inactive" title="tests passed"><i class="icofont-check"></i><div class="value">' + json[i].passed + '</div></div></div>' +
-                    '</div>'
-
-                $("#container-student").append(elem);
-            }
-
-            $(".activity-item-list").click(function () {
-
-                $("#container-student").hide();
-                $("#container-activity-details").show();
-                var idstudant = $(this).attr("value");
-                getActivityByStudent( idstudant ,  showActivityByStudent);
-
-                setInterval(function () {
-
-                    if( $("#container-activity-details").css("display") != "none"){
-                        getActivityByStudent( idstudant ,  showActivityByStudent);
-                    }
-
-                }, 60 * 100);
-
-            });
-
-            $(".statistic-item-list").click(function () {
-                window.open('../statisticstudents.html?id=' + $(this).attr("value"), '_blank');
-            });
-        }
-}
-
-
-function showActivity( data ) {
-
-        $("#container-activity").html("");
-        var json = JSON.parse(data);
-
-        if(json.length == 0){
-            $("#container-activity").html("list returned empty");
-        }else {
-            for (var i = 0; i < json.length; i++) {
-                var elem = '<div class="list-item" value="' + json[i].id + '">' +
-                    ' <div class="name">' + json[i].title + '</div>' +
-                    ' <div class="options-item-list" </div>' +
-
-                    '<div class="label statistic-item-list" title="statistic" value="' + json[i].id + '"><i class="icofont-chart-bar-graph"></i> </div>' +
-                    ' <div class="label inactive" title="compilations"><i class="icofont-code"></i><div class="value">' + json[i].compilation + '</div></div>' +
-                    ' <div class="label inactive" title="total errors"><i class="icofont-error"></i> <div class="value">' + json[i].error + '</div></div>' +
-                    ' <div class="label inactive" title="total tests"><i class="icofont-list"></i> <div class="value">' + json[i].test + '</div></div>' +
-                    ' <div class="label inactive" title="tests passed"><i class="icofont-check"></i><div class="value">' + json[i].passed + '</div></div></div>' +
-
-                    '</div>'
-                $("#container-activity").append(elem);
-            }
-
-            $(".statistic-item-list").click(function () {
-                window.open('../statisticactivity.html?id=' + $(this).attr("value"), '_blank');
-            });
-        }
-
-}
 function showActivityByStudent(data, idstudent) {
 
         $("#container-activity-details").html("");

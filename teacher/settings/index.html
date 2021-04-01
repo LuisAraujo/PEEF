@@ -13,6 +13,7 @@
     <script src="../../js/jquery-3.4.1.min.js"></script>
     <script src="../../js/log.js"></script>
     <script src="../../js/config_frontend.js"></script>
+    <script src="../../js/config_backend.js"></script>
 
 
 </head>
@@ -141,27 +142,28 @@
 
                 <div style="width: 100%; height: 250px; ">
 
+                    <form id="from-newcourse">
+                        <div class="inp-form large ">
+                            <input name="newcoursename" id="newcoursename" placeholder="New Course" required>
+                        </div>
 
-                    <div class="inp-form large ">
-                        <input name="newcoursename" id="newcoursename" placeholder="New Course">
-                    </div>
+                        <div class="inp-form large ">
+                            <input name="newcoursecode" id="newcoursecode" placeholder="Code" required>
+                        </div>
 
-                    <div class="inp-form large ">
-                        <input name="newcoursecod" id="newcoursecod" placeholder="Code">
-                    </div>
+                        <div class="inp-form large ">
+                            <input name="newcoursekey" id="newcoursekey" placeholder="Access Key" required>
+                        </div>
 
-                    <div class="inp-form large ">
-                        <input name="newcoursekey" id="newcoursekey" placeholder="Access Key">
-                    </div>
+                        <div class="select-form large ">
+                            <label id="labellanguage">Programming Lang.</label>
+                            <select  id="newcourselang" required>
 
-                    <div class="select-form large ">
-                        <label id="labellanguage">Programming Lang.</label>
-                        <select  id="newcourselang">
-                            <option>TESTE</option>
-                        </select>
-                    </div>
+                            </select>
+                        </div>
+                    </form>
                 </div>
-                <div class="bt">
+                <div id="bt-newcourse" class="bt">
                     <span id="labelcreatecouse" class="label">Create</span>
                 </div>
 
