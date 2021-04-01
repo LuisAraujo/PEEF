@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    getdatauser();
 
     $.post( "../../backend/session/manager_section.php",
         {currentcourse: -1  });
@@ -19,6 +20,11 @@ $(document).ready(function () {
             var elem ='<option value="'+json[i].id+'">'+ json[i].name+ '</option>'
             $("#select-courses").append(elem);
         }
+
+        configLang($("#labelusername").attr("codlang"), function (data ) {
+            $("#select-courses").append("<option value='-1' >"+ data.newcourse +"</option>");
+        })
+
     });
 
     $("#bt-explore-home").click(function () {
@@ -36,38 +42,97 @@ $(document).ready(function () {
     });
 
     $("#select-courses").change(function () {
-        $.post( "../../backend/session/manager_section.php",
-            {currentcourse: $(this).val() },
-            function( data ) {
-                getSumary(function (data) {
-                    var json = JSON.parse(data);
-                    $("#enrolledstudent").html(json.student);
-                    $("#ncalsses").html(json.activity);
-                    $("#nactivity").html(json.classes);
-                    $("#ncompilation").html(json.complitaion);
-                    $("#ntest").html(json.passedtest);
-                    $("#passedtest").html(json.passedtest);
-                    $("#test").html(json.test);
-                });
-            }
-        )
+
+        if($(this).val() == -1){
+
+            $("#bt-explore-settings").trigger("click");
+
+        }else {
+            $.post("../../backend/session/manager_section.php",
+                {currentcourse: $(this).val()},
+                function (data) {
+                    getSumary(function (data) {
+                        var json = JSON.parse(data);
+                        $("#enrolledstudent").html(json.student);
+                        $("#ncalsses").html(json.activity);
+                        $("#nactivity").html(json.classes);
+                        $("#ncompilation").html(json.complitaion);
+                        $("#ntest").html(json.passedtest);
+                        $("#passedtest").html(json.passedtest);
+                        $("#test").html(json.test);
+                    });
+
+                    if ($("#container-student").css("display") != "none")
+                        $("#bt-explore-student").trigger("click")
+                    if ($("#container-activity").css("display") != "none")
+                        $("#bt-explore-activity").trigger("click")
+                }
+            )
+
+        }
     });
 
     $("#bt-explore-student").click(function () {
-
         getStudents( showListStudents );
-
     });
 
-
     $("#bt-explore-activity").click(function () {
-
         getActivity( showActivity );
+    });
 
+    $("#bt-explore-settings").click(function () {
+        getStudents( showListStudents );
+    });
+
+    $("#selecamounttest").change( function () {
+       createTestsInputs();
+    });
+
+    $("#selecamountinputs").change( function () {
+        createTestsInputs();
     });
 
 
 });
+
+function getdatauser() {
+    $.post("../../backend/getdatauser.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            $("#labelusername").text(data.name);
+            $("#labelusername").attr("codlang", data.cod);
+            configLang(data.cod, function(data){
+                jsonlang = data;
+
+                //initial conf
+                $("#labelhome").text(data.home);
+                $("#labelstudent").text(data.student);
+                $("#labelactivity").text(data.activities);
+                $("#labelasetting").text(data.setting);
+                $("#labelcourse").text(data.course);
+                $("#labelenrolledstudent").text(data.totalclasses);
+                $("#labeltotalclasses").text(data.totalclasses);
+                $("#labeltotalactivity").text(data.totalactivity);
+                $("#labeltotalcompilation").text(data.totalcompilation);
+                $("#labeltotaltest").text(data.totaltest);
+                $("#labeltotalpassestest").text(data.totalpassestest);
+
+            });
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+
+function configLang(cod, callback) {
+    if(cod == null)
+        cod =  "eng";
+
+    jQuery.getJSON("../../lang/"+cod+"-text.json", callback);
+}
 
 function getAllCourse(callback) {
 
@@ -114,6 +179,26 @@ function getActivityByStudent(idstudent, callback) {
     );
 }
 
+
+function createTestsInputs() {
+
+
+    let container="";
+    for(let j = 0; j < $("#selecamounttest").val(); j++) {
+
+        container += '<div><h4>Test '+(j+1)+'</h4>' +
+            ' <label class="from-label" id="">Inputs</label>';
+
+        for (let i = 0; i < $("#selecamountinputs").val(); i++)
+            container += '<div class="inp-form large "><input name="newcoursename"  placeholder="input ' + (i + 1) + '" required></div>'
+
+        container += '<label class="from-label" id="">Output</label>' +
+            '<div class="inp-form large "><input name="newcoursename"  placeholder="output"></div></div>';
+    }
+
+    $("#container-tests").html(container);
+
+}
 
 function  showListStudents( data ) {
 

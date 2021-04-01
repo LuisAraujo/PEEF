@@ -14,9 +14,16 @@ $(document).ready(function () {
        showHome();
     });
 
+    $("#bt-explore-back").click(function () {
+        window.location = "../";
+    });
+
     window.addEventListener("beforeunload", function(e){
         setLog("outcourse")
     }, false);
+
+
+
 
     getAllClasses();
     getAllActivity();
@@ -62,16 +69,15 @@ function configLang(cod) {
 
         //initial conf
 
-        $("#labelhome").text(data.home);
+        $("#labelback").text(data.backcourse);
         $("#labelnotification").text(data.notification);
-        $("#labelactivity").text(data.activity);
+        $("#labelactivity").text(data.activities);
         $("#labeltitle").text(data.title);
         $("#labelsended").text(data.sended);
         $("#labelchat").text(data.chat);
         $("#labelcorrect").text(data.correct);
         $("#labelcourse").text(data.course);
-
-
+        $("#labelclasses").text(data.classes);
 
     });
 }
@@ -134,13 +140,7 @@ function getAllActivity() {
     }
 
     $(".activity-item").click(function () {
-        console.log("click item")
-       // $.post( "../../../backend/course/course_getidproject.php", { idactivity: $(this).attr("idactivity")  } )
-        //.done(function(data)
-       // {
-            //data = JSON.parse(data);
-            //console.log("get data idproj" , data);
-            //$.post( "../../../backend/session/manager_section.php", { currentproject: data.id } )
+
             $.post( "../../../backend/session/manager_section.php", { currentproject: $(this).attr("idactivity") } )
 
                 .done(function(data)
@@ -156,10 +156,7 @@ function getAllActivity() {
 
 
         })
-       // .fail(function () {
-        //    console.log("erro");
-        //});
-    //});
+
   });
 }
 

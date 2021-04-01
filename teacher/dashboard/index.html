@@ -40,6 +40,10 @@
                 <span id="labelactivity" > Activities </span>
             </div>
 
+            <div id="bt-explore-settings" ref="settings"  class="item-menu">
+                <i class="icofont-settings"></i>
+                <span id="labelasetting" > Settings </span>
+            </div>
 
         </div>
     </div>
@@ -54,7 +58,7 @@
 
 
             <div class="inp-search-menu">
-                <label>Course</label>
+                <label id="labelcourse">Course</label>
                 <select class="select-header" id="select-courses">
                     <option> </option>
                     <option>Aluno Teste</option>
@@ -67,38 +71,35 @@
         <div id="container-home" class="container-activity">
 
             <div class="itens-sumary-datshboard color-blue">
-                <div class="label">  <i class="icofont-student-alt"></i> <strong> Enrolled Students </strong></div>
+                <div class="label">  <i  class="icofont-student-alt"></i> <strong id="labelenrolledstudent"> Enrolled Students </strong></div>
                 <div class="number" id="enrolledstudent"> 0</div>
             </div>
 
             <div class="itens-sumary-datshboard color-green">
-                <div class="label"> <i class="icofont-pencil"></i> <strong>Total Classes</strong> </div>
+                <div class="label"> <i class="icofont-pencil"></i> <strong id="labeltotalclasses" >Total Classes</strong> </div>
                 <div class="number" id="ncalsses"> 0 </div>
             </div>
 
             <div class="itens-sumary-datshboard color-orange">
-                <div class="label">  <i class="icofont-test-bulb"></i><strong>Total Activities</strong> </div>
+                <div class="label">  <i  class="icofont-test-bulb"></i><strong id="labeltotalactivity">Total Activities</strong> </div>
                 <div class="number" id="nactivity"> 0 </div>
             </div>
 
             <div class="itens-sumary-datshboard color-red">
-                <div class="label"><strong><i class="icofont-computer"></i> Total Compilation</strong> </div>
+                <div class="label"><i   class="icofont-computer"></i> <strong id="labeltotalcompilation">Total Compilation</strong> </div>
                 <div class="number" id="ncompilation"> 0 </div>
             </div>
 
             <div class="itens-sumary-datshboard color-purple">
-                <div class="label"> <i class="icofont-list"></i><strong>Total Tests </strong></div>
+                <div class="label"> <i  class="icofont-list"></i><strong id="labeltotaltest">Total Tests </strong></div>
                 <div class="number" id="test"> 0 </div>
             </div>
 
             <div class="itens-sumary-datshboard color-cyan">
-                <div class="label"><i class="icofont-check"></i><strong>Total Passed Tests</strong> </div>
+                <div class="label"><i  class="icofont-check"></i><strong id="labeltotalpassestest">Total Passed Tests</strong> </div>
                 <div class="number" id="passedtest"> 0 </div>
             </div>
 
-            <!-- <div class="button" id="btdownload-datasumary">
-                <i class="icofont-download"></i> Download Data
-            </div> -->
 
         </div>
 
@@ -115,11 +116,107 @@
 
 
         <!-- ENGAGEMENT -->
-        <div id="container-activity-details" class="container-activity" style="display: none">
-            engagement
-        </div>
+        <div id="container-settings" class="container-activity" style="display: none; ">
+            <div class="subcontainer-activity" id="container-new-course" style="display: none">
+                <h4>New Course</h4>
+                <div style="width: 100%; height: 150px; ">
+                    <div class="inp-form large left">
+                        <input name="newcoursename" id="newcoursename" placeholder="New Course">
+                    </div>
 
+                    <div class="inp-form large left">
+                        <input name="newcoursecod" id="newcoursecod" placeholder="Code">
+                    </div>
+
+                    <div class="inp-form large left">
+                        <input name="newcoursekey" id="newcoursekey" placeholder="Access Key">
+                    </div>
+
+                    <div class="select-form large left">
+                        <label id="labellanguage">Programming Lang.</label>
+                        <select  id="newcourselang">
+                            <option>TESTE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bt">
+                    <span id="labelcreatecouse" class="label">Create</span>
+                </div>
+            </div>
+
+
+            <div class="subcontainer-activity" id="container-new-activity">
+                <h4>New Classes and Activities</h4>
+
+                <div class="inp-form large ">
+                    <input name="newcoursename" id="inp-newcoursename" placeholder="Title">
+                </div>
+
+                <div class="textarea-form large">
+                    <label id="labeldescription">Description</label>
+                    <textarea  id="textdescription" placeholder="Text Description"></textarea>
+                </div>
+
+                <div class="bt bt-white">
+                    <span class="label"><i class="icofont-upload-alt"></i> <span id="labelimage"> Image </span></span>
+                </div>
+
+                <div class="textarea-form">
+                    <label id="labeldescriptioninput">Description Input</label>
+                    <textarea  id="textdescriptionin" placeholder="Text Description"></textarea>
+                </div>
+
+                <div class="textarea-form">
+                    <label id="labeldescriptionoutput">Description Output</label>
+                    <textarea id="textdescriptionout" placeholder="Text Description"></textarea>
+                </div>
+
+                <div class="inp-form large">
+                    <label id="labeldatedelivery">Date to Delivery</label>
+                    <input type="date" name="newcoursename" id=" " placeholder="Title">
+                </div>
+
+                <label class="from-label" id="labelamountinputs">Amount Inputs</label>
+                <select class="select-form" id="selecamountinputs">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+
+
+                <label class="from-label" id="labelamounttest">Amount Test</label>
+                <select class="select-form" id="selecamounttest">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+                <div id="container-tests">
+                </div>
+
+                <div class="bt left">
+                    <span id="" class="label">Create</span>
+                </div>
+
+            </div>
+        </div>
     </div>
+</div>
 
 </body>
 </html>

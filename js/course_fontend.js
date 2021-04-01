@@ -4,6 +4,15 @@ $(document).ready(function () {
 
     showAllCourse();
 
+    $("#bt-courses").click( function () {
+        showCourse();
+    });
+
+    $("#bt-profile").click( function () {
+        showProfile();
+    });
+
+
     $("#inp-find-course").change(function () {
         findCoursByName( $("#inp-find-course").val() );
     });
@@ -18,6 +27,19 @@ $(document).ready(function () {
 
     getdatauser();
 });
+
+
+function  showProfile() {
+    $("#container-my-courses").hide();
+    $("#container-profile").show();
+}
+
+function  showCourse() {
+    $("#container-profile").hide();
+    $("#container-my-courses").show();
+}
+
+
 
 function getdatauser() {
     $.post("../../backend/getdatauser.php" )
@@ -41,10 +63,11 @@ function configLang(cod) {
 
         //initial conf
         $("#labelhome").text(data.home);
-        $("#labelnotifcation").text(data.notification);
-        $("#labelcourse").text(data.course);
+        $("#labelcourse").text(data.courses);
         $("#labelfind").text(data.find);
         $("#inp-find-course").attr("placeholder", data.findcourse);
+        $("#labelprofile").text(data.profile);
+
 
     });
 }
@@ -94,12 +117,15 @@ function printDataCourse( data ) {
         else
             elem += 'blue2"> ';
 
-        elem += '<span class="bt-close"> <i class="icofont-navigation-menu"></i> </span> <div class="name-course">';
+        elem += '<div class="name-course">';
         elem +=  data[i].name;
-        elem += '</div> <div class="code-course"> <i class="icofont-code"></i> <span>'
+        elem += '</div> <div class="container-tag"><div class="tag-course"> <i class="icofont-code"></i> <span>'
         elem +=  data[i].code;
-        elem += '</span> </div> <div class="professor-course"> <i class="icofont-user"></i><span>';
-        elem += data[i].profname + '</span> </div> </div>';
+        elem += '</span> </div> <div class="tag-course"> <i class="icofont-user"></i><span>';
+        elem += data[i].profname + '</span> </div> ';
+        elem += '</div><div class="progress-course"><div class="progress-course-value">30%</div></div>';
+        elem += '<div class="title-progress-course">progress</div>';
+        elem += ' </div>';
 
         $("#container-my-courses").append(elem);
 

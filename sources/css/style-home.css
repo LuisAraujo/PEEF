@@ -46,26 +46,6 @@ html, body{
     border: 1px solid #d8d8d8;
 }
 
-.inp-form{
-    border: 1px solid #d8d8d8;
-    padding: 5px;
-    width: 200px;
-    margin: 0px auto;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.inp-form input {
-    width: 100%;
-    border: none;
-}
-
-
-.inp-form input:focus {
-   outline: none;
-}
-
 
 .img-logo-form{
     background-image: url("../images/logo_peef.png");

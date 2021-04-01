@@ -84,6 +84,8 @@ body{
     float: right;
     margin-right: 10px;
     margin-top: 15px;
+
+    font-size: 15px;
 }
 
 #container-input-find-course{
@@ -105,16 +107,21 @@ body{
     margin-left: 10px;
     float: left;
     padding: 10px;
-    border: 1px solid #060f24;
 }
 
 .item-courses:hover{
     cursor:pointer;
+
 }
 
 .item-courses.blue{
     background-color: #4684bf;
 }
+
+.item-courses.blue:hover{
+    background-color: #447bb4;
+}
+
 
 .item-courses.blue2{
     background-color: #66adc8;
@@ -125,32 +132,56 @@ body{
 .name-course{
     color:#fff;
     font-size: 25px;
-    text-align: center;
     width: 100%;
+    height: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.container-tag{
     height: 50px;
+    width: 100%;
+}
+
+.title-progress-course{
+    color:#fff;
+    font-size: 10px;
+}
+.tag-course{
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.code-course{
-    background-color: #060f24;
     color: #fff;
+    background-color: #1b43a0;
     width: 120px;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 15px;
     padding: 5px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+    font-size: 10px;
+}
+.tag-course i{
+    margin-right: 5px;
 }
 
-
-.professor-course{
-    margin-top: 10px;
+.progress-course{
+    border-radius: 5px;
+    border: 1px #fff solid;
     width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #060f24;
+    height:30px;
+}
+
+.progress-course-value{
+    width: 40%;
+    border-radius: 5px;
+    height:25px;
+    background-color: #122965;
+    text-align: center;
+    color: #fff;
+    padding-top: 5px;
 }
 
 
@@ -167,7 +198,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     width: calc( 100% - 30px);
-    height: 100%;
+    height: calc(100% - 200px);
 }
 
 .container-activity iframe{

@@ -64,3 +64,9 @@
 #container-student{
 
 }
+
+
+.subcontainer-activity{
+    width: 100%;
+    height: inherit;
+}
