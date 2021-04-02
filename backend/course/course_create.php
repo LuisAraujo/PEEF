@@ -15,7 +15,7 @@ $result = $mysqli->query($sql);
 if ($result)
     echo "1";
  else
-    echo $sql ;
+    echo  "0";
 
 
 

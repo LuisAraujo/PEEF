@@ -23,7 +23,56 @@ function createNewCourse(newcoursename,newcoursecode, newcoursekey, newcourselan
         .done(function(data)
         {
             //data = JSON.parse(data);
+            if(data== "1")
+                alert("Curso cadastrado!");
+            else
+                alert("Erro ao cadastrar curso!");
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+
+function  createNewClass(courses,newclassname,
+    urlvideo, description) {
+
+
+    $.post("../../backend/course/course_createclass.php",
+        {courses:courses,newclassname:newclassname,
+            urlvideo:urlvideo, description:description} )
+        .done(function(data)
+        {
             console.log(data);
+            if(data== "1")
+                alert("Aula cadastrado!");
+            else
+                alert("Erro ao cadastrar aula!");
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+
+function   createNewActivity(idcourses,    activityname, description,
+    descriptionin,descriptionout, datadelivery,  inputs ) {
+
+
+    $.post("../../backend/course/course_createactivity.php",
+        {idcourses:idcourses,activityname:activityname,
+            description:description,descriptionin:descriptionin,
+            descriptionout:descriptionout, datadelivery:datadelivery,
+            inputs:inputs} )
+        .done(function(data)
+        {
+            console.log(data);
+            if(data== "1")
+                alert("Aula cadastrado!");
+            else
+                alert("Erro ao cadastrar aula!");
         })
         .fail(function () {
             console.log("erro");
