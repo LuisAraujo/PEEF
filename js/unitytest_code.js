@@ -8,6 +8,7 @@ function getAllCodesNameByProject(callback) {
 
     $.post("../../backend/project/project_getallcodes.php")
         .done(function (data){
+            console.log(data);
             callback(  JSON.parse( data ) );
         })
         .fail(function () {
@@ -44,11 +45,11 @@ function getCodesById(idcode, callback ) {
 
 
 var startTestCode = function () {
-    // console.log("runnig code");
+
     token = getToken();
 
     gerateFileTestCode( token, function(token, filename){
-        // console.log(filename);
+        console.log(filename);
         testCode(token, filename);
     });
 
@@ -63,7 +64,7 @@ var gerateFileTestCode = function( token, callback){
         method: "POST",
         data: {token: token, idcode: fileactive}
     }).done(function(data) {
-        //console.log(data)
+        console.log(data)
         if(data!="0")
             callback(token);
     });

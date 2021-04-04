@@ -24,6 +24,7 @@ $errorname = getnamefileerror( $iduser, $token );
 //if user folder arealdy exists
 if( is_dir($folderprefix2) ){
     echo "$folderprefix2"."<br>";
+
     //delete all files and folders
     $objects = scandir($folderprefix2);
     foreach ($objects as $object) {
@@ -34,6 +35,11 @@ if( is_dir($folderprefix2) ){
             }
     }
 }else{
+
+    mkdir($folderprefix2, 0700);
+    if(is_dir($folderprefix2)){
+        echo "$folderprefix2"."<br>";
+    }else
     echo "0";
     //create user folder
 

@@ -12,7 +12,7 @@ $myArray = array();
 
 while($row = $result->fetch_array(MYSQLI_ASSOC)){
 
-    $query2 = "SELECT Project.id as id, Compilation.typeError as typeerror, Project.sended as delivered FROM Project INNER JOIN Code ON Code.Project_id = Project.id INNER JOIN Compilation ON Compilation.Code_id = Code.id WHERE Project.Activity_id = '".$row['id_act']."' ORDER BY Compilation.date DESC, Compilation.hours DESC LIMIT 1";
+    $query2 = "SELECT Project.id as id, Compilation.typeError as typeerror, Project.sended as delivered FROM Project LEFT JOIN Code ON Code.Project_id = Project.id LEFT JOIN Compilation ON Compilation.Code_id = Code.id  LEFT JOIN Enrollment ON Project.Enrollment_id = Enrollment.id  WHERE Project.Activity_id = '".$row['id_act']."' AND Enrollment.Student_id = '".getcurrentuser_session()."' ORDER BY Compilation.date DESC, Compilation.hours DESC LIMIT 1";
     $result2 = $mysqli->query($query2);
     $row2 = $result2->fetch_array(MYSQLI_ASSOC);
 

@@ -189,7 +189,8 @@ $(document).ready(function () {
 
 
     getSendedProject(function (data) {
-        if(data.sended == 1)
+
+        if((data!=undefined) && (data.sended == 1))
             $("#check-codesended").prop("checked", true);
     });
 
