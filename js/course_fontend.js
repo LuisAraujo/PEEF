@@ -80,7 +80,9 @@ function findCoursByName(data) {
     $.post("../../backend/course/course_getcoursesbyname.php",{namecourse: data} )
         .done(function(data)
         {
+
             printDataCourse(data);
+
         })
         .fail(function () {
             console.log("erro");
@@ -102,7 +104,7 @@ function showAllCourse() {
 
 }
 
-function printDataCourse( data ) {
+function printDataCourse( data, percent ) {
 
     console.log(data)
     data = JSON.parse(data);
@@ -111,36 +113,45 @@ function printDataCourse( data ) {
     }
 
     for(var i = 0; i < data.length; i++){
-        var elem = '<div id="course-'+data[i].id+'" idcourse='+data[i].id+' class="item-courses ';
-        if(i%2 == 0)
-            elem += 'blue"> ';
-        else
-            elem += 'blue2"> ';
+        localdata = data[i];
 
-        elem += '<div class="name-course">';
-        elem +=  data[i].name;
-        elem += '</div> <div class="container-tag"><div class="tag-course"> <i class="icofont-code"></i> <span>'
-        elem +=  data[i].code;
-        elem += '</span> </div> <div class="tag-course"> <i class="icofont-user"></i><span>';
-        elem += data[i].profname + '</span> </div> ';
-        elem += '</div><div class="progress-course"><div class="progress-course-value">30%</div></div>';
-        elem += '<div class="title-progress-course">progress</div>';
-        elem += ' </div>';
+        $.post("../../backend/course/course_getprogress.php",{idcourses: data[i].id} )
+            .done(function(data2) {
 
-        $("#container-my-courses").append(elem);
+                data2 = JSON.parse(data2);
 
-        $(".item-courses").click(function () {
-            $.post( "../../backend/session/manager_section.php", { currentcourse: $(this).attr("idcourse")  } )
-            .done(function(data)
-            {
-                if(data != "0") {
-                    window.location = "activity/index.html";
-                }
-            })
-            .fail(function () {
-                console.log("erro");
+                var elem = '<div id="course-'+localdata.id+'" idcourse='+localdata.id+' class="item-courses ';
+                if(i%2 == 0)
+                    elem += 'blue"> ';
+                else
+                    elem += 'blue2"> ';
+
+                elem += '<div class="name-course">';
+                elem +=  localdata.name;
+                elem += '</div> <div class="container-tag"><div class="tag-course"> <i class="icofont-code"></i> <span>'
+                elem +=  localdata.code;
+                elem += '</span> </div> <div class="tag-course"> <i class="icofont-user"></i><span>';
+                elem += localdata.profname + '</span> </div> ';
+                elem += '</div><div class="progress-course"><div class="progress-course-value" style="width:'+data2.percent+'% ">'+data2.percent+'%</div></div>';
+                elem += '<div class="title-progress-course">progress</div>';
+                elem += ' </div>';
+
+                $("#container-my-courses").append(elem);
+
+                $(".item-courses").click(function () {
+                    $.post( "../../backend/session/manager_section.php", { currentcourse: $(this).attr("idcourse")  } )
+                        .done(function(data)
+                        {
+                            if(data != "0") {
+                                window.location = "activity/index.html";
+                            }
+                        })
+                        .fail(function () {
+                            console.log("erro");
+                        });
+                })
+
             });
-        })
 
     }
 

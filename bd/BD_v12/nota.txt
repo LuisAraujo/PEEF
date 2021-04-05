@@ -1,1 +1,2 @@
-message não precisa de professor id
+colocar data "showto" em atividade
+colocar nota em matricula 

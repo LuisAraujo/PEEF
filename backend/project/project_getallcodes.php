@@ -10,6 +10,7 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
     $myArray[] = $row;
 }
 
+//repetido codigo de criação de code.py
 if( count($myArray) == 0){
     $query = "INSERT INTO code (id, name, Project_id) VALUES(null, 'mycode','".getcurrentproject_session()."')";
 

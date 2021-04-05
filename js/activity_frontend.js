@@ -6,6 +6,10 @@ $(document).ready(function () {
 
     $("#container-my-activity").hide();
 
+    $("#bt-explore-class").click(function () {
+        showClasses();
+    });
+
     $("#bt-explore-activity").click(function () {
        showActivity();
     });
@@ -84,7 +88,7 @@ function  showActivity() {
     $("#container-my-activity").show();
 }
 
-function  showHome() {
+function  showClasses() {
     $("#container-my-activity").hide();
     $("#container-my-classe").show();
 }
