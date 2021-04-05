@@ -2,8 +2,6 @@
 @include "../conection_database.php";
 @include "../session/manager_section.php";
 
-$idproject = 1;
-
 $query = "SELECT activity.id as id, activity.description, activity.title, activity.description_input ,  activity.description_output, activity.image as image FROM activity WHERE id = (SELECT Activity_id FROM project WHERE id = ".  getcurrentproject_session().")";
 
 $result = $mysqli->query($query);

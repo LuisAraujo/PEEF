@@ -34,8 +34,9 @@ function login(login, pass, mode) {
                    if(data != "0") {
                        if(mode==1)
                            window.location = "courses/index.html";
-                       else
+                       else {
                            window.location = "dashboard/index.html";
+                       }
                    }
                })
                .fail(function () {

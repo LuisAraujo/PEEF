@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="chatbot.js"></script>
+    <script src="nodemessage.js"></script>
+    <script src="../jquery-3.4.1.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <title>PEEFbot</title>
+    <style>
+
+        #msg{
+            height: 300px;
+            overflow-y: scroll;
+        }
+        .msg{
+            border: 1px solid #2c2c36;
+            padding: 10px;
+            margin-bottom: 2px;
+            border-radius: 5px;
+
+        }
+
+        .teacher{
+           background-color: #bbbeb3;
+            margin-left: 5px;
+        }
+        #typetext{
+            width: 100%;
+            height: 100px;
+            resize: none;
+            margin-bottom: 5px;
+        }
+        #btsend{
+            margin-bottom: 5px;
+        }
+
+        body{
+            width: 400px;
+            height: 100px;
+            margin: auto;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body >
+    <h3>PEEFbot Prototype</h3>
+    <textarea id="typetext"></textarea>
+    <button id="btsend">ENVIAR</button>
+    <button id="btsimule">SIMULE RESOLUÇÃO</button>
+
+    <div id="msg">
+
+    </div>
+
+    <script>
+
+        let peef = new PEEFbot();
+        peef.start();
+
+        $("#btsimule").click( function () {
+            peef.setNode("avaliation");
+            peef.getResponse("yes");
+        });
+
+        $("#btsend").click(function () {
+            getMessage();
+        });
+
+
+        $("#typetext").keyup(function(e){
+            if(e.keyCode == 13)
+            {
+                getMessage();
+            }
+        });
+
+        function getMessage() {
+            let text = $("#typetext").val();
+            $("#typetext").val("");
+            $("#msg").append(" <div class='msg'>"+text+"</div>");
+
+
+            peef.getResponse(text);
+        }
+
+        function getResponse(text){
+
+            let response = peef.nextNode( peef.processText(text) );
+
+            //sent response[0] to bd as prof
+
+
+            $("#msg").append(" <div class='msg teacher'>"+response[0]+"</div>");
+
+            if((response[1] == "salutation") || (response[1] ==  "enhanced") || (response[1] == "presentation")
+                || ( response[1] == "analysis") || ( response[1] == "close")
+            ){
+
+                setTimeout( getResponse.bind(this,"yes"), 1500);
+
+            }else if( response[1] == "typeerror") {
+                setTimeout(getResponse.bind(this, "yes"), 3000);
+            }else if (response[1] == "presentation"){
+
+            }else if ( response[1] == "manualmessage"){
+                peef.waitteacher = true;
+
+                setTimeout( function(){
+                    if(peef.waitteacher == true)
+                        getResponse("no");
+                }, 3000);
+            }
+
+        }
+    </script>
+</body>
+</html>

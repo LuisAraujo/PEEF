@@ -6,8 +6,6 @@ editor = null;
 
 $(document).ready(function () {
 
-
-
     getidproject = window.location.search.substr(1);
     if((getidproject != undefined) && (getidproject != "")){
         param = getidproject.split("=")[0];
@@ -39,6 +37,13 @@ $(document).ready(function () {
                        window.location = "../editstring/index.html?id="+idproject;
                     });
 
+
+
+                    $.post( "../../backend/project/project_setstateteacher.php", {state: 1, idproject: idproject} )
+                        .done(function(data) {
+                            console.log(data)
+                        } );
+
                 }
             });
 
@@ -48,6 +53,11 @@ $(document).ready(function () {
     }
 
 
+
+    window.addEventListener("beforeunload", function(e){
+        $.post( "../../backend/project/project_setstateteacher.php", {state: 0, idproject: idproject} )
+            .done(function(data2) {} );
+    }, false);
 
 
 

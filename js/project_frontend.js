@@ -3,10 +3,14 @@ fileactive = undefined;
 json=null;
 editor = null;
 peditor = new PEditor();
+peefbot = new PEEFbot();
 
 var mapcodes = new Map();
 
 $(document).ready(function () {
+
+    peefbot.start();
+
     //backend
     getlastmessages( showChatMessageAndNotification );
 
@@ -196,10 +200,24 @@ $(document).ready(function () {
 
 
     $("#bt-send-message").click(function () {
-        console.log("send msg");
+       // console.log("send msg");
         let text = $("#text-type-message").val();
         sendmessage(text, 0, function () {
             $("#text-type-message").val("");
+
+            $.post("../../backend/project/project_getstateteacher.php" )
+                .done(function(data)
+                {
+                    data = JSON.parse(data);
+                    if(data.professor_online != "1")
+                        peefbot.getResponse(text);
+                })
+                .fail(function () {
+                    console.log("erro");
+                });
+
+
+
 
             getlastmessages( function (data) {
                 setMessageChat(data);
@@ -214,9 +232,6 @@ $(document).ready(function () {
     }, 60*100);
 
 
-    window.addEventListener("beforeunload", function(e){
-       setLog("outproject")
-    }, false);
 
 
 });
@@ -259,7 +274,7 @@ function  showChatMessageAndNotification( data ) {
         }
 }
 
-function setMessageChat(data) {
+function setMessageChat(data, callback) {
 
     for(let i = 0; i < data.length; i++){
 
@@ -281,6 +296,9 @@ function setMessageChat(data) {
 
     var chatcontainer = $('#container-mensage-sended');
     chatcontainer.scrollTop(chatcontainer.prop("scrollHeight"));
+
+    if(callback != undefined)
+        callback();
 
 }
 

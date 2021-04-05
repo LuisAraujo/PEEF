@@ -1,3 +1,5 @@
+getstudentedetails = null;
+
 $(document).ready(function () {
     getdatauser();
 
@@ -5,6 +7,8 @@ $(document).ready(function () {
         {currentcourse: -1  });
 
     $(".item-menu").click(function () {
+
+        clearInterval(getstudentedetails);
 
         $(".item-menu").removeClass("active");
         $(this).addClass("active");
@@ -177,7 +181,8 @@ function getActivity(callback) {
 function getActivityByStudent(idstudent, callback) {
     $.post( "../../backend/dashboard/dash_getactivitiesbystudent.php",{idstudent:idstudent},
         function( data ) {
-           callback(data, idstudent);
+        console.log(data);
+        callback(data, idstudent);
         }
     );
 }
@@ -233,7 +238,7 @@ function  showListStudents( data ) {
                 var idstudant = $(this).attr("value");
                 getActivityByStudent( idstudant ,  showActivityByStudent);
 
-                setInterval(function () {
+                getstudentedetails = setInterval(function () {
 
                     if( $("#container-activity-details").css("display") != "none"){
                         getActivityByStudent( idstudant ,  showActivityByStudent);
@@ -282,6 +287,7 @@ function showActivity( data ) {
 function showActivityByStudent(data, idstudent) {
 
         $("#container-activity-details").html("");
+
         var json = JSON.parse(data);
 
         if(json.length == 0){
