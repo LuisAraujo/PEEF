@@ -90,7 +90,6 @@ html, body{
 
 .bt{
 	width: 100px;
-	height: 40px;
 	margin-top: 5px;
 	background-color: #15357b;
 	color: #fff;
@@ -101,6 +100,10 @@ html, body{
 	margin-left: 5px;
 	margin-right: 5px;
 	border: 0px;
+}
+
+.hidden{
+	display: none;
 }
 
 .bt-white{

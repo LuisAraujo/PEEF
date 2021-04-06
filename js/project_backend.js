@@ -92,7 +92,7 @@ function removeSendProject() {
 }
 
 function getdatauser(callback) {
-    $.post("../../backend/getdatauser.php" )
+    $.post("../../backend/users/getdatauser.php" )
         .done(function(data)
         {
             data = JSON.parse(data);

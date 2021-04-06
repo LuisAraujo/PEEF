@@ -4,6 +4,32 @@ $(document).ready(function () {
 
     showAllCourse();
 
+    getSexy( function (data) {
+        for(let i = 0; i < data.length; i++)
+            $("#selectsexy").append("<option value='"+data[i].id+"'>"+data[i].name+"</option>")
+
+            getLanguages( function (data) {
+                for(let i = 0; i < data.length; i++)
+                    $("#selectlanguage").append("<option value='"+data[i].id+"'>"+(data[i].cod.toUpperCase())+"</option>")
+
+                getdatauser(function (data) {
+                    $("#username").text(data.name);
+                    $("#username2").val(data.name);
+                    $("#usersexy").val(data.sexy);
+                    $("#userbio").val(data.bio);
+
+                    $("#selectlanguage").val(data.idlang);
+                    $("#selectsexy").val(data.sexy);
+                    $("#profileimage").css("background-image","url(../../"+data.urlprofile+" )" );
+
+                });
+
+            });
+        });
+
+
+
+
     $("#bt-courses").click( function () {
         showCourse();
     });
@@ -25,7 +51,60 @@ $(document).ready(function () {
         setLog("offline")
     }, false);
 
-    getdatauser();
+
+  $("#from-updateprofile").submit(function () {
+
+      dataform = new FormData(this);
+
+      $.ajax({
+          type: "POST",
+          dataType: "json",
+          url: "../../backend/users/updateuser.php",
+          data: dataform,
+          enctype: 'multipart/form-data',
+          processData: false,
+          contentType: false
+      }).done( function(data){
+
+          $("#userpassword").val("");
+
+          if(data == "1"){
+
+              alert("Cadastro atualizado!");
+
+              getdatauser(function (data) {
+                  $("#username").text(data.name);
+                  $("#username2").val(data.name);
+                  $("#usersexy").val(data.sexy);
+                  $("#userbio").val(data.bio);
+
+                  $("#selectlanguage").val(data.idlang);
+                  $("#selectsexy").val(data.sexy);
+                  $("#profileimage").css("background-image","url(../../"+data.urlprofile+")" );
+
+              });
+          }else{
+              alert("Erro ao atualizar o Cadastro!");
+          }
+      }).fail( function(data){
+          console.log(data);
+      });
+
+      return false;
+
+  });
+
+
+  $("#btcall-image").click(function () {
+      $("#inp-imageprofile").trigger("click");
+  });
+
+  $("#inp-imageprofile").change(function (e) {
+      $("#namefile").html( $(this)[0].files[0].name );
+  });
+
+
+
 });
 
 
@@ -41,19 +120,48 @@ function  showCourse() {
 
 
 
-function getdatauser() {
-    $.post("../../backend/getdatauser.php" )
+function getdatauser(callback) {
+    $.post("../../backend/users/getdatauser.php" )
         .done(function(data)
         {
             data = JSON.parse(data);
-            $("#username").text(data.name);
             configLang(data.cod);
+
+            if(callback != undefined)
+                callback(data);
         })
         .fail(function () {
             console.log("erro");
         });
 
 }
+
+function getLanguages(callback) {
+    $.post("../../backend/users/getsislanguage.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            callback(data);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+}
+
+function getSexy(callback) {
+    $.post("../../backend/users/getsexy.php" )
+        .done(function(data)
+        {
+            data = JSON.parse(data);
+            callback(data);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+
+}
+
+
 function configLang(cod) {
     if(cod == null)
         cod =  "eng";
@@ -101,8 +209,9 @@ function showAllCourse() {
             console.log("erro");
         });
 
-
 }
+
+
 
 function printDataCourse( data, percent ) {
 

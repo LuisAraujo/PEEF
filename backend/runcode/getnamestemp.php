@@ -1,7 +1,7 @@
 <?php
 
 function getnamefoldertemp_session($iduser){
-   // if(gettypeuser() == "leaner" ) {
+   // if(gettypeuser() == "learner" ) {
         $hex_iduser = md5( $iduser );
         return "../../userdatarunnig/tempuser_" . $hex_iduser . "/";
    // }

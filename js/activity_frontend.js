@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 
 function getdatauser() {
-    $.post("../../../backend/getdatauser.php" )
+    $.post("../../../backend/users/getdatauser.php" )
         .done(function(data)
         {
             data = JSON.parse(data);

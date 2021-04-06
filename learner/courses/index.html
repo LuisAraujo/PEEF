@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PEFF - My Courses</title>
+    <link rel="icon" href="../../sources/images/logo_peef.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
+    <link rel="stylesheet" href="../../sources/css/style.css">
+    <link rel="stylesheet" href="../../sources/css/style-courses.css">
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/log.js"></script>
+    <script src="../../js/course_fontend.js"></script>
+
+</head>
+<body>
+    <div class="bar-side" id="explore-bar">
+
+        <div class="head-bar-side">
+
+            <div id="profileimage" class="img-profile" ></div>
+            <div id="username" class="username">
+                ...
+            </div>
+        </div>
+
+        <div>
+
+
+            <div id="bt-courses" class="item-menu">
+                <i class="icofont-notebook"></i>
+                <span id="labelcourse"> Courses </span>
+            </div>
+
+            <div id="bt-profile" class="item-menu">
+                <i class="icofont-user"></i>
+                <span id="labelprofile"> Profile </span>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="separator-small"></div>
+    <div class="container-medium">
+
+        <div class="head-menu">
+
+            <div  id="bt-find-course"  class="bt">
+                <i class="icofont-search-2"></i>
+                <span id="labelfind" class="label">Find</span>
+            </div>
+
+            <div id="container-input-find-course" class="container-input larger">
+                <input id="inp-find-course" id="inp-find-course" placeholder=""/>
+            </div>
+        </div>
+
+        <div id="container-my-courses" class="container-courses">
+        </div>
+
+
+        <div id="container-profile" class="container-courses" style="display: none;" >
+            <form id="from-updateprofile" >
+
+                <div class="inp-form large ">
+                    <label id="labelname">Name</label>
+                    <input id="username2" name="username" placeholder="Name" required>
+                </div>
+
+                <label class="from-label" id="labelsexy">Sexy</label>
+                <select class="select-form" name="sexy" id="selectsexy" required>
+                    <option value=""></option>
+
+                </select>
+
+
+                <div class="inp-form large ">
+                    <label id="labelbio">Simple Biografy</label>
+                    <input id="userbio" name="bio" placeholder="Simple Biografy" required>
+                </div>
+
+                <label class="from-label" id="labellanguage">Language</label>
+                <select class="select-form" name="language" id="selectlanguage" required>
+                    <option value=""></option>
+                </select>
+
+
+                <div class="inp-form large ">
+                    <label id="labelpassword">Password</label>
+                    <input id="userpassword" name="password" type="password" placeholder="Password" >
+                </div>
+
+                <label class="from-label">Image profile</label>
+
+                <div id="btcall-image" class="bt bt-white">
+                    <span class="label"><i class="icofont-upload-alt"></i> <span id="labelimage"> Image </span></span>
+                </div>
+                <div id="namefile">namefile</div>
+
+                <input type="submit" value="Update" id="bt-update" class="bt">
+
+                <input type="file" name="image" id="inp-imageprofile" class="bt hidden">
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
