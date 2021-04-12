@@ -11,7 +11,7 @@ $result = $mysqli->query($query);
 if( $result->num_rows ==  0  ) {
 
     $query2 = "INSERT INTO code (id, name, code, Project_id)";
-    $query2 .= " VALUES (NULL, 'mycode.py', 'print(\"Test Python\")', ". getcurrentproject_session() .")";
+    $query2 .= " VALUES (NULL, 'mycode.py', ( SELECT templete_code FROM Activity INNER JOIN Project ON Activity.id = Project.Activity_id WHERE Project.id = ".getcurrentproject_session()."), ". getcurrentproject_session() .")";
     $result2 = $mysqli->query($query2);
 
 

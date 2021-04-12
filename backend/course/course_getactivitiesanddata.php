@@ -4,7 +4,7 @@
 @include "../session/manager_section.php";
 
 //select activity * join project (sended) e compilation (sucess) message (chat em view)
-$query = "SELECT id as id_act, title FROM  activity WHERE activity.Course_id = ".getcurrentcourse_session();
+$query = "SELECT id as id_act, title FROM  activity WHERE activity.Course_id = ".getcurrentcourse_session().  " AND (show_after <= CURDATE() OR show_after is NULL) ";
 $result = $mysqli->query($query);
 
 

@@ -3,7 +3,7 @@
 @include "../conection_database.php";
 @include "../session/manager_section.php";
 
-$query = "SELECT * FROM classes WHERE Course_id = ".getcurrentcourse_session();
+$query = "SELECT * FROM classes WHERE Course_id = ".getcurrentcourse_session(). " AND (show_after <= CURDATE() OR show_after is NULL) ";
 $result = $mysqli->query($query);
 
 $myArray = array();

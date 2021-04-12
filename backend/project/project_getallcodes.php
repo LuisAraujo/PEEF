@@ -12,7 +12,7 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
 //repetido codigo de criação de code.py
 if( count($myArray) == 0){
-    $query = "INSERT INTO code (id, name, Project_id) VALUES(null, 'mycode','".getcurrentproject_session()."')";
+    $query = "INSERT INTO code (id, name, code, Project_id) VALUES(null, 'mycode',( SELECT templete_code FROM Activity INNER JOIN Project ON Activity.id = Project.Activity_id WHERE Project.id = ".getcurrentproject_session()."), '".getcurrentproject_session()."')";
 
     $result2  = $mysqli->query($query);
     if($result2) {
