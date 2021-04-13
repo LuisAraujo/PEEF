@@ -1,4 +1,6 @@
 <?php
+//todo: duplicando em runcode/
+
 
 function getnamefoldertemp_session($iduser){
    // if(gettypeuser() == "learner" ) {

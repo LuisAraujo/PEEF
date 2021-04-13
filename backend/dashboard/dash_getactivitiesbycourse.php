@@ -8,6 +8,8 @@ if(getcurrentcourse_session() == "-1"){
     exit();
 }else {
     $query = "SELECT Activity.id as id, Activity.title as title FROM Activity WHERE Activity.Course_id = " . getcurrentcourse_session();
+    //todo: add topics
+    //$query = "SELECT Activity.id as id, Activity.title as title FROM Activity INNER JOIN Topic ON Topic.id = Activity.Topic_id WHERE Topic.Course_id = " . getcurrentcourse_session();
 
     $result = $mysqli->query($query);
     $myArray = array();

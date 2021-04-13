@@ -1,4 +1,5 @@
 <?php
+//depreciate?
 @include "../conection_database.php";
 
 if(isset( $_POST["idproject"]))

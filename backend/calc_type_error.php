@@ -1,4 +1,6 @@
 <?php
+//todo: aparentemente n é usado. Aparentemente duplicando em identify_errotype
+
 echo "<title>Extract Erro Type Line and Msg</title>";
 @include "conection_database.php";
 

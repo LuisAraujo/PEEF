@@ -4,10 +4,11 @@
 @include "../session/manager_section.php";
 
 //select activity * join project (sended) e compilation (sucess) message (chat em view)
-$query = "SELECT id as id_act, title FROM  activity WHERE activity.Course_id = ".getcurrentcourse_session().  " AND (show_after <= CURDATE() OR show_after is NULL) ";
+//$query = "SELECT id as id_act, title FROM  activity WHERE activity.Course_id = ".getcurrentcourse_session().  " AND (show_after <= CURDATE() OR show_after is NULL) ";
+
+$query = "SELECT Activity.id as id_act, Activity.title, Topic.title as topic  FROM  activity INNER JOIN Topic ON Topic.id = Activity.Topic_id WHERE Topic.Course_id = ".getcurrentcourse_session().  " AND (show_after <= CURDATE() OR show_after is NULL) ";
+
 $result = $mysqli->query($query);
-
-
 $myArray = array();
 
 while($row = $result->fetch_array(MYSQLI_ASSOC)){
@@ -30,6 +31,9 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)){
     $row3 = $result3->fetch_array(MYSQLI_ASSOC);
 
     $row["hasmessage"] = $row3["hasmessage"];
+
+    //if( !isset( $myArray[ $row["topic"] ] ))
+    // $myArray[ $row["topic"] ] = array();
 
     array_push($myArray, $row);
 }

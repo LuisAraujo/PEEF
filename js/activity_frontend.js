@@ -110,10 +110,15 @@ function getAllActivity() {
     $.post("../../../backend/course/course_getactivitiesanddata.php", function (data) {
 
         var json = JSON.parse(data);
-        //console.log(json);
+        console.log(data);
         for (var i = 0; i < json.length; i++) {
+            var elem = "";
 
-            var elem = '<div class="list-item activity-item" idactivity="'+ json[i].id_act  +'" idproject="' + json[i].id + '"> <div class="title-activity">' + json[i].title + '</div> ';
+            if( ( i == 0) ||  (json[i-1].topic != json[i].topic) ){
+                elem += "<h3>"+json[i].topic+"</h3>";
+            }
+
+            elem += '<div class="list-item activity-item" idactivity="'+ json[i].id_act  +'" idproject="' + json[i].id + '"> <div class="title-activity">' + json[i].title + '</div> ';
             elem += '<div class="options-item-list"> ';
 
             if (json[i].delivered == 1)
@@ -137,8 +142,8 @@ function getAllActivity() {
             elem += '</div>';
 
             $("#container-my-activity").append(elem)
-
         }
+
 
         $(".activity-item").click(function () {
 

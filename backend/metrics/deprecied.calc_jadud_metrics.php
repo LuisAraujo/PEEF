@@ -107,7 +107,7 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
                 //maximum value possible for each pair).
                 if (!array_key_exists($i, $totalScore))
                     $totalScore[$i] = 0;
-
+                //precisa dividir cada score par por 11
                 $totalScore[$i] += $score / 11;
 
 
@@ -124,11 +124,12 @@ while($row2 = $result2->fetch_array(MYSQLI_ASSOC)) {
         if (!array_key_exists($i, $totalScore))
             $totalScore[$i] = 0;
 
+       //depois soma todos os scores e divide pela quantidade de pares;
         $totalScore[$i] = $totalScore[$i] / (count($arraySession[$i]) - 1);
 
 
-        //precisa dividir cada score par por 11
-        //depois soma todos os scores e divide pela quantidade de pares;
+
+
     }
 
     echo "<hr>";

@@ -10,8 +10,10 @@ while($row = $result->fetch_array(MYSQLI_ASSOC)) {
     $myArray[] = $row;
 }
 
-//repetido codigo de criação de code.py
 if( count($myArray) == 0){
+    //pega template inicial do code e cria o codigo
+
+    //todo: essa criação está duplicada em gteidproject.php
     $query = "INSERT INTO code (id, name, code, Project_id) VALUES(null, 'mycode',( SELECT templete_code FROM Activity INNER JOIN Project ON Activity.id = Project.Activity_id WHERE Project.id = ".getcurrentproject_session()."), '".getcurrentproject_session()."')";
 
     $result2  = $mysqli->query($query);

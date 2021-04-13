@@ -1,4 +1,6 @@
 <?php
+//ir para run code
+
 
 @include "metrics/calc_stringedit.php";
 @include "conection_database.php";

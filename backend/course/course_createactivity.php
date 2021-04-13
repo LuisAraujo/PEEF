@@ -10,9 +10,15 @@ $descriptionin = $_POST["descriptionin"];
 $descriptionout = $_POST["descriptionout"];
 $datadelivery = $_POST["datadelivery"];
 $inputs = $_POST["inputs"];
+//todo: add topics
+$idtopic = 1;//$_POST["topic"];
 
 
-$sql = "INSERT INTO Activity (id,description,title,description_input,description_output, date_creation, data_delivery,     image, Course_id)  VALUES(null, '$activityname', '$description', '$descriptionin', '$descriptionout', CURDATE(), '$datadelivery', '', '$idcourses')";
+//$sql = "INSERT INTO Activity (id,description,title,description_input,description_output, date_creation, data_delivery, image, Course_id)  VALUES(null, '$activityname', '$description', '$descriptionin', '$descriptionout', CURDATE(), '$datadelivery', '', '$idcourses')";
+
+$sql = "INSERT INTO Activity (id,description,title,description_input,description_output, date_creation, data_delivery, image, Course_id, Topic_id)  VALUES(null, '$activityname', '$description', '$descriptionin', '$descriptionout', CURDATE(), '$datadelivery', '', '$idcourses', '$idtopic')";
+
+
 $result = $mysqli->query($sql);
 
 $sql2 ="SELECT LAST_INSERT_ID() as id ";

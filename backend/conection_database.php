@@ -3,7 +3,7 @@ $host = "localhost";
 $user="root";
 $password="";
 
-$databasename = "PEEF_BD";
+$databasename = "PEEF_BD2";
 $mysqli = new mysqli($host,$user,$password,$databasename);
 
 $mysqli->set_charset("utf8");

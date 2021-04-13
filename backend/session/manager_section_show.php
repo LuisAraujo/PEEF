@@ -1,5 +1,7 @@
 <?php
 
+//apenas para exibir a sessão
+
 session_start();
 //session_unset();
 

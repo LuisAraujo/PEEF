@@ -17,6 +17,8 @@ if(getcurrentcourse_session() == "-1") {
 
 
     $query2 = "SELECT count(*) as activity FROM Activity WHERE Course_id = " . getcurrentcourse_session();
+    //todo:
+    //$query2 = "SELECT count(*) as activity FROM Activity WHERE Course_id = " . getcurrentcourse_session();
 
     $result = $mysqli->query($query2);
     $arr["activity"] = $result->fetch_assoc()["activity"];

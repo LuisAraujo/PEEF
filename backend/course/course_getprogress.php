@@ -5,7 +5,11 @@
 
 $idcourse = 1;
 
-$sql = "SELECT Count(*) countactivity FROM Activity INNER JOIN Course ON Activity.Course_id = Course.id  WHERE Course.id = '$idcourse'";
+//$sql = "SELECT Count(*) countactivity FROM Activity INNER JOIN Course ON Activity.Course_id = Course.id  WHERE Course.id = '$idcourse'";
+
+$sql = "SELECT Count(*) countactivity FROM Activity INNER JOIN Topic ON Topic.id = Activity.Topic_id INNER JOIN Course ON Topic.Course_id = Course.id  WHERE Course.id = '$idcourse'";
+
+
 $result = $mysqli->query($sql);
 $row = $result->fetch_assoc();
 $countactivity = $row["countactivity"];

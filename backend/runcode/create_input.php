@@ -1,6 +1,5 @@
 <?php
 
-
 include 'getnamestemp.php';
 error_reporting(0);
 $token = $_POST["token"];

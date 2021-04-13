@@ -1,0 +1,16 @@
+add topic
+
+
+MUDANÇAS NO PROJETO
+scripts 
+* SELECT Course_id FROM Topic INNER JOIN Activity ON Topic.id = Activity.Topic_id WHERE Activity.id = $idactivity
+* INNER JOIN Activity ON Topic.id = Activity.Topic_id WHERE Activity.id = $idactivity
+* INNER JOIN Topic ON Topic.id = Activity.Topic_id
+
+arquivos afetados (marquei como todo):
+
+course_createactivity
+course_createproject
+course_getacvtivities
+course_getacvtivitiesondata
+course_getprogress
