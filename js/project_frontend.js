@@ -8,6 +8,10 @@ peefbot = new PEEFbot();
 var mapcodes = new Map();
 
 $(document).ready(function () {
+    checkType(1, "../", readAfterPermission);
+});
+
+function readAfterPermission() {
 
     peefbot.start();
 
@@ -29,7 +33,7 @@ $(document).ready(function () {
                 return false;
 
 
-            //(R)un code
+                //(R)un code
             }
 
             if((event.ctrlKey || event.metaKey) && event.which == 82) {
@@ -123,7 +127,7 @@ $(document).ready(function () {
     $("#button-save").click(function () {
         if($(this).hasClass("disable"))
             return;
-       savecode(function () {});
+        savecode(function () {});
     });
 
     $("#button-download").click(function () {
@@ -200,7 +204,7 @@ $(document).ready(function () {
 
 
     $("#bt-send-message").click(function () {
-       // console.log("send msg");
+        // console.log("send msg");
         let text = $("#text-type-message").val();
         sendmessage(text, 0, function () {
             $("#text-type-message").val("");
@@ -231,10 +235,7 @@ $(document).ready(function () {
         getlastmessages( showChatMessageAndNotification );
     }, 60*100);
 
-
-
-
-});
+}
 
 function  showChatMessageAndNotification( data ) {
         let unviewed = 0;

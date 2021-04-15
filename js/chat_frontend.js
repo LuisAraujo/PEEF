@@ -6,6 +6,12 @@ editor = null;
 
 $(document).ready(function () {
 
+    checkType(2, "../", readyAfterPermission);
+
+});
+
+function readyAfterPermission() {
+
     getidproject = window.location.search.substr(1);
     if((getidproject != undefined) && (getidproject != "")){
         param = getidproject.split("=")[0];
@@ -34,7 +40,7 @@ $(document).ready(function () {
 
 
                     $("#button-turnedit").click(function () {
-                       window.location = "../editstring/index.html?id="+idproject;
+                        window.location = "../editstring/index.html?id="+idproject;
                     });
 
 
@@ -61,8 +67,7 @@ $(document).ready(function () {
 
 
 
-
-});
+}
 
 
 function setDataStudent(data) {

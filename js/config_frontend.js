@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    checkType(2, "../", readyAfterPermission);
+
+});
+
+function readyAfterPermission() {
+
     getdatauser();
 
     $.post( "../../backend/session/manager_section.php",
@@ -17,7 +24,7 @@ $(document).ready(function () {
     });
 
 
-   getAllCourse(function (data) {
+    getAllCourse(function (data) {
 
         var json = JSON.parse(data);
         $("#selectcourses_createclass").html("<option></option>");
@@ -42,7 +49,7 @@ $(document).ready(function () {
     });
 
     $("#selecamounttest").change( function () {
-       createTestsInputs();
+        createTestsInputs();
     });
 
     $("#selecamountinputs").change( function () {
@@ -69,11 +76,10 @@ $(document).ready(function () {
 
 
 
-
-});
+}
 
 function getdatauser() {
-    $.post("../../backend/getdatauser.php" )
+    $.post("../../backend/users/getdatauser.php" )
         .done(function(data)
         {
             data = JSON.parse(data);

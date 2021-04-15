@@ -2,6 +2,13 @@ idproject = -1;
 
 $(document).ready(function () {
 
+    checkType(2, "../", readyAfterPermission);
+
+});
+
+
+function readyAfterPermission() {
+
     getidproject = window.location.search.substr(1);
     if((getidproject != undefined) && (getidproject != "")) {
         param = getidproject.split("=")[0];
@@ -24,4 +31,5 @@ $(document).ready(function () {
         window.location = "../chat/index.html?id=" + idproject;
     });
 
-});
+
+}

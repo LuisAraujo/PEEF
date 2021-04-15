@@ -14,6 +14,7 @@
     <script src="../../js/log.js"></script>
     <script src="../../js/config_frontend.js"></script>
     <script src="../../js/config_backend.js"></script>
+    <script src="../../js/securitycheck.js"></script>
 
 
 </head>
@@ -26,6 +27,12 @@
         </div>
 
         <div>
+
+            <div id="bt-dashboard" ref="newstudent" class="item-menu">
+                <i class="icofont-dashboard"></i>
+                <span id="labeldashboar"> Dashboard</span>
+            </div>
+
             <div id="bt-explore-newcourse" ref="newcourse" class="item-menu active">
                 <i class="icofont-plus"></i>
                 <span id="labelnewcourse"> New Course </span>
@@ -59,14 +66,36 @@
             </div>
 
             <div id="bt-explore-student" ref="newstudent" class="item-menu">
-                <i class="icofont-student-alt"></i>
+                <i class="icofont-plus"></i>
                 <span id="labelnewstudent"> New Students </span>
             </div>
 
-            <div id="bt-dashboard" ref="newstudent" class="item-menu">
-                <i class="icofont-dashboard"></i>
-                <span id="labeldashboar"> Dashboard</span>
+            <div id="bt-explore-editstudent" ref="editactivity"  class="item-menu">
+                <i class="icofont-student-alt"></i>
+                <span id="labeleditstudent" > Edit Students </span>
             </div>
+
+            <div id="bt-explore-alert" ref="newalert"  class="item-menu">
+                <i class="icofont-plus"></i>
+                <span id="labelalert" > New Alert </span>
+            </div>
+
+            <div id="bt-explore-editalert" ref="editalert"  class="item-menu">
+                <i class="icofont-alarm"></i>
+                <span id="labeleditalert" > Edit Alert </span>
+            </div>
+
+            <div id="bt-explore-topic" ref="newtopic"  class="item-menu">
+                <i class="icofont-plus"></i>
+                <span id="labeltopic" > New Topic </span>
+            </div>
+
+            <div id="bt-explore-edittopic" ref="edittopic"  class="item-menu">
+                <i class="icofont-list"></i>
+                <span id="labeledittopic" > Edit Topic </span>
+            </div>
+
+
 
 
         </div>

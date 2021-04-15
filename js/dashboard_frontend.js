@@ -1,6 +1,13 @@
 getstudentedetails = null;
 
 $(document).ready(function () {
+
+    checkType(2, "../", readyAfterPermission);
+});
+
+
+function readyAfterPermission() {
+
     getdatauser();
 
     $.post( "../../backend/session/manager_section.php",
@@ -29,7 +36,7 @@ $(document).ready(function () {
         }
 
         configLang($("#labelusername").attr("codlang"), function (data ) {
-           // $("#select-courses").append("<option value='-1' >"+ data.newcourse +"</option>");
+            // $("#select-courses").append("<option value='-1' >"+ data.newcourse +"</option>");
         })
 
     });
@@ -59,6 +66,7 @@ $(document).ready(function () {
                 {currentcourse: $(this).val()},
                 function (data) {
                     getSumary(function (data) {
+                        console.log(data)
                         var json = JSON.parse(data);
                         $("#enrolledstudent").html(json.student);
                         $("#ncalsses").html(json.activity);
@@ -92,7 +100,7 @@ $(document).ready(function () {
     });
 
     $("#selecamounttest").change( function () {
-       createTestsInputs();
+        createTestsInputs();
     });
 
     $("#selecamountinputs").change( function () {
@@ -100,10 +108,10 @@ $(document).ready(function () {
     });
 
 
-});
+}
 
 function getdatauser() {
-    $.post("../../backend/getdatauser.php" )
+    $.post("../../backend/users/getdatauser.php" )
         .done(function(data)
         {
             data = JSON.parse(data);

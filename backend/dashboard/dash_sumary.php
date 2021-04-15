@@ -16,7 +16,7 @@ if(getcurrentcourse_session() == "-1") {
     $arr["student"] = $result->fetch_assoc()["student"];
 
 
-    $query2 = "SELECT count(*) as activity FROM Activity WHERE Course_id = " . getcurrentcourse_session();
+    $query2 = "SELECT count(*) as activity FROM Activity INNER JOIN Topic On Topic.id = Activity.Topic_id WHERE Topic.Course_id = " . getcurrentcourse_session();
     //todo:
     //$query2 = "SELECT count(*) as activity FROM Activity WHERE Course_id = " . getcurrentcourse_session();
 

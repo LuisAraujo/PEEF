@@ -1,31 +1,39 @@
 $(document).ready(function () {
 
-    setLog("online");
+    checkType(1, "../", readAfterPermission);
 
+});
+
+
+
+function readAfterPermission() {
+
+
+    setLog("online");
     showAllCourse();
 
     getSexy( function (data) {
         for(let i = 0; i < data.length; i++)
             $("#selectsexy").append("<option value='"+data[i].id+"'>"+data[i].name+"</option>")
 
-            getLanguages( function (data) {
-                for(let i = 0; i < data.length; i++)
-                    $("#selectlanguage").append("<option value='"+data[i].id+"'>"+(data[i].cod.toUpperCase())+"</option>")
+        getLanguages( function (data) {
+            for(let i = 0; i < data.length; i++)
+                $("#selectlanguage").append("<option value='"+data[i].id+"'>"+(data[i].cod.toUpperCase())+"</option>")
 
-                getdatauser(function (data) {
-                    $("#username").text(data.name);
-                    $("#username2").val(data.name);
-                    $("#usersexy").val(data.sexy);
-                    $("#userbio").val(data.bio);
+            getdatauser(function (data) {
+                $("#username").text(data.name);
+                $("#username2").val(data.name);
+                $("#usersexy").val(data.sexy);
+                $("#userbio").val(data.bio);
 
-                    $("#selectlanguage").val(data.idlang);
-                    $("#selectsexy").val(data.sexy);
-                    $("#profileimage").css("background-image","url(../../"+data.urlprofile+" )" );
-
-                });
+                $("#selectlanguage").val(data.idlang);
+                $("#selectsexy").val(data.sexy);
+                $("#profileimage").css("background-image","url(../../"+data.urlprofile+" )" );
 
             });
+
         });
+    });
 
 
 
@@ -52,60 +60,59 @@ $(document).ready(function () {
     }, false);
 
 
-  $("#from-updateprofile").submit(function () {
+    $("#from-updateprofile").submit(function () {
 
-      dataform = new FormData(this);
+        dataform = new FormData(this);
 
-      $.ajax({
-          type: "POST",
-          dataType: "json",
-          url: "../../backend/users/updateuser.php",
-          data: dataform,
-          enctype: 'multipart/form-data',
-          processData: false,
-          contentType: false
-      }).done( function(data){
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "../../backend/users/updateuser.php",
+            data: dataform,
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false
+        }).done( function(data){
 
-          $("#userpassword").val("");
+            $("#userpassword").val("");
 
-          if(data == "1"){
+            if(data == "1"){
 
-              alert("Cadastro atualizado!");
+                alert("Cadastro atualizado!");
 
-              getdatauser(function (data) {
-                  $("#username").text(data.name);
-                  $("#username2").val(data.name);
-                  $("#usersexy").val(data.sexy);
-                  $("#userbio").val(data.bio);
+                getdatauser(function (data) {
+                    $("#username").text(data.name);
+                    $("#username2").val(data.name);
+                    $("#usersexy").val(data.sexy);
+                    $("#userbio").val(data.bio);
 
-                  $("#selectlanguage").val(data.idlang);
-                  $("#selectsexy").val(data.sexy);
-                  $("#profileimage").css("background-image","url(../../"+data.urlprofile+")" );
+                    $("#selectlanguage").val(data.idlang);
+                    $("#selectsexy").val(data.sexy);
+                    $("#profileimage").css("background-image","url(../../"+data.urlprofile+")" );
 
-              });
-          }else{
-              alert("Erro ao atualizar o Cadastro!");
-          }
-      }).fail( function(data){
-          console.log(data);
-      });
+                });
+            }else{
+                alert("Erro ao atualizar o Cadastro!");
+            }
+        }).fail( function(data){
+            console.log(data);
+        });
 
-      return false;
+        return false;
 
-  });
-
-
-  $("#btcall-image").click(function () {
-      $("#inp-imageprofile").trigger("click");
-  });
-
-  $("#inp-imageprofile").change(function (e) {
-      $("#namefile").html( $(this)[0].files[0].name );
-  });
+    });
 
 
+    $("#btcall-image").click(function () {
+        $("#inp-imageprofile").trigger("click");
+    });
 
-});
+    $("#inp-imageprofile").change(function (e) {
+        $("#namefile").html( $(this)[0].files[0].name );
+    });
+
+
+}
 
 
 function  showProfile() {

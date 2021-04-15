@@ -2,6 +2,13 @@ jsonlang =  null;
 
 $(document).ready(function () {
 
+    checkType(1, "../../", readyAfterPermission);
+
+});
+
+
+function readyAfterPermission() {
+
     setLog2("oncourse");
 
     $( ".container-activity").hide();
@@ -33,8 +40,8 @@ $(document).ready(function () {
     getNameCourse();
     getProgress();
 
-});
 
+}
 
 function getdatauser() {
     $.post("../../../backend/users/getdatauser.php" )
@@ -128,7 +135,7 @@ function getAllActivity() {
     $.post("../../../backend/course/course_getactivitiesanddata.php", function (data) {
 
         var json = JSON.parse(data);
-        console.log(data);
+        console.log(json.length);
         for (var i = 0; i < json.length; i++) {
             var elem = "";
 

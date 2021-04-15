@@ -1,8 +1,8 @@
-$(document).ready(function () {
+function readAfterPermission() {
 
     $("#button-login").click(function () {
         console.log("login started");
-		 $("#mgs-login").hide();
+        $("#mgs-login").hide();
         login( $("#username").val(), $("#password").val(),  $("#inp-mode").val());
     });
 
@@ -13,9 +13,7 @@ $(document).ready(function () {
 
         }
     });
-
-});
-
+}
 
 function login(login, pass, mode) {
 
@@ -26,12 +24,13 @@ function login(login, pass, mode) {
 
            if(data != "error"){
 
-               $.post( "../backend/session/manager_section.php", {free:1, typeuser:2, currentuser: data} )
+               $.post( "../backend/session/manager_section.php", {free:1, typeuser:mode, currentuser: data} )
                .done(function(data2)
                {
 
                    console.log(data);
                    if(data != "0") {
+                       //student
                        if(mode==1)
                            window.location = "courses/index.html";
                        else {
