@@ -3,7 +3,9 @@
 @include "../conection_database.php";
 @include "../session/manager_section.php";
 
-$idcourse = 1;
+//apenas um progress?
+
+$idcourse = 1; //$_POST["idcourse"];
 
 //$sql = "SELECT Count(*) countactivity FROM Activity INNER JOIN Course ON Activity.Course_id = Course.id  WHERE Course.id = '$idcourse'";
 

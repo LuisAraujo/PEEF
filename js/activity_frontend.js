@@ -4,33 +4,34 @@ $(document).ready(function () {
 
     setLog2("oncourse");
 
-    $("#container-my-activity").hide();
+    $( ".container-activity").hide();
+    $("#container-alerts").show();
+    $("#bt-explore-alerts").addClass("active");
 
-    $("#bt-explore-class").click(function () {
-        showClasses();
+    $(".item-menu").click(function () {
+
+        $(".item-menu").removeClass("active");
+        $(this).addClass("active");
+        $( ".container-activity").hide();
+        $( "#container-" + $(this).attr("ref") ).show();
     });
 
-    $("#bt-explore-activity").click(function () {
-       showActivity();
-    });
-
-    $("#bt-explore-home").click(function () {
-       showHome();
-    });
 
     $("#bt-explore-back").click(function () {
         window.location = "../";
     });
 
     window.addEventListener("beforeunload", function(e){
-        setLog("outcourse")
+        setLog("outcourse");
     }, false);
 
 
     getAllClasses();
+    getAllAlerts();
     getAllActivity();
     getdatauser();
     getNameCourse();
+    getProgress();
 
 });
 
@@ -78,20 +79,14 @@ function configLang(cod) {
         $("#labelcorrect").text(data.correct);
         $("#labelcourse").text(data.course);
         $("#labelclasses").text(data.classes);
+        $("#labelprogress").text(data.progress);
+        $("#labelalert").text(data.alert);
 
     });
 }
 
 
-function  showActivity() {
-    $("#container-my-classe").hide();
-    $("#container-my-activity").show();
-}
 
-function  showClasses() {
-    $("#container-my-activity").hide();
-    $("#container-my-classe").show();
-}
 
 
 function getAllClasses() {
@@ -105,6 +100,29 @@ function getAllClasses() {
     });
 }
 
+function getProgress() {
+    $.post( "../../../backend/course/course_getprogressbytopic.php", function( data ) {
+
+        var json = JSON.parse(data);
+        for(var i= 0 ; i < json.length; i++){
+            var elem ='<div class="item-progress-course">\n' +
+                '<div class="nametopic-progress-course">'+json[i].topic+'</div>\n' +
+                '<div class="progress-course-grey"><div class="progress-course-value" style="width:'+json[i].percent+'% ">' +json[i].percent+ '%</div></div></div>'
+            $("#container-my-progress").append(elem)
+        }
+    });
+}
+
+function getAllAlerts() {
+    $.post( "../../../backend/course/course_getalerts.php", function( data ) {
+        // console.log(data);
+        var json = JSON.parse(data);
+        for(var i= 0 ; i < json.length; i++){
+            var elem ='<div class="alert-course"> <div class="title-class">'+json[i].title+'</div> <div class="datealert-class">'+json[i].date+'</div><div class="description-class"> '+json[i].text+' </div> </div>'
+            $("#container-alerts").append(elem)
+        }
+    });
+}
 
 function getAllActivity() {
     $.post("../../../backend/course/course_getactivitiesanddata.php", function (data) {

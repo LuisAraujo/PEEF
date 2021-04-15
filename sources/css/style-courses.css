@@ -167,21 +167,44 @@ body{
     margin-right: 5px;
 }
 
-.progress-course{
+.progress-course-grey{
     border-radius: 5px;
-    border: 1px #fff solid;
+    border: 3px #424242 solid;
     width: 300px;
     height:30px;
+    padding: 2px;
 }
+
+.progress-course{
+    border-radius: 5px;
+    border: 3px #fff solid;
+    width: 300px;
+    height:30px;
+    padding: 2px;
+}
+
+.progress-course-grey .progress-course-value{
+    background-color: #3d3865;
+}
+
 
 .progress-course-value{
     width: 40%;
-    border-radius: 5px;
-    height:25px;
+    border-radius: 3px;
+    height:24px;
     background-color: #122965;
     text-align: center;
-    color: #fff;
-    padding-top: 5px;
+    color: hsl(0, 0%, 100%);
+    padding-top: 6px;
+}
+
+.item-progress-course{
+    margin-top: 2px;
+}
+
+
+.nametopic-progress-course{
+    margin-top: 5px;
 }
 
 
@@ -304,4 +327,11 @@ body{
 
 .activity-head div:last-child{
     border-right:none;
+}
+
+.alert-course{
+    border: 1px  solid #555561;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
 }

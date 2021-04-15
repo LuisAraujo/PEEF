@@ -65,5 +65,6 @@
   "totalactivity": "Total de Atividades",
   "totalcompilation": "Total de Compilações",
   "totaltest": "Total de Testes",
-  "totalpassestest": "Total de Testes Passados"
+  "totalpassestest": "Total de Testes Passados",
+  "alert": "Aviso"
 }
