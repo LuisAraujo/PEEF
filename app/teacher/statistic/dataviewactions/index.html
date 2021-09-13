@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../../js/statistics_students.js"></script>
+    <script>
+        getProjectsActivity(53, 2, function (d) {
+            arr = JSON.parse(d);
+            var str_date1  = null;
+            var str_date2  = null;
+            var hours = null;
+            div = '';
+            for(var data in arr){
+
+
+                div += '<div class="bar">';
+                div += '<div class="project">P '+data+' </div>';
+
+                for(var j = 0; j < arr[data].length; j++){
+
+                    str_date2 = [arr[data][j][1], arr[data][j][2]];
+
+                    if(str_date1 != null) {
+
+                        d_date1 = str_date1[0].split("-");
+                        h_date1 = str_date1[1].split(":");
+
+                        d_date2 = str_date2[0].split("-");
+                        h_date2 = str_date2[1].split(":");
+
+                        date1 = new Date(parseInt(d_date1[0]),parseInt(d_date1[1]),parseInt(d_date1[2]),parseInt(h_date1[0]),parseInt(h_date1[1]),parseInt(h_date1[2]));
+                        date2 = new Date(parseInt(d_date2[0]),parseInt(d_date2[1]),parseInt(d_date2[2]),parseInt(h_date2[0]),parseInt(h_date2[1]),parseInt(h_date2[2]));
+
+                        hours = parseInt(Math.abs(date1 - date2) / 60 * 60 );
+                        hours = hours / 1000;
+
+                        if(hours > 200)
+                            hours = 200;
+                        console.log(arr[data][j][0], hours,str_date1[0] +" "+ str_date1[1], str_date2[0] +" "+ str_date2[1] );
+                    }
+
+
+                    if(arr[data][j][0] == "on"){
+                        div += '<div class="unity in" width="2px"></div>';
+                    }else if((arr[data][j][0] == "compilation") && (arr[data][j][3] != "no-error")){
+                        div += '<div class="unity error"   style = "width:'+ (2 + hours) +'px"></div>';
+                    }else if((arr[data][j][0] == "compilation") && (arr[data][j][3] == "no-error") ){
+                        div += '<div class="unity sucess" style = "width:'+ (2 + hours) +'px"></div>';
+                    }else if((arr[data][j][0] == "test") && (arr[data][j][3] == "0") ){
+                        div += '<div class="unity faill" style = "width:'+ (2 + hours) +'px"></div>';
+                    }else if((arr[data][j][0] == "test") && (arr[data][j][3] == "1") ) {
+                        div += '<div class="unity passed" style = "width:'+ (2 + hours)+'px"></div>';
+                    }else if(arr[data][j][0] == "off"){
+                        div += '<div class="unity out"  width="2px"></div>';
+                    }
+
+                    str_date1 = str_date2;
+                }
+
+                div += '</div>';
+
+
+            }
+
+            //console.log(div);
+            $("#container_bar").html(div);
+
+
+        });
+
+
+    </script>
+    <style>
+
+        .bar{
+            width: 90%;
+            height:20px;
+            border:solid 1px #000;
+            margin-bottom: 5px;
+
+        }
+
+        .unity{
+            height: 100%;
+            border-right: solid 1px #000;
+            float: left;
+            width: 2px;
+        }
+
+        .sucess{
+            background-color: #246fc6;
+        }
+
+        .error{
+            background-color: #ad110c;
+        }
+
+        .faill{
+            background-color: #db7d00;
+        }
+
+        .passed {
+            background-color: #4aad1a;
+        }
+
+        .in{
+            background-color: #9827e7;
+        }
+
+        .out{
+            background-color: #48193e;
+        }
+
+        .project{
+            float: left;
+            width: 40px;
+            padding-top: 5px;
+            text-align: center;
+        }
+
+        .legend-item{
+            float: left;
+        }
+        .legend{
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            float: left;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .legend-containers{
+            border: solid 1px #000;
+            height: 30px;
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<h1>Student's Behavior</h1>
+<div class="legend-containers">
+    <div class="legend-item">
+        <div class="legend in"></div>
+        <span>in</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend out"></div>
+        <span>out</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend sucess"></div>
+        <span>success</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend error"></div>
+        <span>error</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend faill"></div>
+        <span>faill</span>
+    </div>
+    <div class="legend-item">
+        <div class="legend passed"></div>
+        <span>passed</span>
+    </div>
+</div>
+
+
+<div id="container_bar"> </div>
+
+</body>
+</html>
+</html>

@@ -1,0 +1,26 @@
+.panel{
+    width: 400px;
+    height: 270px;
+    border-radius: 5px;
+    border: solid 1px #4b4b4b;
+    border: solid 1px #4b4b4b;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    background-color: #d6d6d6;
+}
+
+.panel .title{
+    font-size: 15px;
+}
+
+canvas{
+   height: 140px;
+}
+
+#timeplatform{
+    font-size: 100px;
+    color: #2c4d5d;
+    text-align: center;
+    margin-top: 20px;
+}

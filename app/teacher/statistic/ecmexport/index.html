@@ -1,0 +1,103 @@
+<!-- http://localhost/peef/app/teacher/statistic/ecmexport/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Export ECM Data</title>
+    <meta charset="UTF-8">
+    <script src="../../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../../js/exportdata.js"> </script>
+    <script src="../../../js/FileSaver.js"> </script>
+    <script>
+        $(document).ready(function () {
+
+            $("#bt-toperror").click( function () {
+                exportTopError();
+            });
+
+
+            $("#bt-datastudents").click( function () {
+                exportDataStudent();
+            });
+
+
+            $("#bt-dataactivities").click( function () {
+                exportDataByActivity();
+            });
+
+
+            $("#bt-datacompilationerror").click( function () {
+                exportAllCompilationError();
+            });
+
+            $("#bt-dataenhancedmessagenocover").click( function () {
+                exportEnhancedMessageNoCover();
+            });
+
+            $("#bt-datadelivery").click( function () {
+                exportDeliveryData();
+            });
+
+            $("#bt-datapass").click( function () {
+                exportTestData();
+            });
+
+            $("#bt-red").click( function () {
+                exportREDData();
+            });
+
+
+            $("#bt-eq").click( function () {
+                exportEQData();
+            });
+
+            $("#bt-lasttestresult").click( function () {
+                exportLastTestResult(2);
+            });
+
+
+            $("#bt-timesolve").click( function () {
+
+            });
+
+        });
+    </script>
+
+    <style>
+        .bt-export{
+            background-color: #2a9c2a;
+            border: 1px solid #1a5d1b;
+            color: #f1f1f1;
+            border-radius: 10px;
+            padding: 5px;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .bt-export:hover{
+            background-color: #1a5d1b;
+            cursor: pointer;
+            color: #b0b0b0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bt-export" id="bt-toperror">Top Erros</div>
+<div class="bt-export" id="bt-datastudents">Export Data By Students</div>
+<div class="bt-export"  id="bt-dataactivities">Export Data By Activities</div>
+<div class="bt-export"  id="bt-datacompilationerror">Export Compilation Error Data </div>
+<div class="bt-export"  id="bt-dataenhancedmessagenocover">Export Enhanced Message No Covered </div>
+<div class="bt-export"  id="bt-datadelivery">Projects Delivered</div>
+<div class="bt-export"  id="bt-datapass">Projects Pass</div>
+<div class="bt-export"  id="bt-red">Projects RED</div>
+<div class="bt-export"  id="bt-eq">Projects EQ</div>
+<div class="bt-export"  id="bt-lasttestresult">Last Result Test</div>
+<div class="bt-export"  id="bt-timesolve">Projects Times Solve</div>
+
+</body>
+</html>

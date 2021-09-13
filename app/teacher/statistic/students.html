@@ -1,0 +1,98 @@
+<html lang="en">
+<header>
+    <title>PEEF - Statistic Teacher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8"/>
+    <link rel="icon" href="../../sources/images/logo_peef.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="../../sources/css/style.css">
+    <link rel="stylesheet" href="../../sources/css/style-statistic.css">
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/securitycheck.js"></script>
+    <script src="../../js/frontend_student_statistic.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.min.js" integrity="sha512-RGbSeD/jDcZBWNsI1VCvdjcDULuSfWTtIva2ek5FtteXeSjLfXac4kqkDRHVGf1TwsXCAqPTF7/EYITD0/CTqw==" crossorigin="anonymous"></script>
+
+</header>
+<body >
+
+    <div class="container-activity" style="overflow-y: scroll; height: calc(100%);">
+
+        <div class="head-menu">
+            <div class="title">PEFF: Statistic Student</div>
+        </div>
+
+        <div class="panel">
+        <div class="title">Time in Platform</div>
+        <div class="contents" id="timeplatform">  </div>
+        </div>
+
+        <div class="panel">
+            <div class="title">Time by Day</div>
+            <div class="contents">
+                <canvas id="chart_timeday"></canvas>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="title">Time by WeekDay</div>
+            <div class="contents">
+
+                <canvas id="chart_timeweek"></canvas>
+
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="title">Amount message</div>
+            <div class="contents">
+                <canvas id="chart_datamessage"></canvas>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="title">Time to solve in Projects</div>
+            <div class="contents">
+                <canvas id="chart_datasolve"></canvas>
+
+            </div>
+        </div>
+
+
+        <div class="panel">
+            <div class="title">RED in Projects</div>
+            <div class="contents">
+                <canvas id="chart_red"></canvas>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="title">EQ in Projects</div>
+            <div class="contents">
+                <canvas id="chart_eq"></canvas>
+            </div>
+        </div>
+
+
+        <div class="panel">
+            <div class="title">Amount Executes in Projects</div>
+            <div class="contents">
+                <canvas id="chart_compilation"> </canvas>
+            </div>
+        </div>
+
+
+
+        <div class="panel">
+            <div class="title">Amount Test Passed in Projects</div>
+            <div class="contents">
+                <canvas id="chart_test"> </canvas>
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="../../js/chart-students.js"></script>
+
+</body>
+</html>

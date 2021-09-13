@@ -1,0 +1,131 @@
+#all-codes{
+    margin-top: 10px;
+    overflow: scroll;
+    height: calc(100% - 80px);
+    width: 100%;
+}
+
+.container-data-code {
+    height: 270px;
+    width: 210px;
+    float: left;
+    margin-left: 10px;
+}
+
+.container-code{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    background-color: #fff !important;
+    padding:5px;
+    overflow-y: scroll;
+
+    margin-top: 5px;
+}
+.container-code span{
+    font-family: monospace;
+    white-space: pre;
+}
+.container-code .number{
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #999;
+}
+
+.container-code .line1{
+    background-color: #dedede;
+    width: 120%;
+    display: block;
+}
+
+.container-code .line1.line-changed {
+    background-color: #5ba0ce !important;
+}
+
+
+.container-code .line2{
+    background-color: #fff;
+     width: 120%;
+    display: block;
+}
+
+.container-code .line-changed{
+    background-color: #426f91 !important;
+    color: #fff;
+}
+
+
+.data-code{
+    font-size: 10px;
+    background-color: #fff;
+    color: #222;
+    width: 100%;
+    display: block;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+	border: 1px solid #000;
+}
+.data-lable{
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-left: 5px;
+    display: block;
+    /*width: 40%;*/
+    float: left;
+    height: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+
+ }
+.data-error{
+    background-color: #ff484d !important;
+    color:#fff;
+    border: 1px #7a2224 solid;
+}
+
+.data-noerror{
+    background-color: #34af38 !important;
+    color:#fff;
+    border: 1px #1a5d1b solid;
+
+}
+
+
+
+.data-nomessage{
+    background-color: #939a96 !important;
+    color:#fff;
+    max-width: 35%;
+    border: 1px #5d595c solid;
+}
+
+
+.data-message{
+    background-color: #508caf !important;
+    color:#fff;
+    width: 25%;
+    border: 1px #2a515d solid;
+
+}
+
+.data-faill{
+    background-color: #be6c15 !important;
+    color:#fff;
+    width: 25%;
+    border: 1px #6f3714 solid;
+}
+
+
+.data-passed{
+    background-color: #24631f !important;
+    color:#fff;
+    width: 25%;
+    border: 1px #205518 solid;
+}
+
+/*MENU */

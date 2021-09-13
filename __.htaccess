@@ -1,0 +1,5 @@
+#ErrorDocument 404 /pageerror/index.html
+#ErrorDocument 403 /pageerror/index.html
+
+RewriteEngine On
+Options -Indexes

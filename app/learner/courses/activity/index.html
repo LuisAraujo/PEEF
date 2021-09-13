@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PEFF - My Activity</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../sources/css/icofont.css">
+    <link rel="stylesheet" href="../../../sources/css/style.css">
+    <link rel="stylesheet" href="../../../sources/css/style-courses.css">
+    <link rel="icon" href="../../../sources/images/logo_peef.png" sizes="16x16" type="image/png">
+    <script src="../../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../../js/log.js"></script>
+    <script src="../../../js/activity_frontend.js"></script>
+    <script src="../../../js/securitycheck.js"></script>
+
+
+</head>
+<body>
+    <div class="bar-side" id="explore-bar">
+
+        <div class="head-bar-side">
+
+            <div id="profileimage" class="img-profile" ></div>
+            <div id="labelusername" class="username">
+                ...
+            </div>
+        </div>
+
+        <div>
+            <div id="bt-explore-back" class="item-menu">
+                <i class="icofont-simple-left"></i>
+                <span id="labelback"> Back </span>
+            </div>
+
+            <div id="bt-explore-alerts" class="item-menu" ref="alerts">
+                <i class="icofont-alarm"></i>
+                <span id="labelalert"> Alerts </span>
+            </div>
+
+            <div id="bt-explore-progress" class="item-menu" ref="my-progress">
+                <i class="icofont-chart-histogram"></i>
+                <span id="labelprogress"> Progress </span>
+            </div>
+
+            <div id="bt-explore-class" class="item-menu" ref="my-classe">
+                <i class="icofont-video"></i>
+                <span id="labelclasses"> Classes </span>
+            </div>
+
+            <div id="bt-explore-activity" class="item-menu" ref="my-activity">
+                <i class="icofont-code-alt"></i>
+                <span id="labelactivity" > Activity </span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="separator-small"></div>
+    <div class="container-medium">
+
+        <div class="head-menu">
+            <div class="head-title"> <span id="labelcourse" ></span> <span id="namecourse" ></span> </div>
+        </div>
+
+        <!-- ALERTS -->
+        <div id="container-alerts" class="container-activity">
+        </div>
+
+
+        <!-- COURSE -->
+        <div id="container-my-classe" class="container-activity">
+        </div>
+
+
+        <!-- ACTIVTY -->
+
+        <div id="container-my-activity" class="container-activity">
+
+        </div>
+
+
+        <!-- PROGRESS -->
+        <div id="container-my-progress" class="container-activity">
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

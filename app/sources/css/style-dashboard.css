@@ -1,0 +1,104 @@
+.itens-sumary-datshboard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itens-sumary-datshboard .number{
+    font-family: 'Montserrat Medium', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.itens-sumary-datshboard.color-blue{
+    color: #fff;
+    background-color: #557eca;;
+}
+
+.itens-sumary-datshboard.color-green{
+    color: #fff;
+    background-color: #55ca40;;
+}
+
+.itens-sumary-datshboard.color-orange{
+    color: #fff;
+    background-color: #ca9b24;;
+}
+
+.itens-sumary-datshboard.color-red{
+    color: #fff;
+    background-color: #ca3632;;
+}
+
+
+.itens-sumary-datshboard.color-purple{
+    color: #fff;
+    background-color: #ca61aa;;
+}
+
+.itens-sumary-datshboard.color-cyan{
+    color: #fff;
+    background-color: #599aca;;
+}
+
+.button{
+    border: 1px solid #8d8da0;
+    margin-top: 5px;
+    background-color: #d3d7d8;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #bdc1c2;
+}
+
+#container-student{
+
+}
+
+
+.subcontainer-activity{
+    width: 100%;
+    height: inherit;
+}
+
+.stud-online{
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    background-color: #40f240;
+    border: solid 1px #1a5d1b;
+    border-radius: 50%;
+}
+.stud-offline{
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    background-color: #c5c5df;
+    border: solid 1px #8b8b9f;
+    border-radius: 50%;
+}
+
+
+.bt-order-list{
+    margin-right: 10px;
+    color: #545454;
+}
+
+.bt-order-list:hover{
+    cursor: pointer;
+    color: #000;
+}

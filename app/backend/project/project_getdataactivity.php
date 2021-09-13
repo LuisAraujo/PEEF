@@ -1,0 +1,37 @@
+<?php
+@include "../conection_database.php";
+@include "../session/manager_section.php";
+
+$query = "SELECT activity.id as id, activity.description, activity.title, activity.description_input ,  activity.description_output, activity.image as image FROM activity WHERE id = (SELECT Activity_id FROM project WHERE id = ".  getcurrentproject_session().")";
+
+$result = $mysqli->query($query);
+$row = $result->fetch_array(MYSQLI_ASSOC);
+//echo json_encode($row);
+
+$query2 = "SELECT * FROM test WHERE  Activity_id = ".$row["id"] ." LIMIT 2";
+$result2 = $mysqli->query($query2);
+
+$row2 = $result2->fetch_array(MYSQLI_ASSOC);
+$input01 = str_replace( "\n", " <br> ", $row2["input"]);
+$output01 = $row2["output"];
+
+$row2 = $result2->fetch_array(MYSQLI_ASSOC);
+
+if( isset($row2["input"]))
+    $input02 = str_replace( "\n", " <br> ", $row2["input"]);
+else
+    $input02 = "";
+if( isset($row2["output"]))
+    $output02 = $row2["output"];
+else
+    $output02 = "";
+
+$urlimage = "";
+
+if( strcmp($row['image'], "") != 0)
+    $urlimage = "../../upload/images/".md5(getcurrentcourse_session() )."/".$row['image'];
+
+$result = '{"id":"'.$row['id'].'","description":"'.$row['description'].'","title":"'.$row['title'].'","description_input":"'.$row['description_input'].'","description_output":"'.$row['description_output'].'","input01":"'.$input01.'","output01":"'.$output01.'","input02":"'.$input02.'","output02":"'.$output02.'", "image":"'.$urlimage.'"}';
+echo  $result ;
+
+?>
