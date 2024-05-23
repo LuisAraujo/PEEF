@@ -1,9 +1,9 @@
 <?php
 $host = "localhost";
 $user="root";
-$password="";
+$password="root";
 
-$databasename = "PEEF_BD2";
+$databasename = "peef_bd2";
 $mysqli = new mysqli($host,$user,$password,$databasename);
 
 $mysqli->set_charset("utf8");

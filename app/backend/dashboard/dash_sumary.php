@@ -3,6 +3,8 @@
 @include "../conection_database.php";
 @include "../session/manager_section.php";
 
+
+
 if(getcurrentcourse_session() == "-1") {
     echo "[]";
     exit();
@@ -11,7 +13,7 @@ if(getcurrentcourse_session() == "-1") {
     $arr = [];
 
     $query = "SELECT count(*) as student FROM Enrollment WHERE Course_id = " . getcurrentcourse_session();
-
+    
     $result = $mysqli->query($query);
     $arr["student"] = $result->fetch_assoc()["student"];
 

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Se você utilizar esse software, por favor, cite como a seguir."
+authors:
+- family-names: "Araujo"
+  given-names: "Luis"
+  orcid: "https://orcid.org/0000-0001-6293-2207"
+- family-names: "von Flach"
+  given-names: "Christina"
+  orcid: " https://orcid.org/0000-0001-5172-9641"
+- family-names: "Bittencourt"
+  given-names: "Roberto Almeida"
+  orcid: "http://orcid.org/0000-0002-8854-8956"
+title: "Python Enhanced Error Feedback"
+version: 1.0.0
+date-released: 2024-05-23
+url: "https://github.com/LuisAraujo/PEEF"
