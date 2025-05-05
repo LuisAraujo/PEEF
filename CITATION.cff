@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "Se você utilizar esse software, por favor, cite como a seguir."
 authors:
 - family-names: "Araujo"
-  given-names: "Luis"
+  given-names: "Luis Gustavo de Jesus"
   orcid: "https://orcid.org/0000-0001-6293-2207"
-- family-names: "von Flach"
-  given-names: "Christina"
+- family-names: "Chavez"
+  given-names: "Christina von Flach"
   orcid: " https://orcid.org/0000-0001-5172-9641"
 - family-names: "Bittencourt"
   given-names: "Roberto Almeida"
