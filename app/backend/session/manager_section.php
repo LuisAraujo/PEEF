@@ -81,7 +81,7 @@ function settypeuser($typeuser){
 //get
 
 function getcurrentcourse_session(){
-    return 2;//$_SESSION['currentcourse'];
+    return $_SESSION['currentcourse'];
 }
 
 function getcurrentcode_session(){

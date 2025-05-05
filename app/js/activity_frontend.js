@@ -113,7 +113,7 @@ function configLang(cod) {
 
 function getAllClasses() {
     $.post( "../../../backend/course/course_getclasses.php", function( data ) {
-       // console.log(data);
+        //console.log(data);
         var json = JSON.parse(data);
         for(var i= 0 ; i < json.length; i++){
 
@@ -124,9 +124,9 @@ function getAllClasses() {
         }
 
         $(".click-reloadvideo").click(function () {
-            console.log( $( "#container-video"+ $(this).attr("ref2") ) );
+            console.log( $(this).attr("ref2"), $(this).attr("ref1") );
             $("#container-video"+ $(this).attr("ref2")).remove();
-            $("#description-class" + $(this).attr("ref2") ).after('<iframe  class="frame-video-class" id="videoclass'+i+'" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/'+$(this).attr("ref")+'"></iframe>');
+            $("#description-class" + $(this).attr("ref2") ).after('<iframe  class="frame-video-class" id="container-video'+ $(this).attr("ref2")+'"  type="text/html" width="640" height="360" src="http://www.youtube.com/embed/'+$(this).attr("ref")+'"></iframe>');
            // $("#container-video"+ $(this).attr("ref2") ).html();
 
         });
@@ -149,8 +149,8 @@ function getProgress() {
 
         for(var i= 0 ; i < json.length; i++){
             var elem ='<div class="item-progress-course">\n' +
-                '<div class="nametopic-progress-course">'+json[i].topic+'</div>\n' +
-                '<div class="progress-course-grey"><div class="progress-course-value" style="width:'+json[i].percent+'% ">' +json[i].percent+ '%</div></div></div>'
+                '<div class="nametopic-progress-course">'+json[i].topic+' ('+json[i].percent+ '%)</div>\n' +
+                '<div class="progress-course-grey"><div class="progress-course-value" style="width:'+json[i].percent+'% "></div></div></div>'
             $("#container-my-progress").append(elem)
         }
     });

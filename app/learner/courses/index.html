@@ -12,6 +12,11 @@
     <script src="../../js/log.js"></script>
     <script src="../../js/course_fontend.js"></script>
     <script src="../../js/securitycheck.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="bar-side" id="explore-bar">
@@ -70,24 +75,24 @@
                     <label id="labelname">Name</label>
                     <input id="username2" name="username" placeholder="Name" required>
                 </div>
+                <div class="inp-form large ">
+                    <label class="from-label" id="labelsexy">Sexy</label>
+                    <select class="select-form" name="sexy" id="selectsexy" required>
+                        <option value=""></option>
 
-                <label class="from-label" id="labelsexy">Sexy</label>
-                <select class="select-form" name="sexy" id="selectsexy" required>
-                    <option value=""></option>
-
-                </select>
-
+                    </select>
+                </div>
 
                 <div class="inp-form large ">
                     <label id="labelbio">Simple Biografy</label>
                     <input id="userbio" name="bio" placeholder="Simple Biografy" required>
                 </div>
-
-                <label class="from-label" id="labellanguage">Language</label>
-                <select class="select-form" name="language" id="selectlanguage" required>
-                    <option value=""></option>
-                </select>
-
+                <div class="inp-form large ">
+                    <label class="from-label" id="labellanguage">Language</label>
+                    <select class="select-form" name="language" id="selectlanguage" required>
+                        <option value=""></option>
+                    </select>
+                </div>
 
                 <div class="inp-form large ">
                     <label id="labelpassword">Password</label>
@@ -96,7 +101,7 @@
 
                 <label class="from-label">Image profile</label>
 
-                <div id="btcall-image" class="bt bt-white">
+                <div id="btcall-image" class="">
                     <span class="label"><i class="icofont-upload-alt"></i> <span id="labelimage"> Image </span></span>
                 </div>
                 <div id="namefile">namefile</div>

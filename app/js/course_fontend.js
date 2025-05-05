@@ -253,7 +253,8 @@ function printDataCourse( data, percent ) {
         elem +=  localdata.code;
         elem += '</span> </div> <div class="tag-course"> <i class="icofont-user"></i><span>';
         elem += localdata.profname + '</span> </div> ';
-        elem += '</div><div class="progress-course" id="progresscourse'+localdata.id+'" ><div class="progress-course-value" style="width:0% ">0%</div></div>';
+        elem += '</div><div class="numberprogresscourse" id="numberprogresscourse'+localdata.id+'">0%</div>';
+        elem += '<div class="progress-course" id="progresscourse'+localdata.id+'" ><div class="progress-course-value" style="width:0%"></div></div>';
         elem += '<div class="title-progress-course">progress</div>';
         elem += ' </div>';
 
@@ -276,7 +277,9 @@ function printDataCourse( data, percent ) {
         .done(function(data2) {
 
             data2 = JSON.parse(data2);
-            $("#progresscourse"+localdata.id).html('<div class="progress-course-value" style="width:'+data2.percent+'% ">'+data2.percent+'%</div>');
+            $("#numberprogresscourse"+localdata.id).html(data2.percent+"%");
+            
+            $("#progresscourse"+localdata.id).html('<div class="progress-course-value" style="width:'+data2.percent+'% "></div>');
 
         });
 

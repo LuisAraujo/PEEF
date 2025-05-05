@@ -17,7 +17,6 @@ function readAfterPermission() {
 
 function login(login, pass, mode) {
 
-
     $.post( "../backend/home_login.php", {login: login, password:pass, mode: mode})
 
         .done( function (data){
@@ -44,7 +43,7 @@ function login(login, pass, mode) {
 
            }else{
                $("#mgs-login").show();
-               console.error("Error post ajax login!" + data);
+               console.error("Error post ajax login! " + data);
            }
         })
         .fail( function (data) {

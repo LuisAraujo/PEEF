@@ -1,12 +1,18 @@
+
+  
 body{
     overflow: hidden;
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
 }
 .head-bar-side{
     margin-top: 10px;
     margin-left: 10px;
     width: 100%;
-    height: 50px;
+    height: 50px !important;
 }
+
 .head-bar-side .menu-logo{
     width: 30px;
     height: 30px;
@@ -29,33 +35,63 @@ body{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #727282;
+    
 }
 
+.bar-side{
+    color:#fff;
+    background-color: #1E293B;
+}
 
+#namecourse{
+    font-weight: bold;
+    color: #447bb4;
+}
+
+.datealert-class{
+    background-color: #447bb4;
+    margin-top: 5px;
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    
+}
 .item-menu{
     width: calc(100% - 5px);
     font-size: 20px;
     padding-top:10px;
     padding-left: 5px;
     padding-bottom:10px;
-    color: #5e5e6d;
+    font-weight: normal;
+    border-left: 10px solid;
+    border-color: #447bb4;
 }
+
 
 .item-menu.active{
     background-color: #b1b1cb;
-    color: #3d3d49;
+    color: #fff;
     border-right: 5px solid #060f24;
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
+    border-color: #355a82;
 }
 
 .item-menu:active{
     border-right: 5px solid #060f24;
     width: calc(100% - 10px);
+    border-color: #355a82;
 }
 .item-menu:hover{
-    background-color: #c4c4dc;
     cursor: pointer;
+    border: none;
+    background-color: #447bb4;
+    width: calc(100% - 10px);
 }
 
 .inp-head-lager{
@@ -107,24 +143,26 @@ body{
     margin-left: 10px;
     float: left;
     padding: 10px;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
 }
 
 .item-courses:hover{
     cursor:pointer;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
 
 }
 
 .item-courses.blue{
-    background-color: #4684bf;
+    background-color: rgb(51,93,169);
 }
 
 .item-courses.blue:hover{
-    background-color: #447bb4;
+    background-color: rgb(60, 89, 141);
 }
 
 
 .item-courses.blue2{
-    background-color: #66adc8;
+    background-color: #47bdeb;
 }
 
 
@@ -143,6 +181,7 @@ body{
 .container-tag{
     height: 50px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .title-progress-course{
@@ -155,48 +194,56 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
-    background-color: #1b43a0;
+    background-color: rgb(32,63,115);
     width: 120px;
     padding: 5px;
     border-radius: 5px;
     float: left;
     margin-right: 10px;
-    font-size: 10px;
+    font-size: 15px;
+    text-align: center;
 }
 .tag-course i{
     margin-right: 5px;
+    color: rgb(91,156,240);
 }
 
 .progress-course-grey{
     border-radius: 5px;
     border: 3px #424242 solid;
-    width: 300px;
-    height:30px;
+    width: 90%;
+    height:10px;
     padding: 2px;
     background-color: #727282;
 }
 
 .progress-course{
     border-radius: 5px;
-    border: 3px #fff solid;
+    /*border: 3px #fff solid;*/
     width: 300px;
-    height:30px;
+    height:10px;
     padding: 2px;
+    background-color: rgb(32,63,115);
 }
 
 .progress-course-grey .progress-course-value{
-    background-color: #3d3865;
+    background-color:  rgb(84,166,138);
 }
 
 
 .progress-course-value{
     width: 40%;
     border-radius: 3px;
-    height:24px;
-    background-color: #122965;
+    height: 100%;
+    background-color: rgb(84,166,138);
     text-align: center;
     color: hsl(0, 0%, 100%);
-    padding-top: 6px;
+}
+
+.numberprogresscourse{
+    color:#fff;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .item-progress-course{
@@ -222,7 +269,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     width: calc( 100% - 30px);
-    height: calc(100% - 200px);
+    height: calc(100% - 100px);
 }
 
 .container-activity iframe{
@@ -247,7 +294,7 @@ body{
 
 .container-activity .description-class{
     text-align: justify;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -266,6 +313,7 @@ body{
     cursor: pointer;
     background-color: #47618d;
 }
+
 .container-activity .video-class{   }
 
 #container-my-activity{
@@ -276,14 +324,15 @@ body{
     width: calc(100% - 30px);
     height: 30px;
     border-radius: 10px;
-    border: 1px solid #727282;
+    background-color:rgb(32,63,115) !important;
+    color: #fff;
     padding: 10px;
     margin-bottom: 10px;
+    
 }
 
 .activity-item:hover{
     cursor: pointer;
-    background-color: #d0d0ea;
 }
 .activity-item div{
     float: left;
@@ -292,34 +341,35 @@ body{
 .activity-item i {
     font-size: 30px;
     margin-left: 5px;
-    color: #484854;
+    color: rgb(21, 43, 80);
     width: 50px;
     display: block;
     text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .icofont-flag.actived{
-    color:  #32659c !important;
+    color:  #1fe318 !important;
 }
 
 .icofont-error{
-    color: #9c1612 !important;
+    color: #e61b14 !important;
 }
 
 .icofont-chat.actived{
     color: #32659c !important;
 }
 .icofont-check-circled{
-    color: #2a9c2a !important;
+    color: #1fe318  !important;
 }
 
 
 .activity-item .title-activity{
     width: 400px;
-    font-size: 25px;
+    font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .activity-head{
@@ -345,8 +395,33 @@ body{
 }
 
 .alert-course{
-    border: 1px  solid #555561;
+    background-color:  #fff;
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
+    color: #444;
+    font-family: "Arial";
 }
+
+#from-updateprofile{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#btcall-image{   
+    width: 300px;
+    margin-top: 5px;
+    background-color: #4a5f8e;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+   
+    margin-right: 5px;
+    border: 0px;
+}
+
+#btcall-image:hover{
+    background-color: #38548f;
+    cursor: pointer;
+ }

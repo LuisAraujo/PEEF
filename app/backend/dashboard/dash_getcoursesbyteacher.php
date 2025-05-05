@@ -8,7 +8,7 @@ if(getcurrentuser_session() == "-1") {
 }else {
 
     $query = "SELECT course.id as id, course.name as name, course.code as code FROM course WHERE Professor_id = " . getcurrentuser_session();
-
+echo  $query ;
     $result = $mysqli->query($query);
     $myArray = array();
 
