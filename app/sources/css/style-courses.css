@@ -286,6 +286,7 @@ body{
     width: 100%;
     min-height:300px;
     margin-top: 10px;
+
 }
 .container-activity .title-class{
     font-size: 25px;
@@ -299,17 +300,38 @@ body{
     margin-bottom: 10px;
 }
 
-.container-activity .click-reloadvideo{
-    background-color: #5d77a0;
-    border-radius: 10px;
+.container-activity .tumbler-video{
+    /*background-color: #5d77a0;*/
+    background: #32358f;
+    background: linear-gradient(293deg, rgb(32,63,115) 0%, rgba(87, 117, 199, 1) 48%, rgb(32,63,115) 100%);
     color: #fff;
-    width: 70px;
+    width: 640px;
+    height: 360px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 40px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container-activity .click-reloadvideo:hover{
+
+.tumbler-video .container-image{
+    height: 150px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.tumbler-video .container-image img{
+    height: 100%;
+  
+   
+}
+
+
+.tumbler-video .container-image img path{
+    color:#fff;
+}
+
+.container-activity .tumbler-video:hover{
     cursor: pointer;
     background-color: #47618d;
 }

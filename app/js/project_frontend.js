@@ -174,6 +174,8 @@ function readAfterPermission() {
     });
 
     $("#labeltalkme").click(function () {
+        return;
+        
         $("#container-chat").show();
         $("#notification-chat").hide();
         $("#notification-chat").html(0);
@@ -375,6 +377,8 @@ function setCodeNamesMenu(data) {
             '<span  class="container-filename"> ' + data[i].name + '</span>' +
             '</div>'
         );
+
+        
     });
 
     //3. when click in itens file-explore-bar show code in editor
@@ -417,6 +421,14 @@ function setCodeNamesMenu(data) {
 
 
     });
+
+    //start with file opened
+    if($("#file-explore-0") != undefined){
+        $("#file-explore-0").trigger("click");
+        console.log("btn defined");
+    }else{
+        console.log("btn undefined");
+    }
 
 
 

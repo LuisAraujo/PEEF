@@ -116,18 +116,18 @@ function getAllClasses() {
         //console.log(data);
         var json = JSON.parse(data);
         for(var i= 0 ; i < json.length; i++){
-
-            var elem ='<div class="class-item"> <div class="title-class">'+json[i].title+'</div> <div id="description-class'+i+'" class="description-class"> '+json[i].description+' <div class="click-reloadvideo" ref="'+json[i].url+'"  ref2="'+i+'" ><i class="icofont-play"></i> reaload</div> </div> <div id="container-video'+i+'" class="video-class" > <iframe  class="frame-video-class" id="videoclass'+i+'" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/'+json[i].url+'"></iframe> </div> </div>';
-            //var elem ='<div class="class-item"> <div class="title-class">'+json[i].title+'</div> <div class="description-class"> '+json[i].description+' </div> <div id="videoclass'+i+'" class="video-class" ref="'+json[i].url+'">  </div> </div>'
+            var elem ='<div class="class-item"> <div class="title-class"> Aula '+(i+1) +' '+json[i].title+'</div> <div id="description-class'+i+'" class="description-class"> '+json[i].description+' <div class="tumbler-video" ref="'+json[i].url+'"  ref2="'+i+'" ><div class="container-image"><img src="../../../icons/'+json[i].icon+'.svg"></div> '+json[i].title+'</div> </div> <div id="container-video'+i+'" class="video-class"></div> </div>';
+            //var elem ='<div class="class-item"> <div class="title-class">'+json[i].title+'</div> <div id="description-class'+i+'" class="description-class"> '+json[i].description+' <div class="click-reloadvideo" ref="'+json[i].url+'"  ref2="'+i+'" ><i class="icofont-play"></i> reaload</div> </div> <div id="container-video'+i+'" class="video-class" > <iframe  class="frame-video-class" id="videoclass'+i+'" type="text/html" width="640" height="360" src="http://www.youtube.com/embed/'+json[i].url+'"></iframe> </div> </div>';
+           
             $("#container-my-classe").append(elem);
 
         }
 
-        $(".click-reloadvideo").click(function () {
+        $(".tumbler-video").click(function () {
             console.log( $(this).attr("ref2"), $(this).attr("ref1") );
             $("#container-video"+ $(this).attr("ref2")).remove();
             $("#description-class" + $(this).attr("ref2") ).after('<iframe  class="frame-video-class" id="container-video'+ $(this).attr("ref2")+'"  type="text/html" width="640" height="360" src="http://www.youtube.com/embed/'+$(this).attr("ref")+'"></iframe>');
-           // $("#container-video"+ $(this).attr("ref2") ).html();
+             $(this).hide();
 
         });
 
@@ -194,11 +194,12 @@ function getAllActivity() {
 
             elem += ' <!-- <div ><i class="icofont-error" title="Wrong"></i></div> --> ';
 
-            if (json[i].hasmessage > 0)
+            //function removed
+           /* if (json[i].hasmessage > 0)
                 elem += '<div class="lable"><i class="icofont-chat actived" title="message"></i></div> </div>';
             else
                 elem += '<div class="lable"><i class="icofont-chat" title="message"></i></div> </div>';
-
+            */
 
             elem += '</div>';
 
@@ -250,9 +251,14 @@ function openProjectPage( idactivity ) {
 }
 
 
-function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady(){
+
+}
 
 
+function addIframeYoutube(){
+
+    console.log("teste");
     listvideo = $(".video-class");
 
     for(var i = 0; i < listvideo.length; i++){

@@ -20,9 +20,12 @@
 
 	<script src= "../../js/chat.js" ></script>
 	<script src= "../../js/unitytest_code.js" ></script>
-	<script src= "../../js/run_code.js" ></script>
 	<script src="../../js/securitycheck.js"></script>
-
+	
+		
+	<script src="../../js/gpt/keysGpt.js"></script>
+	<script src="../../js/gpt/requestChatGPT.js"></script>
+	<script src="../../js/gpt/settingGroups.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../sources/css/icofont.css">
@@ -36,6 +39,26 @@
 
 <body>
    <div id="bg"></div>
+
+   <div id="modal-error">
+		<div id="bt-close-modal-error" class="bt-close">
+			<i class="icofont-close"></i>
+		</div>
+		<div id="title-modal-description" class="title">Mensagem de Erro Melhorada</div>
+
+		<div id="mensage-error">
+				
+		</div>
+		<div id="container-btn">
+			<button id="goodhint" class="mt-4 bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded"> <i class="fa fa-thumbs-o-up flex" aria-hidden="true"></i>
+			Boa dica</button>
+			<button id="donehint" class="mt-4 bg-yellow-500 hover:bg-yellow-700 text-white px-4 py-2 rounded"> <i class="fa fa-hand-paper-o flex" aria-hidden="true"></i>
+			Já fiz isso</button>
+			<button id="badhint" class="mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded"> <i class="fa fa-thumbs-o-down flex" aria-hidden="true"></i>
+			Dica ruim</button>
+		</div>
+	</div>
+
 
 	<div id="modal-description">
 		<div id="bt-close-modal-description" class="bt-close">
@@ -233,7 +256,7 @@
 			<div id="button-help">
 				<div> ----------------------------------- </div>
 				<i class="icofont-ui-text-chat"></i> 
-				<span >  <span id="labelneedhelp"> Do you need help?</span> <span class="link" id="labeltalkme"> Talk with me!  </span> </span>
+				<span>  <span id="labelneedhelp"> Do you need help?</span> <span class="link" id="labeltalkme"> Talk with your teach!  </span> </span>
 			</div>
 		</div>
 
@@ -275,4 +298,8 @@
 		</div>
 
 </body>
+<script src= "../../js/run_code.js" ></script>
+<script src="../../js/sk/skulpt.js" type="text/javascript"></script> 
+<script src="../../js/sk/skulpt-stdlib.js" type="text/javascript"></script> 
+
 </html>

@@ -1,0 +1,890 @@
+EXEMPLO 1:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que receba uma sequencia indefinida de nomes e adicione estes nomes em uma lista. A sequencia e interrompida quando o usuario digitar a palavra ‘Fim’ ‘FIM’ ou ‘fim’. Ao termino da sequencia, deve exibir a lista.
+# MENSAGEM DE ERRO
+:
+# CÓDIGO COM ERRO
+nome = input('Digite um nome')
+max = 0
+resp = 'FIM'
+while resp in 'FIM':
+ nom = int(input('Digite um nome: '))
+ resp = str(input('Quer continuar ? [S/N] ')).upper().strip()[0]
+ print('FIM') 
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático no código acima é que a variável resposta não é usada para finalizar o loop while, o que significa que o loop nunca será interrompido. Além disso, a variável “nome” não é usada dentro do loop, o que significa que os nomes não serão adicionados à lista. 
+
+# EXEMPLO DE COMO RESOLVER
+Uma solução para esse problema seria alterar o código para que a variável “resp” seja usada para finalizar o loop e a variável “nome” seja usada para adicionar os nomes à lista. Por exemplo:
+
+nome = []
+resp = 'FIM'
+while resp != 'FIM':
+ nome.append(input('Digite um nome: '))
+ resp = str(input('Quer continuar ? [S/N] ')).upper().strip()[0]
+
+print('FIM') 
+print(nome)
+
+EXEMPLO 2:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que receba uma sequencia de 5 numeros e adicione estes numeros em uma lista. Ao termino da sequencia some todos os elementos da lista utilizando funcoes de Lista. 
+# MENSAGEM DE ERRO
+NameError:name raw_input is not defined
+# CÓDIGO COM ERRO
+maxi = i = 0
+while i >= maxi:
+ n1 = raw_input('Digite um numero')
+ soma = sum(n1)
+print(soma)
+
+
+# EXPLICAÇÃO DO ERRO
+O erro ocorre pois a função raw_input() não foi definida, essa função é utilizada para receber dados do usuário.
+
+Saída esperada:
+
+# EXEMPLO DE CÓDIGO CORRIGIDO
+maxi = 5
+i = 0
+soma = 0
+while i < maxi:
+ n1 = int(input('Digite um numero'))
+ soma += n1
+ i += 1
+print(soma)
+
+EXEMPLO 3:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Use o template que declara uma variavel do tipo string e atribui o valor digitado pelo usuario. Voce deve adicionar codigo para exibir a palavra digitada, o sinal de = e tamanho da string, usando a funcao len. 
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+nome = 'python'
+print(nome ::-1)
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro acontece pois o operador de indexação '::' não é válido para strings.
+
+# EXEMPLO DE COMO RESOLVER
+
+# Exibindo a palavra digitada
+nome = 'python'
+print(nome)
+
+# Exibindo sinal de =
+print('=')
+
+# Exibindo tamanho da string
+print(len(nome))
+
+EXEMPLO 4:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que obtenha o nome do usuario e sua funcao em uma empresa. Exiba este nome juntamente com o a sua funcao entre parenteses.
+# MENSAGEM DE ERRO
+NameError:name Professor is not defined
+# CÓDIGO COM ERRO
+nome = input('Digite seu nome')
+funcao = Professor(Luis),Encanador(Mario)
+print('Este e seu nome: ', nome, ' e sua funcao e: ', funcao) 
+
+Saída esperada: 
+
+# EXPLICAÇÃO
+O erro acontece porque a variável 'Professor' não foi definida. Para corrigir, podemos defini-la antes da linha de código em questão:
+
+professor = 'Luis'
+encanador = 'Mario'
+
+nome = input('Digite seu nome')
+funcao = professor,encanador
+print('Este e seu nome: ', nome, ' e sua funcao e: ', funcao)
+
+EXEMPLO 5:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que imprime a soma de todos os numeros inteiros entre A e B (incluindo A e B), onde A e B sao fornecidos pelo usuario.
+# MENSAGEM DE ERRO
+NameError:name d is not defined
+# CÓDIGO COM ERRO
+A = int(input('Digite o comeco do range'))
+B = int(input('Digite o final do range'))
+
+for c in range(A,B+1):
+ d = d + c
+ if(c == B):
+ print(d)
+ break 
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro mencionado ocorre pois a variável d não foi inicializada antes de ser utilizada. Para resolver isso, é necessário inicializar a variável d antes de usá-la como no exemplo a seguir:
+
+A = int(input('Digite o comeco do range'))
+B = int(input('Digite o final do range'))
+d = 0
+
+for c in range(A,B+1):
+ d = d + c
+ if(c == B):
+ print(d)
+ break
+
+EXEMPLO 6:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que mostre uma tabela de conversao de graus fahrenheit para Celsius para todos os valores inteiros de 32 a 40 farenheit, mostrando o valor em centigrados e ao lado o valor em fahrenheit. O numero deve ser acompanhado do texto entre aspas ‘ºF’. A parte flutuante deve ser de apenas 1 numero. Todos os graus devem esta na mesma linha. A conversao de graus fahrenheit para Celsius e obtida pela formula na Figura.
+# MENSAGEM DE ERRO
+TypeError:
+# CÓDIGO COM ERRO
+for c in range(32, 41):
+ f = (9*(c/5))+32
+ fr = round(f,1)
+ print(fr+'ºF - ') 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro acontece porque estamos tentando somar uma string (fr) com um valor literal ('ºF'), o que não é permitido.
+
+# COMO RESOLVER
+Uma solução é adicionar os parênteses para que a string seja concatenada com a variável flutuante, assim:
+
+for c in range(32, 41):
+ f = (9*(c/5))+32
+ fr = round(f,1)
+ print(str(fr)+'ºF - ')
+
+EXEMPLO 7:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que receba uma sequencia de 10 numeros e adicione estes numeros em uma lista. Ao termino da sequencia a lista deve-se solicitar mais 1 numero. Por fim deve-se verificar se o ultimo numero digitado esta na sequencia digitada anteriormente. Caso o numero exista deve-se exibir a mensagem ‘O numero X esta na sequencia!’ ou ‘O numero X nao esta na sequencia!’
+# MENSAGEM DE ERRO
+:
+# CÓDIGO COM ERRO
+lista = []
+K = True
+for i in range(10):
+ x = int(input())
+ lista.append(x)
+ 
+x = int(input())
+for i in lista:
+ if x == i:
+ print(f'O numero {x} esta na sequencia!')
+ K = False
+ break;
+if K:
+ print(f'O numero {x} esta na sequencia!')
+ 
+ 
+# ERRO
+Erro de sintaxe. O código tem um erro de identação, que faz com que a linha 'if x == i:' fique fora do bloco de repetição.
+
+# SOLUÇÃO
+lista = []
+K = True
+for i in range(10):
+ x = int(input())
+ lista.append(x)
+ 
+x = int(input())
+for i in lista:
+ if x == i:
+  print(f'O numero {x} esta na sequencia!')
+  K = False
+  break;
+if K:
+ print(f'O numero {x} esta na sequencia!')
+
+EXEMPLO 8:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que exibam na tela os valores das seguintes formulas: (45 ÷ 7) × 5^2 + 6 × 3 + 4
+# MENSAGEM DE ERRO
+AttributeError:float object has no attribute round
+# CÓDIGO COM ERRO
+num1=45/7
+num2=5**2
+num3=6*3
+num4=4
+num5=num1*num2+num3+num4
+print(num5.round(2)) 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+A mensagem de erro indica que o objeto float (num5) não possui o atributo 'round'. Isso acontece porque os objetos do tipo float não possuem esse atributo. Para resolver esse erro, podemos usar a função 'round' para arredondar o resultado final do cálculo.
+
+# CÓDIGO CORRIGIDO
+num1=45/7
+num2=5**2
+num3=6*3
+num4=4
+num5=num1*num2+num3+num4
+print(round(num5,2))
+
+EXEMPLO 9:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que le uma sequencia indefinida de numeros inteiros e imprime qual o maior e qual o menor valor dessa sequencia no seguinte formato: MAIOR: M, MENOR: N. Sendo M e N um dos numeros da sequencia. O usuario deve digitar 0 (zero) como condicao de parada do loop. Considere que o maior numero digitado seja 100 e o menor -100.
+# MENSAGEM DE ERRO
+SyntaxError:continue not properly in loop
+# CÓDIGO COM ERRO
+primeiro = int(input('Primeiro numero: '))
+segundo = int(input('Segundo numero : '))
+terceiro = int(input('Terceiro numero: '))
+quarto = int(input('Quarto numero: '))
+quinto = int(input('Quinto numero: '))
+maior = primeiro
+if (segundo > maior):
+ maior = segundo
+if (terceiro > maior):
+ maior = terceiro
+if (quarto > maior):
+ maior = quarto
+if (quinto > maior):
+ maior = quinto
+ print('Maior: ',maior)
+ continue
+menor = primeiro
+if (segundo < menor):
+ menor = segundo
+if (terceiro < menor):
+ menor = terceiro
+ print('Menor: ',menor) 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático é que a palavra-chave continue não está sendo usada corretamente dentro de um loop. Ela deve ser usada dentro de um loop para pular para a próxima iteração.
+
+# EXEMPLO DE COMO RESOLVER
+primeiro = int(input('Primeiro numero: '))
+segundo = int(input('Segundo numero : '))
+terceiro = int(input('Terceiro numero: '))
+quarto = int(input('Quarto numero: '))
+quinto = int(input('Quinto numero: '))
+maior = primeiro
+if (segundo > maior):
+ maior = segundo
+if (terceiro > maior):
+ maior = terceiro
+if (quarto > maior):
+ maior = quarto
+if (quinto > maior):
+ maior = quinto
+ print('Maior: ',maior)
+menor = primeiro
+if (segundo < menor):
+ menor = segundo
+if (terceiro < menor):
+ menor = terceiro
+ print('Menor: ',menor)
+ 
+EXEMPLO 10:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que mostre uma tabela de conversao de graus fahrenheit para Celsius para todos os valores inteiros de 32 a 40 farenheit, mostrando o valor em centigrados e ao lado o valor em fahrenheit. O numero deve ser acompanhado do texto entre aspas ‘ºF’. A parte flutuante deve ser de apenas 1 numero. Todos os graus devem esta na mesma linha. A conversao de graus fahrenheit para Celsius e obtida pela formula na Figura.
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+for T in range (8):
+ C = T + 32
+ F = (9*(C/5)) + 32
+ print(round F,'ºF') 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático neste código é que não está sendo usado nenhum parênteses ao redor da variável 'F' na linha 5 quando se tenta imprimir a variável.
+# EXEMPLO DE SOLUÇÃO
+for T in range (8):
+ C = T + 32
+ F = (9*(C/5)) + 32
+ print(round(F),'ºF')
+
+EXEMPLO 11:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que mostre uma tabela de conversao de graus fahrenheit para Celsius para todos os valores inteiros de 32 a 40 farenheit, mostrando o valor em centigrados e ao lado o valor em fahrenheit. O numero deve ser acompanhado do texto entre aspas ‘ºF’. A parte flutuante deve ser de apenas 1 numero. Todos os graus devem esta na mesma linha. A conversao de graus fahrenheit para Celsius e obtida pela formula na Figura.
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+for T in range (8):
+ C = T + 32
+ F = (9*(C/5)) + 32
+ print(round F,'ºF') 
+ 
+ Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático neste código é que não está sendo usado nenhum parênteses ao redor da variável 'F' na linha 5 quando se tenta imprimir a variável.
+# EXEMPLO DE SOLUÇÃO
+for T in range (8):
+ C = T + 32
+ F = (9*(C/5)) + 32
+ print(round(F),'ºF')
+
+EXEMPLO 12:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Um angulo e chamado agudo se e menor que 90 graus, obtuso se e maior do que 90 graus ou reto caso seja exatamente 90 graus. Implemente um programa que receba um angulo (numero real) como entrada e responda qual e o tipo de angulo.
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+angulo=input('Informe o numero que representa o angulo')
+if(angulo<90):
+ print('Angulo Agudo')
+elif(angulo=90):
+ print('Angulo Reto')
+else:
+ print('Angulo Obtuso')
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO
+O erro sintático no código está na linha 4, onde o sinal de comparação deve ser um '==', ao invés de um '=' para que o código possa ser executado corretamente. O '=' é utilizado apenas para atribuir valores a variáveis, enquanto o '==' é utilizado para comparar se dois valores são iguais.
+
+# CÓDIGO CORRIGIDO
+angulo=input('Informe o numero que representa o angulo')
+if(angulo<90):
+ print('Angulo Agudo')
+elif(angulo==90):
+ print('Angulo Reto')
+else:
+ print('Angulo Obtuso')
+
+EXEMPLO 13:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escrava um programa que exiba apenas o primeiro e o 18a caractere da seguinte string entre aspas: ‘Programando em python usando indices’
+# MENSAGEM DE ERRO
+SyntaxError:unexpected EOF while parsing
+# CÓDIGO COM ERRO
+frase = 'Programando em python usando indices'
+print(frase[0] + frase[18-1] 
+
+Saída esperada: 
+
+# EXPLICAÇÃO
+A mensagem de erro indica que o interpretador de Python encontrou um erro de sintaxe no código. O erro está na falta de um parêntese de fechamento, no final da linha 4.
+
+# EXEMPLOS DE RESOLUÇÃO
+Exemplo 1:
+
+frase = 'Programando em python usando indices'
+print(frase[0] + frase[18-1]) 
+
+Exemplo 2:
+
+frase = 'Programando em python usando indices'
+letra1 = frase[0]
+letra2 = frase[18-1]
+print(letra1 + letra2)
+
+EXEMPLO 14:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que determina se um numero inteiro, informado pelo usuario, e um numero primo ou nao. O programa deve exibir a mensagem ‘O numero X e primo!’ ou ‘O numero X nao e primo!’. Sendo X o numero informado pelo usuario.
+# MENSAGEM DE ERRO
+SyntaxError:EOL while scanning string literal
+# CÓDIGO COM ERRO
+n = int(input('Verificar numeros primos ate: '))
+mult=0
+
+for count in range(2,n):
+ if (n % count == 0):
+ print('Multiplo de',count)
+ mult += 1
+
+if(mult==0):
+ print('O numero {} e primo!',n)
+else:
+ print('O numero {} nao e primo!,n) 
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+Esse código apresenta um erro sintático no final da última linha de código. O erro indica que a string não foi fechada adequadamente. O motivo desse erro é a falta de um aspas simples (' ' ') para fechar a string.
+# EXEMPLO DE SOLUÇÃO
+n = int(input('Verificar numeros primos ate: '))
+mult=0
+
+for count in range(2,n):
+ if (n % count == 0):
+ print('Multiplo de',count)
+ mult += 1
+
+if(mult==0):
+ print('O numero {} e primo!',n)
+else:
+ print('O numero {} nao e primo!',n)
+
+EXEMPLO 15:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Sabemos que um triangulo e formado por tres lados que possuem uma determinada medida, mas essas nao podem ser escolhidas aleatoriamente. So ira existir um triangulo se, somente se, os seus lados obedeceram a seguinte regra: ‘um de seus lados deve ser maior que o valor absoluto (modulo) da diferenca dos outros dois lados e menor que a soma dos outros dois lados. Veja o resumo da regra na Figura. Escreva um programa que solicite tres numeros e informe se eles podem formar os lados de um triangulo. Informe: ‘E um triangulo!’, em caso positivo e ‘Nao e um triangulo!’, em caso negativo.
+# MENSAGEM DE ERRO
+SyntaxError:EOL while scanning string literal
+# CÓDIGO COM ERRO
+
+longNota = float(input('Digite sua nota'))
+nota = round(longNota, 2) 
+
+if(nota >= 9):
+ print('Conceito A) 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro indicado é um erro de sintaxe, pois há um erro de delimitação na string de impressão. O correto seria fechar a string com uma aspa simples, como abaixo:
+
+longNota = float(input('Digite sua nota'))
+nota = round(longNota, 2) 
+
+if(nota >= 9):
+ print('Conceito A')
+
+EXEMPLO 16:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que leia os valores da base maior (B), base menor (b) e altura (h) de um trapezio e calcule e imprima o valor de sua area, sabendo que a area de um trapezio (A) e dada por (ver Figura).
+# MENSAGEM DE ERRO
+TypeError:
+# CÓDIGO COM ERRO
+B = input ();
+b = input ();
+h = input ();
+A = ((float(B) + float (b))*h)/2;
+print (A); 
+
+Saída esperada: 
+
+# EXPLICAÇÃO
+O erro está no código quando tenta-se converter os valores de B, b e h para float. O código correto para converter os valores para float é:
+
+B = float(input ());
+b = float(input ());
+h = float(input ());
+A = ((B + b)*h)/2;
+print (A);
+
+EXEMPLO 17:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que peca para um numero (A) ao usuario. Verifique se A e par ou impar. Em caso de A ser par, solicite um numero (B) maior que o primeiro. Caso o A seja menor que B e B par, some B ao primeiro numero. Caso A seja menor e B impar, subtraia B do primeiro. Caso o numero B seja menor (nao respeitou a regra), some-os e divida-os por 100. Em caso de A ser impar, solicite um numero menor que o primeiro. Caso o B seja menor e par, some ao primeiro. Caso B seja menor e impar, subtraia do primeiro. Caso o numero seja maior (nao respeitou a regra) some-os e multiplique por 100. Exiba o resultado da operacao.
+# MENSAGEM DE ERRO
+NameError:name B is not defined
+# CÓDIGO COM ERRO
+A = input()
+A = int(A)
+
+if(A%2)==0: 
+ B > A
+ B = input()
+ B = int(B)
+ 
+else: 
+ print('impar')
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro aconteceu pois a variável B não foi definida antes de ser utilizada. Para resolver o problema, podemos adicionar o seguinte código antes da linha em que o erro ocorreu: 
+
+A = input()
+A = int(A)
+B = 0
+
+if(A%2)==0: 
+ B > A
+ B = input()
+ B = int(B)
+ 
+else: 
+ print('impar')
+
+EXEMPLO 18:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Em uma competicao esportiva o desempenho de uma equipe e medida pela quantidade de medalhas de ouro que a equipe conquista. Escreva um algoritmo / programa que leia a quantidade de medalhas de ouro ganhas pela equipe e escreva na tela uma mensagem informando o desempenho da equipe de acordo com a tabela na Figura.
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+Medalhas = input()
+Medalhas = int(Medalhas)
+
+if (Medalhas>= 30)
+ print('Otimo')
+
+Saída esperada: 
+
+# EXPLICAÇÃO
+O erro sintático presente no código acima é o caractere de dois pontos (:) que não foi colocado logo após a condição if. Esse caractere é necessário para indicar que o que vem a seguir é o bloco de código que será executado caso a condição seja verdadeira.
+
+Para corrigir o erro, basta adicionar um caractere de dois pontos (:) logo após a condição if, como mostrado abaixo:
+
+Medalhas = input()
+Medalhas = int(Medalhas)
+
+if (Medalhas>= 30):
+ print('Otimo')
+
+EXEMPLO 19:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que leia dois numeros inteiros e faca a multiplicacao de um numero pelo outro sem utilizar o operador de multiplicacao (*). Imprimir na tela o valor encontrado.Obs: Lembrar que uma multiplicacao pode ser definida por uma sucessao de somas.
+# MENSAGEM DE ERRO
+SyntaxError:Missing parentheses in call to print. Did you mean print(INEXISTENTE)?
+# CÓDIGO COM ERRO
+N = int(raw_input())
+A = int(raw_input())
+B = int(raw_input())
+for i in range(A, B + 1):
+ if i % N == 0:
+ print (i)
+if N > B:
+ print 'INEXISTENTE' 
+ 
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático está na última linha, pois para exibir a mensagem na tela, é necessário utilizar o comando print(), e não apenas escrever o conteúdo da variável.
+
+# EXEMPLO DE RESOLUÇÃO
+N = int(raw_input())
+A = int(raw_input())
+B = int(raw_input())
+for i in range(A, B + 1):
+ if i % N == 0:
+ print (i)
+if N > B:
+ print('INEXISTENTE')
+
+EXEMPLO 20:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Declare duas variaveis, uma string e outra do tipo inteiro com os seguintes valores: ‘python e: ’ e 10. Concatene estes dois valores e exiba.
+# MENSAGEM DE ERRO
+TypeError:can only concatenate str (not int) to str
+# CÓDIGO COM ERRO
+s = str('python e:')
+i = int(10)
+
+print(s+i) 
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro indica que não é possível concatenar uma variável do tipo inteiro com uma variável do tipo string.
+# EXEMPLOS DE COMO RESOLVER
+Exemplo 1: 
+
+s = str('python e:')
+i = int(10)
+
+print(s + str(i))
+
+Exemplo 2:
+
+s = str('python e:')
+i = 10
+
+print(s + str(i))
+
+EXEMPLO 21:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que leia o peso e a altura de uma pessoa. Em seguida o programa deve calcular e imprimir indice de massa corporea (IMC) dessa pessoa. Ver formula na Figura. A saida deve ser acompanhada da palavra entre as aspas ‘Seu IMC:’. 
+# MENSAGEM DE ERRO
+ZeroDivisionError:division by zero
+# CÓDIGO COM ERRO
+peso = input()
+altura = input()
+
+peso = int()
+altura = int()
+
+IMC = peso/(altura*altura)
+
+print(IMC) 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro acima ocorre pois está sendo tentada a divisão de um número inteiro por zero. Isso é uma operação matemática inválida.
+
+Para resolver esse erro, é preciso verificar se a variável altura possui um valor diferente de 0 antes de realizar o cálculo. Por exemplo:
+
+peso = input()
+altura = input()
+
+peso = int()
+altura = int()
+
+if altura != 0:
+    IMC = peso/(altura*altura)
+    print('Seu IMC:', IMC)
+else:
+    print('Altura não pode ser igual a 0')
+
+
+EXEMPLO 22:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que leia n valores, um de cada vez, e calcule a media, mostrando o resultado ao final. O usuario deve digitar 0 (zero) como condicao de parada do loop.
+# MENSAGEM DE ERRO
+SyntaxError:unexpected EOF while parsing
+# CÓDIGO COM ERRO
+for i in range():
+ num = int(input('Digite um numero') 
+ 
+ soma = soma + num
+ media = soma/n
+print('A media dos numeros digitados eh', media)
+
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro está no comando 'for i in range()', pois não está especificado qual será o limite do loop.
+
+# EXEMPLO DE RESOLUÇÃO
+# Criar uma variável para armazenar a quantidade de números que o usuário deseja informar
+n = int(input('Quantos números deseja informar? '))
+
+# Alterar o comando 'for' para especificar o limite
+for i in range(n):
+ num = int(input('Digite um numero') 
+ soma = soma + num
+ media = soma/n
+print('A media dos numeros digitados eh', media)
+
+EXEMPLO 23:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Faca um programa que leia um numero, passe ele para uma funcao com parametro e verifique se ele e par ou nao. A funcao deve imprimir diretamente a mensagem na tela: ‘X e par!’ ou ‘X nao e par!’
+# MENSAGEM DE ERRO
+SyntaxError:
+# CÓDIGO COM ERRO
+def par(x):
+ if x%2 == 0:
+ print(f'{x} e par!)
+ else:
+ print(f'{x} nao e par!)
+
+x = int(input())
+par(x) 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático desse código se deve à falta de aspas duplas no final das linhas que contém o comando print. Para resolver o erro, deve-se adicionar as aspas no final de cada linha:
+
+def par(x):
+ if x%2 == 0:
+ print(f'{x} e par!') # Aspas adicionadas aqui
+ else:
+ print(f'{x} nao e par!') # Aspas adicionadas aqui
+
+x = int(input())
+par(x)
+
+EXEMPLO 24:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Sabemos que um triangulo e formado por tres lados que possuem uma determinada medida, mas essas nao podem ser escolhidas aleatoriamente. So ira existir um triangulo se, somente se, os seus lados obedeceram a seguinte regra: ‘um de seus lados deve ser maior que o valor absoluto (modulo) da diferenca dos outros dois lados e menor que a soma dos outros dois lados. Veja o resumo da regra na Figura. Escreva um programa que solicite tres numeros e informe se eles podem formar os lados de um triangulo. Informe: ‘E um triangulo!’, em caso positivo e ‘Nao e um triangulo!’, em caso negativo.
+# MENSAGEM DE ERRO
+NameError:name resul is not defined
+# CÓDIGO COM ERRO
+notaA = input()
+notaA = float(notaA)
+notaB = input()
+notaB = float(notaB)
+
+
+result = (notaA + notaB) /2
+if(resul >= 9):
+ print('Conceito A')
+elif(resul < 9) and (resul >=8):
+ print('Conceito B')
+elif(result < 8) and (result >= 7):
+ print('Cenceito C')
+elif(result < 7) and (resul >= 6):
+ print('Cenceito D')
+elif(result < 6 ):
+ print('Cenceito f') 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático está no nome da variável 'resul', que foi definida como 'result', e por isso, o programa não consegue identificar a variável.
+
+# EXEMPLO DE RESOLUÇÃO
+notaA = input()
+notaA = float(notaA)
+notaB = input()
+notaB = float(notaB)
+
+
+result = (notaA + notaB) /2
+if(result >= 9):
+ print('Conceito A')
+elif(result < 9) and (result >=8):
+ print('Conceito B')
+elif(result < 8) and (result >= 7):
+ print('Cenceito C')
+elif(result < 7) and (result >= 6):
+ print('Cenceito D')
+elif(result < 6 ):
+ print('Cenceito f')
+
+EXEMPLO 25:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Escreva um programa que exiba na tela os valores das seguintes formulas: 6 × (2 + 3) ÷ (4 + 6)
+# MENSAGEM DE ERRO
+SyntaxError:invalid character in identifier
+# CÓDIGO COM ERRO
+n1 = 6 × (2 + 3) ÷ (4 + 6)
+print(n1)
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO
+O erro sintático presente neste código está na variável n1. O operador de multiplicação (*) deve ser usado ao invés do símbolo de vezes (×).
+
+# EXEMPLO DE RESOLUÇÃO
+n1 = 6 * (2 + 3) ÷ (4 + 6)
+print(n1)
+ #Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+Fazer um programa que leia uma temperatura fornecida em graus Fahrenheit e a converta para o seu equivalente em graus Celsius, imprimindo este valor na tela. O numero deve ser acompanhado do texto entre aspas ‘ºC’. A parte flutuante deve ser de apenas 1 numero. Formula na Figura.
+# MENSAGEM DE ERRO
+TypeError:
+# CÓDIGO COM ERRO
+F= input()
+Fahrenheit = float(F)
+
+C = 5/9*(F-32)
+
+print(C,'ºC') 
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro é que a variável F está sendo usada como float, mas ela foi definida como String (input()). Para corrigir, é preciso mudar a definição usando: F = float(input()) ou mais simplesmente, F = float(F).
+
+EXEMPLO 26:
+Prompt:
+
+#Explique qual o erro sintático deste código? Dê exemplos de como resolver
+# DESCRIÇÃO DA ATIVIDADE
+O conceito de um estudante e calculado de acordo com a tabela na Figura. Implemente um programa que receba a nota e devolva o conceito de um aluno.
+# MENSAGEM DE ERRO
+SyntaxError:invalid syntax
+# CÓDIGO COM ERRO
+nota = input()
+
+Nota = float(nota)
+
+if (Nota>=9):
+ print('Conceito A')
+
+if(9>Nota>=8):
+ print('Conceito B')
+ 
+ef(8>Nota>=7):
+ print('Conceito C')
+
+if(7>Nota>=6):
+ print('Conceito D')
+
+if(Nota<6):
+ print('Conceito F')
+ 
+Saída esperada: 
+
+# EXPLICAÇÃO DO ERRO
+O erro sintático se deve ao uso da palavra reservada 'ef' ao invés de 'if', pois 'ef' não é uma palavra válida em Python. Para corrigir o erro deve-se substituir o 'ef' por 'if'.
+
+# CÓDIGO CORRIGIDO
+nota = input()
+
+Nota = float(nota)
+
+if (Nota>=9):
+ print('Conceito A')
+
+if(9>Nota>=8):
+ print('Conceito B')
+ 
+if(8>Nota>=7):
+ print('Conceito C')
+
+if(7>Nota>=6):
+ print('Conceito D')
+
+if(Nota<6):
+ print('Conceito F')

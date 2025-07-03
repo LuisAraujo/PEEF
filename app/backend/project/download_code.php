@@ -1,7 +1,7 @@
 <?php
 @include "../conection_database.php";
 @include "../session/manager_section.php";
-
+error_reporting(0);
 $idcode = $_GET["idcode"];
 
 setcurrentcode_session($idcode);
