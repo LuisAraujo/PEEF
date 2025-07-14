@@ -41,6 +41,7 @@ function inputf () {
  }
 
  function outf(text) {
+    console.log("out");
      if(text=="")
         return;
 
@@ -61,6 +62,7 @@ function builtinRead(x) {
 
     
 var startRunCode = function () {
+    
     var prog = editor.getValue(); 
     
     out_lines.innerHTML = ''; 
@@ -79,10 +81,12 @@ var startRunCode = function () {
     );
 
     myPromise.then(function(mod) {
+        console.log("hahhsa");
+      
         $("#loading-code").hide();
         $("#out_lines").append("<br>Seu programa terminou...");
         $("#button-run").removeClass("disable");
-        //saveExecution();
+        saveExecution("");
         //showSuccessMensage();
     },
     function(err) {
@@ -90,8 +94,10 @@ var startRunCode = function () {
         $("#out_lines").append("<br></b><span class='alert-error'>" + err.toString() +"</span>");
         $("#button-run").removeClass("disable");
         data = {code: editor.getValue(), error: err.toString(), atvdesc: $("#text-modal-description").text() }
-        sendPromptbyGroup(data);
+        sendPromptbyGroup(data, function(){ $("#container-alert-ia").hide();});
         console.log("error");
+        saveExecution(err.toString());
+        $("#container-alert-ia").show();
         /*state_code = ERROR;
         msgerro = err.toString();
         saveExecution();*/

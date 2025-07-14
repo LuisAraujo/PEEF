@@ -1,3 +1,5 @@
+var lastcompilation;
+
 function getStartPage(callback){
     $.post( "../../backend/project/project_getidcode.php").done(
         function (data){
@@ -136,4 +138,45 @@ function configLang(cod, callback) {
         callback();
 
     });
+}
+
+
+function saveExecution(errormsg){
+    $.post("../../backend/runcode/save_execution.php", {errormsg: errormsg})
+        .done(function(data)
+        {
+            console.log(data);
+            data = JSON.parse(data);
+            lastcompilation = data.id;
+            
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+}
+
+function saveEnhancedMessage(data){
+  
+ $.post("../../backend/runcode/save_enhancedmessage.php", {id: lastcompilation, message: data })
+        .done(function(data)
+        {console.log(data);
+            data = JSON.parse(data);
+            console.log(data);
+            lastenhancedmsg = data.id;
+        })
+        .fail(function () {
+            console.log("erro");
+        });
+}
+
+function updateEnhancedMessage(data){
+ $.post("../../backend/runcode/update_enhancedmessage.php", {id: lastenhancedmsg, value: data})
+        .done(function(data)
+        {console.log(data);
+            data = JSON.parse(data);
+            console.log(data);
+        })
+        .fail(function () {
+            console.log("erro");
+        });
 }

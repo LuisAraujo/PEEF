@@ -92,7 +92,7 @@ function getcountmessagesunviewed(idproject,fromprof, callback) {
     $.post( "../../backend/chat/getmessageunviewed.php", {fromprof: fromprof, idproject:idproject },
         function( data ) {
             //data = JSON.parse(data);
-            console.log(data);
+           // console.log(data);
 
             if(callback!=undefined)
                 callback(data);
@@ -104,7 +104,7 @@ function getlastmessages( callback) {
    //console.log(lastidmsg)
     $.post( "../../backend/chat/getlastmessage.php", { lastidmsg:  lastidmsg },
         function( data ) {
-            console.log(data);
+            //console.log(data);
             data = JSON.parse(data);
             if(data[data.length-1]!= undefined)
                 lastidmsg = data[data.length-1].id;

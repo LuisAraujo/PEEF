@@ -83,12 +83,12 @@ function testCode(token){
     function(data) { })
 	.done(function(out) {
 
-        console.log(out);
+       // console.log(out);
 
         $("#labelresulttest").text(json.result_test);
 
         if(out != "0"){
-            console.log(out)
+            //console.log(out)
             var jsonout = JSON.parse(out);
 
             $("#percent-passed").html(jsonout.total.percent + "%") ;
@@ -182,7 +182,7 @@ function savecode(callback) {
 
             $("#item-code-"+fileactive).removeClass("no-saved");
 
-            //console.log("code saved " + fileactive + "  " +editor.getValue() );
+           // console.log("code saved " + fileactive + "  " +editor.getValue() );
             callback();
            // console.log(callback);
         })
@@ -216,7 +216,7 @@ function  downloadcode() {
     req.open("GET", '../../backend/project/download_code.php?idcode='+fileactive , true);
     req.responseType = "blob";
     req.onload = function (event) {
-        console.log(req)
+        //console.log(req)
         var blob = req.response;
         var fileName = req.getResponseHeader('Content-Disposition').split("fileName=")[1];  //if you have the fileName header available
         var link=document.createElement('a');

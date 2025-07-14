@@ -1,5 +1,5 @@
 /*Get Activity */
-function sendPromptbyGroup(data) { 
+function sendPromptbyGroup(data, callback) { 
     var key = 0;
     
     var prompt;
@@ -8,19 +8,19 @@ function sendPromptbyGroup(data) {
             
             //GROUP A - zero shot
             if(parseInt(id)%3 == 0){
-   
                 prompt= getPrompt('zero', data);
+            
             //GROUP B - few shot
             } if(parseInt(id)%2 == 0){
-
-                 prompt= getPrompt('few', data);
+                prompt= getPrompt('few', data);
+                
             //GROUP C - fine-tuning
             }else{
-       
                 prompt= getPrompt('fine', data);
             }
      
         //requestChatGPT(prompt, key, callback);
+        callback();
     });
 }
 
@@ -61,14 +61,17 @@ function getPrompt(type, data){
             prompt += data.error+"\n";
 
             prompt += "#Explique qual o erro sintático deste código? Dê exemplos de como resolver\n";
-   
+            prompt += "#Adicione o c'pdigo dentro da tag ```python\n";
 
             requestChatGPT(prompt, key, function(data){
-                console.log(data);
-                data = data.replaceAll("\n", "<br>");
-
+               // console.log(data);
+               data = formatMessage( data );
+            
                $("#modal-error").show();
                $("#mensage-error").html(data);
+               hljs.highlightAll();
+
+               saveEnhancedMessage(data);
                
                 //exibir
                //salvar
@@ -77,5 +80,33 @@ function getPrompt(type, data){
         .catch(error => {
             console.error('Erro ao ler o arquivo:', error);
         });
+}
+
+
+function formatMessage(data){
+
+    arr = data.split('\n');
+     codemode = false;
+    arr.forEach(function(element, index, array) {
+       
+        console.log(element, element[0])
+        if(element.includes("```python") ){
+            codemode = true;
+            array[index] = "<pre><code class='python'>";
+        }else if(element.includes("```") ){
+            codemode = false;
+            array[index] = "</code></pre>";
+        }
+
+        if(!codemode){
+            if(element[0] == "#"){
+                array[index] = "<strong>"+element+"</strong>"
+            }
+        }
+       
+    });
+    console.log(arr);
+    return arr.join("<br>");
+
 }
 

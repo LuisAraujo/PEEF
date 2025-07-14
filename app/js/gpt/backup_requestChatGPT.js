@@ -1,7 +1,7 @@
 
 
 function requestChatGPT(prompt, key, callback) {
-  //console.log( prompt );
+  console.log( prompt );
 
     const data = {
         messages: [
@@ -10,15 +10,16 @@ function requestChatGPT(prompt, key, callback) {
             role: "system",
           },
         ],
-        //model: 'gpt-4',
-        model: 'ft:gpt-4o-mini-2024-07-18:personal::B3X8ZQfX',
+        //model: 'gpt-4-turbo',
+        model: 'gpt-4o-realtime-preview-2025-06-03',
         temperature: 0.5,
         max_tokens: 4000,
         top_p: 1,
         frequency_penalty: 0.5,
         presence_penalty: 0,
       };
-    fetch('https://api.openai.com/v1/chat/completions', {
+    //fetch('https://api.openai.com/v1/chat/completions', {
+    fetch('https://api.openai.com/v1/realtime', {
         method: "POST",
         headers: {
         "Content-Type": "application/json",

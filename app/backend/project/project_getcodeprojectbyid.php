@@ -1,7 +1,9 @@
 <?php
 @include "../conection_database.php";
+@include "../session/manager_section.php";
 
 $idcode = $_POST["idcode"];
+setcurrentcode_session($idcode);
 
 $result = $mysqli->query("SELECT code FROM code Where code.id = $idcode;");
 $myArray = array();

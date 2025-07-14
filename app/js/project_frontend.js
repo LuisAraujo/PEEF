@@ -81,7 +81,7 @@ function readAfterPermission() {
     //$("#editor").hide();
 
     /** MENU **/
-    //Button Run
+    //Button Teste
     $("#button-test").click( function(){
         if($(this).hasClass("disable")) {
             alert("Esta ação está inativa ou já foi executada!");
@@ -114,7 +114,9 @@ function readAfterPermission() {
 
     } );
 
+    //Button Run
     $("#button-run").click(function () {
+       
         if($(this).hasClass("disable")) {
             alert("Esta ação está inativa ou já foi executada!");
             return;
@@ -122,6 +124,7 @@ function readAfterPermission() {
             $("#loading-code").show();
             $(this).addClass("disable");
             $("#button-test").addClass("disable");
+            $("#container-alert-ia").hide();
         }
 
         $("#console-container").show();
@@ -253,6 +256,14 @@ function readAfterPermission() {
         getlastmessages( showChatMessageAndNotification );
     }, 60*100);
 
+
+    $(".option-eval").click(function (e) {
+        console.log("click")
+        updateEnhancedMessage($(this).attr('value'));
+        $("#modal-error").hide();
+    });
+
+
 }
 
 function  showChatMessageAndNotification( data ) {
@@ -368,6 +379,10 @@ function setCodeNamesMenu(data) {
         $("#modal-description").hide();
     });
 
+    $("#bt-close-modal-error").click(function(){
+        $("#modal-error").hide();
+    });
+
     //2.get file list and set item file-explore-bar in bar explore
     $.each(data, function(i) {
         //show in explore bar
@@ -425,9 +440,9 @@ function setCodeNamesMenu(data) {
     //start with file opened
     if($("#file-explore-0") != undefined){
         $("#file-explore-0").trigger("click");
-        console.log("btn defined");
+       // console.log("btn defined");
     }else{
-        console.log("btn undefined");
+        //console.log("btn undefined");
     }
 
 

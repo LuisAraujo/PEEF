@@ -4,7 +4,7 @@ function checkType(type, back, callback,callback2) {
         url: back+"../backend/security/checktypeuser.php",
     }).done( function(data){
         if(data == type){
-            console.log(data);
+            //console.log(data);
             callback(data);
         }else{
             if(callback2 != undefined)

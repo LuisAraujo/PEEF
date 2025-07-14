@@ -1,4 +1,6 @@
 <?php
+/*ESTE CODIGO NÃO É MAIS NECESSÁRIO NESTA VERSÃO*/
+
     header('Content-type: text/html; charset=utf-8');
 
     include 'getnamestemp.php';

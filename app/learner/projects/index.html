@@ -35,6 +35,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8">
 	</script>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+	<!-- and it's easy to individually load additional languages -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
 </head>
 
 <body>
@@ -50,12 +55,16 @@
 				
 		</div>
 		<div id="container-btn">
-			<button id="goodhint" class="mt-4 bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded"> <i class="fa fa-thumbs-o-up flex" aria-hidden="true"></i>
-			Boa dica</button>
-			<button id="donehint" class="mt-4 bg-yellow-500 hover:bg-yellow-700 text-white px-4 py-2 rounded"> <i class="fa fa-hand-paper-o flex" aria-hidden="true"></i>
+			<button id="goodhint" class="option-eval mt-4 bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded" value="1">  <i class="fa fa-thumbs-o-up flex" aria-hidden="true"></i>
+			Boa dica (direta/curta)</button>
+			<button id="goodhint2" class="option-eval mt-4 bg-yellow-500 hover:bg-yellow-700 text-white px-4 py-2 rounded" value="2"> <i class="fa fa-hand-paper-o flex" aria-hidden="true"></i>
+			Boa dica, porém longa</button>
+			<button id="neutralhint" class=" option-eval mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded" value="3"> <i class="fa fa-thumbs-o-down flex" aria-hidden="true"></i>
 			Já fiz isso</button>
-			<button id="badhint" class="mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded"> <i class="fa fa-thumbs-o-down flex" aria-hidden="true"></i>
-			Dica ruim</button>
+			<button id="badhint" class="option-eval mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded" value="4"> <i class="fa fa-thumbs-o-down flex" aria-hidden="true"></i>
+			Dica ruim, não é sobre o problema</button>
+			<button id="badhint2" class="option-eval mt-4 bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded" value="5"> <i class="fa fa-thumbs-o-down flex" aria-hidden="true"></i>
+			Dica ruim, não entendi</button>
 		</div>
 	</div>
 
@@ -250,14 +259,17 @@
 				<div id="loading-code"><img src="../../sources/images/loading.gif"><span id="msg-loading-code">Seu programa está executando...</span></div>
 				<div id="out_lines"></div>
 				<input id="in"></input>
-
+				<div id="container-alert-ia"> 
+					<img id="icon-ia" src="../../sources/images/ia_icon.png">
+					Aguarde um pouco... Estamos gerando uma mensagem melhor usando IA...
+				</div>
 			</div>
 			
-			<div id="button-help">
+			<!-- <div id="button-help">
 				<div> ----------------------------------- </div>
 				<i class="icofont-ui-text-chat"></i> 
 				<span>  <span id="labelneedhelp"> Do you need help?</span> <span class="link" id="labeltalkme"> Talk with your teach!  </span> </span>
-			</div>
+			</div> -->
 		</div>
 
 
